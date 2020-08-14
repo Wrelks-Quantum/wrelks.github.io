@@ -10,12 +10,11 @@ comment: false
 
 <div class="article__content" markdown="1">
 
----
-
 <a itemprop="headline" class="item__header" href="/flashcards/page-build/repo/1%20Basics.html">Linear Algebra | Part 1</a><br>
 <a itemprop="headline" class="item__header" href="/flashcards/page-build/repo/2%20Basics%202.html">Linear Algebra | Part 2</a><br>
 <a itemprop="headline" class="item__header" href="/flashcards/page-build/repo/3%20Basics%203.html">Linear Algebra | Part 3</a><br>
 
+---
 
 <center>
 <code class="error highlighter-rouge"><i class="fas fa-exclamation-triangle" style="font-size: 15px;"></i> Flash Cards work best on Tablet, Laptop, and Desktops! <i class="fas fa-exclamation-triangle" style="font-size: 15px;"></i></code> 
