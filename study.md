@@ -12,9 +12,9 @@ comment: false
 
 ---
 
-<a itemprop="headline" class="item__header" href="/flashcards/page-build/repo/1%20Basics.html">Linear Algebra | Part 1</a>
-<a itemprop="headline" class="item__header" href="/flashcards/page-build/repo/2%20Basics%202.html">Linear Algebra | Part 2</a>
-<a itemprop="headline" class="item__header" href="/flashcards/page-build/repo/3%20Basics%203.html">Linear Algebra | Part 3</a>
+<a itemprop="headline" class="item__header" href="/flashcards/page-build/repo/1%20Basics.html">Linear Algebra | Part 1</a><br>
+<a itemprop="headline" class="item__header" href="/flashcards/page-build/repo/2%20Basics%202.html">Linear Algebra | Part 2</a><br>
+<a itemprop="headline" class="item__header" href="/flashcards/page-build/repo/3%20Basics%203.html">Linear Algebra | Part 3</a><br>
 
 
 <center>
