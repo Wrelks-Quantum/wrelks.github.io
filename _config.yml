@@ -232,7 +232,7 @@ collections:
   flashcards:
     output: true
   flashcards/f594ec05d4fdb15d6e2effe683b4de384828bc97:
-    output: true
+    output: false
   
   #includes: 
   #  output: true
