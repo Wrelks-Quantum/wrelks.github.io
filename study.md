@@ -20,4 +20,6 @@ comment: false
 >> The study page is here to provide you with plentiful sets of flash cards for you to study quantum computing from. Ranging from linear algebra to quantum algorithms. These flash cards are actively updated, but if you have any suggestions for sample questions, contact me at <perry@wrelks.com>. 
 If you would like to regularly contribute to the flash cards please check out the contributor page here *Insert link later*
 
+<blockquote><h6><a href="https://wrelks.com/flashcards/f594ec05d4fdb15d6e2effe683b4de384828bc97">Development Tests</a></h6></blockquote>
+
 </div>
