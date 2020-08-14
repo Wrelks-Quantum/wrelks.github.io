@@ -1,0 +1,2408 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Qiskit Global Summer School - qcrypto-the-tales-of-alice-bob-and-eve</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+        @font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+#topWrelks{
+    width: 50px;
+    height: 16px;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    padding: 0.45rem 0.6333333333rem;
+    font-size: 1rem;
+    border-radius: 6rem;
+    color: #fff;
+    background-color: #fc4d50;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 0px;
+    height: 0px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 0px;
+    width: 0px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="https://wrelks.com/qssdiscord/b44c50254b6660944b720679911b8772056c8f6b/index.html" id="topWrelks">Back</a>
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/729706617951485954/8e1b64c57789ff06c248f35ae228ceaa.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Qiskit Global Summer School</div>
+        <div class="preamble__entry">Study Groups / qcrypto-the-tales-of-alice-bob-and-eve</div>
+
+            <div class="preamble__entry preamble__entry--small">Study Group and for those interested in Quantum Crypto, QKD, Satellite Communications in Quantum, etc.</div>
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/444097032185970699/25cf73ece093773af86d1ff9479e80c5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 03:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="734490928076554270" id="message-734490928076554270">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Shakina#6650">@Anonymous</span> <span class="mention" title="ellessar#9486">@Anonymous</span> <span class="mention" title="PN#9790">@Anonymous</span> PN</span> <span class="mention" title="Delta#5000">@Anonymous</span> Hey Guys, I have created this group. But if there is any other group already on Quantum Crypto please let me know. Or we can keep this group alive. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="734501937835147294" id="message-734501937835147294">
+                <div class="chatlog__content">
+                    <div class="markdown">Hey there, I work on cryptography but not on quantum stuff at the moment. Can I join? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="734503813251334204" id="message-734503813251334204">
+                <div class="chatlog__content">
+                    <div class="markdown">Love the name <img class="emoji " alt="😆" title="😆" src="https://twemoji.maxcdn.com/2/72x72/1f606.png"> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128518;" title="&#128518;" src="https://twemoji.maxcdn.com/2/72x72/1f606.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/257901205857107973/78ae4405d6af2067557859519d07b72c.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="734504628137492542" id="message-734504628137492542">
+                <div class="chatlog__content">
+                    <div class="markdown">:O, could you guide me a little please,  I am a Computer engineering student and I would like to go more deep in security but I am with the dilema if going to cybersecurity of cryptography,  this is also my last year for the Bachelor&#39;s degree so I would like to try to apply for a master in the same area also. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:24 PM</span>
+
+            <div class="chatlog__message " data-message-id="734506015516786758" id="message-734506015516786758">
+                <div class="chatlog__content">
+                    <div class="markdown">Have you already done a course on one of these topics? In my case I was introduced to cryptography in a course about computer security in general </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734506231305076737" id="message-734506231305076737">
+                <div class="chatlog__content">
+                    <div class="markdown">I believe computer security is interesting because it is very variegated and it is very spendable from a professional perspective </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/257901205857107973/78ae4405d6af2067557859519d07b72c.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:26 PM</span>
+
+            <div class="chatlog__message " data-message-id="734506486457303101" id="message-734506486457303101">
+                <div class="chatlog__content">
+                    <div class="markdown">the introduction to security (it has also the cryptography topic, but just the scratch)  is the next semester for me, is one of the courser. But I have study by my own security topics. <span class="chatlog__edited-timestamp" title="19-Jul-20 04:26 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:26 PM</span>
+
+            <div class="chatlog__message " data-message-id="734506532946837557" id="message-734506532946837557">
+                <div class="chatlog__content">
+                    <div class="markdown">Cryptography, as far as what I have seen up to now (I am doing a PhD about it), is more common used in research institutions </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734507093767356466" id="message-734507093767356466">
+                <div class="chatlog__content">
+                    <div class="markdown">Of course there are tons of people doing research on computer security stuff as well </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734507228744384524" id="message-734507228744384524">
+                <div class="chatlog__content">
+                    <div class="markdown">In my particular case I am working on cryptographic protocols for secure multi party computation </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734507424098156555" id="message-734507424098156555">
+                <div class="chatlog__content">
+                    <div class="markdown">That is a type of protocol that allows a set of parties to jointly compute the output of a function while keeping their respective inputs private </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128161;" title="&#128161;" src="https://twemoji.maxcdn.com/2/72x72/1f4a1.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/257901205857107973/78ae4405d6af2067557859519d07b72c.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="734508088517853244" id="message-734508088517853244">
+                <div class="chatlog__content">
+                    <div class="markdown">:o
+in that case computer security is a more safe option, if I want to work , the professional perspective is very good and I also have the option to good for research. But cryptography is also interesting but also more hard for me :/ </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734508394076963169" id="message-734508394076963169">
+                <div class="chatlog__content">
+                    <div class="markdown">but in any case if I choose a master for computer security or cryptography , they are both very realted. In that case I will be able to see wich one I like more? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:34 PM</span>
+
+            <div class="chatlog__message " data-message-id="734508507742863591" id="message-734508507742863591">
+                <div class="chatlog__content">
+                    <div class="markdown">Also for me cryptography looked harder in the beginning, but it can be very fun too </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/257901205857107973/78ae4405d6af2067557859519d07b72c.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:35 PM</span>
+
+            <div class="chatlog__message " data-message-id="734508653570162818" id="message-734508653570162818">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Also for me cryptography looked harder in the beginning, but it can be very fun too
+</div><span class="mention" title="lorenzogentile404#0661">@Anonymous</span> yep, is like hard but fun </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:35 PM</span>
+
+            <div class="chatlog__message " data-message-id="734508661623357581" id="message-734508661623357581">
+                <div class="chatlog__content">
+                    <div class="markdown">For example, what I am doing finds applications in electronic auctions, voting and cash systems </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734508896063848448" id="message-734508896063848448">
+                <div class="chatlog__content">
+                    <div class="markdown">Since I have an engineering background too, I like to focus on concrete applications </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/257901205857107973/78ae4405d6af2067557859519d07b72c.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:36 PM</span>
+
+            <div class="chatlog__message " data-message-id="734509102365147136" id="message-734509102365147136">
+                <div class="chatlog__content">
+                    <div class="markdown">yes, that is the main problem, engineering backgroud, the theory is not that good and is hard to start in crptography </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="734509133440614410" id="message-734509133440614410">
+                <div class="chatlog__content">
+                    <div class="markdown">I am sure that if you do a master in computer security, in case you like cryptography, you may continue your studies with a PhD about it eventually </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/257901205857107973/78ae4405d6af2067557859519d07b72c.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 04:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="734509268371243029" id="message-734509268371243029">
+                <div class="chatlog__content">
+                    <div class="markdown">true </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734509872070262835" id="message-734509872070262835">
+                <div class="chatlog__content">
+                    <div class="markdown">then my secon main problem is that there is no security master in my country <img class="emoji " alt="😦" title="😦" src="https://twemoji.maxcdn.com/2/72x72/1f626.png">  so I must go outside, could you guide to me a some good places to keep in mind when I can start sending my summition forms </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734509987325280326" id="message-734509987325280326">
+                <div class="chatlog__content">
+                    <div class="markdown">using google for searching is like , I don&#39;t know any of this places, </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734511748450615347" id="message-734511748450615347">
+                <div class="chatlog__content">
+                    <div class="markdown">in my case I won a schoolarship for a exchange program in the University of Renne 1 , but covid happen so I was not able to go. They also have the two areas for master, as is a exchange program is maybe possible they let me take a few master courses to see how it is. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/177022915747905536/a_c4f5c9ec0fd68ba2fb695226655e74a3.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 07:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="734545757708877921" id="message-734545757708877921">
+                <div class="chatlog__content">
+                    <div class="markdown">Hey! Awesome thanks for making the group </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 10:11 PM</span>
+
+            <div class="chatlog__message " data-message-id="734593196742410350" id="message-734593196742410350">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi all, nice to connect with everyone. Any fellow QRNG researchers here? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 11:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="734611115006230550" id="message-734611115006230550">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi everyone,  I&#39;m a telecommunications engineering student specialised in network security .I have small experience with quantum cryptography: As my end of year project ,I worked on a quantum encrypted chat application using BB84 keys and OTP encryption. I look forward to learning more about this field and I&#39;m happy to join you guys <img class="emoji " alt="😃" title="😃" src="https://twemoji.maxcdn.com/2/72x72/1f603.png"> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/255675987956596736/870e2f0cf1ad38355f9813a34ce2de4d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">19-Jul-20 11:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="734613418190831656" id="message-734613418190831656">
+                <div class="chatlog__content">
+                    <div class="markdown">Oh a study group for q crypto nice. BB84 <img class="emoji " alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">✌️ </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 12:11 AM</span>
+
+            <div class="chatlog__message " data-message-id="734623511263576085" id="message-734623511263576085">
+                <div class="chatlog__content">
+                    <div class="markdown">;group casual </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 12:38 AM</span>
+
+            <div class="chatlog__message " data-message-id="734630401334706256" id="message-734630401334706256">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Shakina#6650">@Anonymous</span> <span class="mention" title="ellessar#9486">@Anonymous</span> <span class="mention" title="PN#9790">@Anonymous</span> PN</span> <span class="mention" title="Delta#5000">@Anonymous</span> Hey Guys, I have created this group. But if there is any other group already on Quantum Crypto please let me know. Or we can keep this group alive.
+</div><span class="mention" title="Deep#2595">@Anonymous</span> cool. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 12:48 AM</span>
+
+            <div class="chatlog__message " data-message-id="734632871654064248" id="message-734632871654064248">
+                <div class="chatlog__content">
+                    <div class="markdown">&gt; 
+<div class="quote">then my secon main problem is that there is no security master in my country <img class="emoji " alt="😦" title="😦" src="https://twemoji.maxcdn.com/2/72x72/1f626.png">  so I must go outside, could you guide to me a some good places to keep in mind when I can start sending my summition forms
+<span class="mention" title="Dark Nacho#6723">@Anonymous</span> Nacho</span> if you can, there are cybersecurity certification programs that are really respected. all online. like this one <a href="https://www.eccouncil.org/programs/">https://www.eccouncil.org/programs/</a> or oncp certification or so. might see if they fit your tastes</div> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.eccouncil.org/programs/">
+                                                    <div class="markdown">Cyber Security Training &amp; Certifications | Information Security Cer...</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Cybersecurity training and certification programs that enable the information security workforce to create CISOs, ethical hackers, cyber forensic investigators etc</div>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="chatlog__message " data-message-id="734633095457800223" id="message-734633095457800223">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hey there, I work on cryptography but not on quantum stuff at the moment. Can I join?
+</div><span class="mention" title="lorenzogentile404#0661">@Anonymous</span> which aspect of crytography do you work on? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:46 AM</span>
+
+            <div class="chatlog__message " data-message-id="734647362374336593" id="message-734647362374336593">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi everyone i am working on Post Quantum Cryptography that is elliptic curves and Quantum Cryptography, i am looking forward to gain insights if anyone over here can help </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:06 AM</span>
+
+            <div class="chatlog__message " data-message-id="734652521632759849" id="message-734652521632759849">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hi everyone i am working on Post Quantum Cryptography that is elliptic curves and Quantum Cryptography, i am looking forward to gain insights if anyone over here can help
+</div><span class="mention" title="Deepanshu Baisoya#3915">@Anonymous</span> Baisoya</span> great. i guess you would be working on supersingular curves? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:07 AM</span>
+
+            <div class="chatlog__message " data-message-id="734652680101953596" id="message-734652680101953596">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hi everyone i am working on Post Quantum Cryptography that is elliptic curves and Quantum Cryptography, i am looking forward to gain insights if anyone over here can help
+</div><span class="mention" title="Deepanshu Baisoya#3915">@Anonymous</span> Baisoya</span> this is an interest of mine too <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734653483575410711" id="message-734653483575410711">
+                <div class="chatlog__content">
+                    <div class="markdown">I&#39;d appreciate if guys could share resources too. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:15 AM</span>
+
+            <div class="chatlog__message " data-message-id="734654706911281202" id="message-734654706911281202">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Deepanshu Baisoya#3915">@Anonymous</span> Baisoya</span> this is an interest of mine too <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png">
+</div><span class="mention" title="levanto#9760">@Anonymous</span> Lecture notes on cryto <a href="https://cseweb.ucsd.edu/~mihir/papers/gb.pdf">https://cseweb.ucsd.edu/~mihir/papers/gb.pdf</a>
+
+how about this one? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:18 AM</span>
+
+            <div class="chatlog__message " data-message-id="734655352716394556" id="message-734655352716394556">
+                <div class="chatlog__content">
+                    <div class="markdown">I mean more around LWE or lattice-based crypto </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734655526226624572" id="message-734655526226624572">
+                <div class="chatlog__content">
+                    <div class="markdown">for the link,, i have been looking into such content for a long while. <span class="chatlog__edited-timestamp" title="20-Jul-20 02:20 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:18 AM</span>
+
+            <div class="chatlog__message " data-message-id="734655563451072674" id="message-734655563451072674">
+                <div class="chatlog__content">
+                    <div class="markdown">oh. lattice based. yup. i have one i am currently reading that </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734655581448830987" id="message-734655581448830987">
+                <div class="chatlog__content">
+                    <div class="markdown">just a sec </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:21 AM</span>
+
+            <div class="chatlog__message " data-message-id="734656102804881449" id="message-734656102804881449">
+                <div class="chatlog__content">
+                    <div class="markdown">Also, this channel: <a href="https://www.youtube.com/user/SimonsInstitute">https://www.youtube.com/user/SimonsInstitute</a> is a gold mine </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/user/SimonsInstitute">
+                                                    <div class="markdown">Simons Institute</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">The Simons Institute for the Theory of Computing is an exciting new venue for collaborative research in theoretical computer science. The Institute will be h...</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://yt3.ggpht.com/a/AATXAJwcZL2VmlAY_qhqpqtq40M3oolm0-1TbK8PpCxpgw=s900-c-k-c0xffffffff-no-rj-mo">
+                                            <img class="chatlog__embed-thumbnail" src="https://yt3.ggpht.com/a/AATXAJwcZL2VmlAY_qhqpqtq40M3oolm0-1TbK8PpCxpgw=s900-c-k-c0xffffffff-no-rj-mo" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:22 AM</span>
+
+            <div class="chatlog__message " data-message-id="734656515998482434" id="message-734656515998482434">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">for the link,, i have been looking into such content for a long while.
+</div><span class="mention" title="levanto#9760">@Anonymous</span> <a href="http://sandip.ece.ufl.edu/publications/csur19.pdf">http://sandip.ece.ufl.edu/publications/csur19.pdf</a> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="qiskitblack" title="qiskitblack" src="https://cdn.discordapp.com/emojis/732893594293239818.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/548121657735118850/efcd2bd7f5b476f5c5cfb3b7ceb8958e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:29 AM</span>
+
+            <div class="chatlog__message " data-message-id="734658343024459797" id="message-734658343024459797">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Also, this channel: <a href="https://www.youtube.com/user/SimonsInstitute">https://www.youtube.com/user/SimonsInstitute</a> is a gold mine
+</div><span class="mention" title="levanto#9760">@Anonymous</span> <img class="emoji " alt="🤩" title="🤩" src="https://twemoji.maxcdn.com/2/72x72/1f929.png"> <img class="emoji " alt="🤩" title="🤩" src="https://twemoji.maxcdn.com/2/72x72/1f929.png"> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:30 AM</span>
+
+            <div class="chatlog__message " data-message-id="734673666767454288" id="message-734673666767454288">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="lorenzogentile404#0661">@Anonymous</span> which aspect of crytography do you work on?
+</div><span class="mention" title="ellessar#9486">@Anonymous</span> secure multi party computation with a focus on blockchain applications </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128079;" title="&#128079;" src="https://twemoji.maxcdn.com/2/72x72/1f44f.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:39 AM</span>
+
+            <div class="chatlog__message " data-message-id="734675947927896084" id="message-734675947927896084">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="ellessar#9486">@Anonymous</span> secure multi party computation with a focus on blockchain applications
+</div><span class="mention" title="lorenzogentile404#0661">@Anonymous</span> cool </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:41 AM</span>
+
+            <div class="chatlog__message " data-message-id="734676337087873126" id="message-734676337087873126">
+                <div class="chatlog__content">
+                    <div class="markdown">And I have no experience at all with quantum computing but I hope I will be able to understand something from the book today :) </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:41 AM</span>
+
+            <div class="chatlog__message " data-message-id="734676432759947285" id="message-734676432759947285">
+                <div class="chatlog__content">
+                    <div class="markdown">have some experience with programming? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:42 AM</span>
+
+            <div class="chatlog__message " data-message-id="734676556823265351" id="message-734676556823265351">
+                <div class="chatlog__content">
+                    <div class="markdown">Yes </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:43 AM</span>
+
+            <div class="chatlog__message " data-message-id="734676882326421535" id="message-734676882326421535">
+                <div class="chatlog__content">
+                    <div class="markdown">then won&#39;t be that big a problem to get going <span class="chatlog__edited-timestamp" title="20-Jul-20 03:43 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:04 AM</span>
+
+            <div class="chatlog__message " data-message-id="734682240201785384" id="message-734682240201785384">
+                <div class="chatlog__content">
+                    <div class="markdown">Hello everyone, does someone work on lattice based cryptography? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 07:31 AM</span>
+
+            <div class="chatlog__message " data-message-id="734734142687936565" id="message-734734142687936565">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hi everyone,  I&#39;m a telecommunications engineering student specialised in network security .I have small experience with quantum cryptography: As my end of year project ,I worked on a quantum encrypted chat application using BB84 keys and OTP encryption. I look forward to learning more about this field and I&#39;m happy to join you guys <img class="emoji " alt="😃" title="😃" src="https://twemoji.maxcdn.com/2/72x72/1f603.png">
+</div><span class="mention" title="M.Yassine Ferjani#6896">@Anonymous</span> Ferjani</span> hey that sounds interersting. do you have anything you can share about it? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734410823233175572/2eed23eb6aa4c799b426ff303a3a7fad.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 07:32 AM</span>
+
+            <div class="chatlog__message " data-message-id="734734559433719889" id="message-734734559433719889">
+                <div class="chatlog__content">
+                    <div class="markdown">Hello </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/444097032185970699/25cf73ece093773af86d1ff9479e80c5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 07:39 AM</span>
+
+            <div class="chatlog__message " data-message-id="734736263612989461" id="message-734736263612989461">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="lorenzogentile404#0661">@Anonymous</span>  We&#39;ll be glad to have you. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 07:43 AM</span>
+
+            <div class="chatlog__message " data-message-id="734737234384650240" id="message-734737234384650240">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hello everyone, does someone work on lattice based cryptography?
+</div><span class="mention" title="Gamze#6471">@Anonymous</span> me </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 07:44 AM</span>
+
+            <div class="chatlog__message " data-message-id="734737498105708656" id="message-734737498105708656">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="ellessar#9486">@Anonymous</span>  are you from university? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 08:13 AM</span>
+
+            <div class="chatlog__message " data-message-id="734744805032067092" id="message-734744805032067092">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="ellessar#9486">@Anonymous</span> Hi bro yes i am working on sidh </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734745008313204737" id="message-734745008313204737">
+                <div class="chatlog__content">
+                    <div class="markdown">Will this group remain active after 31st ?? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 08:31 AM</span>
+
+            <div class="chatlog__message " data-message-id="734749350156173312" id="message-734749350156173312">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Gamze#6471">@Anonymous</span> me
+</div><span class="mention" title="ellessar#9486">@Anonymous</span> yeah </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734749425531879475" id="message-734749425531879475">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="ellessar#9486">@Anonymous</span> Hi bro yes i am working on sidh
+</div><span class="mention" title="Deepanshu Baisoya#3915">@Anonymous</span> Baisoya</span> should remain active after 31st. <span class="chatlog__edited-timestamp" title="20-Jul-20 08:38 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/444097032185970699/25cf73ece093773af86d1ff9479e80c5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 08:35 AM</span>
+
+            <div class="chatlog__message " data-message-id="734750430466146314" id="message-734750430466146314">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hi all, nice to connect with everyone. Any fellow QRNG researchers here?
+</div><span class="mention" title="Shash#8042">@Anonymous</span> No but i find it interesting too. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 08:52 AM</span>
+
+            <div class="chatlog__message " data-message-id="734754695360544788" id="message-734754695360544788">
+                <div class="chatlog__content">
+                    <div class="markdown">@Anonymous</span> can I contact you? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 08:53 AM</span>
+
+            <div class="chatlog__message " data-message-id="734754794471948350" id="message-734754794471948350">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">@Anonymous</span> can I contact you?
+</div><span class="mention" title="Gamze#6471">@Anonymous</span> yup. sent you a friend request </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/3.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 09:04 AM</span>
+
+            <div class="chatlog__message " data-message-id="734757507041329202" id="message-734757507041329202">
+                <div class="chatlog__content">
+                    <div class="markdown"><a href="https://www.linkedin.com/in/danialshehroz/">https://www.linkedin.com/in/danialshehroz/</a> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 09:04 AM</span>
+
+            <div class="chatlog__message " data-message-id="734757576679489626" id="message-734757576679489626">
+                <div class="chatlog__content">
+                    <div class="markdown">Sure <span class="mention" title="ellessar#9486">@Anonymous</span> ! Hope everyone are safe and sound!! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 12:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="734809727418105868" id="message-734809727418105868">
+                <div class="chatlog__content">
+                    <div class="markdown"><a href="https://in.linkedin.com/in/shakina-dunna-a952b9120">https://in.linkedin.com/in/shakina-dunna-a952b9120</a> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="734829399009918986" id="message-734829399009918986">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="DiscordHG#6847">@Anonymous</span> Garg</span>  I will share my project in the next few days <img class="emoji " alt="😉" title="😉" src="https://twemoji.maxcdn.com/2/72x72/1f609.png"> </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734829484288639027" id="message-734829484288639027">
+                <div class="chatlog__content">
+                    <div class="markdown">Anyone here interested in quantum cryptanalysis ? </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128064;" title="&#128064;" src="https://twemoji.maxcdn.com/2/72x72/1f440.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="✋" title="✋" src="https://twemoji.maxcdn.com/2/72x72/270b.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="734843337428697188" id="message-734843337428697188">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi, everyone </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 02:33 AM</span>
+
+            <div class="chatlog__message " data-message-id="735021654014427196" id="message-735021654014427196">
+                <div class="chatlog__content">
+                    <div class="markdown">hello everyone </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735021845719285800" id="message-735021845719285800">
+                <div class="chatlog__content">
+                    <div class="markdown">I work in quantum crypto via optics. I would like to connect with people and discuss </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735022152310587454" id="message-735022152310587454">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Deep#2595">@Anonymous</span> currently I am looking into QRNG </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735023820808650783" id="message-735023820808650783">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Shash#8042">@Anonymous</span> I am looking into Qrng for now </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/177022915747905536/a_c4f5c9ec0fd68ba2fb695226655e74a3.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 05:40 AM</span>
+
+            <div class="chatlog__message " data-message-id="735068647835303956" id="message-735068647835303956">
+                <div class="chatlog__content">
+                    <div class="markdown">For anyone doing research on quantum crypto: what percentage of your expertise is crypto and what percentage quantum?
+
+Please elaborate if you like! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 06:52 AM</span>
+
+            <div class="chatlog__message " data-message-id="735086772702150696" id="message-735086772702150696">
+                <div class="chatlog__content">
+                    <div class="markdown">well its hard to discern <span class="mention" title="Delta#5000">@Anonymous</span> Knowledge of  crypto isn&#39;t a pre-requisite but useful. Quantum is a pre-requisite. Since most of the physical realizations of quantum crypto involve quantum mechanical properties of the system in discussion. This is based on my experiences so far. So don&#39;t consider it a complete picture. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/177022915747905536/a_c4f5c9ec0fd68ba2fb695226655e74a3.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 06:53 AM</span>
+
+            <div class="chatlog__message " data-message-id="735087161774440468" id="message-735087161774440468">
+                <div class="chatlog__content">
+                    <div class="markdown">That is true, you would need to understand quantum capabilities in order to design crypto that utilises quantum phenomena </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735087277906067486" id="message-735087277906067486">
+                <div class="chatlog__content">
+                    <div class="markdown">But then again I feel like there could be two sides to it all? More crypto aligned people and more quantum /physics aligned people </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 06:59 AM</span>
+
+            <div class="chatlog__message " data-message-id="735088584247345192" id="message-735088584247345192">
+                <div class="chatlog__content">
+                    <div class="markdown">classical crypto is based on computational hardness. to make it secure, we want ot base it on principles  such that nature doesn&#39;t allow you to intercept and thus it is inherently secure </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 09:05 AM</span>
+
+            <div class="chatlog__message " data-message-id="735120220309684275" id="message-735120220309684275">
+                <div class="chatlog__content">
+                    <div class="markdown">Anyone interested in post-quantum crypto (don&#39;t confuse with quantum crypto)? </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="✅" title="✅" src="https://twemoji.maxcdn.com/2/72x72/2705.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/728828397995687956/eb704554084cd5961e23c894f0858b2e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 11:16 AM</span>
+
+            <div class="chatlog__message " data-message-id="735153225656696832" id="message-735153225656696832">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Anyone interested in post-quantum crypto (don&#39;t confuse with quantum crypto)?
+</div><span class="mention" title="anton1us_#0632">@Anonymous</span> +1 </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 11:20 AM</span>
+
+            <div class="chatlog__message " data-message-id="735154165285650577" id="message-735154165285650577">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Anyone interested in post-quantum crypto (don&#39;t confuse with quantum crypto)?
+</div><span class="mention" title="anton1us_#0632">@Anonymous</span>  +1 </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 11:27 AM</span>
+
+            <div class="chatlog__message " data-message-id="735155943427538975" id="message-735155943427538975">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Anyone interested in post-quantum crypto (don&#39;t confuse with quantum crypto)?
+</div><span class="mention" title="anton1us_#0632">@Anonymous</span> +1 </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128075;" title="&#128075;" src="https://twemoji.maxcdn.com/2/72x72/1f44b.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 12:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="735168010100277328" id="message-735168010100277328">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="vardaan#2116">@Anonymous</span> yes </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735168244825980981" id="message-735168244825980981">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="anton1us_#0632">@Anonymous</span>  yes </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 01:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="735179783276593273" id="message-735179783276593273">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="anton1us_#0632">@Anonymous</span> yes </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125719164158034/d75c1ec1aae5d0f4b041b1b88c8a3483.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 07:14 AM</span>
+
+            <div class="chatlog__message " data-message-id="735454737557749781" id="message-735454737557749781">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">But then again I feel like there could be two sides to it all? More crypto aligned people and more quantum /physics aligned people
+</div><span class="mention" title="Delta#5000">@Anonymous</span> I work on crypto and I am learning something now about quantum computing </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735454845720330240" id="message-735454845720330240">
+                <div class="chatlog__content">
+                    <div class="markdown">I believe the knowledge of both is equally important </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735455085856817174" id="message-735455085856817174">
+                <div class="chatlog__content">
+                    <div class="markdown">Unless you reason on cryptographic protocols in a completely abstract way </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735455259148681266" id="message-735455259148681266">
+                <div class="chatlog__content">
+                    <div class="markdown">In that case, if somebody gives you ideals functionalities (that can be implemented using quantum features), you potentially can completely ignore it the physics behind it </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735455852814663730" id="message-735455852814663730">
+                <div class="chatlog__content">
+                    <div class="markdown">However, since the mathematics used by quantum computing is so particular, I believe you need at least an understanding of quantum information theory </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735457077480390706" id="message-735457077480390706">
+                <div class="chatlog__content">
+                    <div class="markdown">Maybe somebody working on quantum cryptography can say more than me </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/177022915747905536/a_c4f5c9ec0fd68ba2fb695226655e74a3.gif" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 07:42 AM</span>
+
+            <div class="chatlog__message " data-message-id="735461867350130739" id="message-735461867350130739">
+                <div class="chatlog__content">
+                    <div class="markdown">well said! <span class="mention" title="lorenzogentile404#0661">@Anonymous</span> <span class="chatlog__edited-timestamp" title="22-Jul-20 07:42 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 04:43 AM</span>
+
+            <div class="chatlog__message " data-message-id="735779183812149329" id="message-735779183812149329">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="lorenzogentile404#0661">@Anonymous</span>  i don&#39;t work on quantum crypto, but i started as a CS major and took a crypto class my 2nd quarter, then did independent study on quantum key distribution.  i unpremeditately became a physics double major and learned quantum mechanics and quantum algorithms my junior year </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 04:51 AM</span>
+
+            <div class="chatlog__message " data-message-id="735781014118596618" id="message-735781014118596618">
+                <div class="chatlog__content">
+                    <div class="markdown">my undergrad uni hired a new professor last year, Professor Prabhanjan Ananth at UCSB, who taught a grad post quantum crypto class winter quarter and he ran a quantum crypto seminar in spring. i was really lucky he was hired the year before i graduated cuz imo it will take most unis a decade to even bureaucratically be capable of interdisciplinary quantum education at scale
+
+he didn&#39;t post pqc lecture notes, but his course site (<a href="https://sites.google.com/view/winter20)">https://sites.google.com/view/winter20)</a> has some of the links we found valuable - ex. highly recommend Chris Peikert&#39;s A Decade of Lattice Cryptography <span class="chatlog__edited-timestamp" title="23-Jul-20 04:53 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/3.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 11:21 AM</span>
+
+            <div class="chatlog__message " data-message-id="735879329652932698" id="message-735879329652932698">
+                <div class="chatlog__content">
+                    <div class="markdown">yup </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735879366575128779" id="message-735879366575128779">
+                <div class="chatlog__content">
+                    <div class="markdown">whats wrong with </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735879388419195011" id="message-735879388419195011">
+                <div class="chatlog__content">
+                    <div class="markdown">this group </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="❔" title="❔" src="https://twemoji.maxcdn.com/2/72x72/2754.png">
+                                <span class="chatlog__reaction-count">7</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/444097032185970699/25cf73ece093773af86d1ff9479e80c5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 12:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="735889690980253709" id="message-735889690980253709">
+                <div class="chatlog__content">
+                    <div class="markdown">Thanks Lia Yeh </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

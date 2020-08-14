@@ -1,0 +1,3618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Qiskit Global Summer School - quantum-mechanics-help</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+        @font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+#topWrelks{
+    width: 50px;
+    height: 16px;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    padding: 0.45rem 0.6333333333rem;
+    font-size: 1rem;
+    border-radius: 6rem;
+    color: #fff;
+    background-color: #fc4d50;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 0px;
+    height: 0px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 0px;
+    width: 0px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="https://wrelks.com/qssdiscord/b44c50254b6660944b720679911b8772056c8f6b/index.html" id="topWrelks">Back</a>
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/729706617951485954/8e1b64c57789ff06c248f35ae228ceaa.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Qiskit Global Summer School</div>
+        <div class="preamble__entry">Study Group / quantum-mechanics-help</div>
+
+        <div class="preamble__entry preamble__entry--small">This channel is dedicated for questions about the physics behind the topics discussed in the lectures. Given that there are people with varying backgrounds it would be really nice if the members with a physics/math or related background can answer others&#39; questions and share the wonders of quantum mechanics and quantum information theory with everyone else. Direct your physics related questions about definitions, theorems etc here :)</div>
+
+    </div>
+</div>
+
+<div class="chatlog">
+    <div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:28 PM</span>
+
+            <div class="chatlog__message " data-message-id="734824105861447812" id="message-734824105861447812">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi! Thank you for creating this channel</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693005105322262539/4dd14edd811c9780036b38f9509c43da.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="734824478663770138" id="message-734824478663770138">
+                <div class="chatlog__content">
+                    <div class="markdown">I am wondering in reality, how Alice and Bob shared / access same state on protocol (Bell States) if they are separated. and the communication among them only classical channel?</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734825034211786822" id="message-734825034211786822">
+                <div class="chatlog__content">
+                    <div class="markdown">here question again, what is the simple proof of no cloning theorem? can you explain it with no mathematical equation?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="734825223227965471" id="message-734825223227965471">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">I am wondering in reality, how Alice and Bob shared / access same state on protocol (Bell States) if they are separated. and the communication among them only classical channel?
+</div><span class="mention" title="kafka#8276">@Anonymous</span> The idea is that some time before, Alice and Bob were together and each took one part of a Bell state with them before separating</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734303813946703882/a1eecfb93a999c5c7083a2a86ffca6c0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="734825296007790723" id="message-734825296007790723">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">here question again, what is the simple proof of no cloning theorem? can you explain it with no mathematical equation?
+</div><span class="mention" title="kafka#8276">@Anonymous</span> that is a very tough job, as quantum stuff is not intuitive in the first place. But one way to think would be since you&#39;re uncertain of the outcome of the quantum experiment, how can you clone it.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:34 PM</span>
+
+            <div class="chatlog__message " data-message-id="734825504926072933" id="message-734825504926072933">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">I am wondering in reality, how Alice and Bob shared / access same state on protocol (Bell States) if they are separated. and the communication among them only classical channel?
+</div><span class="mention" title="kafka#8276">@Anonymous</span> so you are basically asking how teleportation works? i have attached the notes i made on telportation here. if you are interested you can read it. i attached it in thr group @Anonymous</span> i&#39;ll attach it again here</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="734825557480439931" id="message-734825557480439931">
+                <div class="chatlog__content">
+                    <div class="markdown"></div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734825554259345418/IMG_6085.JPG">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734825554259345418/IMG_6085.JPG" alt="Attachment">
+                    </a>
+                </div>
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="734825612975407156" id="message-734825612975407156">
+                <div class="chatlog__content">
+                    <div class="markdown"></div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734825609158459515/IMG_6086.JPG">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734825609158459515/IMG_6086.JPG" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734825614653259816" id="message-734825614653259816">
+                <div class="chatlog__content">
+                    <div class="markdown"></div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734825612111249468/IMG_6087.JPG">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734825612111249468/IMG_6087.JPG" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734825616146432085" id="message-734825616146432085">
+                <div class="chatlog__content">
+                    <div class="markdown"></div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734825612182814900/IMG_6088.JPG">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734825612182814900/IMG_6088.JPG" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693005105322262539/4dd14edd811c9780036b38f9509c43da.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:36 PM</span>
+
+            <div class="chatlog__message " data-message-id="734826005234974731" id="message-734826005234974731">
+                <div class="chatlog__content">
+                    <div class="markdown">thanks for the notes, but too small for me to read, and the discord do not show it (probably my web disord problem) unless i click it, can you made those images into pdf, please?</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734826094741422171" id="message-734826094741422171">
+                <div class="chatlog__content">
+                    <div class="markdown">Pinned a message.</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734826232046420048" id="message-734826232046420048">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="kafka#8276">@Anonymous</span> The idea is that some time before, Alice and Bob were together and each took one part of a Bell state with them before separating
+</div><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> I see, that makes sense though.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:38 PM</span>
+
+            <div class="chatlog__message " data-message-id="734826657440858254" id="message-734826657440858254">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">I am wondering in reality, how Alice and Bob shared / access same state on protocol (Bell States) if they are separated. and the communication among them only classical channel?
+</div><span class="mention" title="kafka#8276">@Anonymous</span> in layman terms teleporations gives you a chance to send information without actually <strong>physically</strong> transporting the information. like <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> explained, there is a prerequisite. 
+they need to have a part of a shared entangled qubit between them.
+so usually how it goes is that, alice and bob will prepare an entangled qubit pair, take a part of it and go their separate ways and safeguard it. this is their &quot;resource&quot; here. 
+when they want to communicate a qubit, a piece of quantum information but they don&#39;t have any access to a quantum channel through which they can send it, but only a conventional classical channel they can &quot;<em>sacrifice</em>&quot; (just to sound dramatic <img class="emoji " alt="😆" title="😆" src="https://twemoji.maxcdn.com/2/72x72/1f606.png"> ) that ebit they once made to achieve it<span class="chatlog__edited-timestamp" title="20-Jul-20 01:43 PM">(edited)</span></div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="734827408015753338" id="message-734827408015753338">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">thanks for the notes, but too small for me to read, and the discord do not show it (probably my web disord problem) unless i click it, can you made those images into pdf, please?
+</div><span class="mention" title="kafka#8276">@Anonymous</span> i couldnt upoad the pdf as it was large. but if the resolution is bad you can clock on the image and at the bottom click something like view original you can view the full size</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="734827476664057987" id="message-734827476664057987">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> thank you for your notes it is very awesome and useful ❤️</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="734827531584405515" id="message-734827531584405515">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="cos(x/2)|0&gt;+e^ix sin(x/2)|1&gt;#4399">@Anonymous</span> sin(x/2) |1&gt;</span> just text here</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693005105322262539/4dd14edd811c9780036b38f9509c43da.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="734827619048226816" id="message-734827619048226816">
+                <div class="chatlog__content">
+                    <div class="markdown">thanks, i just noticed the open original button <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"></div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="734827965795270656" id="message-734827965795270656">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="kafka#8276">@Anonymous</span> in layman terms teleporations gives you a chance to send information without actually <strong>physically</strong> transporting the information. like <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> explained, there is a prerequisite. 
+they need to have a part of a shared entangled qubit between them.
+so usually how it goes is that, alice and bob will prepare an entangled qubit pair, take a part of it and go their separate ways and safeguard it. this is there &quot;resource&quot; here. 
+when they want to communicate a qubit, a piece of quantum information but they don&#39;t have any access to a quantum channel through which they can send it, but only a convention classical channel they can &quot;<em>sacrifice</em>&quot; (just to sound dramatic <img class="emoji " alt="😆" title="😆" src="https://twemoji.maxcdn.com/2/72x72/1f606.png"> ) that ebit they once made to achieve it
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> to add on to this, the idea is that if you can find some way to consistently generate bell states, then you can use this &quot;resource&quot; to consistently teleport <strong>any</strong> initial state</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 01:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="734830987988566057" id="message-734830987988566057">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="kafka#8276">@Anonymous</span> that is a very tough job, as quantum stuff is not intuitive in the first place. But one way to think would be since you&#39;re uncertain of the outcome of the quantum experiment, how can you clone it.
+</div><span class="mention" title="psiPen#2521">@Anonymous</span>  giving the &quot;proof&quot; of no-cloning theorem would be like telling you how to swim by demonstrating on sand <img class="emoji " alt="😶" title="😶" src="https://twemoji.maxcdn.com/2/72x72/1f636.png">  
+but i can try to give an intuitive idea to see where it all stems from. 
+so, to get an idea there are a few things you need to keep in mind.
+
+1. <strong>arbitrary unknown state </strong> -&gt; you don&#39;t know anything about it
+
+2. there are two <em>flavours</em>? of this theorem. we usually prove it for pure states -&gt; no cloning theorem.
+we can also do it for mixed states -&gt; no-broadcast theorem. it&#39;s a corollary of the no cloning theorem. (there&#39;s also  the fancy no-deletion. it&#39;s like going down the rabbit hole <img class="emoji " alt="😆" title="😆" src="https://twemoji.maxcdn.com/2/72x72/1f606.png">  <img class="emoji " alt="🐰" title="🐰" src="https://twemoji.maxcdn.com/2/72x72/1f430.png">  
+
+3.   this is how the proof goes 
+<strong>step 01</strong> :  we have two systems. one is for Alice, the other for Bob. and alice wants to copy an unknown arbitrary state  (she has no prior knowledge about it). She wants to try and find a way with which she can copy this state &quot;IDK_alice&quot; into Bob&#39;s system. For that she starts by taking a <strong>blank</strong> state from Bob&#39;s system  &quot;BLANK_bob&quot;. and she&#39;s aiming for the <em>product</em> state 
+|IDK_alice BLANK_bob&gt; 
+
+<strong>step 02</strong> :  Alice is given a critical choice between two operations she can do to manipulate her IDK_alice state. 
+       <em>option A</em>: she can observe it (if she does it, all is doomed. the state will collapse and she doesnt want it to happen)
+        <em>option B</em> : she could be patient and wait for |IDK_alice BLANK_bob&gt; combined system to evolve in time by controlling something called the Hamiltonian of the combined system.   
+
+she&#39;s a wise girl, so chooses B<span class="chatlog__edited-timestamp" title="20-Jul-20 02:18 PM">(edited)</span></div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:18 PM</span>
+
+            <div class="chatlog__message " data-message-id="734836676245061642" id="message-734836676245061642">
+                <div class="chatlog__content">
+                    <div class="markdown"><strong>step 03</strong> : after letting it evolve for a finite time period, what she will get is a univeral unitary operator on the Alice-Bob combined sytem (to be specific and correct hilbert space)
+this is where things get whacky. there&#39;s no universal unitary operator in this combined system that can give you the ability to copy <strong>all</strong> whatever state you throw at it. (it&#39;s an arbitrary state, right? so that&#39;s why we need to think of all the possible states ) 
+this is the part where the fancy math gets thrown in and it&#39;s proved that there&#39;s no universal unitary gate that could clone all the possible states. i&#39;m sorry but i really don&#39;t know how to explain it with just words <img class="emoji " alt="😶" title="😶" src="https://twemoji.maxcdn.com/2/72x72/1f636.png"> . hope <span class="mention" style="color: rgb(155, 89, 182); background-color: rgba(155, 89, 182, 0.1);">@Anonymous</span>  could help?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="734845048264458300" id="message-734845048264458300">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><strong>step 03</strong> : after letting it evolve for a finite time period, what she will get is a univeral unitary operator on the Alice-Bob combined sytem (to be specific and correct hilbert space)
+this is where things get whacky. there&#39;s no universal unitary operator in this combined system that can give you the ability to copy <strong>all</strong> whatever state you throw at it. (it&#39;s an arbitrary state, right? so that&#39;s why we need to think of all the possible states ) 
+this is the part where the fancy math gets thrown in and it&#39;s proved that there&#39;s no universal unitary gate that could clone all the possible states. i&#39;m sorry but i really don&#39;t know how to explain it with just words <img class="emoji " alt="😶" title="😶" src="https://twemoji.maxcdn.com/2/72x72/1f636.png"> . hope <span class="mention" style="color: rgb(155, 89, 182); background-color: rgba(155, 89, 182, 0.1);">@Anonymous</span>  could help?
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> Yes I guess this is the most you can do without going through the math. I think this is somewhat similar to the approach by Nielsen and Chuang except it&#39;s supplemented with a short calculation. The key point is that a cloner would have to be able to clone an <strong>arbitrary</strong> state. You can certainly come up with a unitary operator that can clone <strong>some</strong> states but not <strong>all</strong></div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693005105322262539/4dd14edd811c9780036b38f9509c43da.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="734861332729561218" id="message-734861332729561218">
+                <div class="chatlog__content">
+                    <div class="markdown">thanks to all your effort <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> and <span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> it is good enough for my first question. for second question, i see it&#39;s so hard to not give explanation without mathematical expression .
+i just found crazily good explanation with very simple math to proof no-cloning theorem, it just mindblowing how intuitive and straightforward the logic is .
+<a href="https://www.youtube.com/watch?v=owPC60Ue0BE">https://www.youtube.com/watch?v=owPC60Ue0BE</a></div>
+                </div>
+
+
+            <div class="chatlog__embed">
+                <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+                <div class="chatlog__embed-content-container">
+                    <div class="chatlog__embed-content">
+                        <div class="chatlog__embed-text">
+                            <div class="chatlog__embed-author">
+
+                                <span class="chatlog__embed-author-name">
+                                    <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg">minutephysics</a>
+                                </span>
+                            </div>
+
+                            <div class="chatlog__embed-title">
+                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=owPC60Ue0BE"><div class="markdown">The No Cloning Theorem</div></a>
+                            </div>
+
+                            <div class="chatlog__embed-description"><div class="markdown">Support MinutePhysics on Patreon: <a href="http://www.patreon.com/minutephysics">http://www.patreon.com/minutephysics</a>
+
+Three Blue One Brown: <a href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw">https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</a>
+
+Why you can’t clone Schr&#246;dinger’s cat: this video presents the full proof of the “No Cloning” Theorem in Quantum Mechanics –&#160;...</div></div>
+
+                        </div>
+
+                        <div class="chatlog__embed-thumbnail-container">
+                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/owPC60Ue0BE/maxresdefault.jpg">
+                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/owPC60Ue0BE/maxresdefault.jpg" alt="Thumbnail">
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="734865851781611611" id="message-734865851781611611">
+                <div class="chatlog__content">
+                    <div class="markdown">Im assuming that absolute square is just the absolute value of an expression squared?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/611762884464082945/da0352ddc0eec948d7116b2fd867977d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:21 PM</span>
+
+            <div class="chatlog__message " data-message-id="734867523404562552" id="message-734867523404562552">
+                <div class="chatlog__content">
+                    <div class="markdown">Unless there is an imaginary part</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734867749947310132" id="message-734867749947310132">
+                <div class="chatlog__content">
+                    <div class="markdown">Taking the square first then absolute after will result in a positive, while taking absolute first then squaring it will give you a negative</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="734867907577774080" id="message-734867907577774080">
+                <div class="chatlog__content">
+                    <div class="markdown">So either way, we take the absolute value of the expression</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734867919888187505" id="message-734867919888187505">
+                <div class="chatlog__content">
+                    <div class="markdown">and <em>then</em> square it?<span class="chatlog__edited-timestamp" title="20-Jul-20 04:22 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/611762884464082945/da0352ddc0eec948d7116b2fd867977d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="734868025706283108" id="message-734868025706283108">
+                <div class="chatlog__content">
+                    <div class="markdown">I think so</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693005105322262539/4dd14edd811c9780036b38f9509c43da.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:25 PM</span>
+
+            <div class="chatlog__message " data-message-id="734868616356429845" id="message-734868616356429845">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="thing#1620">@Anonymous</span> Majboor</span> quantum state involve complex number, the definition of absolute square of complex number is given as follow :
+
+z = a + ib
+|z| = zz* = (a + ib) * (a - ib) = a^2 + b^2
+
+where a* is conjugate of a
+this also true for vector quantity
+z = (a b c)
+|z| = (a b c)  (a b c)* = aa* + bb* + cc*</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734869047992254586" id="message-734869047992254586">
+                <div class="chatlog__content">
+                    <div class="markdown">i forgot the square after the absolute, but yeah like that.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="734870649813598220" id="message-734870649813598220">
+                <div class="chatlog__content">
+                    <div class="markdown">Ok</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734870904315838689" id="message-734870904315838689">
+                <div class="chatlog__content">
+                    <div class="markdown">Ooooh and ok I now understand and also i just realized so bra-ket is the dot product of the row and the column vector, while ket-bra is the dot product of the column and then the row vector<span class="chatlog__edited-timestamp" title="20-Jul-20 04:35 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734870974083760241" id="message-734870974083760241">
+                <div class="chatlog__content">
+                    <div class="markdown">which are different since matrix multiplication is not communative</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734663195540586518/aada6f24667c57b231091c120e0994ce.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:40 PM</span>
+
+            <div class="chatlog__message " data-message-id="734872444157952050" id="message-734872444157952050">
+                <div class="chatlog__content">
+                    <div class="markdown">Not really, bra-ket is the inner product. While ket-bra is the outer product
+&lt;a|b&gt; (bra-ket, inner product), |b&gt;&lt;a| (ket-bra, outer product)<span class="chatlog__edited-timestamp" title="20-Jul-20 04:41 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693005105322262539/4dd14edd811c9780036b38f9509c43da.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="734873666239594517" id="message-734873666239594517">
+                <div class="chatlog__content">
+                    <div class="markdown">again braket is simply notation for vector of quantum states
+bra is 1xN vector, while ket is Nx1 vector
+
+in matrix oepration, or linear algebra  the matrix multiplcation is given as follow
+MxN (times) NxK = MxK
+
+so,
+when you operate braket it means = 1xN (times) Nx1 = 1 , it gives a number
+when you operate ketbra it means = Nx1 (times) 1xN = NxN, it gives a matrix.</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734873839200370739" id="message-734873839200370739">
+                <div class="chatlog__content">
+                    <div class="markdown">inner product is another way to say dot product</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="734875823537913896" id="message-734875823537913896">
+                <div class="chatlog__content">
+                    <div class="markdown">Ok. I understand.</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734875846539608145" id="message-734875846539608145">
+                <div class="chatlog__content">
+                    <div class="markdown">Thx <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="734878919530119250" id="message-734878919530119250">
+                <div class="chatlog__content">
+                    <div class="markdown">for a matrix that&#39;s bigger than 2x2, how would you write it in dirac notation?
+in this example, she used an outer product, but how will it look like if its bigger than 2x2?</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734878927042117713" id="message-734878927042117713">
+                <div class="chatlog__content">
+                    <div class="markdown"></div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734878924944965772/unknown.png">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734878924944965772/unknown.png" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693005105322262539/4dd14edd811c9780036b38f9509c43da.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="734880521095741472" id="message-734880521095741472">
+                <div class="chatlog__content">
+                    <div class="markdown">what do you mean? for Nx1 or 1xN the dirac notation for outer product always has been |state 1&gt;&lt;state 2|</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734880574585700392" id="message-734880574585700392">
+                <div class="chatlog__content">
+                    <div class="markdown">it will eventually gives NxN matrix</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="734881150324965469" id="message-734881150324965469">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">for a matrix that&#39;s bigger than 2x2, how would you write it in dirac notation?
+in this example, she used an outer product, but how will it look like if its bigger than 2x2?
+</div><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span> outer product of the respective basis... say we have 3 qubuts. So 1st elements for a 3x3 matrix is expressed in dirac notation as.. |000&gt;&lt;000|</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍🏻" title="👍🏻" src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fb.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734663195540586518/aada6f24667c57b231091c120e0994ce.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="734881631218696194" id="message-734881631218696194">
+                <div class="chatlog__content">
+                    <div class="markdown">with a 4x4 is already quite annoying to write it down generically:
+<span class="pre pre--inline">u_0000|00&gt;&lt;00| + u_0001|00&gt;&lt;01| + ... + </span> (for all 16 elements)</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="734882240961445938" id="message-734882240961445938">
+                <div class="chatlog__content">
+                    <div class="markdown">So that means for an n qubit gate, I&#39;ll have a matrix that&#39;s 2^n x 2^n dimensions and that it will have <span class="pre pre--inline">|n-digits&gt;&lt;n-digits|</span>?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="734882419458703442" id="message-734882419458703442">
+                <div class="chatlog__content">
+                    <div class="markdown">Nxn matrix</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="734882459149139999" id="message-734882459149139999">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">inner product is another way to say dot product
+</div><span class="mention" title="kafka#8276">@Anonymous</span>  it is an oversimplification. But I think this is enough for applications with in the scope of this school. 
+For anyone who’s well versed in linear algebra, this is the proper explanation.
+Ket-&gt; represents the state vector like what everyone said
+The definition of bra is what a lot of people overlook
+Bra is the <strong>dual</strong> / covector of ket living in the dual space of the the vector space in which the ket lives. So the braket is Basically a linear functional mapping from the vector space into the field of complex numbers.</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734882935278403625" id="message-734882935278403625">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">for a matrix that&#39;s bigger than 2x2, how would you write it in dirac notation?
+in this example, she used an outer product, but how will it look like if its bigger than 2x2?
+</div><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span>  it depends on the dimension of the ket and bra that you are using to do the outer product. If you use qudits (more than 2 dimensions unlike qubits) you will get an operator/matrix as your outer product with a higher dimension</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍🏻" title="👍🏻" src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fb.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="734883011727720510" id="message-734883011727720510">
+                <div class="chatlog__content">
+                    <div class="markdown">I thin a simple explanation is that a bra is the complex conjugate (I becomes -i ) and then transposed (row becomes column)</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734883061363114005" id="message-734883061363114005">
+                <div class="chatlog__content">
+                    <div class="markdown">And I dont think it matters which way round</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734883220369440798" id="message-734883220369440798">
+                <div class="chatlog__content">
+                    <div class="markdown">And then matrix manipulation takes care of the inner product when you consider what comes first</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:27 PM</span>
+
+            <div class="chatlog__message " data-message-id="734884290785050785" id="message-734884290785050785">
+                <div class="chatlog__content">
+                    <div class="markdown">How do you multiply 2 things that are in dirac notation?
+Doesn&#39;t <span class="pre pre--inline">(a+b) x (c+d) = ac + ad + bc + bd</span>?
+
+edit: I figured it out<span class="chatlog__edited-timestamp" title="20-Jul-20 05:30 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734884312255823975" id="message-734884312255823975">
+                <div class="chatlog__content">
+                    <div class="markdown"></div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734884308342276207/unknown.png">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734884308342276207/unknown.png" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:28 PM</span>
+
+            <div class="chatlog__message " data-message-id="734884564471906346" id="message-734884564471906346">
+                <div class="chatlog__content">
+                    <div class="markdown">Is it right to assume that in the inner product it&#39;s a &lt;1x2| multiplied by the |2x1&gt; matrix where the 1x2 is the complex conjugate? And similarly for nx1</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734885050012663859" id="message-734885050012663859">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span> I think the lecturer was using the fact that it the fact that when you do multiply them out some of the terms are equal to zero because they are orthogonal</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="734885143109566597" id="message-734885143109566597">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span> I think the lecturer was using the fact that it the fact that when you do multiply them out some of the terms are equal to zero because they are orthogonal
+</div><span class="mention" title="abubakrqaasim#0572">@Anonymous</span> Yea I just realized, thanks!</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="734885236034502677" id="message-734885236034502677">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span> no problem</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="734885438359077036" id="message-734885438359077036">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">How do you multiply 2 things that are in dirac notation?
+Doesn&#39;t <span class="pre pre--inline">(a+b) x (c+d) = ac + ad + bc + bd</span>?
+</div><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span>  yeah we are expanding things here like you showed. Let’s take the first term here. It will be 1/sqrt(2) * |0&gt;&lt;0|0&gt;.
+Remember that a braket/inner product of a vector with itself will give the norm. 
+Norm of |0&gt; is 1. So &lt;0|0&gt; is just 1. Similarly you expand the other terms and the end result is only written with the intermediate steps skipped</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍🏻" title="👍🏻" src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fb.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/694531951133982780/75d0516d8af7f08c4327cbf0de945cdf.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="734890315395366992" id="message-734890315395366992">
+                <div class="chatlog__content">
+                    <div class="markdown">What are Eigen states?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:53 PM</span>
+
+            <div class="chatlog__message " data-message-id="734890709869396040" id="message-734890709869396040">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">What are Eigen states?
+</div><span class="mention" title="Srishti Singh#0401">@Anonymous</span> Singh</span>  could you tell me your background eg: high school student or undergrad or knows linear algebra? So that I can explain accordingly</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693005105322262539/4dd14edd811c9780036b38f9509c43da.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="734890896239231029" id="message-734890896239231029">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="kafka#8276">@Anonymous</span>  it is an oversimplification. But I think this is enough for applications with in the scope of this school. 
+For anyone who’s well versed in linear algebra, this is the proper explanation.
+Ket-&gt; represents the state vector like what everyone said
+The definition of bra is what a lot of people overlook
+Bra is the <strong>dual</strong> / covector of ket living in the dual space of the the vector space in which the ket lives. So the braket is Basically a linear functional mapping from the vector space into the field of complex numbers.
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> 
+
+yes thank you, I am aware of the inner product outside vector space. but, <span class="mention" title="thing#1620">@Anonymous</span> Majboor</span> is just highschooler, so i just keep the language is simply as possible, and avoid advanced mathematical term.</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/694531951133982780/75d0516d8af7f08c4327cbf0de945cdf.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:54 PM</span>
+
+            <div class="chatlog__message " data-message-id="734890966225256510" id="message-734890966225256510">
+                <div class="chatlog__content">
+                    <div class="markdown">undergrad in CSE</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734891196836479016" id="message-734891196836479016">
+                <div class="chatlog__content">
+                    <div class="markdown">Also, what do these symbols represent?</div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734891193644875856/Screenshot_640_LI.jpg">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734891193644875856/Screenshot_640_LI.jpg" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="734891493843533892" id="message-734891493843533892">
+                <div class="chatlog__content">
+                    <div class="markdown">If you have a quantum state, |psi&gt; with multiple qubits, how do you know if the qubits are entangled, tensored together, or both (some entangled, some tensored together)?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/3.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:57 PM</span>
+
+            <div class="chatlog__message " data-message-id="734891862149824542" id="message-734891862149824542">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Srishti Singh#0401">@Anonymous</span> Singh</span> pauli matrices</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:57 PM</span>
+
+            <div class="chatlog__message " data-message-id="734891873470251098" id="message-734891873470251098">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Also, what do these symbols represent?
+</div><span class="mention" title="Srishti Singh#0401">@Anonymous</span> Singh</span> they represent a special kind of matrix/operator the Pauli matrices / operators... there are 3,  X Y Z</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 06:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="734892813602258956" id="message-734892813602258956">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">undergrad in CSE
+</div><span class="mention" title="Srishti Singh#0401">@Anonymous</span> Singh</span>  okay so I’ll assume you’ll learn linear algebra very soon. 
+You have something called linear operators (they can be represented and are equivalent to finite dimensional matrices in finite vector space). They can act on vectors. 
+ So let’s say you have an operator A and it’s acting of a vector X. If the outcome is again a scalar multiplication of X such as cX then X is called the eigenvectors of A and c the eigenvalue of A. 
+AX=cX
+They are very important in quantum mechanics because the postulates of QM state that we consider our observables (could be anything like angular momentum, spin, position etc) to be a <strong>linear operator</strong>. And the outcomes you get when you measure an observable will be one of the possible eigenvalues of that operator/matrix.
+And the state collapses to the corresponding eigenvector state after that.</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125704870101094/6118386707938d73693d86ec2ce13e62.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 06:02 PM</span>
+
+            <div class="chatlog__message chatlog__message--pinned" data-message-id="734892974328250441" id="message-734892974328250441">
+                <div class="chatlog__content">
+                    <div class="markdown">The X gate</div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734892971257888868/image0.gif">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734892971257888868/image0.gif" alt="Attachment">
+                    </a>
+                </div>
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">3</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="734893048785535036" id="message-734893048785535036">
+                <div class="chatlog__content">
+                    <div class="markdown">The Y gate</div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734893046268821547/image0.gif">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734893046268821547/image0.gif" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734893099079434322" id="message-734893099079434322">
+                <div class="chatlog__content">
+                    <div class="markdown">The Z gate</div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734893095778517002/image0.gif">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734893095778517002/image0.gif" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734893148290940967" id="message-734893148290940967">
+                <div class="chatlog__content">
+                    <div class="markdown">For better visualization</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 06:04 PM</span>
+
+            <div class="chatlog__message " data-message-id="734893508078469223" id="message-734893508078469223">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">If you have a quantum state, |psi&gt; with multiple qubits, how do you know if the qubits are entangled, tensored together, or both (some entangled, some tensored together)?
+</div><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span>  you can try distinguishing them by checking whether the corresponding state can be written as a product state or not. If it’s can’t be written as a product state then it’s entangled 
+
+Side kick physics point for those interested in more :
+The physics begins it is to check the density matrices</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/694531951133982780/75d0516d8af7f08c4327cbf0de945cdf.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 06:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="734893937197711410" id="message-734893937197711410">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Srishti Singh#0401">@Anonymous</span> Singh</span>  okay so I’ll assume you’ll learn linear algebra very soon. 
+You have something called linear operators (they can be represented and are equivalent to finite dimensional matrices in finite vector space). They can act on vectors. 
+ So let’s say you have an operator A and it’s acting of a vector X. If the outcome is again a scalar multiplication of X such as cX then X is called the eigenvectors of A and c the eigenvalue of A. 
+AX=cX
+They are very important in quantum mechanics because the postulates of QM state that we consider our observables (could be anything like angular momentum, spin, position etc) to be a <strong>linear operator</strong>. And the outcomes you get when you measure an observable will be one of the possible eigenvalues of that operator/matrix.
+And the state collapses to the corresponding eigenvector state after that.
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> got it, thank you</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 06:07 PM</span>
+
+            <div class="chatlog__message " data-message-id="734894275392831569" id="message-734894275392831569">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span>  you can try distinguishing them by checking whether the corresponding state can be written as a product state or not. If it’s can’t be written as a product state then it’s entangled 
+</div>&gt; 
+<div class="quote">Side kick physics point for those interested in more :
+The physics begins it is to check the density matrices
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> So is it more like a trail and error method, or is there a distinct method?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 06:11 PM</span>
+
+            <div class="chatlog__message " data-message-id="734895296328368199" id="message-734895296328368199">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> So is it more like a trail and error method, or is there a distinct method?
+</div><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span>  it’s not a trial and error method. For simpler states which I assume are the only kinds you will come across it’s easy to look at them and say whether you can factorize them and write as a tensor product between two distinct systems. 
+I could give you a very very very lame explanation. Let’s say you have a fruit basket with Apples and oranges and another with just apple and orange mix  smoothie.
+In the first basket you can separate the apples and oranges into two separate baskets just by looking at them. (Product state)
+You can’t in the case of the smoothie (entangled)</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734895392092848142" id="message-734895392092848142">
+                <div class="chatlog__content">
+                    <div class="markdown">I’m sorry, my explanations are getting lamer as I feel sleepy <img class="emoji " alt="😶" title="😶" src="https://twemoji.maxcdn.com/2/72x72/1f636.png"></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 06:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="734896128323223583" id="message-734896128323223583">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span>  it’s not a trial and error method. For simpler states which I assume are the only kinds you will come across it’s easy to look at them and say whether you can factorize them and write as a tensor product between two distinct systems. 
+I could give you a very very very lame explanation. Let’s say you have a fruit basket with Apples and oranges and another with just apple and orange mix  smoothie.
+In the first basket you can separate the apples and oranges into two separate baskets just by looking at them. (Product state)
+You can’t in the case of the smoothie (entangled)
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> Ah I see, thanks!</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/694531951133982780/75d0516d8af7f08c4327cbf0de945cdf.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 07:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="734910138766459025" id="message-734910138766459025">
+                <div class="chatlog__content">
+                    <div class="markdown">Pinned a message.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734314567060160574/59f3850e174423867a61b82bc7fff5cc.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 07:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="734918817645330453" id="message-734918817645330453">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Also, what do these symbols represent?
+</div><span class="mention" title="Srishti Singh#0401">@Anonymous</span> Singh</span>  these ar 3 pauli matrices . Along with identity matrix ( represnted as 
+    σ0), we can represent any quantum state in these 4 matrices. they have property of being Hermitian and their eigen value is one. these 4 matrices form the a basis for the real vector space of 2 &#215; 2 Hermitian matrices. ( for understanding you can take it as an axis lkie in 3d i.e x, y and z which is used to represent a point. in the same way these matrices is used to represent quantum state)</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="734918999065755648" id="message-734918999065755648">
+                <div class="chatlog__content">
+                    <div class="markdown">like*</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 08:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="734926541481574512" id="message-734926541481574512">
+                <div class="chatlog__content">
+                    <div class="markdown">Ok, so the absolute square of -2-3i would be -5+6i?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 08:46 PM</span>
+
+            <div class="chatlog__message " data-message-id="734934286419099752" id="message-734934286419099752">
+                <div class="chatlog__content">
+                    <div class="markdown">And normalizing a matrix just means reduced row echelon form?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 09:02 PM</span>
+
+            <div class="chatlog__message " data-message-id="734938227005194272" id="message-734938227005194272">
+                <div class="chatlog__content">
+                    <div class="markdown">Ok, and phi is Φ wwhich is a constant.</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734938665360556043" id="message-734938665360556043">
+                <div class="chatlog__content">
+                    <div class="markdown">Whenever we transpose a quantum state vector, we always complex conjugate it? (sorry for the amount of questions, i am researching before asking, and then asking whatever i am confused about).</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 09:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="734941431713628593" id="message-734941431713628593">
+                <div class="chatlog__content">
+                    <div class="markdown">so are thse placeholder values, like theta?</div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734941429939568700/whatisthisone.PNG">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734941429939568700/whatisthisone.PNG" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734941822589206608" id="message-734941822589206608">
+                <div class="chatlog__content">
+                    <div class="markdown"></div>
+                </div>
+
+                <div class="chatlog__attachment">
+                    
+                    <a href="https://cdn.discordapp.com/attachments/734821376522715229/734941820110241822/placeholderpossibly.PNG">
+                        
+                            <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734821376522715229/734941820110241822/placeholderpossibly.PNG" alt="Attachment">
+                    </a>
+                </div>
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 10:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="734954202035388488" id="message-734954202035388488">
+                <div class="chatlog__content">
+                    <div class="markdown">Ok, I have found that the 1st one is a different way to write the constant phi (is this correct?)</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="✅" title="✅" src="https://twemoji.maxcdn.com/2/72x72/2705.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="734954288018882623" id="message-734954288018882623">
+                <div class="chatlog__content">
+                    <div class="markdown">and the 2nd one is a placeholder for wave functions? (is this correct?)<span class="chatlog__edited-timestamp" title="20-Jul-20 10:06 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 10:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="734956678948061194" id="message-734956678948061194">
+                <div class="chatlog__content">
+                    <div class="markdown">so the representation of qubit states on a bloch-sphere and q-sphere are arbitrary ways for us to be able to visualise a qubit&#39;s states? This is because qubits are represented by wave functions which are not actually in space?<span class="chatlog__edited-timestamp" title="20-Jul-20 10:16 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/654361724178137129/6e388e0f8146191ae836b1aee11a7310.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 10:55 PM</span>
+
+            <div class="chatlog__message " data-message-id="734966878208000163" id="message-734966878208000163">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">so the representation of qubit states on a bloch-sphere and q-sphere are arbitrary ways for us to be able to visualise a qubit&#39;s states? This is because qubits are represented by wave functions which are not actually in space?
+</div><span class="mention" title="thing#1620">@Anonymous</span> Majboor</span> 
+
+Sorta - qubits can be fully described by two complex numbers, and one way of representing those two complex numbers is on the bloch sphere</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/587046186804969512/a65246379fe0b48bde11a07879fe9264.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 11:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="734971733731311628" id="message-734971733731311628">
+                <div class="chatlog__content">
+                    <div class="markdown">Ok. Thank you.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 02:18 AM</span>
+
+            <div class="chatlog__message " data-message-id="735017799981727776" id="message-735017799981727776">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">so the representation of qubit states on a bloch-sphere and q-sphere are arbitrary ways for us to be able to visualise a qubit&#39;s states? This is because qubits are represented by wave functions which are not actually in space?
+</div><span class="mention" title="thing#1620">@Anonymous</span> Majboor</span>  they ARE in space. They exist!! That’s what the normalization is there to ensure. And yes, like <span class="mention" title="Chunny#4174">@Anonymous</span> said it’s to have a geometric visualization</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/693005105322262539/4dd14edd811c9780036b38f9509c43da.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 02:23 AM</span>
+
+            <div class="chatlog__message " data-message-id="735019108126425088" id="message-735019108126425088">
+                <div class="chatlog__content">
+                    <div class="markdown">I am wondering, when we are simulating quantum circuit on local (classical) computer, what is backend simulation really doing? just it simply sampling the probability from pseudo-random generator or what?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/373581967733555201/a203fba67ddd458037e30e9c882c8084.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 02:26 AM</span>
+
+            <div class="chatlog__message " data-message-id="735019865118867518" id="message-735019865118867518">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="thing#1620">@Anonymous</span> Majboor</span>  they ARE in space. They exist!! That’s what the normalization is there to ensure. And yes, like <span class="mention" title="Chunny#4174">@Anonymous</span> said it’s to have a geometric visualization
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> Not sure how correct it is to say that wavefunctions exists, since we cannot actually measure wavefunctions.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/372045754195378176/f33844549b6ee367c82d40ead51678a7.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 02:30 AM</span>
+
+            <div class="chatlog__message " data-message-id="735020896217202750" id="message-735020896217202750">
+                <div class="chatlog__content">
+                    <div class="markdown">Hey what is the use or importance of phase of qubits?
+
+Message <span class="mention">#quantum-reference</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 02:32 AM</span>
+
+            <div class="chatlog__message " data-message-id="735021434681819178" id="message-735021434681819178">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> Not sure how correct it is to say that wavefunctions exists, since we cannot actually measure wavefunctions.
+</div><span class="mention" title="soham#7966">@Anonymous</span>  yeah of course. I wasn’t talking about dangling waves hanging around in space. I meant what they represent in physical reality. Like the wave function of an electron. Wave function is the mathematical entity that lives in complex field (mathematical term field) to represent the actual electron living in the physical world. That’s what I meant.</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/372045754195378176/f33844549b6ee367c82d40ead51678a7.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 03:07 AM</span>
+
+            <div class="chatlog__message " data-message-id="735030252316917831" id="message-735030252316917831">
+                <div class="chatlog__content">
+                    <div class="markdown">Hey If light has no mass then howcan it be deflected by gravity?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/192691163084357632/73fbd0518a0321b1a0cb71782587ca3d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 03:11 AM</span>
+
+            <div class="chatlog__message " data-message-id="735031306605428757" id="message-735031306605428757">
+                <div class="chatlog__content">
+                    <div class="markdown">Gravity distorts space-time, which bends the path traveled by the photon <a href="https://astronomy.com/magazine/ask-astro/2019/09/how-does-gravity-affect-photons-that-is-bend-light-if-photons-have-no-mass">https://astronomy.com/magazine/ask-astro/2019/09/how-does-gravity-affect-photons-that-is-bend-light-if-photons-have-no-mass</a><span class="chatlog__edited-timestamp" title="21-Jul-20 03:12 AM">(edited)</span></div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="735032063518048318" id="message-735032063518048318">
+                <div class="chatlog__content">
+                    <div class="markdown">A black hole has such a strong gravitational field that any light inside the black hole will curve inward, preventing it from escaping</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 03:18 AM</span>
+
+            <div class="chatlog__message " data-message-id="735032991725781022" id="message-735032991725781022">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hey If light has no mass then howcan it be deflected by gravity?
+</div><span class="mention" title="EnigmA#5092">@Anonymous</span>  &quot;gravity&quot; is the intrinsic nature of space-time fabric. light travels through space-time. if the space-time fabric is warped due to presence of mass the light traversing through will travel along the fabric as it is. i think i&#39;m doing a bad job of explaining it <img class="emoji " alt="😶" title="😶" src="https://twemoji.maxcdn.com/2/72x72/1f636.png">  i could also give an oversimplified example. take an unblown balloon. draw a straight line on it. then blow it, the balloon expands, but the line you drew on the surface is still there, but it&#39;t not straight in the same sense of the 2D line you drew before.
+the key idea here is to think about how different things are in euclidean space geometry (the normal flat things we generally talk about ) and riemannian geometry (curved space). it&#39;s the latter we need to think about.
+the normal pythagoras theorem everyone knows is on flat spaces. that sum of square of sides is not equal to hypotenuse squared in curved spaces.
+p.s: that balloon example was just to give you an example of how geomtry varies. that expnasion is not how gravity works</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 03:36 AM</span>
+
+            <div class="chatlog__message " data-message-id="735037524589805667" id="message-735037524589805667">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hey If light has no mass then howcan it be deflected by gravity?
+</div><span class="mention" title="EnigmA#5092">@Anonymous</span> photons have energy that in GR is &quot;equivalent&quot;  to  mass</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 03:48 AM</span>
+
+            <div class="chatlog__message " data-message-id="735040413403971646" id="message-735040413403971646">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="EnigmA#5092">@Anonymous</span> photons have energy that in GR is &quot;equivalent&quot;  to  mass
+</div><span class="mention" title="edoardo#7645">@Anonymous</span>  this is misleading and it’s semantically wrong in physics. This is the relativistic mass. 
+Mass is actually the invariant mass. Photons have non zero relativistic mass and zero invariant mass. Relativistic mass is equivalent to energy, which is why relativistic mass is not a commonly used term nowadays.  In the modern view &quot;mass&quot; is not equivalent to energy; mass is just that part of the energy of a body which is not kinetic energy.  Mass is independent of velocity whereas energy is not.</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 03:55 AM</span>
+
+            <div class="chatlog__message " data-message-id="735042315386880020" id="message-735042315386880020">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hey If light has no mass then howcan it be deflected by gravity?
+</div><span class="mention" title="EnigmA#5092">@Anonymous</span>  to give you the exact answer, all particles (photons included) moves along geodesics according to general relativity. And this path they take is independent of their mass. Another way to say is the photon has momentum and energy that couples to gravity. 
+—————————
+I do not expect you to understand what comes below, but I’m just leaving it out here to satisfy the curious minds <img class="emoji " alt="😊" title="😊" src="https://twemoji.maxcdn.com/2/72x72/1f60a.png">
+
+If you know about the concept of 4-vectors and need a technical answer:
+Just like how you have electric charges in electric field, you have an analogue here. It’s the energy-momentum 4-vector of a particle that does the job. Just like charge you also have an equivalent to electric current in general relativity. It’s a quantity known as energy-momentum stress tensor. The energy and momentum of light also generates curvature of spacetime, so general relativity predicts that light will <em>attract objects gravitationally</em>.  But this effect is far too weak to be measured.  The gravitational effect of photons does not have any cosmological effects either (but it did shortly after big bang though)</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="❤️" title="❤️" src="https://twemoji.maxcdn.com/2/72x72/2764.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 04:34 AM</span>
+
+            <div class="chatlog__message " data-message-id="735052013976682506" id="message-735052013976682506">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hey what is the use or importance of phase of qubits?
+</div>&gt; 
+<div class="quote">Message <span class="mention">#quantum-reference</span>
+</div><span class="mention" title="EnigmA#5092">@Anonymous</span> The (relative) phase of a qubit is what allows for interference effects to happen</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/372045754195378176/f33844549b6ee367c82d40ead51678a7.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 07:40 AM</span>
+
+            <div class="chatlog__message " data-message-id="735098909713498142" id="message-735098909713498142">
+                <div class="chatlog__content">
+                    <div class="markdown">Is the location of an electron in an electron cloud also superimposed?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 08:06 AM</span>
+
+            <div class="chatlog__message " data-message-id="735105450411950138" id="message-735105450411950138">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Is the location of an electron in an electron cloud also superimposed?
+</div><span class="mention" title="EnigmA#5092">@Anonymous</span> im not sure whether it makes sense to talk about pin pointed &quot;location&quot; of and electron inside &quot;cloud&quot; because the cloud is not a physical cloud like what&#39;s usually shown in pictures. its a probability cloud of charge distribution. as usual, physicists like using day-to-day words for abstract things and confusing people by making them imagine it literally. <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> colour, spin etc etc. the list goes on.
+oh and you should not forget the heisenberg uncertainty here. it&#39;s the FUNDAMENTAL nature of duality</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 02:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="735559298075197500" id="message-735559298075197500">
+                <div class="chatlog__content">
+                    <div class="markdown">I know this is probably a bit of a dumb question, but if you had to make a matrix with the winner marked in the beginning wouldn&#39;t it be better just searching through classically?</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735559372125634634" id="message-735559372125634634">
+                <div class="chatlog__content">
+                    <div class="markdown">when talking about Grovers algorithm</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 03:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="735582694968393748" id="message-735582694968393748">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">I know this is probably a bit of a dumb question, but if you had to make a matrix with the winner marked in the beginning wouldn&#39;t it be better just searching through classically?
+</div><span class="mention" title="abubakrqaasim#0572">@Anonymous</span>  that’s an example to demonstrate its power and use as a proof of concept. As the database gets larger the Computational cost of finding it classically is higher than doing it the quantum mechanical way, due to the upper hand with quantum parallelism. I’m not quite sure though. We can ask the <span class="mention" style="color: rgb(155, 89, 182); background-color: rgba(155, 89, 182, 0.1);">@Anonymous</span>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 03:48 PM</span>
+
+            <div class="chatlog__message " data-message-id="735584119542644807" id="message-735584119542644807">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="abubakrqaasim#0572">@Anonymous</span>  that’s an example to demonstrate its power and use as a proof of concept. As the database gets larger the Computational cost of finding it classically is higher than doing it the quantum mechanical way, due to the upper hand with quantum parallelism. I’m not quite sure though. We can ask the <span class="mention" style="color: rgb(155, 89, 182); background-color: rgba(155, 89, 182, 0.1);">@Anonymous</span>
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> 
+Cant you just have a parallel classical processor?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 03:50 PM</span>
+
+            <div class="chatlog__message " data-message-id="735584644002480248" id="message-735584644002480248">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Elisa#3560">@Anonymous</span> Please answer this question.<span class="chatlog__edited-timestamp" title="22-Jul-20 03:51 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="735587321495421060" id="message-735587321495421060">
+                <div class="chatlog__content">
+                    <div class="markdown">According to me, superposition of states is more important here, as you can check everything at once.</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="735587365187223584" id="message-735587365187223584">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> 
+Cant you just have a parallel classical processor?
+</div><span class="mention" title="abubakrqaasim#0572">@Anonymous</span>  parallel processing and quantum parallelism are worlds apart. By using parallel classical processors you are increasing your energy expenditure. It will not be an efficient choice when the other choice you have is a quantum processor  (it’s the feasible choice right now given that we don’t have large scale quantum computers with several qubits at disposal)</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="735587534221869097" id="message-735587534221869097">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">According to me, superposition of states is more important here, as you can check everything at once.
+</div><span class="mention" title="Rahul_Pratap_Singh#8311">@Anonymous</span>  yes, that’s the starting point of what you call quantum parallelism</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="735587955103629392" id="message-735587955103629392">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> I agree, there is one more thing important here that it is reversible, which makes it&#39;s energy efficient.</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:05 PM</span>
+
+            <div class="chatlog__message " data-message-id="735588244841955379" id="message-735588244841955379">
+                <div class="chatlog__content">
+                    <div class="markdown">but to have to mark a point in a matrix you have to search for it classically anyway. and it is only valid for one query if I am not wrong? <span class="mention" title="Rahul_Pratap_Singh#8311">@Anonymous</span>  <span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="735588561725947976" id="message-735588561725947976">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">but to have to mark a point in a matrix you have to search for it classically anyway. and it is only valid for one query if I am not wrong? <span class="mention" title="Rahul_Pratap_Singh#8311">@Anonymous</span>  <span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span>
+</div><span class="mention" title="abubakrqaasim#0572">@Anonymous</span>  okay so you are asking to build the oracle in a such a way to look for the answer you need to know it beforehand?</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735588999183466576" id="message-735588999183466576">
+                <div class="chatlog__content">
+                    <div class="markdown">I only know it from quantum Information theory perspective. We need the oracle to be able to identify the correct answer, not KNOWING it. And there’s a difference. In terms of actual implementation I don’t know how the theoretical idea is made a reality. <span class="mention" title="ethiopianqubit#1969">@Anonymous</span> Asfaw</span>  any thoughts on it?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="735589326943158324" id="message-735589326943158324">
+                <div class="chatlog__content">
+                    <div class="markdown">Isn&#39;t that what your doing when you are building an oracle. setting one point in the matrix at at -1 (The location could be the actual information for arguments sake). So you are inputting one bit of information where is w. But what&#39;s the point in having only being able to search for one piece of information.</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735589543570309171" id="message-735589543570309171">
+                <div class="chatlog__content">
+                    <div class="markdown">Sorry if I am coming off rude. I think its a genuine question.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="735590070819487895" id="message-735590070819487895">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="abubakrqaasim#0572">@Anonymous</span>  you marked one state, and search it. The state in superposition had 2^5 for 5 qubits and you search it at once. now if you do it classically you require searching through the 2^5 options.</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735590338839838802" id="message-735590338839838802">
+                <div class="chatlog__content">
+                    <div class="markdown">And you mark it. you just say this is the position I mark, state is not specified there. And you find that state.</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="735590528095355030" id="message-735590528095355030">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Rahul_Pratap_Singh#8311">@Anonymous</span> If you had 5 bits and you didn&#39;t know which one was 1 for example wouldn&#39;t you only have to look at bit one or 2 or 3 or 4 or 5 so there ar 5 operations</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="735590787097559160" id="message-735590787097559160">
+                <div class="chatlog__content">
+                    <div class="markdown">Ok. so this is bit not qubit right?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="735590937866272829" id="message-735590937866272829">
+                <div class="chatlog__content">
+                    <div class="markdown">even if it was a qubit wouldn&#39;t you just measure the state of each qubit?<span class="chatlog__edited-timestamp" title="22-Jul-20 04:16 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735590983403569232" id="message-735590983403569232">
+                <div class="chatlog__content">
+                    <div class="markdown">and that would be 5 operations too</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735591190237413468" id="message-735591190237413468">
+                <div class="chatlog__content">
+                    <div class="markdown">Ah the state is not specified</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="735591364636574088" id="message-735591364636574088">
+                <div class="chatlog__content">
+                    <div class="markdown">Yes, There is a difference between qubits and bits.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:18 PM</span>
+
+            <div class="chatlog__message " data-message-id="735591499764596748" id="message-735591499764596748">
+                <div class="chatlog__content">
+                    <div class="markdown">So just say with w the winning bit we are finding the location of w but it could be any state</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:18 PM</span>
+
+            <div class="chatlog__message " data-message-id="735591512364154889" id="message-735591512364154889">
+                <div class="chatlog__content">
+                    <div class="markdown">3 qubits means 8 states which is not same as 3 states</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:18 PM</span>
+
+            <div class="chatlog__message " data-message-id="735591548267266118" id="message-735591548267266118">
+                <div class="chatlog__content">
+                    <div class="markdown">for example it could be 1 or 0</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735591734431711322" id="message-735591734431711322">
+                <div class="chatlog__content">
+                    <div class="markdown">so we are finding the location of w and it doesn&#39;t matter what state w is in?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="735591790505361488" id="message-735591790505361488">
+                <div class="chatlog__content">
+                    <div class="markdown">Okay let&#39;s talk over dm</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="735595448986763335" id="message-735595448986763335">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Okay let&#39;s talk over dm
+</div><span class="mention" title="Rahul_Pratap_Singh#8311">@Anonymous</span> I might be able to help with this if the question hasn&#39;t been answered yet</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:40 PM</span>
+
+            <div class="chatlog__message " data-message-id="735597158421626980" id="message-735597158421626980">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Rahul_Pratap_Singh#8311">@Anonymous</span> I might be able to help with this if the question hasn&#39;t been answered yet
+</div><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span>  could you still give the answer here for everyone else to read as well?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="735598426393411718" id="message-735598426393411718">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> Done</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735598511076278393" id="message-735598511076278393">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> Please help <span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 04:51 PM</span>
+
+            <div class="chatlog__message " data-message-id="735599830990061620" id="message-735599830990061620">
+                <div class="chatlog__content">
+                    <div class="markdown">&gt; 
+<div class="quote"><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span>  could you still give the answer here for everyone else to read as well?
+<span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> sure give me a minute to write it in the best way possible</div></div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 05:07 PM</span>
+
+            <div class="chatlog__message " data-message-id="735603938111258745" id="message-735603938111258745">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span>  could you still give the answer here for everyone else to read as well?
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> &gt; <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span>  could you still give the answer here for everyone else to read as well?
+<span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> Hope this answers the question and please correct me otherwise. So, you&#39;re right about the oracle only knowing how to identify the correct answer without knowing it. I guess you have to go back to the idea that grover&#39;s algorithm performs a search over an unstructured database with the eventual goal of providing the <strong>position</strong> (or maybe better referred to as the <strong>index</strong>) of the element you&#39;re interested in within that unstructured database. So there are actually two nuggets of information here: the <strong>value</strong> of your desired element and its <strong>index</strong>. You know the <strong>value</strong> but you don&#39;t know its <strong>index</strong> (or if it actually exists) within the database. Now the crucial part is that <strong>when you construct the oracle, you only make use of the former</strong> (<strong>value</strong>). For example, for the phase oracle in the qiskit textbook), we used control z gates to mark elements with the values that we are interested in. When we then run the algorithm, we then get the index.<span class="chatlog__edited-timestamp" title="22-Jul-20 05:12 PM">(edited)</span></div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">3</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="735604509258285097" id="message-735604509258285097">
+                <div class="chatlog__content">
+                    <div class="markdown">The power of grover&#39;s is that you can input a superposition into the oracle and immediately obtain global information about the entire set of elements (whether an element exists or not) by running the algorithm</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">3</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 05:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="735605631381274686" id="message-735605631381274686">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> &gt; <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span>  could you still give the answer here for everyone else to read as well?
+<span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> Hope this answers the question and please correct me otherwise. So, you&#39;re right about the oracle only knowing how to identify the correct answer without knowing it. I guess you have to go back to the idea that grover&#39;s algorithm performs a search over an unstructured database with the eventual goal of providing the <strong>position</strong> (or maybe better referred to as the <strong>index</strong>) of the element you&#39;re interested in within that unstructured database. So there are actually two nuggets of information here: the <strong>value</strong> of your desired element and its <strong>index</strong>. You know the <strong>value</strong> but you don&#39;t know its <strong>index</strong> (or if it actually exists) within the database. Now the crucial part is that <strong>when you construct the oracle, you only make use of the former</strong> (<strong>value</strong>). For example, for the phase oracle in the qiskit textbook), we used control z gates to mark elements with the values that we are interested in. When we then run the algorithm, we then get the index.
+</div><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span>  so basically we know <em>what we are looking for</em> to command it to conduct a search *without having to know * whether it’s there or not. Is it correct?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 05:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="735606368601374821" id="message-735606368601374821">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span>  so basically we know <em>what we are looking for</em> to command it to conduct a search *without having to know * whether it’s there or not. Is it correct?
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> Yup! I guess if you make the goal of the problem to just check if such an element exists then its easier to digest <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> imagine trying to see if your name is in a list. you (the oracle) can tell its your name once you see the entry but you have no knowledge whether it is in the list or not (or its position)</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">3</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 05:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="735606560553959594" id="message-735606560553959594">
+                <div class="chatlog__content">
+                    <div class="markdown">Thanks <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734162588736421929/acf71287721505982db237435e6505e9.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 05:20 PM</span>
+
+            <div class="chatlog__message " data-message-id="735607193352536065" id="message-735607193352536065">
+                <div class="chatlog__content">
+                    <div class="markdown">Thanks <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> .  Nice explanation.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 05:21 PM</span>
+
+            <div class="chatlog__message " data-message-id="735607364018765824" id="message-735607364018765824">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="abubakrqaasim#0572">@Anonymous</span>  parallel processing and quantum parallelism are worlds apart. By using parallel classical processors you are increasing your energy expenditure. It will not be an efficient choice when the other choice you have is a quantum processor  (it’s the feasible choice right now given that we don’t have large scale quantum computers with several qubits at disposal)
+</div><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> To also put this into context, for classical systems, if you want to decrease computation time exponentially, you would have to increase the number of parallel processors exponentially as well (along with the physical space needed). In quantum systems, you get this exponential increase in parallelism with only a linear increase in needed physical space.<span class="chatlog__edited-timestamp" title="22-Jul-20 05:21 PM">(edited)</span></div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="💯" title="💯" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                            <span class="chatlog__reaction-count">2</span>
+                        </div>
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="simulate" title="simulate" src="https://cdn.discordapp.com/emojis/732893594293370910.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 05:38 PM</span>
+
+            <div class="chatlog__message " data-message-id="735611826079007333" id="message-735611826079007333">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> Thanks for the answer. You get the index (or you don&#39;t if its not there) from its value in less gos then triying them all is quite a enhancement over classical</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735612765506502697" id="message-735612765506502697">
+                <div class="chatlog__content">
+                    <div class="markdown">The way I see it now is like looking for a certain city on a map. Grovers is looking at the whole map and looking at the dots which could be that city or not. Whereas, you could look at the grid squares A1 A2 A3 . .. . Z99 and then find it</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/373581967733555201/a203fba67ddd458037e30e9c882c8084.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 09:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="735667327290441748" id="message-735667327290441748">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> &gt; <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span>  could you still give the answer here for everyone else to read as well?
+<span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> Hope this answers the question and please correct me otherwise. So, you&#39;re right about the oracle only knowing how to identify the correct answer without knowing it. I guess you have to go back to the idea that grover&#39;s algorithm performs a search over an unstructured database with the eventual goal of providing the <strong>position</strong> (or maybe better referred to as the <strong>index</strong>) of the element you&#39;re interested in within that unstructured database. So there are actually two nuggets of information here: the <strong>value</strong> of your desired element and its <strong>index</strong>. You know the <strong>value</strong> but you don&#39;t know its <strong>index</strong> (or if it actually exists) within the database. Now the crucial part is that <strong>when you construct the oracle, you only make use of the former</strong> (<strong>value</strong>). For example, for the phase oracle in the qiskit textbook), we used control z gates to mark elements with the values that we are interested in. When we then run the algorithm, we then get the index.
+</div><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> When we use Grover&#39;s algorithm to search through a database what would we actually give as an input?</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735667901905895575" id="message-735667901905895575">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> Yup! I guess if you make the goal of the problem to just check if such an element exists then its easier to digest <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> imagine trying to see if your name is in a list. you (the oracle) can tell its your name once you see the entry but you have no knowledge whether it is in the list or not (or its position)
+</div><span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> Does this mean we can use Grover&#39;s algorithm as a root finding method?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/373581967733555201/a203fba67ddd458037e30e9c882c8084.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 09:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="735670563992764526" id="message-735670563992764526">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> To also put this into context, for classical systems, if you want to decrease computation time exponentially, you would have to increase the number of parallel processors exponentially as well (along with the physical space needed). In quantum systems, you get this exponential increase in parallelism with only a linear increase in needed physical space.
+</div>To add to what <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> said. Gaining exponential speedup by exponentially increasing parallel processors would be the best case scenario. There could be considerable overhead due to communication between the processors. And at some stage the communication cost might become larger than the parallelism gain, and increasing the number of processors beyond that would not lead to a speedup.</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 12:13 AM</span>
+
+            <div class="chatlog__message " data-message-id="735711121096573031" id="message-735711121096573031">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> <span class="mention" title="Rahul_Pratap_Singh#8311">@Anonymous</span> I found out what I was looking for on the Qiskit youtube channel. If you want to know what the number in a Blackbox is you can get it by checking classically each bit (so I think this is what is meant by 6 goes in the video) or quantum mechanically you can get it in one go. Its called the Bernstein-Vazirani Algorithm and Abe describes it beautifully as ever on youtube <a href="https://www.youtube.com/watch?v=sqJIpHYl7oo">https://www.youtube.com/watch?v=sqJIpHYl7oo</a></div>
+                </div>
+
+
+            <div class="chatlog__embed">
+                <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+                <div class="chatlog__embed-content-container">
+                    <div class="chatlog__embed-content">
+                        <div class="chatlog__embed-text">
+                            <div class="chatlog__embed-author">
+
+                                <span class="chatlog__embed-author-name">
+                                    <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UClBNq7mCMf5xm8baE_VMl3A">Qiskit</a>
+                                </span>
+                            </div>
+
+                            <div class="chatlog__embed-title">
+                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=sqJIpHYl7oo"><div class="markdown">Bernstein-Vazirani Algorithm — Programming on Quantum Computers Ep 6</div></a>
+                            </div>
+
+                            <div class="chatlog__embed-description"><div class="markdown">In this video, we cover how the Bernstein-Vazirani algorithm correctly guesses a string of binary numbers in one shot and then program the circuit in Qiskit. 
+Your formal invite to weekly Qiskit videos ► <a href="https://ibm.biz/q-subscribe">https://ibm.biz/q-subscribe</a>
+
+Code: <a href="http://ibm.biz/cwq-bernstein-vazirani">http://ibm.biz/cwq-bernstein-vazirani</a>
+...</div></div>
+
+                        </div>
+
+                        <div class="chatlog__embed-thumbnail-container">
+                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/sqJIpHYl7oo/maxresdefault.jpg">
+                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/sqJIpHYl7oo/maxresdefault.jpg" alt="Thumbnail">
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 01:37 AM</span>
+
+            <div class="chatlog__message " data-message-id="735732359340621904" id="message-735732359340621904">
+                <div class="chatlog__content">
+                    <div class="markdown">&gt; 
+<div class="quote"><span class="mention" title="Bavithra Govintharajah#3526">@Anonymous</span> Govintharajah</span> <span class="mention" title="Harold Co#0477">@Anonymous</span> Co</span> <span class="mention" title="Rahul_Pratap_Singh#8311">@Anonymous</span> I found out what I was looking for on the Qiskit youtube channel. If you want to know what the number in a Blackbox is you can get it by checking classically each bit (so I think this is what is meant by 6 goes in the video) or quantum mechanically you can get it in one go. Its called the Bernstein-Vazirani Algorithm and Abe describes it beautifully as ever on youtube <a href="https://www.youtube.com/watch?v=sqJIpHYl7oo">https://www.youtube.com/watch?v=sqJIpHYl7oo</a>
+<span class="mention" title="abubakrqaasim#0572">@Anonymous</span> Yup good video! I guess you just have to remember that the box (the oracle) doesn&#39;t actually <strong>know</strong> the number in the sense of actually storing it. It only knows how to tell if the number you input is correct. This is important to take into account when you&#39;re actually implementing the oracle</div></div>
+                </div>
+
+
+            <div class="chatlog__embed">
+                <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+                <div class="chatlog__embed-content-container">
+                    <div class="chatlog__embed-content">
+                        <div class="chatlog__embed-text">
+                            <div class="chatlog__embed-author">
+
+                                <span class="chatlog__embed-author-name">
+                                    <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UClBNq7mCMf5xm8baE_VMl3A">Qiskit</a>
+                                </span>
+                            </div>
+
+                            <div class="chatlog__embed-title">
+                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=sqJIpHYl7oo"><div class="markdown">Bernstein-Vazirani Algorithm — Programming on Quantum Computers Ep 6</div></a>
+                            </div>
+
+                            <div class="chatlog__embed-description"><div class="markdown">In this video, we cover how the Bernstein-Vazirani algorithm correctly guesses a string of binary numbers in one shot and then program the circuit in Qiskit. 
+Your formal invite to weekly Qiskit videos ► <a href="https://ibm.biz/q-subscribe">https://ibm.biz/q-subscribe</a>
+
+Code: <a href="http://ibm.biz/cwq-bernstein-vazirani">http://ibm.biz/cwq-bernstein-vazirani</a>
+...</div></div>
+
+                        </div>
+
+                        <div class="chatlog__embed-thumbnail-container">
+                            <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/sqJIpHYl7oo/maxresdefault.jpg">
+                                <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/sqJIpHYl7oo/maxresdefault.jpg" alt="Thumbnail">
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 03:09 AM</span>
+
+            <div class="chatlog__message " data-message-id="735755418516586536" id="message-735755418516586536">
+                <div class="chatlog__content">
+                    <div class="markdown">Hey. Beginners qn. Whats the technical difference between quantum mechanics and quantum physics?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 03:21 AM</span>
+
+            <div class="chatlog__message " data-message-id="735758508070535178" id="message-735758508070535178">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hey. Beginners qn. Whats the technical difference between quantum mechanics and quantum physics?
+</div><span class="mention" title="CI#7731">@Anonymous</span>  nothing. They are identical. Just two names for the same thing depending on the field you are from when it comes to referring it.</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735759113891348521" id="message-735759113891348521">
+                <div class="chatlog__content">
+                    <div class="markdown">But some people would also say that quantum mechanics is the underlying quantum theory and quantum physics is the field encompassing all the branches ranging from certain aspects of quantum chemistry (density functional theory parts) etc</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 03:57 AM</span>
+
+            <div class="chatlog__message " data-message-id="735767475743883315" id="message-735767475743883315">
+                <div class="chatlog__content">
+                    <div class="markdown">Thanks.</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/730783239920287805/90f5530aa449c5ec9eb8b0e024779bd5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 04:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="735951975165853816" id="message-735951975165853816">
+                <div class="chatlog__content">
+                    <div class="markdown">Hey, why do we do a (QFT)^+ at the end of Shors algorithm when the qbits are not in k-space? is it to get a change in phase or some math trick for the negative in the exponent?</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/615885899875745813/2c7d43748b38999eefde2b990b5f1c8f.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">24-Jul-20 05:57 AM</span>
+
+            <div class="chatlog__message " data-message-id="736160110979842159" id="message-736160110979842159">
+                <div class="chatlog__content">
+                    <div class="markdown">it is basically a math trick to find out the r</div>
+                </div>
+
+
+
+                <div class="chatlog__reactions">
+                        <div class="chatlog__reaction">
+                            <img class="emoji emoji--small" alt="👏" title="👏" src="https://twemoji.maxcdn.com/2/72x72/1f44f.png">
+                            <span class="chatlog__reaction-count">1</span>
+                        </div>
+                </div>
+            </div>
+            <div class="chatlog__message " data-message-id="736160198850248744" id="message-736160198850248744">
+                <div class="chatlog__content">
+                    <div class="markdown">cause iqft gives phase</div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="736160334846361621" id="message-736160334846361621">
+                <div class="chatlog__content">
+                    <div class="markdown">and if you look at the math the unitary function gives an output in some kind of a phase</div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div><div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734521523473481839/491f5aa0b71b58a7de4771b4b833bade.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">25-Jul-20 05:45 AM</span>
+
+            <div class="chatlog__message " data-message-id="736519496298135572" id="message-736519496298135572">
+                <div class="chatlog__content">
+                    <div class="markdown">If you fancy learning Q M with a cheap book, there is a fab paper back book that is very inexpensive and typically under 10$ which you can see reviewed here: <a href="https://quantumzeitgeist.com/learning-quantum-mechanics-doesnt-have-to-be-traumatic/">https://quantumzeitgeist.com/learning-quantum-mechanics-doesnt-have-to-be-traumatic/</a></div>
+                </div>
+
+
+            <div class="chatlog__embed">
+                <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+                <div class="chatlog__embed-content-container">
+                    <div class="chatlog__embed-content">
+                        <div class="chatlog__embed-text">
+                            <div class="chatlog__embed-author">
+
+                                <span class="chatlog__embed-author-name">
+                                    <a class="chatlog__embed-author-name-link" href="https://quantumzeitgeist.com/author/una-wang/">Una Wang</a>
+                                </span>
+                            </div>
+
+                            <div class="chatlog__embed-title">
+                                <a class="chatlog__embed-title-link" href="https://quantumzeitgeist.com/learning-quantum-mechanics-doesnt-have-to-be-traumatic/"><div class="markdown">Learning Quantum Mechanics doesn’t have to be traumatic</div></a>
+                            </div>
+
+                            <div class="chatlog__embed-description"><div class="markdown">Unfortunately some have developed a fear of maths and fear of science - especially physics. Sometimes this is literally just down to the way its taught. To better understand the field of Quantum Computing, you might want to also have a look at understanding quantum mechanics -...</div></div>
+
+                        </div>
+
+                        <div class="chatlog__embed-thumbnail-container">
+                            <a class="chatlog__embed-thumbnail-link" href="https://i0.wp.com/quantumzeitgeist.com/wp-content/uploads/QM2.jpg?resize=1200%2C630&ssl=1">
+                                <img class="chatlog__embed-thumbnail" src="https://i0.wp.com/quantumzeitgeist.com/wp-content/uploads/QM2.jpg?resize=1200%2C630&ssl=1" alt="Thumbnail">
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

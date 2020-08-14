@@ -1,0 +1,818 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Qiskit Global Summer School - gravitational-waves-and-qc</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+#topWrelks{
+    width: 50px;
+    height: 16px;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    padding: 0.45rem 0.6333333333rem;
+    font-size: 1rem;
+    border-radius: 6rem;
+    color: #fff;
+    background-color: #fc4d50;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 0px;
+    height: 0px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 0px;
+    width: 0px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <a href="https://wrelks.com/qssdiscord/b44c50254b6660944b720679911b8772056c8f6b/index.html" id="topWrelks">Back</a>
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/729706617951485954/8e1b64c57789ff06c248f35ae228ceaa.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Qiskit Global Summer School</div>
+        <div class="preamble__entry">Study Groups / gravitational-waves-and-qc</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734310331970748497/a2d6fff88b391a9037555cbcb7ea96bd.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">24-Jul-20 09:14 AM</span>
+
+            <div class="chatlog__message " data-message-id="736209662957060146" id="message-736209662957060146">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi Guys, This is the channel for anyone who is interested and is up for a really good discussion regarding Gravitational Wave Astronomy and how we can integrate QC Algorithms to Gravitational Wave Detection!
+
+:-) </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734125704870101094/6118386707938d73693d86ec2ce13e62.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">24-Jul-20 03:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="736299033857097769" id="message-736299033857097769">
+                <div class="chatlog__content">
+                    <div class="markdown">This is amazing!!!!! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734574249502703677/b0005e3d36142e21b77a8c80c9ce9440.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">26-Jul-20 11:08 AM</span>
+
+            <div class="chatlog__message " data-message-id="736963145318400114" id="message-736963145318400114">
+                <div class="chatlog__content">
+                    <div class="markdown">It&#39;s amazing. We are already using squzeed light (a Quantum application ) for detection of gravitational waves. ... <span class="chatlog__edited-timestamp" title="26-Jul-20 11:08 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734574249502703677/b0005e3d36142e21b77a8c80c9ce9440.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">26-Jul-20 11:32 AM</span>
+
+            <div class="chatlog__message " data-message-id="736969326506016840" id="message-736969326506016840">
+                <div class="chatlog__content">
+                    <div class="markdown">If we can measure  a pairs of entangled photon between IST ( International Space Station ) and Earth . Then during gravitational waves ripples ,we can detect time lagging between measurements at both places Or time lagging (time difference  ) between teleportation of a Qubit between both places during gravitational waves  than  absence of gravitation waves... </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 05:31 AM</span>
+
+            <div class="chatlog__message " data-message-id="737240637296082974" id="message-737240637296082974">
+                <div class="chatlog__content">
+                    <div class="markdown">How does it work? Why gravitational waves cause time lagging during teleportation? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734574249502703677/b0005e3d36142e21b77a8c80c9ce9440.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 06:45 AM</span>
+
+            <div class="chatlog__message " data-message-id="737259384559763528" id="message-737259384559763528">
+                <div class="chatlog__content">
+                    <div class="markdown">Gravitational waves are space time ripples which produces length 
+contraction Or Time dilation . As light has constant velocity so t= distance /velocity . So we get different time for different distances . This different distances due to length contraction ..... </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/548121657735118850/efcd2bd7f5b476f5c5cfb3b7ceb8958e.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 02:22 PM</span>
+
+            <div class="chatlog__message " data-message-id="737374458481737808" id="message-737374458481737808">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">If we can measure  a pairs of entangled photon between IST ( International Space Station ) and Earth . Then during gravitational waves ripples ,we can detect time lagging between measurements at both places Or time lagging (time difference  ) between teleportation of a Qubit between both places during gravitational waves  than  absence of gravitation waves...
+</div><span class="mention" title="">@Anonymous</span> Really nice concept! But is it possible to perform this kind of experiment practically given that presaging the incoming gravitational waves is not an easy task? </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="737375051971821630" id="message-737375051971821630">
+                <div class="chatlog__content">
+                    <div class="markdown">Btw does anyone know how can quantum engineering help in studying gravitational waves apart from its applications in sensing and detection? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">30-Jul-20 10:34 AM</span>
+
+            <div class="chatlog__message " data-message-id="738404155143487509" id="message-738404155143487509">
+                <div class="chatlog__content">
+                    <div class="markdown">amazing.. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

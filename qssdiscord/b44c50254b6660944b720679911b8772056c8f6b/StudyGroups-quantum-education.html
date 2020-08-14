@@ -1,0 +1,3729 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Qiskit Global Summer School - quantum-education</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <style>
+        /* General */
+
+        @font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url(https://discord.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff);
+    font-weight: 700;
+}
+
+body {
+    font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+.markdown {
+    max-width: 100%;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+}
+
+.spoiler {
+    width: fit-content;
+}
+
+.spoiler--hidden {
+    cursor: pointer;
+}
+
+.spoiler-text {
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-text {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler--hidden .spoiler-text::selection {
+    color: rgba(0, 0, 0, 0);
+}
+
+.spoiler-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.spoiler--hidden .spoiler-image {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.spoiler--hidden .spoiler-image img {
+    filter: blur(44px);
+}
+
+.spoiler--hidden .spoiler-image:after {
+    content: "SPOILER";
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    padding: 0.5em 0.7em;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+}
+
+.spoiler--hidden:hover .spoiler-image:after {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.quote {
+    margin: 0.1em 0;
+    padding-left: 0.6em;
+    border-left: 4px solid;
+    border-radius: 3px;
+}
+
+.pre {
+    font-family: "Consolas", "Courier New", Courier, monospace;
+}
+
+.pre--multiline {
+    margin-top: 0.25em;
+    padding: 0.5em;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.pre--inline {
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.mention {
+    border-radius: 3px;
+    padding: 0 2px;
+    color: #7289da;
+    background: rgba(114, 137, 218, .1);
+    font-weight: 500;
+}
+
+.emoji {
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0.06em;
+    vertical-align: -0.4em;
+}
+
+.emoji--small {
+    width: 1em;
+    height: 1em;
+}
+
+.emoji--large {
+    width: 2.8em;
+    height: 2.8em;
+}
+
+/* Preamble */
+
+.preamble {
+    display: grid;
+    margin: 0 0.3em 0.6em 0.3em;
+    max-width: 100%;
+    grid-template-columns: auto 1fr;
+}
+
+.preamble__guild-icon-container {
+    grid-column: 1;
+}
+
+.preamble__guild-icon {
+    max-width: 88px;
+    max-height: 88px;
+}
+
+.preamble__entries-container {
+    grid-column: 2;
+    margin-left: 0.6em;
+}
+
+.preamble__entry {
+    font-size: 1.4em;
+}
+
+.preamble__entry--small {
+    font-size: 1em;
+}
+
+/* Chatlog */
+
+.chatlog {
+    max-width: 100%;
+}
+
+.chatlog__message-group {
+    display: grid;
+    margin: 0 0.6em;
+    padding: 0.9em 0;
+    border-top: 1px solid;
+    grid-template-columns: auto 1fr;
+}
+
+.chatlog__author-avatar-container {
+    grid-column: 1;
+    width: 0px;
+    height: 0px;
+}
+
+.chatlog__author-avatar {
+    border-radius: 50%;
+    height: 0px;
+    width: 0px;
+}
+
+.chatlog__messages {
+    grid-column: 2;
+    margin-left: 1.2em;
+    min-width: 50%;
+}
+
+.chatlog__author-name {
+    font-weight: 500;
+}
+
+.chatlog__timestamp {
+    margin-left: 0.3em;
+    font-size: 0.75em;
+}
+
+.chatlog__message {
+    padding: 0.1em 0.3em;
+    margin: 0 -0.3em;
+    background-color: transparent;
+    transition: background-color 1s ease;
+}
+
+.chatlog__content {
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.chatlog__edited-timestamp {
+    margin-left: 0.15em;
+    font-size: 0.8em;
+}
+
+.chatlog__attachment {
+    margin-top: 0.3em;
+}
+
+.chatlog__attachment-thumbnail {
+    vertical-align: top;
+    max-width: 45vw;
+    max-height: 500px;
+    border-radius: 3px;
+}
+
+.chatlog__embed {
+    display: flex;
+    margin-top: 0.3em;
+    max-width: 520px;
+}
+
+.chatlog__embed-color-pill {
+    flex-shrink: 0;
+    width: 0.25em;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.chatlog__embed-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0.6em;
+    border: 1px solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.chatlog__embed-content {
+    display: flex;
+    width: 100%;
+}
+
+.chatlog__embed-text {
+    flex: 1;
+}
+
+.chatlog__embed-author {
+    display: flex;
+    margin-bottom: 0.3em;
+    align-items: center;
+}
+
+.chatlog__embed-author-icon {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.chatlog__embed-author-name {
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-title {
+    margin-bottom: 0.2em;
+    font-size: 0.875em;
+    font-weight: 600;
+}
+
+.chatlog__embed-description {
+    font-weight: 500;
+    font-size: 0.85em;
+}
+
+.chatlog__embed-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chatlog__embed-field {
+    flex: 0;
+    min-width: 100%;
+    max-width: 506px;
+    padding-top: 0.6em;
+    font-size: 0.875em;
+}
+
+.chatlog__embed-field--inline {
+    flex: 1;
+    flex-basis: auto;
+    min-width: 150px;
+}
+
+.chatlog__embed-field-name {
+    margin-bottom: 0.2em;
+    font-weight: 600;
+}
+
+.chatlog__embed-field-value {
+    font-weight: 500;
+}
+
+.chatlog__embed-thumbnail {
+    flex: 0;
+    margin-left: 1.2em;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-image-container {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-image {
+    max-width: 500px;
+    max-height: 400px;
+    border-radius: 3px;
+}
+
+.chatlog__embed-footer {
+    margin-top: 0.6em;
+}
+
+.chatlog__embed-footer-icon {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.chatlog__embed-footer-text {
+    font-size: 0.75em;
+    font-weight: 500;
+}
+
+.chatlog__reactions {
+    display: flex;
+}
+
+.chatlog__reaction {
+    display: flex;
+    align-items: center;
+    margin: 0.35em 0.1em 0.1em 0.1em;
+    padding: 0.2em 0.35em;
+    border-radius: 3px;
+}
+
+.chatlog__reaction-count {
+    min-width: 9px;
+    margin-left: 0.35em;
+    font-size: 0.875em;
+}
+
+.chatlog__bot-tag {
+    position: relative;
+    top: -.2em;
+    margin-left: 0.3em;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    vertical-align: middle;
+    line-height: 1.3;
+    background: #7289da;
+    color: #ffffff;
+    font-size: 0.625em;
+    font-weight: 500;
+}
+
+/* Postamble */
+
+.postamble {
+    margin: 1.4em 0.3em 0.6em 0.3em;
+    padding: 1em;
+    border-top: 1px solid;
+}
+    </style>
+    <style>
+        /* General */
+
+body {
+    background-color: #36393e;
+    color: #dcddde;
+}
+
+a {
+    color: #0096cf;
+}
+
+.spoiler-text {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.spoiler--hidden .spoiler-text {
+    background-color: #202225;
+}
+
+.spoiler--hidden:hover .spoiler-text {
+    background-color: rgba(32, 34, 37, 0.8);
+}
+
+.quote {
+    border-color: #4f545c;
+}
+
+.pre {
+    background-color: #2f3136 !important;
+}
+
+.pre--multiline {
+    border-color: #282b30 !important;
+    color: #b9bbbe !important;
+}
+
+/* === Preamble === */
+
+.preamble__entry {
+    color: #ffffff;
+}
+
+/* Chatlog */
+
+.chatlog__message-group {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.chatlog__author-name {
+    color: #ffffff;
+}
+
+.chatlog__timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__message--highlighted {
+    background-color: rgba(114, 137, 218, 0.2) !important;
+}
+
+.chatlog__message--pinned {
+    background-color: rgba(249, 168, 37, 0.05);
+}
+
+.chatlog__edited-timestamp {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chatlog__embed-color-pill--default {
+    background-color: rgba(79, 84, 92, 1);
+}
+
+.chatlog__embed-content-container {
+    background-color: rgba(46, 48, 54, 0.3);
+    border-color: rgba(46, 48, 54, 0.6);
+}
+
+.chatlog__embed-author-name {
+    color: #ffffff;
+}
+
+#topWrelks{
+    width: 50px;
+    height: 16px;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    padding: 0.45rem 0.6333333333rem;
+    font-size: 1rem;
+    border-radius: 6rem;
+    color: #fff;
+    background-color: #fc4d50;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+
+.chatlog__embed-author-name-link {
+    color: #ffffff;
+}
+
+.chatlog__embed-title {
+    color: #ffffff;
+}
+
+.chatlog__embed-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-field-name {
+    color: #ffffff;
+}
+
+.chatlog__embed-field-value {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__embed-footer {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chatlog__reaction {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.chatlog__reaction-count {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Postamble */
+
+.postamble {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.postamble__entry {
+    color: #ffffff;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.pre--multiline').forEach(block => hljs.highlightBlock(block));
+        });
+    </script>
+
+    <script>
+        function scrollToMessage(event, id) {
+            var element = document.getElementById('message-' + id);
+
+            if (element) {
+                event.preventDefault();
+
+                element.classList.add('chatlog__message--highlighted');
+
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top - document.body.getBoundingClientRect().top - (window.innerHeight / 2),
+                    behavior: 'smooth'
+                });
+
+                window.setTimeout(function() {
+                    element.classList.remove('chatlog__message--highlighted');
+                }, 2000);
+            }
+        }
+
+        function showSpoiler(event, element) {
+            if (element && element.classList.contains('spoiler--hidden')) {
+                event.preventDefault();
+                element.classList.remove('spoiler--hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="https://wrelks.com/qssdiscord/b44c50254b6660944b720679911b8772056c8f6b/index.html" id="topWrelks">Back</a>
+<div class="preamble">
+    <div class="preamble__guild-icon-container">
+        <img class="preamble__guild-icon" src="https://cdn.discordapp.com/icons/729706617951485954/8e1b64c57789ff06c248f35ae228ceaa.png" alt="Guild icon">
+    </div>
+    <div class="preamble__entries-container">
+        <div class="preamble__entry">Qiskit Global Summer School</div>
+        <div class="preamble__entry">Study Groups / quantum-education</div>
+
+
+    </div>
+</div>
+
+<div class="chatlog">
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 02:52 PM</span>
+
+            <div class="chatlog__message " data-message-id="734845241693175829" id="message-734845241693175829">
+                <div class="chatlog__content">
+                    <div class="markdown">Created a channel for people working in or interested in quantum science education to e-meet❣️ </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">7</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="734845566608998533" id="message-734845566608998533">
+                <div class="chatlog__content">
+                    <div class="markdown">Anyone is welcome to introduce themself and post their linked-in so we can keep in touch after~ </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734845587983171714" id="message-734845587983171714">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi, I&#39;m Lia Yeh, just graduated B.S. Computing and B.S. Physics from the College of Creative Studies at the University of California, Santa Barbara.  I&#39;ll be starting a CS PhD researching quantum compilers in October at the University of Oxford.  I was a Quantum Undergraduate Research at IBM and Princeton intern last summer (it was awesome!), and would love to hear from people interested in contributing to an open-source quantum education website which I just received funding from the non-profit Unitary Fund to build.  I&#39;d love to e-meet and chat at <a href="https://www.linkedin.com/in/lia-yeh/">https://www.linkedin.com/in/lia-yeh/</a> - just connect with a note </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/550449342021107752/a9535f32a92772c2182221bc986bdebb.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="734852028488220793" id="message-734852028488220793">
+                <div class="chatlog__content">
+                    <div class="markdown">That&#39;s interesting, where can we learn more about your project? <span class="chatlog__edited-timestamp" title="20-Jul-20 03:19 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:27 PM</span>
+
+            <div class="chatlog__message " data-message-id="734853888787742860" id="message-734853888787742860">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Bidao#4541">@Anonymous</span> I just started building the website yesterday so the website is still a fetus now, but I&#39;ll have put up an introduction, contributor guidelines, and link to the Apache code of conduct on the site by Wednesday: www.fullstackquantumcomputation.tech
+The most info so far is in an email I sent to students and guest speakers of the full-stack quantum computation student-led seminar I taught/ran at UCSB last quarter below: </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734853979107754104" id="message-734853979107754104">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/734845022708564119/734853978676002916/message.txt">
+Attachment: message.txt (2.22 KB)                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="734854025010348103" id="message-734854025010348103">
+                <div class="chatlog__content">
+                    <div class="markdown">(uploaded as a file because discord has a character limit) </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/550449342021107752/a9535f32a92772c2182221bc986bdebb.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 03:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="734854996750762114" id="message-734854996750762114">
+                <div class="chatlog__content">
+                    <div class="markdown">Nice, it&#39;s always good to see such initiatives! Good work </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="SuperimposedSmile" title="SuperimposedSmile" src="https://cdn.discordapp.com/emojis/733144277609087117.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 04:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="734864863406325793" id="message-734864863406325793">
+                <div class="chatlog__content">
+                    <div class="markdown">Hello! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:33 PM</span>
+
+            <div class="chatlog__message " data-message-id="734885690860503180" id="message-734885690860503180">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/654361724178137129/6e388e0f8146191ae836b1aee11a7310.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 05:43 PM</span>
+
+            <div class="chatlog__message " data-message-id="734888221850206268" id="message-734888221850206268">
+                <div class="chatlog__content">
+                    <div class="markdown">This is such a great idea! I&#39;m Chunny, Yale &#39;19 grad w/ B.S. Physics, and will be starting a Physics Ph.D. at UChicago this fall. I had also worked at IonQ as an associate physicist this past year, and have done research in SCQC w/ Prof. Devoret&#39;s group. I&#39;m very passionate about science communication, and would love to see more &quot;200 level&quot; quantum computing resources, especially for understanding quantum hardware! 
+
+One of the ideas that I have had is building an analog experiment for demonstrating the Deutch-Jozsa algorithm, but I still need to figure out how to build it irl... ping me if you&#39;re interested! </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128076;" title="&#128076;" src="https://twemoji.maxcdn.com/2/72x72/1f44c.png">
+                                <span class="chatlog__reaction-count">5</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 06:04 PM</span>
+
+            <div class="chatlog__message " data-message-id="734893427124207697" id="message-734893427124207697">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="Bidao#4541">@Anonymous</span> I just started building the website yesterday so the website is still a fetus now, but I&#39;ll have put up an introduction, contributor guidelines, and link to the Apache code of conduct on the site by Wednesday: www.fullstackquantumcomputation.tech
+The most info so far is in an email I sent to students and guest speakers of the full-stack quantum computation student-led seminar I taught/ran at UCSB last quarter below:
+</div><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span> Hi Lia, I&#39;m a high school student (incoming uni freshman). I&#39;m interested in helping but I&#39;m not sure if I&#39;ll have much value. Perhaps I can help provide feedback for the high school sections, since that&#39;s when I first started QC </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="quantumidea" title="quantumidea" src="https://cdn.discordapp.com/emojis/732893594448560188.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">20-Jul-20 07:37 PM</span>
+
+            <div class="chatlog__message " data-message-id="734916999632912514" id="message-734916999632912514">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="RyanRageboi#8424">@Anonymous</span> Lam</span> Thanks for reaching out - we need input from people who understand the challenges for high school quantum learning and I believe this wouldn&#39;t be possible without input/feedback from high schoolers, recent high school graduates, and high school teachers!  It will take considerable collaboration to edit learning materials contributions to the website, gradually build the content to form a foundation of knowledge, and directing to some of the amazing resources out there already with guides as to what prerequisite knowledges are recommended.</div> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 12:35 AM</span>
+
+            <div class="chatlog__message " data-message-id="734992012767395880" id="message-734992012767395880">
+                <div class="chatlog__content">
+                    <div class="markdown">I&#39;m really happy to know that people who are already deep into this field are working on making a platform to help newcomers. QC is not a very wide known topic where I come from despite the fact that I&#39;m a computer engineering student. So I&#39;d like to extensively use your platform to let other people know more about this. Do you think we could conduct small introductory workshops as a part of it, wherein we introduce the site to everyone. Get them started on it.. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 01:00 AM</span>
+
+            <div class="chatlog__message " data-message-id="734998325429796915" id="message-734998325429796915">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">I&#39;m really happy to know that people who are already deep into this field are working on making a platform to help newcomers. QC is not a very wide known topic where I come from despite the fact that I&#39;m a computer engineering student. So I&#39;d like to extensively use your platform to let other people know more about this. Do you think we could conduct small introductory workshops as a part of it, wherein we introduce the site to everyone. Get them started on it..
+</div><span class="mention" title="Sans#5894">@Anonymous</span> Glad to see that you&#39;re interested in quantum education! Guessing by your timezone you might also want to check out IndiQ Meetups (<a href="https://twitter.com/IndiQmeetups)">https://twitter.com/IndiQmeetups)</a>. The group has already hosted introductory workshops in the past and will be organizing more events soon to involve the local QC community. <span class="chatlog__edited-timestamp" title="21-Jul-20 01:02 AM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="QiskitMulti" title="QiskitMulti" src="https://cdn.discordapp.com/emojis/732893558318563388.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 01:09 AM</span>
+
+            <div class="chatlog__message " data-message-id="735000425454895134" id="message-735000425454895134">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="sam-qc#5621">@Anonymous</span>  
+Hey, thanks for letting me know. I&#39;ve been following the IndiQmeetups twitter profile since only about a month ago. So yeah, I&#39;m sure I&#39;ll be notified about future workshops and am very eager to participate in them. I&#39;ll also like to be of any help that you need and think me befitting of it. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="networked" title="networked" src="https://cdn.discordapp.com/emojis/732893594569932810.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 05:20 AM</span>
+
+            <div class="chatlog__message " data-message-id="735063652113317938" id="message-735063652113317938">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Do you think we could conduct small introductory workshops as a part of it, wherein we introduce the site to everyone. Get them started on it..
+</div><span class="mention" title="Sans#5894">@Anonymous</span> The two target audiences of the site are students who want to 1) learn at a self-guided pace and/or 2) are 
+supplementing their learning in an introductory course/seminar/workshop - so yes!  In fact workshops can double as focus groups to truly make it a community-driven project. <span class="chatlog__edited-timestamp" title="21-Jul-20 05:21 AM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="quantumidea" title="quantumidea" src="https://cdn.discordapp.com/emojis/732893594448560188.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/579055421277601793/bc1f93b3f3ba5e4298a1c86598847c61.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 08:49 AM</span>
+
+            <div class="chatlog__message " data-message-id="735116305203462186" id="message-735116305203462186">
+                <div class="chatlog__content">
+                    <div class="markdown">Created a poll a couple days ago asking which ways people learned best from and these were the results </div>
+                </div>
+
+                    <div class="chatlog__attachment">
+                            <a href="https://cdn.discordapp.com/attachments/734845022708564119/735116300497453156/poll.png">
+                                    <img class="chatlog__attachment-thumbnail" src="https://cdn.discordapp.com/attachments/734845022708564119/735116300497453156/poll.png" alt="Attachment">
+                            </a>
+                    </div>
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735116410480754698" id="message-735116410480754698">
+                <div class="chatlog__content">
+                    <div class="markdown">I thought it would be interesting to share here as this seems to be a channel focused on teaching others about quantum and it gives a little insight to some of the more preferred ways people learn <span class="chatlog__edited-timestamp" title="21-Jul-20 08:50 AM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735116873879912468" id="message-735116873879912468">
+                <div class="chatlog__content">
+                    <div class="markdown">I think that the qiskit team should record themselves covering qiskit notebook material as people seem to really prefer video like content <span class="chatlog__edited-timestamp" title="21-Jul-20 08:52 AM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="qiskitsmart" title="qiskitsmart" src="https://cdn.discordapp.com/emojis/732962802318442576.png">
+                                <span class="chatlog__reaction-count">5</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 08:54 AM</span>
+
+            <div class="chatlog__message " data-message-id="735117515738579107" id="message-735117515738579107">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Created a poll a couple days ago asking which ways people learned best from and these were the results
+</div><span class="mention" title="PN#9790">@Anonymous</span> PN</span> Thanks for sharing, this looks very insightful! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 12:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="735167749327683727" id="message-735167749327683727">
+                <div class="chatlog__content">
+                    <div class="markdown"><img class="emoji emoji--large" alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png"> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 12:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="735167991070851134" id="message-735167991070851134">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hi, I&#39;m Lia Yeh, just graduated B.S. Computing and B.S. Physics from the College of Creative Studies at the University of California, Santa Barbara.  I&#39;ll be starting a CS PhD researching quantum compilers in October at the University of Oxford.  I was a Quantum Undergraduate Research at IBM and Princeton intern last summer (it was awesome!), and would love to hear from people interested in contributing to an open-source quantum education website which I just received funding from the non-profit Unitary Fund to build.  I&#39;d love to e-meet and chat at <a href="https://www.linkedin.com/in/lia-yeh/">https://www.linkedin.com/in/lia-yeh/</a> - just connect with a note
+</div><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span>  Hi Lia, this sounds great! I&#39;ve just sent you a note on linkedin <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/733736783392800918/906d34e20e1ffa84f95ddebc52953d8d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 12:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="735178334614454275" id="message-735178334614454275">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hi, I&#39;m Lia Yeh, just graduated B.S. Computing and B.S. Physics from the College of Creative Studies at the University of California, Santa Barbara.  I&#39;ll be starting a CS PhD researching quantum compilers in October at the University of Oxford.  I was a Quantum Undergraduate Research at IBM and Princeton intern last summer (it was awesome!), and would love to hear from people interested in contributing to an open-source quantum education website which I just received funding from the non-profit Unitary Fund to build.  I&#39;d love to e-meet and chat at <a href="https://www.linkedin.com/in/lia-yeh/">https://www.linkedin.com/in/lia-yeh/</a> - just connect with a note
+</div><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span> Hey, sounds awesome! Sent you a note with the connect. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 08:45 PM</span>
+
+            <div class="chatlog__message " data-message-id="735296438438985738" id="message-735296438438985738">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi guys, I&#39;m Adithya. I recently graduated from the Uni of Edinburgh. I&#39;m currently working on an idea for people to track what resources they use while learning any topic online and create learning paths (structured set of videos, articles, research papers, code repos etc) and share these learning paths for new learners to get guidance from so that they don&#39;t get overwhelmed with the amount of resources available online. Just released the MVP a couple of days ago and there&#39;s an Intro to Quantum Computing learning path for anyone to use. Would love it if you guys could check it out. Any feedback is much appreciated, and would be very valuable to move the product further <img class="emoji " alt="😊" title="😊" src="https://twemoji.maxcdn.com/2/72x72/1f60a.png"> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128075;" title="&#128075;" src="https://twemoji.maxcdn.com/2/72x72/1f44b.png">
+                                <span class="chatlog__reaction-count">5</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="735296565979119706" id="message-735296565979119706">
+                <div class="chatlog__content">
+                    <div class="markdown">Currently, only Gmail login works on the website <img class="emoji " alt="😅" title="😅" src="https://twemoji.maxcdn.com/2/72x72/1f605.png"> </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735296984528846928" id="message-735296984528846928">
+                <div class="chatlog__content">
+                    <div class="markdown">The website is www.knovo-web-app.herokuapp.com </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735297186169880600" id="message-735297186169880600">
+                <div class="chatlog__content">
+                    <div class="markdown"><a href="http://knovo-web-app.herokuapp.com/">http://knovo-web-app.herokuapp.com/</a> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="http://knovo-web-app.herokuapp.com/">
+                                                    <div class="markdown">Your Knowledge Voyage</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Come join a new revolution in online learning</div>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">4</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 10:07 PM</span>
+
+            <div class="chatlog__message " data-message-id="735317099563581563" id="message-735317099563581563">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span>, you&#39;ve mentioned that you&#39;ve received a grant from the Unitary Fund. I&#39;m thinking of applying because I really want to focus on adding quality quantum learning paths on the website. Any tips on applying for the grant? </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735317640482127932" id="message-735317640482127932">
+                <div class="chatlog__content">
+                    <div class="markdown">All web services I&#39;m using to run the website being paid for by me, and once more people start using the website, I&#39;ll definitely require a grant <img class="emoji " alt="😅" title="😅" src="https://twemoji.maxcdn.com/2/72x72/1f605.png"> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/579055421277601793/bc1f93b3f3ba5e4298a1c86598847c61.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 10:14 PM</span>
+
+            <div class="chatlog__message " data-message-id="735318866074534018" id="message-735318866074534018">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="adi#7650">@Anonymous</span> very impressive website, like the whole uniqueness behind the idea too. hopefully you get that grant <img class="emoji " alt="👍" title="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png"> <span class="chatlog__edited-timestamp" title="21-Jul-20 10:17 PM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="❤️" title="❤️" src="https://twemoji.maxcdn.com/2/72x72/2764.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 10:41 PM</span>
+
+            <div class="chatlog__message " data-message-id="735325673593241721" id="message-735325673593241721">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="adi#7650">@Anonymous</span>  Your website and idea is really cool, best of luck with the grant!  I&#39;ll upload my Unitary Fund application video here (the app is mainly an abstract and a 2-min video) and am happy to answer any questions about applying (PM on discord is good) </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735326121410953307" id="message-735326121410953307">
+                <div class="chatlog__content">
+                    <div class="markdown">A google drive link to the fullstackquantumcomputation.tech Unitary Fund application video is here: <a href="https://drive.google.com/file/d/13DGbA3ZPShl-fS-w95a_pkJqydXI0iIL/view?usp=drive_web">https://drive.google.com/file/d/13DGbA3ZPShl-fS-w95a_pkJqydXI0iIL/view?usp=drive_web</a> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://drive.google.com/file/d/13DGbA3ZPShl-fS-w95a_pkJqydXI0iIL/view?usp=drive_web">
+                                                    <div class="markdown">fsqc_unitary_fund_app_slides_colorized.mp4</div>
+                                                </a>
+                                        </div>
+
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://lh5.googleusercontent.com/Y7DeCRKo4Z8KHo192lHViYn8PNQnhjOPDkuECbzzly0a_cEND0HPa2zyYDHIDDM=w1200-h630-p">
+                                            <img class="chatlog__embed-thumbnail" src="https://lh5.googleusercontent.com/Y7DeCRKo4Z8KHo192lHViYn8PNQnhjOPDkuECbzzly0a_cEND0HPa2zyYDHIDDM=w1200-h630-p" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="chatlog__message " data-message-id="735326462823104594" id="message-735326462823104594">
+                <div class="chatlog__content">
+                    <div class="markdown">i was really lucky to get a free domain name + security scanning for 5 years from Major League Hacking Top 50 </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128559;" title="&#128559;" src="https://twemoji.maxcdn.com/2/72x72/1f62f.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 10:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="735327640969543741" id="message-735327640969543741">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="adi#7650">@Anonymous</span>  Your website and idea is really cool, best of luck with the grant!  I&#39;ll upload my Unitary Fund application video here (the app is mainly an abstract and a 2-min video) and am happy to answer any questions about applying (PM on discord is good)
+</div><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span> thanks for the reply. That would be very helpful <img class="emoji " alt="😀" title="😀" src="https://twemoji.maxcdn.com/2/72x72/1f600.png"> </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735327897350307902" id="message-735327897350307902">
+                <div class="chatlog__content">
+                    <div class="markdown">I worked on the website design with my girlfriend. She&#39;s the other co-founder of knovo.me<img class="emoji " alt="😀" title="😀" src="https://twemoji.maxcdn.com/2/72x72/1f600.png"> </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735328389484773408" id="message-735328389484773408">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">A google drive link to the fullstackquantumcomputation.tech Unitary Fund application video is here: <a href="https://drive.google.com/file/d/13DGbA3ZPShl-fS-w95a_pkJqydXI0iIL/view?usp=drive_web">https://drive.google.com/file/d/13DGbA3ZPShl-fS-w95a_pkJqydXI0iIL/view?usp=drive_web</a>
+</div><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span> 
+Thank you very much. This will go a long way in helping the project. The website is still in the very early stage, but want to grow it to something that would help anyone learn anything online in a more effective manner, and hopeful help people completely see through their learning journey </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://drive.google.com/file/d/13DGbA3ZPShl-fS-w95a_pkJqydXI0iIL/view?usp=drive_web">
+                                                    <div class="markdown">fsqc_unitary_fund_app_slides_colorized.mp4</div>
+                                                </a>
+                                        </div>
+
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://lh5.googleusercontent.com/Y7DeCRKo4Z8KHo192lHViYn8PNQnhjOPDkuECbzzly0a_cEND0HPa2zyYDHIDDM=w1200-h630-p">
+                                            <img class="chatlog__embed-thumbnail" src="https://lh5.googleusercontent.com/Y7DeCRKo4Z8KHo192lHViYn8PNQnhjOPDkuECbzzly0a_cEND0HPa2zyYDHIDDM=w1200-h630-p" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">21-Jul-20 11:04 PM</span>
+
+            <div class="chatlog__message " data-message-id="735331417411682405" id="message-735331417411682405">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">i was really lucky to get a free domain name + security scanning for 5 years from Major League Hacking Top 50
+</div><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span> 
+That&#39;s so cool. Congrats on that<img class="emoji " alt="💪" title="💪" src="https://twemoji.maxcdn.com/2/72x72/1f4aa.png">. Two of my friends actually got it too </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 02:02 AM</span>
+
+            <div class="chatlog__message " data-message-id="735376160174899250" id="message-735376160174899250">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="adi#7650">@Anonymous</span>  Your website is a really amazing idea. I&#39;m sure it gonna help scores of people like me who are very enthusiastic to learn but are bugged by the lack of a directive path.
+
+Thank you so much for taking up such a good initiative!!! </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="networked" title="networked" src="https://cdn.discordapp.com/emojis/732893594569932810.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="❤️" title="❤️" src="https://twemoji.maxcdn.com/2/72x72/2764.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/106492154175569920/54d5a05b8ff5483bf458cac8a505b32d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 05:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="735610286752661613" id="message-735610286752661613">
+                <div class="chatlog__content">
+                    <div class="markdown">Hey everyone! I&#39;m Henry, I&#39;m a senior in Applied Physics at Yale. I also work in the Devoret Lab (hi <span class="mention" title="Chunny#4174">@Anonymous</span> on bosonic error correcting codes. I took a few years away from undergrad to work on a software company, but actually came back to finish last year to get involved with QC research.
+
+I&#39;m currently helping to develop a lab course using qiskit as an interesting platform to clarify concepts in intro quantum mechanics. The target audience would be students who have taken a semester or two of QM but instead don&#39;t have much computer science background. (It seems like most of the existing content goes in the other direction!) For example, a couple of the modules we&#39;re working on are a quantum tunneling simulation and VQE for the Ising model. Would love to chat more about this if anyone is interested! </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">8</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 05:55 PM</span>
+
+            <div class="chatlog__message " data-message-id="735616144668360835" id="message-735616144668360835">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hey everyone! I&#39;m Henry, I&#39;m a senior in Applied Physics at Yale. I also work in the Devoret Lab (hi <span class="mention" title="Chunny#4174">@Anonymous</span> on bosonic error correcting codes. I took a few years away from undergrad to work on a software company, but actually came back to finish last year to get involved with QC research.
+</div>&gt; 
+<div class="quote">I&#39;m currently helping to develop a lab course using qiskit as an interesting platform to clarify concepts in intro quantum mechanics. The target audience would be students who have taken a semester or two of QM but instead don&#39;t have much computer science background. (It seems like most of the existing content goes in the other direction!) For example, a couple of the modules we&#39;re working on are a quantum tunneling simulation and VQE for the Ising model. Would love to chat more about this if anyone is interested!
+</div><span class="mention" title="asteros7#8072">@Anonymous</span> Liu</span>  hi <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> 
+I’m feel really intrigued by this. Because I Could  totally relate to what you described. I’m a physics graduate student, so as much as I can understand how the hardware works and how the information theory comes into play I always have a hard time wrapping my head around the middle part where you get the algorithm work it’s magic. 
+And for my master thesis I just recently starting working on VQEs. So please let me know if I can learn something new or help in anyways <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/106492154175569920/54d5a05b8ff5483bf458cac8a505b32d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 06:32 PM</span>
+
+            <div class="chatlog__message " data-message-id="735625397349253170" id="message-735625397349253170">
+                <div class="chatlog__content">
+                    <div class="markdown">Haha, definitely! We thought the quantum tunneling simulation would be very straightforward but there&#39;s a lot of little nontrivial details <img class="emoji " alt="😆" title="😆" src="https://twemoji.maxcdn.com/2/72x72/1f606.png"> (which papers often omit...) <span class="chatlog__edited-timestamp" title="22-Jul-20 06:33 PM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 06:39 PM</span>
+
+            <div class="chatlog__message " data-message-id="735627023317336154" id="message-735627023317336154">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Haha, definitely! We thought the quantum tunneling simulation would be very straightforward but there&#39;s a lot of little nontrivial details <img class="emoji " alt="😆" title="😆" src="https://twemoji.maxcdn.com/2/72x72/1f606.png"> (which papers often omit...)
+</div><span class="mention" title="asteros7#8072">@Anonymous</span> Liu</span>  unfortunately I have never done much background work on quantum tunneling simulation. But I do feel that it could be a good starting point for someone with basic QM knowledge as typically every undergrad QM course would have something about it. And usually it feels good to carry on with the execution part when you clearly understand the theory behind it.
+VQE on the other, might need concepts like second quantization etc to understand the Ansatz . </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/106492154175569920/54d5a05b8ff5483bf458cac8a505b32d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 06:46 PM</span>
+
+            <div class="chatlog__message " data-message-id="735628872372191252" id="message-735628872372191252">
+                <div class="chatlog__content">
+                    <div class="markdown">Yeah, that&#39;s what we are hoping to get at. The subtleties come from mapping the continuous Hamiltonian onto the discrete time/space of the QC (and a small one at that), so we have to briefly introduce some concepts like trotterization and quantized momentum. It still seems like a good intro but not as clean as originally thought <span class="chatlog__edited-timestamp" title="22-Jul-20 06:46 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 06:58 PM</span>
+
+            <div class="chatlog__message " data-message-id="735631941730172989" id="message-735631941730172989">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Yeah, that&#39;s what we are hoping to get at. The subtleties come from mapping the continuous Hamiltonian onto the discrete time/space of the QC (and a small one at that), so we have to briefly introduce some concepts like trotterization and quantized momentum. It still seems like a good intro but not as clean as originally thought
+</div><span class="mention" title="asteros7#8072">@Anonymous</span> Liu</span>  that’s great. Hope to discuss more about it. I added you on linkedin. Feel free to reach out anytime. I’m really interested in  collaborating <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/192691163084357632/73fbd0518a0321b1a0cb71782587ca3d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 06:59 PM</span>
+
+            <div class="chatlog__message " data-message-id="735632123414708224" id="message-735632123414708224">
+                <div class="chatlog__content">
+                    <div class="markdown">There’s a program called Ready which simulates reaction-diffusion systems using OpenCL.  (It’s made by the same people as Golly, a cellular automata program.)  It bas some examples with the Schr&#246;dinger equation, including a demonstration of quantum tunneling.  You can check it out here if you’re interested: <a href="https://github.com/GollyGang/Ready">https://github.com/GollyGang/Ready</a> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/106492154175569920/54d5a05b8ff5483bf458cac8a505b32d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 07:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="735633816236064889" id="message-735633816236064889">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Turtle1331#9910">@Anonymous</span>  huh, that&#39;s pretty interesting, very different way of thinking about it. is it doing something like a finite element method? <span class="chatlog__edited-timestamp" title="22-Jul-20 07:06 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/192691163084357632/73fbd0518a0321b1a0cb71782587ca3d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 07:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="735634809463898182" id="message-735634809463898182">
+                <div class="chatlog__content">
+                    <div class="markdown">I believe the default is Runge-Kutta 4.  There’s a set of examples (in the NumericalMethods folder) that explores the different options for numerical approximation. <span class="chatlog__edited-timestamp" title="22-Jul-20 07:11 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 08:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="735648238404632666" id="message-735648238404632666">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="asteros7#8072">@Anonymous</span> Liu</span> a 4th year undergrad at my undergrad uni, UCSB, will soon start running a free online seminar series on Quantum Dynamics in MATLAB, there&#39;s been a lot of interest in it.  Let me know if you&#39;d like to get in touch with him </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">22-Jul-20 09:06 PM</span>
+
+            <div class="chatlog__message " data-message-id="735664139774722219" id="message-735664139774722219">
+                <div class="chatlog__content">
+                    <div class="markdown">I&#39;ve just updated the website, <a href="https://www.fullstackquantumcomputation.tech">https://www.fullstackquantumcomputation.tech</a>; it&#39;s now ready for submissions!  Thanks to <span class="mention" title="Turtle1331#9910">@Anonymous</span> for kicking it off with an awesome explanation of his programming project modding quantumgame.io to implement the BB84 quantum key distribution protocol.
+
+Certainly with the vision of community-driven open-source education, it&#39;s a chicken and egg situation where it&#39;s gotta start somewhere, but it&#39;s community collaboration that makes it reach its full potential.  Thank you so much to y&#39;all in this channel for being supportive even when 2 days ago the website was 2 sentences in an html file xD </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">6</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="735664654193262614" id="message-735664654193262614">
+                <div class="chatlog__content">
+                    <div class="markdown">I made a post on the site sharing recorded research talks free to view online from recent conferences, workshops, and summer schools.  Next I want to make the history of quantum mechanics and of quantum information slides I made into an infographic <img class="emoji " alt="😮" title="😮" src="https://twemoji.maxcdn.com/2/72x72/1f62e.png"> </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735666152407302215" id="message-735666152407302215">
+                <div class="chatlog__content">
+                    <div class="markdown">There&#39;s 3 Google forms on the contributing page of the site - 1) to share an online resource, 2) contribute a new resource, or 3) apply to be a content reviewer -  free shipped t-shirt for 2) and 3).  All contributions are greatly appreciated, feel free to share, and we would love to get feedback and ideas! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 12:15 AM</span>
+
+            <div class="chatlog__message " data-message-id="735711613751132232" id="message-735711613751132232">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">There&#39;s 3 Google forms on the contributing page of the site - 1) to share an online resource, 2) contribute a new resource, or 3) apply to be a content reviewer -  free shipped t-shirt for 2) and 3).  All contributions are greatly appreciated, feel free to share, and we would love to get feedback and ideas!
+</div><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span>  Can I DM for discussing it&#39;s prospects </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="✅" title="✅" src="https://twemoji.maxcdn.com/2/72x72/2705.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 04:26 AM</span>
+
+            <div class="chatlog__message " data-message-id="735774805424340993" id="message-735774805424340993">
+                <div class="chatlog__content">
+                    <div class="markdown">Hello all, this is Nilay Awasthi, I&#39;m a final year unde in Electronics and Communication with minor degree in Embedded Systems and Design. I&#39;m interested in Quantum Electronics, and currently I&#39;m working on Quantum Circuit Optimization. I&#39;m interested in taking up my further studies in Quantum regime. I guess we can make a separate group for all of us, on slack or somewhere, where we can discuss after the summer school, as this group will collapse after it, I guess. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="quantumidea" title="quantumidea" src="https://cdn.discordapp.com/emojis/732893594448560188.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 04:33 AM</span>
+
+            <div class="chatlog__message " data-message-id="735776566784688150" id="message-735776566784688150">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Nilay Awasthi#6264">@Anonymous</span> Awasthi</span> for sure we can make that happen! can i ask what&#39;s it like studying electronics and communication - is that a comm major program or focusing on digital communication? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 04:36 AM</span>
+
+            <div class="chatlog__message " data-message-id="735777409663631430" id="message-735777409663631430">
+                <div class="chatlog__content">
+                    <div class="markdown">It focuses on Semiconductors, VLSI, Microelectronics, Electronics Instrumentation, Electronics Devices and Circuits, Control System, Electromagnetic Field Theory, Signal Processing and then focusing on mobile communication, digital communication, communication systems </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#129321;" title="&#129321;" src="https://twemoji.maxcdn.com/2/72x72/1f929.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="735777489372053515" id="message-735777489372053515">
+                <div class="chatlog__content">
+                    <div class="markdown">You study both the domains, the electronics and the communication domain, equally. </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="735778682181779457" id="message-735778682181779457">
+                <div class="chatlog__content">
+                    <div class="markdown">So guys, which platform you guys prefer, slack, discord, what&#39;s app, LinkedIn, or anything else? Where we can all meet up. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 04:58 AM</span>
+
+            <div class="chatlog__message " data-message-id="735782929132683324" id="message-735782929132683324">
+                <div class="chatlog__content">
+                    <div class="markdown">^ seems like discord is the easiest given that we&#39;re all on here already. my only con for it is i used to use discord solely for gaming so I&#39;m just getting used to using it for professional stuffs xD </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128518;" title="&#128518;" src="https://twemoji.maxcdn.com/2/72x72/1f606.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 05:33 AM</span>
+
+            <div class="chatlog__message " data-message-id="735791700366065677" id="message-735791700366065677">
+                <div class="chatlog__content">
+                    <div class="markdown">If all agree, then we can start off here by creating another server for us ... </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 06:09 AM</span>
+
+            <div class="chatlog__message " data-message-id="735800723199098933" id="message-735800723199098933">
+                <div class="chatlog__content">
+                    <div class="markdown">there&#39;s pros and cons to making the server now vs the end of this summer school.  since this channel is quite active, more people can join if we still primarily use this channel before then.  making another server would let people who aren&#39;t in labs join </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 06:38 AM</span>
+
+            <div class="chatlog__message " data-message-id="735808081564270593" id="message-735808081564270593">
+                <div class="chatlog__content">
+                    <div class="markdown">So I guess, we can use this server till the end of school, so all the people can gather and introduce themselves here...then at the end we can make another server, so all the people who have joined here can shift to that and we can circulate the link on other channels as well, so students who aren&#39;t in labs can join. What say? </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#129321;" title="&#129321;" src="https://twemoji.maxcdn.com/2/72x72/1f929.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 08:39 AM</span>
+
+            <div class="chatlog__message " data-message-id="735838391400398939" id="message-735838391400398939">
+                <div class="chatlog__content">
+                    <div class="markdown">for those who&#39;d like to give feedback on the website (thank you again), i realized i should add that the website <a href="https://fullstackquantumcomputation.tech">https://fullstackquantumcomputation.tech</a> still has a long way to go in terms of organization, ex. for technical reasons i can&#39;t start building until next week the personality quiz to introduce people of all ages to a dozen areas of quantum computing that will be on the front page of the site, and it will take time to modify the course material and online links i have organized by topic area to be ready for open-source </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://fullstackquantumcomputation.tech/">
+                                                    <div class="markdown">Full-Stack Quantum Computation</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">“Welcome to this community-driven, open-source educational website for learning about all aspects of quantum computing across the full stack, from hardware to algorithms to everything in between and adjacent!  Whether you are new to quantum science, filling in gaps in your fou...</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png">
+                                            <img class="chatlog__embed-thumbnail" src="https://fullstackquantumcomputation.tech/assets/images/FSQC-small.png" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/733736783392800918/906d34e20e1ffa84f95ddebc52953d8d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 12:36 PM</span>
+
+            <div class="chatlog__message " data-message-id="735898217010692176" id="message-735898217010692176">
+                <div class="chatlog__content">
+                    <div class="markdown"><a href="https://github.com/India-Qiskit-Summer-School/Nielsen-Chuang-Solutions">https://github.com/India-Qiskit-Summer-School/Nielsen-Chuang-Solutions</a>
+Hi all, some of us over at the Indian Qiskit Discord server have created a repository for Nielsen and Chuang solutions and hints.
+
+It is without doubt one of the most used resource by quantum computing students and yet does not have complete solutions till date to our knowledge. There have been few attempts but are partial and also handwritten. So to help new learners and also as a refresher for us, we&#39;ve created this joint repo where we wish to collate all solutions of exercises and problems with Hints. Anyone is welcomed to contribute. Add your names against the spreadsheet and read the Guidelines before going ahead. You are free to refer to existing solutions and type them out, just provide attribution in your files.
+We are over 1000 people easily and if each person takes up just over 2~3 problems atmost, we would be done in a day. I request whoever wishes to contribute to take around 5 problems (depending on your time availability), all in the same chapter as it would make it easier for us. Please note to provide hints to with the solutions. </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(30,35,39,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://github.com/India-Qiskit-Summer-School/Nielsen-Chuang-Solutions">
+                                                    <div class="markdown">India-Qiskit-Summer-School/Nielsen-Chuang-Solutions</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">A repository of hints and solutions for Michael Nielsen and isaac Chuang&amp;#39;s Book, Quantum Computation and Quantum Information, 10th Anniversary Edition. - India-Qiskit-Summer-School/Nielsen-...</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://avatars3.githubusercontent.com/u/68541495?s=400&amp;v=4">
+                                            <img class="chatlog__embed-thumbnail" src="https://avatars3.githubusercontent.com/u/68541495?s=400&amp;v=4" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128175;" title="&#128175;" src="https://twemoji.maxcdn.com/2/72x72/1f4af.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/550449342021107752/a9535f32a92772c2182221bc986bdebb.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">23-Jul-20 06:44 PM</span>
+
+            <div class="chatlog__message " data-message-id="735990877394042880" id="message-735990877394042880">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="PoorJoke#4600">@Anonymous</span> 
+<a href="https://github.com/goropikari/SolutionQCQINielsenChuang">https://github.com/goropikari/SolutionQCQINielsenChuang</a>
+This repo has a pretty good set of solutions, its worth taking a look </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(30,35,39,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://github.com/goropikari/SolutionQCQINielsenChuang">
+                                                    <div class="markdown">goropikari/SolutionQCQINielsenChuang</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Solution for Quantum Computation and Quantum Information by Nielsen and Chuang - goropikari/SolutionQCQINielsenChuang</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://avatars0.githubusercontent.com/u/21122112?s=400&amp;v=4">
+                                            <img class="chatlog__embed-thumbnail" src="https://avatars0.githubusercontent.com/u/21122112?s=400&amp;v=4" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/733736783392800918/906d34e20e1ffa84f95ddebc52953d8d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">24-Jul-20 12:45 AM</span>
+
+            <div class="chatlog__message " data-message-id="736081537711341698" id="message-736081537711341698">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote"><span class="mention" title="PoorJoke#4600">@Anonymous</span> 
+<a href="https://github.com/goropikari/SolutionQCQINielsenChuang">https://github.com/goropikari/SolutionQCQINielsenChuang</a>
+This repo has a pretty good set of solutions, its worth taking a look
+</div><span class="mention" title="Bidao#4541">@Anonymous</span> I do know about this, but it is incomplete, that&#39;s why we thought we could do this. But if enough people don&#39;t help out, we won&#39;t really go ahead because it won&#39;t be feasible to do this and won&#39;t be useful to have another incomplete repository <img class="emoji " alt="😅" title="😅" src="https://twemoji.maxcdn.com/2/72x72/1f605.png"> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(30,35,39,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://github.com/goropikari/SolutionQCQINielsenChuang">
+                                                    <div class="markdown">goropikari/SolutionQCQINielsenChuang</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Solution for Quantum Computation and Quantum Information by Nielsen and Chuang - goropikari/SolutionQCQINielsenChuang</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://avatars0.githubusercontent.com/u/21122112?s=400&amp;v=4">
+                                            <img class="chatlog__embed-thumbnail" src="https://avatars0.githubusercontent.com/u/21122112?s=400&amp;v=4" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">24-Jul-20 08:58 PM</span>
+
+            <div class="chatlog__message chatlog__message--pinned" data-message-id="736386959810887780" id="message-736386959810887780">
+                <div class="chatlog__content">
+                    <div class="markdown">Hello everyone!  Wow, the enthusiasm on this channel is incredible.   I think we should definitely have an online meetup to e-meet and talk about community-driven open-source quantum education!
+
+It&#39;ll be an hour long during a weekday next week --- whichever 1-2 times are most popular on the when2meet (linked in agenda below, please fill it out with your availability and time zone) at 9AM PDT Monday (aka when Monday live lecture ends).
+
+Agenda (feel free to add your ideas and questions to it): <a href="https://docs.google.com/document/d/1IkelqGLoSwC6qv6rLRPq4plizWFVt2gpnH9cZEefYfg/edit?usp=sharing">https://docs.google.com/document/d/1IkelqGLoSwC6qv6rLRPq4plizWFVt2gpnH9cZEefYfg/edit?usp=sharing</a> <span class="chatlog__edited-timestamp" title="24-Jul-20 11:11 PM">(edited)</span></div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://docs.google.com/document/d/1IkelqGLoSwC6qv6rLRPq4plizWFVt2gpnH9cZEefYfg/edit?usp=sharing">
+                                                    <div class="markdown">community-driven open-source quantum education online meetup agenda</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Hello!  This living document will be the agenda for the upcoming community-driven open-source quantum education online meetup.  Feel free to add (but out of respect, please do not delete) any topics, ideas, or questions you would like to discuss or see discussed at the meetup....</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://lh3.googleusercontent.com/AZjP2DyuBASYQj-2-lD9i2awD0ixfFO8tC6ZrAOO4LnKQwcVSxA0lePEouD0MaUPeAho7UwMSQ=w1200-h630-p">
+                                            <img class="chatlog__embed-thumbnail" src="https://lh3.googleusercontent.com/AZjP2DyuBASYQj-2-lD9i2awD0ixfFO8tC6ZrAOO4LnKQwcVSxA0lePEouD0MaUPeAho7UwMSQ=w1200-h630-p" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">6</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/722532899693527131/be6e6c78fc58a90269c029640187b2fa.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">24-Jul-20 11:29 PM</span>
+
+            <div class="chatlog__message " data-message-id="736424841527296131" id="message-736424841527296131">
+                <div class="chatlog__content">
+                    <div class="markdown">Great! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">25-Jul-20 01:10 AM</span>
+
+            <div class="chatlog__message " data-message-id="736450384393928754" id="message-736450384393928754">
+                <div class="chatlog__content">
+                    <div class="markdown">Are there any Quantum Engineering programs in US akin to ETH Zurich&#39;s or TUM&#39;s? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734521523473481839/491f5aa0b71b58a7de4771b4b833bade.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">25-Jul-20 05:47 AM</span>
+
+            <div class="chatlog__message " data-message-id="736520112441524235" id="message-736520112441524235">
+                <div class="chatlog__content">
+                    <div class="markdown">Here are some nice links to free resources: <a href="https://quantumzeitgeist.com/free-resources-for-learning-about-quantum-computing/">https://quantumzeitgeist.com/free-resources-for-learning-about-quantum-computing/</a> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://quantumzeitgeist.com/free-resources-for-learning-about-quantum-computing/">
+                                                    <div class="markdown">Free resources for learning about Quantum Computing</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Learning about how quantum computers work and their algorithms doesn&#39;t have to be difficult and expensive. There are plenty of great books written on the subject that range from popular to science to extensive text books costing hundreds of dollars.</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://i1.wp.com/quantumzeitgeist.com/wp-content/uploads/TU-Delft.jpg?fit=1200%2C630&amp;ssl=1">
+                                            <img class="chatlog__embed-thumbnail" src="https://i1.wp.com/quantumzeitgeist.com/wp-content/uploads/TU-Delft.jpg?fit=1200%2C630&amp;ssl=1" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127860;" title="&#127860;" src="https://twemoji.maxcdn.com/2/72x72/1f374.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">25-Jul-20 01:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="736643070833066034" id="message-736643070833066034">
+                <div class="chatlog__content">
+                    <div class="markdown">Hey guys, I was thinking if we could all team up and do a project, as we all are from different domains, and having quantum as a common node, so we can come with varied dimensions to add on. What&#39;s say? </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="quantumidea" title="quantumidea" src="https://cdn.discordapp.com/emojis/732893594448560188.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="736643184083468328" id="message-736643184083468328">
+                <div class="chatlog__content">
+                    <div class="markdown">Like Lia said...we can have an e- meet  and I guess we discuss over it </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/579055421277601793/bc1f93b3f3ba5e4298a1c86598847c61.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">25-Jul-20 02:09 PM</span>
+
+            <div class="chatlog__message " data-message-id="736646360509710366" id="message-736646360509710366">
+                <div class="chatlog__content">
+                    <div class="markdown">Pinned a message. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/120327863273652224/c50b009a72f90db9a882bb02f6672bf6.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">25-Jul-20 09:34 PM</span>
+
+            <div class="chatlog__message " data-message-id="736758206390599681" id="message-736758206390599681">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi, my names Ricky, a rising Senior at the University of Nevada, Reno studying Physics. Just put my availability for your <span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span>  meetup. I have also been slowly collecting my own QC resources and would love a community to share it with. I hope that interuniversity communications are relevant enough to discuss, especially between clubs/orgs to further hype for the subject. Also I just saw in the high schoolers study group a paper showing how to introduce high schoolers to QC (<a href="https://arxiv.org/pdf/1905.00282.pdf)">https://arxiv.org/pdf/1905.00282.pdf)</a> <img class="emoji " alt="qiskitblack" title="qiskitblack" src="https://cdn.discordapp.com/emojis/732893594293239818.png"> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#129395;" title="&#129395;" src="https://twemoji.maxcdn.com/2/72x72/1f973.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">25-Jul-20 10:47 PM</span>
+
+            <div class="chatlog__message " data-message-id="736776587239882783" id="message-736776587239882783">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Are there any Quantum Engineering programs in US akin to ETH Zurich&#39;s or TUM&#39;s?
+</div><span class="mention" title="waelitani#0614">@Anonymous</span> UCLA announced it&#39;s establishing a master&#39;s program in quantum science and technology (<a href="https://newsroom.ucla.edu/releases/uc-to-lead-group-creating-quantum-computing-institute)">https://newsroom.ucla.edu/releases/uc-to-lead-group-creating-quantum-computing-institute)</a>.  While not in the US, the University of Waterloo in Canada is very well-known for its quantum information research, and has several graduate programs emphasizing quantum science.  I would say the vast majority of grad students researching quantum science/computing in the US are pursuing degrees in physics, CS, EE, ECE, materials, chemistry, math, etc.
+Change at most US universities happens very slow, so it will take years for them to offer interdisciplinary quantum courses at scale much less new graduate programs, and in the meantime undergrads are unable to take courses due to major restrictions or unfulfilled prerequisites (at least at large public universities, even UCSB which has much quantum science research). </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="736776975351545886" id="message-736776975351545886">
+                <div class="chatlog__content">
+                    <div class="markdown">^I should add that in particular, physics graduate programs are almost all PhD&#39;s instead of Master&#39;s programs (in the US; I don&#39;t know about other countries).  I also in recent months learned that unlike in the US where physics and CS PhD programs are longer (5-7 years) and a Master&#39;s is not necessary to apply; for the most part, in the EU and UK often times a Master&#39;s is needed to apply for PhD programs but their PhD programs are shorter (3-4 years). <span class="chatlog__edited-timestamp" title="25-Jul-20 10:52 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">25-Jul-20 11:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="736780828667019375" id="message-736780828667019375">
+                <div class="chatlog__content">
+                    <div class="markdown">^Should also add that while grad students in the US researching quantum science are pursuing degrees that don&#39;t have the word quantum in it, the more well-regarded (for lack of any quantum-specific ranking as far as I know) programs are associated with multiple faculty members researching quantum science at that university, often associated with one or more centers (with the word quantum in the name) funded by or in partnerships with government organizations or national labs or industry.
+Feel free to DM with questions, for example specifics on which universities to apply to depends the most on what area(s) of research you are interested in within the very large umbrella of quantum science. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">26-Jul-20 12:40 PM</span>
+
+            <div class="chatlog__message " data-message-id="736986197087223912" id="message-736986197087223912">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi guys ! Do you think that quantum physics can be learned online ? Is there an university providing remote education ? Or are there courses you recommend ? Thanks </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/524799662717141002/9729118820982d962d99af0f42d87014.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">26-Jul-20 12:42 PM</span>
+
+            <div class="chatlog__message " data-message-id="736986778753302602" id="message-736986778753302602">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hi guys ! Do you think that quantum physics can be learned online ? Is there an university providing remote education ? Or are there courses you recommend ? Thanks
+</div><span class="mention" title="donevski#1390">@Anonymous</span> <a href="https://ocw.mit.edu/courses/physics/8-04-quantum-physics-i-spring-2016/">https://ocw.mit.edu/courses/physics/8-04-quantum-physics-i-spring-2016/</a> <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://ocw.mit.edu/courses/physics/8-04-quantum-physics-i-spring-2016/">
+                                                    <div class="markdown">Quantum Physics I</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">This is the first course in the undergraduate Quantum Physics sequence. It introduces the basic features of quantum mechanics. It covers the experimental basis of quantum physics, introduces wave mechanics, Schr&#246;dinger&#39;s equation in a single dimension, and Schr&#246;dinger&#39;s equati...</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://ocw.mit.edu/courses/physics/8-04-quantum-physics-i-spring-2016/8-04s16.jpg">
+                                            <img class="chatlog__embed-thumbnail" src="https://ocw.mit.edu/courses/physics/8-04-quantum-physics-i-spring-2016/8-04s16.jpg" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="❤️" title="❤️" src="https://twemoji.maxcdn.com/2/72x72/2764.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="736987047595737119" id="message-736987047595737119">
+                <div class="chatlog__content">
+                    <div class="markdown">this gives the basics of quantum mechanics, and Quantum Physics II goes over formalism <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/654361724178137129/6e388e0f8146191ae836b1aee11a7310.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">26-Jul-20 06:17 PM</span>
+
+            <div class="chatlog__message " data-message-id="737071060683587635" id="message-737071060683587635">
+                <div class="chatlog__content">
+                    <div class="markdown">My first exposure to a full quantum computing course was Vazirani&#39;s EdX course - would still recommend! <a href="https://www.edx.org/course/quantum-mechanics-and-quantum-computation">https://www.edx.org/course/quantum-mechanics-and-quantum-computation</a> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.edx.org/course/quantum-mechanics-and-quantum-computation">
+                                                    <div class="markdown">Quantum Mechanics and Quantum Computation</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">A simple conceptual introduction to quantum mechanics and quantum computation.</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://prod-discovery.edx-cdn.org/media/course/image/31c40299-2f14-4689-849d-3f9545b665b7-f7dc11030e00.small.jpg">
+                                            <img class="chatlog__embed-thumbnail" src="https://prod-discovery.edx-cdn.org/media/course/image/31c40299-2f14-4689-849d-3f9545b665b7-f7dc11030e00.small.jpg" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="chatlog__message " data-message-id="737071508639186957" id="message-737071508639186957">
+                <div class="chatlog__content">
+                    <div class="markdown">I also wrote a comment with some prominent US based quantum groups linked here: <a href="https://www.reddit.com/r/QuantumComputing/comments/gdk2x9/which_universities_lead_in_quantum_computing/fpixgcr/">https://www.reddit.com/r/QuantumComputing/comments/gdk2x9/which_universities_lead_in_quantum_computing/fpixgcr/</a> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,255,255,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.reddit.com/r/QuantumComputing/comments/gdk2x9/which_universities_lead_in_quantum_computing/fpixgcr/">
+                                                    <div class="markdown">r/QuantumComputing - Comment by u/seattlechunny on ”Which universit...</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">35 votes and 36 comments so far on Reddit</div>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="chatlog__message " data-message-id="737072119665655949" id="message-737072119665655949">
+                <div class="chatlog__content">
+                    <div class="markdown">There are many universities in the US that are creating quantum institutes, in the same way that IQC was established at UWaterloo - much of it is to get in on the National Quantum Initiative Act, and so programs like the YQI at Yale, the Chicago Quantum Exchange at UChicago/UIllinois/UWisconsin/Northwestern, the QTC at UMaryland, and many more. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="networked" title="networked" src="https://cdn.discordapp.com/emojis/732893594569932810.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="737072587380752475" id="message-737072587380752475">
+                <div class="chatlog__content">
+                    <div class="markdown">I will specifically plug UChicago&#39;s program here - they recently launched the Pritzker School of Molecular Engineering, and one of the four divisions of that school is specifically focused on Quantum Engineering. Really cool program! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/2.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">26-Jul-20 07:19 PM</span>
+
+            <div class="chatlog__message " data-message-id="737086701230489651" id="message-737086701230489651">
+                <div class="chatlog__content">
+                    <div class="markdown">Hi this is Luis! Currently studying AI applied to financial markets. At the same time, I am learning quantum computing in order to apply it to my machine learning /deep learning models. Please check my LinkedIn profile:<a href="https://www.linkedin.com/in/luis-roman-alcaide-383b12b5/">https://www.linkedin.com/in/luis-roman-alcaide-383b12b5/</a> Let&#39;s connect! <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> Thanks </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/579055421277601793/bc1f93b3f3ba5e4298a1c86598847c61.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">26-Jul-20 08:40 PM</span>
+
+            <div class="chatlog__message " data-message-id="737107154426658877" id="message-737107154426658877">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">I also wrote a comment with some prominent US based quantum groups linked here: <a href="https://www.reddit.com/r/QuantumComputing/comments/gdk2x9/which_universities_lead_in_quantum_computing/fpixgcr/">https://www.reddit.com/r/QuantumComputing/comments/gdk2x9/which_universities_lead_in_quantum_computing/fpixgcr/</a>
+</div><span class="mention" title="Chunny#4174">@Anonymous</span> Thank you for this! </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,255,255,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.reddit.com/r/QuantumComputing/comments/gdk2x9/which_universities_lead_in_quantum_computing/fpixgcr/">
+                                                    <div class="markdown">r/QuantumComputing - Comment by u/seattlechunny on ”Which universit...</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">36 votes and 36 comments so far on Reddit</div>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 08:08 AM</span>
+
+            <div class="chatlog__message " data-message-id="737280301541228625" id="message-737280301541228625">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Hello everyone!  Wow, the enthusiasm on this channel is incredible.   I think we should definitely have an online meetup to e-meet and talk about community-driven open-source quantum education!
+</div>&gt; 
+<div class="quote">It&#39;ll be an hour long during a weekday next week --- whichever 1-2 times are most popular on the when2meet (linked in agenda below, please fill it out with your availability and time zone) at 9AM PDT Monday (aka when Monday live lecture ends).
+</div>&gt; 
+<div class="quote">Agenda (feel free to add your ideas and questions to it): <a href="https://docs.google.com/document/d/1IkelqGLoSwC6qv6rLRPq4plizWFVt2gpnH9cZEefYfg/edit?usp=sharing">https://docs.google.com/document/d/1IkelqGLoSwC6qv6rLRPq4plizWFVt2gpnH9cZEefYfg/edit?usp=sharing</a>
+</div><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span> bumping this^
+you&#39;re all welcome to join the meet-up, time to be announced at the end of Monday&#39;s live lecture.  the meet-up time will be when most people have indicated they&#39;re available on the when2meet - please fill out if you&#39;re interested by just typing in your name and dragging green boxes for when you&#39;re available: <a href="https://www.when2meet.com/?9426399-DmtED">https://www.when2meet.com/?9426399-DmtED</a> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://docs.google.com/document/d/1IkelqGLoSwC6qv6rLRPq4plizWFVt2gpnH9cZEefYfg/edit?usp=sharing">
+                                                    <div class="markdown">community-driven open-source quantum education online meetup agenda</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Hello!  This living document will be the agenda for the upcoming community-driven open-source quantum education online meetup.  Feel free to add (but out of respect, please do not delete) any topics, ideas, or questions you would like to discuss or see discussed at the meetup....</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://lh3.googleusercontent.com/AZjP2DyuBASYQj-2-lD9i2awD0ixfFO8tC6ZrAOO4LnKQwcVSxA0lePEouD0MaUPeAho7UwMSQ=w1200-h630-p">
+                                            <img class="chatlog__embed-thumbnail" src="https://lh3.googleusercontent.com/AZjP2DyuBASYQj-2-lD9i2awD0ixfFO8tC6ZrAOO4LnKQwcVSxA0lePEouD0MaUPeAho7UwMSQ=w1200-h630-p" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 10:00 AM</span>
+
+            <div class="chatlog__message " data-message-id="737308382024826952" id="message-737308382024826952">
+                <div class="chatlog__content">
+                    <div class="markdown">Sharing here in case you have missied it. Looking forward to your responses. <a href="https://discordapp.com/channels/729706617951485954/733435595837276220/737014120729149521" onclick="scrollToMessage(event, '737014120729149521')">https://discordapp.com/channels/729706617951485954/733435595837276220/737014120729149521</a> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 12:12 PM</span>
+
+            <div class="chatlog__message " data-message-id="737341646554923008" id="message-737341646554923008">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention">#quantum-education</span> oh gee the most popular meet-up time is today, 80 minutes from now (10:30AM PDT, 1:30PM EDT) </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="737342226811715675" id="message-737342226811715675">
+                <div class="chatlog__content">
+                    <div class="markdown">let&#39;s do that then!  i&#39;ll post a Google Meet link here </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;&#127995;" title="&#128077;&#127995;" src="https://twemoji.maxcdn.com/2/72x72/1f44d-1f3fb.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 12:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="737342465106772159" id="message-737342465106772159">
+                <div class="chatlog__content">
+                    <div class="markdown">Perfect... </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 12:25 PM</span>
+
+            <div class="chatlog__message " data-message-id="737344850499731606" id="message-737344850499731606">
+                <div class="chatlog__content">
+                    <div class="markdown">Here&#39;s the Google Meet link for an hour and 5 min from now (10:30AM PDT aka 1.5 hours after the end of the 3 hrs marked for live lecture) (the link runs in-browser, if it doesn&#39;t work the most common issue is not enabling audio or optionally video permissions):
+<a href="https://meet.google.com/zru-refs-bsj">https://meet.google.com/zru-refs-bsj</a> <span class="chatlog__edited-timestamp" title="27-Jul-20 12:29 PM">(edited)</span></div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://meet.google.com/zru-refs-bsj">
+                                                    <div class="markdown">Meet</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Real-time meetings by Google. Using your browser, share your video, desktop, and presentations with teammates and customers.</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://www.gstatic.com/images/branding/product/2x/meet_96dp.png">
+                                            <img class="chatlog__embed-thumbnail" src="https://www.gstatic.com/images/branding/product/2x/meet_96dp.png" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="chatlog__message " data-message-id="737344983987781653" id="message-737344983987781653">
+                <div class="chatlog__content">
+                    <div class="markdown">Excited to e-meet-up ahhhhhhhh </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="737345631072550932" id="message-737345631072550932">
+                <div class="chatlog__content">
+                    <div class="markdown">^if this link has audio issues, you can dial-in to the phone numbers here:
+<a href="https://meet.google.com/tel/zru-refs-bsj?pin=8080761978768&hs=1">https://meet.google.com/tel/zru-refs-bsj?pin=8080761978768&amp;hs=1</a>
+and then enter this PIN into your phone to join:
+808 076 197 8768#
+
+there&#39;ll be a summary to be posted here for those who can&#39;t make it <span class="chatlog__edited-timestamp" title="27-Jul-20 12:47 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 01:31 PM</span>
+
+            <div class="chatlog__message " data-message-id="737361617154736169" id="message-737361617154736169">
+                <div class="chatlog__content">
+                    <div class="markdown">starting now at: <a href="https://meet.google.com/zru-refs-bsj">https://meet.google.com/zru-refs-bsj</a> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://meet.google.com/zru-refs-bsj">
+                                                    <div class="markdown">Meet</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Real-time meetings by Google. Using your browser, share your video, desktop, and presentations with teammates and customers.</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://www.gstatic.com/images/branding/product/2x/meet_96dp.png">
+                                            <img class="chatlog__embed-thumbnail" src="https://www.gstatic.com/images/branding/product/2x/meet_96dp.png" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/734422278707871776/ac6be6cc1946b8e689d985d476f283e1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 02:55 PM</span>
+
+            <div class="chatlog__message " data-message-id="737382784355532943" id="message-737382784355532943">
+                <div class="chatlog__content">
+                    <div class="markdown">Hey sorry. Somethings wrong with my internet connection </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 03:03 PM</span>
+
+            <div class="chatlog__message " data-message-id="737384632894358217" id="message-737384632894358217">
+                <div class="chatlog__content">
+                    <div class="markdown"><a href="https://docs.google.com/document/d/1IkelqGLoSwC6qv6rLRPq4plizWFVt2gpnH9cZEefYfg/edit?usp=sharing">https://docs.google.com/document/d/1IkelqGLoSwC6qv6rLRPq4plizWFVt2gpnH9cZEefYfg/edit?usp=sharing</a>
+^ our agenda link now has all our notes from the meet-up!  thank you all who joined, nice to e-meet as a group and have such eye-opening discussion <img class="emoji " alt="😄" title="😄" src="https://twemoji.maxcdn.com/2/72x72/1f604.png"> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://docs.google.com/document/d/1IkelqGLoSwC6qv6rLRPq4plizWFVt2gpnH9cZEefYfg/edit?usp=sharing">
+                                                    <div class="markdown">community-driven open-source quantum education online meetup agenda...</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Here&#39;s the Google Meet link for 10:30AM PDT (the link runs in-browser, if it doesn&#39;t work the most common issue is not enabling audio or optionally video permissions): <a href="https://meet.google.com/zru-refs-bsj">https://meet.google.com/zru-refs-bsj</a> ^if this link has audio issues, you can dial-in to the phone numbers her...</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://lh3.googleusercontent.com/AZjP2DyuBASYQj-2-lD9i2awD0ixfFO8tC6ZrAOO4LnKQwcVSxA0lePEouD0MaUPeAho7UwMSQ=w1200-h630-p">
+                                            <img class="chatlog__embed-thumbnail" src="https://lh3.googleusercontent.com/AZjP2DyuBASYQj-2-lD9i2awD0ixfFO8tC6ZrAOO4LnKQwcVSxA0lePEouD0MaUPeAho7UwMSQ=w1200-h630-p" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="quantumidea" title="quantumidea" src="https://cdn.discordapp.com/emojis/732893594448560188.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#129395;" title="&#129395;" src="https://twemoji.maxcdn.com/2/72x72/1f973.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="737385330646450266" id="message-737385330646450266">
+                <div class="chatlog__content">
+                    <div class="markdown">as we thought it&#39;d be a really good idea to survey learners of Qiskit Global Summer School of how they first heard of and became interested in quantum computing/science, their advice for those just starting out, their background and interest areas, feel free to add survey questions collaboratively at the bottom of the agenda/notes/surveyquestions doc above </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 03:10 PM</span>
+
+            <div class="chatlog__message " data-message-id="737386505386852393" id="message-737386505386852393">
+                <div class="chatlog__content">
+                    <div class="markdown">Thankyou <span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span>  for introducing us to this wonderful open source project. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128158;" title="&#128158;" src="https://twemoji.maxcdn.com/2/72x72/1f49e.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="737386593374961684" id="message-737386593374961684">
+                <div class="chatlog__content">
+                    <div class="markdown">Thankyou everyone for the insightful discussion and for sharing thoughtful ideas. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="quantumcomputing" title="quantumcomputing" src="https://cdn.discordapp.com/emojis/732893594498629663.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="U2_gate" title="U2_gate" src="https://cdn.discordapp.com/emojis/733003245815070766.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 03:15 PM</span>
+
+            <div class="chatlog__message " data-message-id="737387827800703107" id="message-737387827800703107">
+                <div class="chatlog__content">
+                    <div class="markdown">It&#39;s was a great meet guys... </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="737388062929059911" id="message-737388062929059911">
+                <div class="chatlog__content">
+                    <div class="markdown">I guess regarding the survey of the Qiskit Summer School, Brian gives away his email id for people who have query, I guess Lia you can drop down an email to him, and ask about it. </div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="737388336724836352" id="message-737388336724836352">
+                <div class="chatlog__content">
+                    <div class="markdown">If I&#39;m not wrong, it&#39;s brian.i@Anonymous</span> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 04:07 PM</span>
+
+            <div class="chatlog__message " data-message-id="737400685779353690" id="message-737400685779353690">
+                <div class="chatlog__content">
+                    <div class="markdown">^Ah I&#39;ve connected with him before and will gladly reach out <img class="emoji " alt="🙂" title="🙂" src="https://twemoji.maxcdn.com/2/72x72/1f642.png"> thanks! </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">27-Jul-20 10:49 PM</span>
+
+            <div class="chatlog__message " data-message-id="737502027005034577" id="message-737502027005034577">
+                <div class="chatlog__content">
+                    <div class="markdown"><a href="https://www.sciencealert.com/this-is-the-first-ever-photo-of-quantum-entanglement/amp">https://www.sciencealert.com/this-is-the-first-ever-photo-of-quantum-entanglement/amp</a> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128064;" title="&#128064;" src="https://twemoji.maxcdn.com/2/72x72/1f440.png">
+                                <span class="chatlog__reaction-count">2</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">28-Jul-20 12:45 AM</span>
+
+            <div class="chatlog__message " data-message-id="737531224566005772" id="message-737531224566005772">
+                <div class="chatlog__content">
+                    <div class="markdown">Is there any chance that anyone who attended the meet recorded it?
+I missed it cuz it was night time at ours and didn&#39;t check discord before sleeping </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/192691163084357632/73fbd0518a0321b1a0cb71782587ca3d.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">28-Jul-20 02:44 AM</span>
+
+            <div class="chatlog__message " data-message-id="737561083287699561" id="message-737561083287699561">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Sans#5894">@Anonymous</span> Lia posted meeting notes here <a href="https://discord.com/channels/729706617951485954/734845022708564119/737384632894358217" onclick="scrollToMessage(event, '737384632894358217')">https://discord.com/channels/729706617951485954/734845022708564119/737384632894358217</a> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/4.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">28-Jul-20 02:58 AM</span>
+
+            <div class="chatlog__message " data-message-id="737564596361232434" id="message-737564596361232434">
+                <div class="chatlog__content">
+                    <div class="markdown"><span class="mention" title="Turtle1331#9910">@Anonymous</span>  Thanks Vincent, I did go through it. Hope I can help contribute too. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/654361724178137129/6e388e0f8146191ae836b1aee11a7310.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">28-Jul-20 11:05 AM</span>
+
+            <div class="chatlog__message " data-message-id="737687194902462534" id="message-737687194902462534">
+                <div class="chatlog__content">
+                    <div class="markdown">Just wanted to extend a general invite - if anyone would be interested in publishing a blog on some interesting qc paper that they read recently, onto <a href="https://figtwo.wordpress.com">https://figtwo.wordpress.com</a>, let me know and we can figure something out! I just posted (for the first time in a looong while, lol), so feel free to check that out as well. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">6</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">29-Jul-20 09:56 PM</span>
+
+            <div class="chatlog__message " data-message-id="738213277313531934" id="message-738213277313531934">
+                <div class="chatlog__content">
+                    <div class="markdown">Based on our meet-up discussion, we&#39;re basically deciding between Slack and Discord as which platform to choose for the open-source quantum education community.  I&#39;ve put below the advantages to each we listed before below - please add any other points you think would be helpful.  The intended usage is to have channels for:
+- admin team (who builds/maintains the site, coordinates collaborations/outreach, moderates channels)
+- contributors (anyone who wants to add an educational resource to the site)
+- reviewers (works with contributors to review and make educational materials accessible)
+- area-specific channels so anyone can ask questions - we&#39;ll encourage people ask questions on StackOverflow and link to them in the relevant area-specific channel
+
+Slack
+- pros: used by Qiskit, DMs stay on that stack instead of mixed with all your other DMs
+- cons: need to keep track of each Slack&#39;s site and login
+Discord
+- pros: used by Qiskit Global Summer School and Major League Hacking, easy sign-up and sign-in
+- cons: DMs intermixed with all your DMs (i guess we could get around that by encouraging using voice channels), you see when people are playing video games xD <span class="chatlog__edited-timestamp" title="29-Jul-20 10:00 PM">(edited)</span></div>
+                </div>
+
+
+
+            </div>
+            <div class="chatlog__message " data-message-id="738214640483303564" id="message-738214640483303564">
+                <div class="chatlog__content">
+                    <div class="markdown">!poll &quot;Would you prefer Slack or Discord to continue the discussion in this channel post- summer school?&quot; &quot;Slack&quot; &quot;Discord&quot; </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/168274283414421504/ee1f5eeba16cebf42a850c12809554d5.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+            <span class="chatlog__bot-tag">BOT</span>
+
+        <span class="chatlog__timestamp">29-Jul-20 10:01 PM</span>
+
+            <div class="chatlog__message " data-message-id="738214640491954218" id="message-738214640491954218">
+                <div class="chatlog__content">
+                    <div class="markdown"> </div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(51,127,213,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <div class="markdown">Would you prefer Slack or Discord to continue the discussion in this channel post- summer school?</div>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">1️⃣ Slack
+2️⃣ Discord</div>
+                                        </div>
+
+                                </div>
+
+                            </div>
+
+
+                                <div class="chatlog__embed-footer">
+
+                                        <span class="chatlog__embed-footer-text">
+Poll started by infinitesseract [Lia Yeh]#4561
+ • 
+29-Jul-20 10:01 PM                                        </span>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="1️⃣" title="1️⃣" src="https://twemoji.maxcdn.com/2/72x72/31-20e3.png">
+                                <span class="chatlog__reaction-count">3</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="2️⃣" title="2️⃣" src="https://twemoji.maxcdn.com/2/72x72/32-20e3.png">
+                                <span class="chatlog__reaction-count">15</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">29-Jul-20 10:08 PM</span>
+
+            <div class="chatlog__message " data-message-id="738216472131796992" id="message-738216472131796992">
+                <div class="chatlog__content">
+                    <div class="markdown">For more info, here&#39;s the slant comparison of Slack vs Discord: <a href="https://www.slant.co/versus/4553/5637/~slack_vs_discord">https://www.slant.co/versus/4553/5637/~slack_vs_discord</a> <span class="chatlog__edited-timestamp" title="29-Jul-20 10:08 PM">(edited)</span></div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.slant.co/versus/4553/5637/~slack_vs_discord">
+                                                    <div class="markdown">Slant - Slack vs Discord detailed comparison as of 2020</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">Comparison of Slack vs Discord detailed comparison as of 2020 and their Pros/Cons</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://ucarecdn.com/a8f29c40-2956-4731-9d90-773e087e0a3e/">
+                                            <img class="chatlog__embed-thumbnail" src="https://ucarecdn.com/a8f29c40-2956-4731-9d90-773e087e0a3e/" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">29-Jul-20 10:47 PM</span>
+
+            <div class="chatlog__message " data-message-id="738226263310729217" id="message-738226263310729217">
+                <div class="chatlog__content">
+                    <div class="markdown">Tomorrow&#39;s my first meeting with the Unitary Fund.  I&#39;ll share their suggestions here, which I&#39;m sure will be helpful to know for quantum education in general.
+
+The next month timeline for <a href="https://fullstackquantumcomputation.tech">https://fullstackquantumcomputation.tech</a> is
+This week: let&#39;s focus on Qiskit Global Summer School together :D
+7/30: create either a Slack or Discord (poll above) and link to it here and in the help channels
+7/31: decide on which dropshipping print-on-demand custom t-shirt service to use (all help appreciated - I&#39;m considering <a href="https://qikink.com/product/mens-raglan-t-shirt-drop-shipping/">https://qikink.com/product/mens-raglan-t-shirt-drop-shipping/</a>
+8/1: kick off month-long t-shirt and logo contest (winners gets free t-shirts) via our social media and a design Discord server with 1000s of people
+Week of 8/3-8/7: Make the Typeform quiz introducing different areas of quantum science/computing, and reach out to experts in these areas to explain at different levels of difficulty
+Remainder of August: focus on the writeups introducing each area, collab on the contributions process, write an op-ed for the Qiskit Blog, and improve the site aesthetic
+Week of 9/1: Check-in meeting of some of admin team with Unitary Fund team <span class="chatlog__edited-timestamp" title="29-Jul-20 10:56 PM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">5</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="738226885997101097" id="message-738226885997101097">
+                <div class="chatlog__content">
+                    <div class="markdown">^ The experts explaining at different levels of difficulty video is inspired by the WIRED YouTube channel which made this gem - IBM&#39;s Dr. Talia Gershon explains quantum computing to 5 different people: <a href="https://www.youtube.com/watch?v=OWJCfOvochA">https://www.youtube.com/watch?v=OWJCfOvochA</a>
+Once my Uber driver, a musician, and I found out we&#39;d both watched this video <span class="chatlog__edited-timestamp" title="29-Jul-20 10:53 PM">(edited)</span></div>
+                </div>
+
+
+                    <div class="chatlog__embed">
+                            <div class="chatlog__embed-color-pill" style="background-color: rgba(255,0,0,255)"></div>
+
+                        <div class="chatlog__embed-content-container">
+                            <div class="chatlog__embed-content">
+                                <div class="chatlog__embed-text">
+                                        <div class="chatlog__embed-author">
+
+                                                <span class="chatlog__embed-author-name">
+                                                        <a class="chatlog__embed-author-name-link" href="https://www.youtube.com/channel/UCftwRNsjfRo08xYE31tkiyw">WIRED</a>
+                                                </span>
+                                        </div>
+
+                                        <div class="chatlog__embed-title">
+                                                <a class="chatlog__embed-title-link" href="https://www.youtube.com/watch?v=OWJCfOvochA">
+                                                    <div class="markdown">Quantum Computing Expert Explains One Concept in 5 Levels of Diffic...</div>
+                                                </a>
+                                        </div>
+
+                                        <div class="chatlog__embed-description">
+                                            <div class="markdown">WIRED has challenged IBM&#39;s Dr. Talia Gershon (Senior Manager, Quantum Research) to explain quantum computing to 5 different people; a child, teen, a college student, a grad student and a professional.
+
+Still haven’t subscribed to WIRED on YouTube? ►► <a href="http://wrd.cm/15fP7B7">http://wrd.cm/15fP7B7</a> 
+Ge...</div>
+                                        </div>
+
+                                </div>
+
+                                    <div class="chatlog__embed-thumbnail-container">
+                                        <a class="chatlog__embed-thumbnail-link" href="https://i.ytimg.com/vi/OWJCfOvochA/maxresdefault.jpg">
+                                            <img class="chatlog__embed-thumbnail" src="https://i.ytimg.com/vi/OWJCfOvochA/maxresdefault.jpg" alt="Thumbnail">
+                                        </a>
+                                    </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">30-Jul-20 03:55 PM</span>
+
+            <div class="chatlog__message " data-message-id="738485031651115099" id="message-738485031651115099">
+                <div class="chatlog__content">
+                    <div class="markdown">Just met with 3 members of the Unitary Fund team (Nathan Shammah, William Zeng, Travis Scholten) and 2 people representing the Quantum Open Software Foundation (Mark Fingerhuth and Tomas Babej).  They shared a few links and I&#39;ve organized my notes from it (both now in the meet-up agenda/notes link above).
+<span class="mention" title="adi#7650">@Anonymous</span>  i put in a good word for your website to them!
+
+No response from Brian Ingmanson and Suzie Kirschner yet who I emailed yesterday about if we could share a survey to the summer school participants.  <span class="mention" title="sam-qc#5621">@Anonymous</span> any luck from the summer school organizers end? </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">30-Jul-20 05:23 PM</span>
+
+            <div class="chatlog__message " data-message-id="738506989675741325" id="message-738506989675741325">
+                <div class="chatlog__content">
+                    <div class="markdown">Response from Anne Gebbie on the Qiskit Slack!  She and <span class="mention" title="justjosie#1568">@Anonymous</span> are working on polling Qiskit Global Summer School participants.  She asked if there were 3-4 questions we&#39;d be most interested in sharing </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="qiskitwhite" title="qiskitwhite" src="https://cdn.discordapp.com/emojis/732893614543470592.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#128077;" title="&#128077;" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">30-Jul-20 05:30 PM</span>
+
+            <div class="chatlog__message " data-message-id="738508895802097715" id="message-738508895802097715">
+                <div class="chatlog__content">
+                    <div class="markdown">(just deleted voting for new discord server name because that voting should be in the new server itself so non-lab and non-Qiskit Global Summer School participants can vote too) </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/1.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">30-Jul-20 06:00 PM</span>
+
+            <div class="chatlog__message " data-message-id="738516408392220782" id="message-738516408392220782">
+                <div class="chatlog__content">
+                    <div class="markdown">Great stuff Lia. Appreciate your enthusiasm </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#129426;" title="&#129426;" src="https://twemoji.maxcdn.com/2/72x72/1f992.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">31-Jul-20 04:05 AM</span>
+
+            <div class="chatlog__message " data-message-id="738668670972330005" id="message-738668670972330005">
+                <div class="chatlog__content">
+                    <div class="markdown">Wootwootwoot just made the Discord server and it&#39;s pretty :O:O:O
+I named it Quantum Universal Education, with the full name being People Interested in Quantum Universal Education (PIQUE), but if people want a different name we can put it up for a vote haha
+Join link expires in 1 day here: <a href="https://discord.gg/jYAAsW">https://discord.gg/jYAAsW</a>  It&#39;s public so you can invite anyone!
+I&#39;d say to hold off on posting much in it before the end of the summer school, as sharing it on social media and the t-shirt contest kick off on August 1. <span class="chatlog__edited-timestamp" title="31-Jul-20 04:19 AM">(edited)</span></div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="♥️" title="♥️" src="https://twemoji.maxcdn.com/2/72x72/2665.png">
+                                <span class="chatlog__reaction-count">6</span>
+                            </div>
+                    </div>
+            </div>
+            <div class="chatlog__message " data-message-id="738668973088047114" id="message-738668973088047114">
+                <div class="chatlog__content">
+                    <div class="markdown">^ah the logo is cursed.  if you look closely the face spells the word pique.  should explain why we desperately need a new logo.  thank goodness my graphic designer friend is done with her summer classes soon. </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">31-Jul-20 04:33 AM</span>
+
+            <div class="chatlog__message " data-message-id="738675788358090802" id="message-738675788358090802">
+                <div class="chatlog__content">
+                    <div class="markdown">Also, I sent <span class="mention" title="justjosie#1568">@Anonymous</span> all our survey questions on the doc and she said
+<div class="quote">I checked in with the team, and in the Summer School official post-event survey, all of these questions happen to be included!</div> </div>
+                </div>
+
+
+
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">31-Jul-20 05:21 AM</span>
+
+            <div class="chatlog__message " data-message-id="738687738626441276" id="message-738687738626441276">
+                <div class="chatlog__content">
+                    <div class="markdown"><div class="quote">Just met with 3 members of the Unitary Fund team (Nathan Shammah, William Zeng, Travis Scholten) and 2 people representing the Quantum Open Software Foundation (Mark Fingerhuth and Tomas Babej).  They shared a few links and I&#39;ve organized my notes from it (both now in the meet-up agenda/notes link above).
+<span class="mention" title="adi#7650">@Anonymous</span>  i put in a good word for your website to them!
+</div>&gt; 
+<div class="quote">No response from Brian Ingmanson and Suzie Kirschner yet who I emailed yesterday about if we could share a survey to the summer school participants.  <span class="mention" title="sam-qc#5621">@Anonymous</span> any luck from the summer school organizers end?
+</div><span class="mention" title="infinitesseract [Lia Yeh]#4561">@Anonymous</span> Yeh</span> thanks a lot. will take a look. apologies for not being able to attend the meet-up. </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#127850;" title="&#127850;" src="https://twemoji.maxcdn.com/2/72x72/1f36a.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+
+<div class="chatlog__message-group">
+        <img class="chatlog__author-avatar" src="https://cdn.discordapp.com/avatars/189586204155445258/36a522533738093f86c6f67b854d0034.png" alt="Avatar">
+    </div>
+    <div class="chatlog__messages">
+<span class="chatlog__author-name" title="" data-user-id="" style="color: rgb(52,152,219)">Anonymous</span>
+
+        <span class="chatlog__timestamp">01-Aug-20 05:16 PM</span>
+
+            <div class="chatlog__message " data-message-id="739230137681444895" id="message-739230137681444895">
+                <div class="chatlog__content">
+                    <div class="markdown">oh the discord server invite by default expired in 1 day so here&#39;s a permanent link (unless it gets overrun by bots)!  all people interested in quantum universal education are welcome :D
+<a href="https://discord.gg/NDm9e9W">https://discord.gg/NDm9e9W</a> </div>
+                </div>
+
+
+
+                    <div class="chatlog__reactions">
+                            <div class="chatlog__reaction">
+                                <img class="emoji emoji--small" alt="&#129395;" title="&#129395;" src="https://twemoji.maxcdn.com/2/72x72/1f973.png">
+                                <span class="chatlog__reaction-count">1</span>
+                            </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
