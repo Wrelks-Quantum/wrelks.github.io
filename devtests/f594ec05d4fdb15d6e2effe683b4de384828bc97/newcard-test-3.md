@@ -19,8 +19,8 @@ mathjax: true
       <div class="flash-card-view" id="cardViewer">
         <div class="flash-card">
           <!-- Flash Card Front -->
-          <div class="flash-card-front" id="rescale" style="diaplay:inline-block">
-            <div class="grid-container full-height justify-center align-center text-only"> <!-- Text only will center text :)-->
+          <div class="flash-card-front">
+            <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
                 <h2 id="frontCopy" class="text-center"></h2>
               </div>
@@ -93,18 +93,18 @@ mathjax: true
 
 .flash-card-container {
   position: absolute;
-  top: 20rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
+  top: 15rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 1em auto 0 auto;
-  padding: 0 20px;
+  /*margin: 1em auto 0 auto;*/
+  /*padding: 0 20px;*/
 }
 
 /* make mathjax fit container */
 
 .MathJax {
-font-size: 0.5em;
+font-size: 0.2em;
 }
 
 .flash-card-view {
@@ -150,6 +150,7 @@ font-size: 0.5em;
   bottom: 0;
   right: 0;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .flash-card-front {
