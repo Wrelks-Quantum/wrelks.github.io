@@ -22,7 +22,7 @@ mathjax: true
           <div class="flash-card-front">
             <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
-                <h2 id="frontCopy" class="text-center"></h2>
+                <h2 id="frontCopy" class="text-center" style="font-size: 0.5em;"></h2>
               </div>
             </div>
           </div>
@@ -90,6 +90,11 @@ mathjax: true
   width: 100vw;
   transition: opacity .25s ease-in-out;
 }
+
+/* code needed to work on safari - Back of flash card test
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+*/
 
 .flash-card-container {
   position: absolute;
