@@ -99,6 +99,8 @@ mathjax: true
   bottom: 0;
   /*margin: 1em auto 0 auto;*/
   /*padding: 0 20px;*/
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* make mathjax fit container */
@@ -117,6 +119,8 @@ font-size: 0.2em;
   transition: all .25s ease;
   border: 1px solid red;
   border-radius: 5px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .flash-card-view.flip .flash-card {
@@ -141,6 +145,9 @@ font-size: 0.2em;
   border-radius: 1rem;
   transition: 0.6s;
   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
 }
 
 .flash-card-front, .flash-card-back {
