@@ -30,7 +30,7 @@ mathjax: true
 
   <!-- Flash Card Back -->
   <div class="flash-card-back">
-            <div class="grid-container full-height justify-center align-center media-and-text">
+            <div class="grid-container full-height justify-center align-center text-only">
               <div class="grid-item">
                 <video id="backVideo" class="img-responsive hide" src="" controls></video>
                 <img id="backImage" class="img-responsive hide" src="" />
