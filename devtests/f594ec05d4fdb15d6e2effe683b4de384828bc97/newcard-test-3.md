@@ -185,7 +185,7 @@ mathjax: true
 }
 
 .img-responsive {
-  width: 0px;
+  width: 100%;
   height: auto;
 }
 
