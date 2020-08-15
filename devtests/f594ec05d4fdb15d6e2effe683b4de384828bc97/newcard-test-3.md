@@ -93,7 +93,7 @@ mathjax: true
 
 .flash-card-container {
   position: absolute;
-  top: 2rem;
+  top: 5rem; /* org - 2 | Test with this one*/
   left: 0;
   right: 0;
   bottom: 0;
@@ -101,8 +101,8 @@ mathjax: true
 
 .flash-card-view {
   position: relative;
-  height: 80%;
-  width: 90%;
+  height: 40%;
+  width: 50%; /* Changes size but not pos */
   margin: 0 auto;
   perspective: 1000px;
   transform: translateX(0);
