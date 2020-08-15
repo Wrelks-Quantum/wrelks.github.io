@@ -20,7 +20,7 @@ mathjax: true
         <div class="flash-card">
           <!-- Flash Card Front -->
           <div class="flash-card-front">
-            <div class="grid-container full-height justify-center align-center text-only">
+            <div class="grid-container full-height justify-center align-center text-only"> <!-- Text only will center text :)-->
               <div class="grid-item">
                 <h2 id="frontCopy" class="text-center"></h2>
               </div>
@@ -303,6 +303,19 @@ mathjax: true
         "src": null
       },
       "backCopy": "Supine position with head resting on pillow"
+    },
+    {
+      "position": 1,
+      "frontMedia": {
+        "mimeType": null,
+        "src": null
+      },
+      "frontCopy": "$$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$$",
+      "backMedia": {
+        "mimeType": null,
+        "src": null
+      },
+      "backCopy": "The bilaterally symmetric sympathetic chain ganglia, also called the paravertebral ganglia, are located just ventral and lateral to the spinal cord. The chain extends from the upper neck down to the coccyx, forming the unpaired coccygeal ganglion"
     }
   ]
 };
