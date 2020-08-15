@@ -20,7 +20,7 @@ mathjax: true
         <div class="flash-card">
           <!-- Flash Card Front -->
           <div class="flash-card-front">
-            <div class="grid-container full-height justify-center align-center text-only"> <!-- Text only will center text :)-->
+            <div class="grid-container full-height justify-center align-center text-only" id="rescale" style="diaplay:inline-block"> <!-- Text only will center text :)-->
               <div class="grid-item">
                 <h2 id="frontCopy" class="text-center"></h2>
               </div>
@@ -98,6 +98,8 @@ mathjax: true
   right: 0;
   bottom: 0;
 }
+
+/* make mathjax fit container */
 
 .MathJax {
 font-size: 0.5em;
@@ -278,10 +280,46 @@ font-size: 0.5em;
 
 </style>
 
+<!-- MathJax auto fit container code
+<script type="text/javascript">
+  window.MathJax = {
+    AuthorInit: function () {
+      MathJax.Hub.Register.StartupHook("Begin",function () {
+        MathJax.Hub.Queue(function () {
+          var math = document.getElementById("rescale");
+          var w = math.offsetWidth, W = math.parentNode.offsetWidth-40;
+          if (w > W) {
+            math.style.fontSize = (95*W/w)+"%";
+            MathJax.Hub.getAllJax(math)[0].Rerender();
+          }
+        });
+      });
+    },
+    jax: ["input/TeX","output/HTML-CSS","output/NativeMML"],
+  };
+</script> -->
+
  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.production.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js"></script> 
 
 <script>
+
+  window.MathJax = {
+    AuthorInit: function () {
+      MathJax.Hub.Register.StartupHook("Begin",function () {
+        MathJax.Hub.Queue(function () {
+          var math = document.getElementById("rescale");
+          var w = math.offsetWidth, W = math.parentNode.offsetWidth-40;
+          if (w > W) {
+            math.style.fontSize = (95*W/w)+"%";
+            MathJax.Hub.getAllJax(math)[0].Rerender();
+          }
+        });
+      });
+    },
+    jax: ["input/TeX","output/HTML-CSS","output/NativeMML"],
+  };
+
  const deck = {
   "cards": [
     {
