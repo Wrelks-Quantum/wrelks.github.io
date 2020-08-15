@@ -327,7 +327,7 @@ font-size: 1.3em;
 };
 
 window.onload = function() {
-  hideNavButtonsForMobileOperatingSystems();
+ /* hideNavButtonsForMobileOperatingSystems();*/
   showCard(0);
   var initialX = null;
   
