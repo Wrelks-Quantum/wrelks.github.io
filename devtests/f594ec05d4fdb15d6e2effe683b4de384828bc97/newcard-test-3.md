@@ -281,8 +281,8 @@ mathjax: true
     {
       "position": 1,
       "frontMedia": {
-        "mimeType": "",
-        "src": ""
+        "mimeType": null,
+        "src": null
       },
       "frontCopy": "$$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$$",
       "backMedia": {
@@ -294,13 +294,13 @@ mathjax: true
     {
       "position": 2,
       "frontMedia": {
-        "mimeType": "",
-        "src": ""
+        "mimeType": null,
+        "src": null
       },
       "frontCopy": "$$10101203$$",
       "backMedia": {
-        "mimeType": "image/jpeg",
-        "src": "http://livingmetta.com/wp-content/uploads/2012/08/14%20Plow%20SM1-550x300.jpg"
+        "mimeType": null,
+        "src": null
       },
       "backCopy": "Supine position with head resting on pillow"
     }
