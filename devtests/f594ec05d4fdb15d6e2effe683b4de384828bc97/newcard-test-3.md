@@ -243,21 +243,21 @@ mathjax: true
     display: inline;
   }
 }
-
+/* beginning of image css */
 @media (orientation: landscape) {
   .img-fullscreen {
-    height: 100%;
-    width: auto;
+    height: 0px;
+    width: 0px;
   }
 }
 
 @media (orientation: portrait) {
   .img-fullscreen {
-    height: auto;
-    width: 100%;
+    height: 0px;
+    width: 0px;
   }
 }
-
+/* End of image css */
 .debug-red {
   border: 1px solid red;
 }
@@ -281,8 +281,8 @@ mathjax: true
     {
       "position": 1,
       "frontMedia": {
-        "mimeType": null,
-        "src": null
+        "mimeType": "",
+        "src": ""
       },
       "frontCopy": "$$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$$",
       "backMedia": {
@@ -294,8 +294,8 @@ mathjax: true
     {
       "position": 2,
       "frontMedia": {
-        "mimeType": null,
-        "src": null
+        "mimeType": "",
+        "src": ""
       },
       "frontCopy": "$$10101203$$",
       "backMedia": {
