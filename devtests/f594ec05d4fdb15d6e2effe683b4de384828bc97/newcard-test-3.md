@@ -54,10 +54,10 @@ mathjax: true
           </span>
           <button class="btn-circle" id="nextCard" onclick="nextCard();">&gt;</button>
         </div>
-        <div class="flash-card-options">
+        <!-- <div class="flash-card-options">
           <input type="checkbox" id="cardBacksFirst" value="on" onclick="setInitialCardPosition();">
           <label for="cardBacksFirst">Show answers first</label>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
