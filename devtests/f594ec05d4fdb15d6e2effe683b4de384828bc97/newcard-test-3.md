@@ -99,6 +99,10 @@ mathjax: true
   bottom: 0;
 }
 
+.MathJax {
+font-size: 1.3em;
+}
+
 .flash-card-view {
   position: relative;
   height: 40%;
@@ -108,6 +112,7 @@ mathjax: true
   transform: translateX(0);
   transition: all .25s ease;
   border: 1px solid red;
+  border-radius: 5px;
 }
 
 .flash-card-view.flip .flash-card {
