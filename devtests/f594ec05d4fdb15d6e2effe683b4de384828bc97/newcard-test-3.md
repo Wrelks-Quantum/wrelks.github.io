@@ -19,9 +19,9 @@ mathjax: true
       <div class="flash-card-view" id="cardViewer">
         <div class="flash-card">
           <!-- Flash Card Front -->
-          <div class="flash-card-front">
+          <div class="flash-card-front" id="rescale" style="diaplay:inline-block">
             <div class="grid-container full-height justify-center align-center text-only"> <!-- Text only will center text :)-->
-              <div class="grid-item" id="rescale" style="diaplay:inline-block">
+              <div class="grid-item">
                 <h2 id="frontCopy" class="text-center"></h2>
               </div>
             </div>
