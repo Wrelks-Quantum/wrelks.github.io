@@ -598,7 +598,7 @@ function isMobileOperatingSystem() {
 
   return false;
 }
-
+/*
 function hideNavButtonsForMobileOperatingSystems() {
   if (isMobileOperatingSystem()) {
     document.querySelectorAll('.btn-circle').forEach(function(el) {
@@ -607,7 +607,7 @@ function hideNavButtonsForMobileOperatingSystems() {
     document.getElementById('previousCard').style.display = 'none';
     document.getElementById('nextCard').style.display = 'none';
   }
-}
+} */
 </script>
 
 <!-- https://codepen.io/dylangggg/pen/YmGMew -->
