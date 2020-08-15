@@ -185,7 +185,7 @@ mathjax: true
 }
 
 .img-responsive {
-  width: 100%;
+  width: 0px;
   height: auto;
 }
 
@@ -243,21 +243,21 @@ mathjax: true
     display: inline;
   }
 }
-/* beginning of image css */
+
 @media (orientation: landscape) {
   .img-fullscreen {
-    height: 0px;
-    width: 0px;
+    height: 100%;
+    width: auto;
   }
 }
 
 @media (orientation: portrait) {
   .img-fullscreen {
-    height: 0px;
-    width: 0px;
+    height: auto;
+    width: 100%;
   }
 }
-/* End of image css */
+
 .debug-red {
   border: 1px solid red;
 }
