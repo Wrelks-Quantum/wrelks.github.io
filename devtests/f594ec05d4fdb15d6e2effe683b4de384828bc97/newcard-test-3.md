@@ -66,10 +66,10 @@ mathjax: true
 <style>
 
 body {
-  height: calc(100vh - 1.75rem);
-  max-width: 900px;
+  height: auto;
+  max-width: auto;
   margin: 0 auto;
-  background-color: #e0e0e0;
+  /*background-color: #e0e0e0;*/
 }
 
 .bg-full-screen {
