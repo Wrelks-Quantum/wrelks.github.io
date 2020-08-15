@@ -34,10 +34,8 @@ mathjax: true
               <div class="grid-item">
                 <video id="backVideo" class="img-responsive hide" src="" controls></video>
                 <img id="backImage" class="img-responsive hide" src="" />
-              </div>
-              <div class="grid-item">
-                <center><h2 id="backCopy" class="text-center"></h2></center>
-              </div>
+              </div> 
+                <h2 id="backCopy" class="text-center"></h2>
             </div>
           </div>
           <!-- End Flash Card Back -->
