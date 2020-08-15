@@ -34,8 +34,10 @@ mathjax: true
               <div class="grid-item">
                 <video id="backVideo" class="img-responsive hide" src="" controls></video>
                 <img id="backImage" class="img-responsive hide" src="" />
-              </div> 
+              </div>
+              <div class="grid-item">
                 <h2 id="backCopy" class="text-center"></h2>
+              </div>
             </div>
           </div>
           <!-- End Flash Card Back -->
@@ -244,15 +246,15 @@ mathjax: true
 
 @media (orientation: landscape) {
   .img-fullscreen {
-    height: 100%;
-    width: auto;
+    height: 0px;
+    width: 0px;
   }
 }
 
 @media (orientation: portrait) {
   .img-fullscreen {
-    height: auto;
-    width: 100%;
+    height: 0px;
+    width: 0px;
   }
 }
 
