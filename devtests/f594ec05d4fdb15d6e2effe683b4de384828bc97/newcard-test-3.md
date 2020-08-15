@@ -97,6 +97,8 @@ mathjax: true
   left: 0;
   right: 0;
   bottom: 0;
+  margin: 1em auto 0 auto;
+  padding: 0 20px;
 }
 
 /* make mathjax fit container */
