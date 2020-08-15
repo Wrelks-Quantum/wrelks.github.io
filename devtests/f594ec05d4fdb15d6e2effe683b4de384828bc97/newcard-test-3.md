@@ -100,13 +100,13 @@ mathjax: true
 }
 
 .MathJax {
-font-size: 1.3em;
+font-size: 0.5em;
 }
 
 .flash-card-view {
   position: relative;
   height: 60%; /* how thicc it is */
-  width: 70%; /* Changes size but not pos */
+  width: 70%; /* Changes size but not pos */ /* how long it is*/
   margin: 0 auto;
   perspective: 1000px;
   transform: translateX(0);
