@@ -105,8 +105,8 @@ font-size: 1.3em;
 
 .flash-card-view {
   position: relative;
-  height: 60%;
-  width: 50%; /* Changes size but not pos */
+  height: 60%; /* how thicc it is */
+  width: 70%; /* Changes size but not pos */
   margin: 0 auto;
   perspective: 1000px;
   transform: translateX(0);
