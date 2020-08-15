@@ -93,7 +93,7 @@ mathjax: true
 
 .flash-card-container {
   position: absolute;
-  top: 15rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
+  top: 16rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
   left: 0;
   right: 0;
   bottom: 0;
