@@ -107,6 +107,7 @@ mathjax: true
   perspective: 1000px;
   transform: translateX(0);
   transition: all .25s ease;
+  border: 1px solid red;
 }
 
 .flash-card-view.flip .flash-card {
