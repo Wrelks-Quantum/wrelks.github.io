@@ -101,7 +101,7 @@ mathjax: true
 
 .flash-card-view {
   position: relative;
-  height: 40%;
+  height: 60%;
   width: 50%; /* Changes size but not pos */
   margin: 0 auto;
   perspective: 1000px;
