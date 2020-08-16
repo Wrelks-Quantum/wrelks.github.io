@@ -252,19 +252,19 @@ font-size: 0.2em;
   display: none;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 201px) {
   .grid-container.media-and-text {
     grid-template-columns: 60% auto;
     grid-column-gap: 1.5rem;
   }
 
-@media screen and (min-width: 801px){
+@media screen and (min-width: 201px){
     .flash-card-view {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 801px){
+@media screen and (min-width: 201px){
   .text-center {
   font-size:1.2rem;
   }
