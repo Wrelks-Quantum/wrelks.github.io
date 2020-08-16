@@ -115,6 +115,10 @@ MathJax.Hub.Config({
     }
 }
 
+.MathJax_Display {
+    overflow-x: scroll;
+}
+
 /*@media screen and (max-width : 1204px)
 {
   h5
