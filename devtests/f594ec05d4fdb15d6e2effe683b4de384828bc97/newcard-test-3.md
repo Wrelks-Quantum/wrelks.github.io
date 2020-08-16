@@ -524,6 +524,7 @@ MathJax.Hub.Typeset()
 }
 
 function showCard(i) {
+  MathJax.Hub.Typeset()
   setInitialCardPosition();
   const card = deck.cards[i];
   
