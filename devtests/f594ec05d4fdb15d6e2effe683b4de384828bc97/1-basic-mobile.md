@@ -80,7 +80,7 @@ $('.back', '.flashcard').on('click', function() {
 <style>
 .front,
 .back {
-  width: 90%;
+  width: 100%;
   /*min-height: 150px; */
   height: 200px;
   display: table;
