@@ -22,7 +22,6 @@ UNDER CONSTRUCTION 3/13/19
 </head>
 
 <br>
-<br>
 
 <div class="container">
   <div class="row">
@@ -32,7 +31,6 @@ UNDER CONSTRUCTION 3/13/19
   </div><!-- end row -->
 </div><!-- end container -->
 
-<br>
 <br>
 
 <div class="container">
