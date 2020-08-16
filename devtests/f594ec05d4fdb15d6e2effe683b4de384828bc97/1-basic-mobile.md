@@ -107,7 +107,7 @@ MathJax.Hub.Config({
     overflow-wrap: break-word;
 }
 
-@media screen and (max-width : 320px)
+@media screen and (max-width : 520px)
 {
   .p-3
     {
