@@ -117,12 +117,12 @@ font-size: 0.2em;
 .flash-card-view {
   position: relative;
   height: 60%; /* how thicc it is */
-  width: 70%; /* Changes size but not pos */ /* how long it is*/
+  width: 100%; /* Changes size but not pos */ /* how long it is*/
   margin: 0 auto;
   perspective: 1000px;
   transform: translateX(0);
   transition: all .25s ease;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   border-radius: 5px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
