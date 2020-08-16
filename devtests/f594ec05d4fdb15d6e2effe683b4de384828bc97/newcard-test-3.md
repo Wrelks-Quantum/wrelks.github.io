@@ -42,7 +42,7 @@ mathjax: true
             <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
                 <div id="rescale" style="display:inline-block">
-                <h2 id="frontCopy" class="text-center"></h2>
+                <p id="frontCopy" class="text-center"></p>
                 </div>
               </div>
             </div>
