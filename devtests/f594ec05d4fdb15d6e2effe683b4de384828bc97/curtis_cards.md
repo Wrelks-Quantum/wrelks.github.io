@@ -22,10 +22,10 @@ mathjax: true
 
   <meta name="viewport" content="width=device-width">
 
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="https://wrelks.com/devtests/f594ec05d4fdb15d6e2effe683b4de384828bc97/css/style.css">
 
- <link href="http://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet" type="text/css">
- <script src="js/vendor/modernizr-2.5.3.min.js"></script>
+ <!-- <link href="http://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet" type="text/css">-->
+ <script src="https://wrelks.com/devtests/f594ec05d4fdb15d6e2effe683b4de384828bc97/js/vendor/modernizr-2.5.3.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js ">
@@ -69,6 +69,6 @@ mathjax: true
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="https://wrelks.com/devtests/f594ec05d4fdb15d6e2effe683b4de384828bc97/js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
 
-  <script src="js/flash_cards.min.js"></script>
+  <script src="https://wrelks.com/devtests/f594ec05d4fdb15d6e2effe683b4de384828bc97/js/flash_cards.min.js"></script>
