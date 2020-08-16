@@ -20,7 +20,7 @@ mathjax: true
         <div class="flash-card">
           <!-- Flash Card Front -->
           <div class="flash-card-front">
-            <div class="grid-container full-height justify-center align-center text-only" style="font-size: 1.2rem;"> <!-- 'Text-only' will center text :)-->
+            <div class="grid-container full-height justify-center align-center text-only" style="font-size: 1.0rem;"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
                 <h2 id="frontCopy" class="text-center"></h2>
               </div>
