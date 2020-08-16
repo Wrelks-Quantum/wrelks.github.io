@@ -22,7 +22,7 @@ mathjax: true
           <div class="flash-card-front">
             <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
-                <h2 id="frontCopy" class="text-center" style="font-size:0.6rem;"></h2>
+                <h2 id="frontCopy" class="text-center" style="font-size:1.2rem;"></h2>
               </div>
             </div>
           </div>
