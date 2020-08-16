@@ -9,6 +9,11 @@ mathjax: true
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
 <body>
+
+<center>
+<a class="button button--outline-error button--rounded my-2" href="mailto:perry@wrelks.com"><i class="fas fa-paper-plane"></i> Submit a New Question</a>
+</center>
+
   <div>
     <div class="bg-full-screen">
       <figure class="figure-centered">
@@ -47,7 +52,7 @@ mathjax: true
         <div class="spacer"></div>
         <div class="flash-card-nav">
           <button class="btn-circle" id="previousCard" onclick="previousCard();">&lt;</button>
-          <span class="ml-1 mr-1">Card
+          <span class="ml-1 mr-1">Question
             <span id="currentPosition"></span>
             of
             <span id="cardCount"></span>
