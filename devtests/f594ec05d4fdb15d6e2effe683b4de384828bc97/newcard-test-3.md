@@ -9,7 +9,7 @@ mathjax: true
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
 <body>
-  <div>
+  <div><center>
     <div class="bg-full-screen">
       <figure class="figure-centered">
         <img id="fullScreenImg" class="img-fullscreen" src="" />
@@ -24,7 +24,7 @@ mathjax: true
               <div class="grid-item">
                 <h2 id="frontCopy" class="text-center"></h2>
               </div>
-            </div>
+            </div><center>
           </div>
           <!-- End Flash Card Front -->
 
@@ -97,7 +97,7 @@ backface-visibility: hidden;
 */
 
 .flash-card-container {
-  position: center;
+  position: absolute;
   top: 16rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
   left: 0;
   right: 0;
