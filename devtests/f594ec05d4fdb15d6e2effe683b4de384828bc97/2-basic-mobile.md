@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Q #2 | Basic"
+title: "Q #1 | Basic"
 key: fffy384fad
 comment: true
 author: Perry
@@ -27,7 +27,6 @@ UNDER CONSTRUCTION 3/13/19
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1 class="display-3">Basics</h1>
       <h4>Click on the card to reveal the answer</h4>
     </div><!-- end col -->
   </div><!-- end row -->
@@ -80,7 +79,7 @@ $('.back', '.flashcard').on('click', function() {
 <style>
 .front,
 .back {
-  width: 90%;
+  width: 100%;
   /*min-height: 150px; */
   height: 200px;
   display: table;
