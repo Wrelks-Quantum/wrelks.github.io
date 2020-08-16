@@ -8,14 +8,13 @@ mathjax: true
 ---
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
-<body>
-
 <center>
 <a class="button button--outline-error button--rounded my-2" href="mailto:perry@wrelks.com"><i class="fas fa-paper-plane" ></i> Submit a New Question</a>
 </center>
 <br>
 <br>
 
+<body>
   <div>
     <div class="bg-full-screen">
       <figure class="figure-centered">
