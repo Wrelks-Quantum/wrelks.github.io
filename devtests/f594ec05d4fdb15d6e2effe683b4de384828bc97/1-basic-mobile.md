@@ -39,7 +39,7 @@ UNDER CONSTRUCTION 3/13/19
   <!-------- FLASH CARD 1 -------->
   <div class="col-sm">
       <div class="flashcard">
-        <div class="p-3 front border">
+        <div class="p-3 front border rescale">
           <h5 style="font-size: 0.85rem;">$\displaystyle\sum_{n \ = \ 0}^{\infty} \ \frac{(-1)^n \gamma^{2n} B^{2n}}{(2n)!} \ + \ i \displaystyle\sum_{n \ = \ 0}^{\infty} \frac{(-1)^n \gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$</h5>
         </div><!-- end front -->
         <div class="p-3 back border">
@@ -109,6 +109,25 @@ $('.back', '.flashcard').on('click', function() {
 }
 
 </style>
+
+<script type="text/javascript">
+  window.MathJax = {
+    AuthorInit: function () {
+      MathJax.Hub.Register.StartupHook("Begin",function () {
+        MathJax.Hub.Queue(function () {
+          var math = document.getElementById("rescale");
+          var w = math.offsetWidth, W = math.parentNode.offsetWidth-40;
+          if (w > W) {
+            math.style.fontSize = (95*W/w)+"%";
+            MathJax.Hub.getAllJax(math)[0].Rerender();
+          }
+        });
+      });
+    },
+    jax: ["input/TeX","output/HTML-CSS","output/NativeMML"],
+    extensions: ["tex2jax.js"],
+  };
+</script>
 
 <!-- https://codepen.io/dylangggg/pen/YmGMew -->
 <!-- https://codepen.io/matie/pen/bvRqLE -->
