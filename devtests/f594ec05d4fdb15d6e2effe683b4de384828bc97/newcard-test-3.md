@@ -42,7 +42,9 @@ mathjax: true
             <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
                 <div id="rescale" style="display:inline-block">
+                <div class="box">
                 <p id="frontCopy" class="text-center"></p>
+                </div>
                 </div>
               </div>
             </div>
@@ -192,6 +194,13 @@ font-size: 0.2em;
 
 .flash-card-back {
   transform: rotateX(180deg);
+}
+
+.box {
+  margin: 1em auto 0 auto;
+  border: 2px solid black;
+  padding: 0 20px;
+  width: 20em;
 }
 
 .flash-card-view.slide-left {
