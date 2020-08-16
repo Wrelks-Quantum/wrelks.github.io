@@ -39,7 +39,7 @@ UNDER CONSTRUCTION 3/13/19
   <!-------- FLASH CARD 1 -------->
   <div class="col-sm">
       <div class="flashcard">
-        <div class="p-3 front border rescale">
+        <div class="p-3 front border rescale" style="display:inline-block">
           <h5>$\displaystyle\sum_{n \ = \ 0}^{\infty} \ \frac{(-1)^n \gamma^{2n} B^{2n}}{(2n)!} \ + \ i \displaystyle\sum_{n \ = \ 0}^{\infty} \frac{(-1)^n \gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$</h5>
         </div><!-- end front -->
         <div class="p-3 back border rescale">
