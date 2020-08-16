@@ -43,7 +43,7 @@ UNDER CONSTRUCTION 3/13/19
           <h5>$\displaystyle\sum_{n \ = \ 0}^{\infty} \ \frac{(-1)^n \gamma^{2n} B^{2n}}{(2n)!} \ + \ i \displaystyle\sum_{n \ = \ 0}^{\infty} \frac{(-1)^n \gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$</h5>
         </div><!-- end front -->
         <div class="p-3 back border">
-          <p>$\sum_{P_{n-1},\ldots,P_0 \in \{1,X,Y,Z\\}} C_{P_{n-1}\ldots,P_0}~~P_{n-1} \otimes P_{n-2}\otimes\ldots\otimes P_0$$</p>
+          <p>$\sum_{P_{n-1},\ldots,P_0 \in \{1,X,Y,Z\\}} C_{P_{n-1}\ldots,P_0}~~P_{n-1} \otimes P_{n-2}\otimes\ldots\otimes P_0$</p>
         </div><!-- end back -->
       </div><!-- end flashcard -->
     </div><!-- end col -->
