@@ -56,9 +56,10 @@ UNDER CONSTRUCTION 3/13/19
 
 <br>
 <br>
-<a class="button button--primary button--pill sitck-to-right" href=""><i class="fas fa-forward"></i> NEXT</a>
-
-<a class="button button--primary button--pill" href=""><i class="fas fa-backward"></i> BACK</a>
+<div id="container">
+  <a class="button button--primary button--pill sitck-to-right" href=""><i class="fas fa-forward"></i> NEXT</a>
+  <a class="button button--primary button--pill" href=""><i class="fas fa-backward"></i> BACK</a>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -93,6 +94,10 @@ $('.back', '.flashcard').on('click', function() {
 
 .stick-to-right {
   float: right;
+}
+
+#container{
+    text-align: center;
 }
 
 .front h5,
