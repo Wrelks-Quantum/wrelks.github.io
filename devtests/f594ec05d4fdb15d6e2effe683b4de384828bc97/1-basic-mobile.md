@@ -91,7 +91,8 @@ MathJax.Hub.Config({
   max-width: 100%;
   /*min-height: 150px; */
   height: 300px;
-  /*display: table;*/
+  display: table;
+  overflow-wrap: break-word;
   padding: 10px;
   box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.15), -8px -8px 12px 0 rgba(255, 255, 255, 0.5);
   border-radius: 10px;
