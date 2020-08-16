@@ -22,7 +22,7 @@ mathjax: true
           <div class="flash-card-front">
             <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
-                <h2 id="frontCopy" class="text-center" style="font-size:1.2rem;"></h2>
+                <h2 id="frontCopy" class="text-center"></h2>
               </div>
             </div>
           </div>
@@ -263,6 +263,13 @@ font-size: 0.2em;
     width: 100%;
   }
 }
+
+@media screen and (min-width: 201px){
+  .text-center {
+  font-size:1.2rem;
+  }
+}
+
   
   .grid-container.flash-card-nav {
     grid-template-columns: 25% auto 25%;
