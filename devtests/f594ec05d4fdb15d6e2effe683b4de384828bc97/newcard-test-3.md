@@ -9,6 +9,13 @@ mathjax: true
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
 <body>
+
+<center>
+<a class="button button--outline-error button--rounded my-2" href="mailto:perry@wrelks.com"><i class="fas fa-paper-plane" ></i> Submit a New Question</a>
+</center>
+<br>
+<br>
+
   <div>
     <div class="bg-full-screen">
       <figure class="figure-centered">
@@ -61,9 +68,6 @@ mathjax: true
       </div>
     </div>
   </div>
-<center>
-<a class="button button--outline-error button--rounded my-2" id="buttondown" href="mailto:perry@wrelks.com"><i class="fas fa-paper-plane" ></i> Submit a New Question</a>
-</center>
 </body>
 
 <style>
@@ -85,10 +89,6 @@ mathjax: true
   z-index: 1;
   background-color: #000;
   opacity: 0;
-}
-
-.buttondown {
-  bottom: 70%;
 }
 
 .bg-full-screen.show {
