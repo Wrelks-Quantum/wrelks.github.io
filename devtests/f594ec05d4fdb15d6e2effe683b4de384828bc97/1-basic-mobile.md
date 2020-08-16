@@ -104,6 +104,7 @@ MathJax.Hub.Config({
 
 #container{
     text-align: center;
+    overflow-wrap: break-word;
 }
 
 .front h5,
@@ -111,7 +112,7 @@ MathJax.Hub.Config({
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-
+  overflow-wrap: break-word;
 }
 
 .fast {
