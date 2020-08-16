@@ -20,7 +20,7 @@ mathjax: true
         <div class="flash-card">
           <!-- Flash Card Front -->
           <div class="flash-card-front">
-            <div class="grid-container full-height justify-center align-center text-only" style="font-size: 1.0rem;"> <!-- 'Text-only' will center text :)-->
+            <div class="grid-container full-height justify-center align-center text-only" style="font-size: 0.75rem;"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
                 <h2 id="frontCopy" class="text-center"></h2>
               </div>
@@ -357,7 +357,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": " This is some sample text talking about this very long equation here $$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$$ <p>",
+      "frontCopy": " This is some sample text talking about this very long equation here $$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$$",
       "backMedia": {
         "mimeType": null,
         "src": null
