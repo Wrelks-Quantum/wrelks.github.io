@@ -670,7 +670,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 }
 
 if (isMobile == true){
-  alert("Hello I see that you are using a mobile device! Thats totally ok just be please be aware that at the current moment flash cards work best on desktops, laptops, and tablet devices. Thank you!");
+  alert("Hello I see that you are using a mobile device! That's totally ok, just please be aware that at the current moment, flash cards work best on desktops, laptops, and tablet devices. You may experience errors or cut off text on mobile. Thank you!");
 }
 
 </script>
