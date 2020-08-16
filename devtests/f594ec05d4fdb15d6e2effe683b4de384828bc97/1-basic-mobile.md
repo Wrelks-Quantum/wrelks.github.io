@@ -88,6 +88,7 @@ MathJax.Hub.Config({
 .front,
 .back {
   width: 100%;
+  max-width: 100%;
   /*min-height: 150px; */
   height: 300px;
   display: table;
