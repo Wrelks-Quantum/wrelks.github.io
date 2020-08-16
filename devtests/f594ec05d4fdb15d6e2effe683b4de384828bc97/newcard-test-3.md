@@ -22,7 +22,7 @@ mathjax: true
           <div class="flash-card-front">
             <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
-                <h2 id="frontCopy" class="text-center" style="font-size: 0.75rem;"></h2>
+                <h2 id="frontCopy" class="text-center" style="font-size: 1.3rem;"></h2>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ font-size: 0.2em;
 
 .flash-card-nav {
   grid-template-rows: auto auto;
-  grid-row-gap: 4em;
+  grid-row-gap: 2em;
 }
 
 .btn-circle {
