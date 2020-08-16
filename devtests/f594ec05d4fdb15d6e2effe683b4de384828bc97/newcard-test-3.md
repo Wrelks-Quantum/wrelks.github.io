@@ -36,7 +36,7 @@ mathjax: true
                 <img id="backImage" class="img-responsive hide" src="" />
               </div>
               <div class="grid-item">
-                <h2 id="backCopy" class="text-center" style="font-size:1.2rem;"></h2>
+                <p id="backCopy" class="text-center" style="font-size:1.2rem;"></p>
               </div>
             </div>
           </div>
