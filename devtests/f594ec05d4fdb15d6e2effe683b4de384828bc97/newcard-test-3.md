@@ -670,7 +670,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 }
 
 if (isMobile == true){
-  alert("Mobile user found!");
+  alert("Hello I see that you are using a mobile device! Thats totally ok just be please be aware that at the current moment flash cards work best on desktops, laptops, and tablet devices. Thank you!");
 }
 
 </script>
