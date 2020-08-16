@@ -62,7 +62,7 @@ mathjax: true
     </div>
   </div>
 <center>
-<a class="button button--outline-error button--rounded my-2 buttondown" href="mailto:perry@wrelks.com"><i class="fas fa-paper-plane" ></i> Submit a New Question</a>
+<a class="button button--outline-error button--rounded my-2" id="buttondown" href="mailto:perry@wrelks.com"><i class="fas fa-paper-plane" ></i> Submit a New Question</a>
 </center>
 </body>
 
