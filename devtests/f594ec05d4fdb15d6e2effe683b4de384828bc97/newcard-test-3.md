@@ -61,35 +61,8 @@ mathjax: true
       </div>
     </div>
   </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <center>
-<a class="button button--outline-error button--rounded my-2" href="mailto:perry@wrelks.com"><i class="fas fa-paper-plane"></i> Submit a New Question</a>
+<a class="button button--outline-error button--rounded my-2 buttondown" href="mailto:perry@wrelks.com"><i class="fas fa-paper-plane" ></i> Submit a New Question</a>
 </center>
 </body>
 
@@ -112,6 +85,10 @@ mathjax: true
   z-index: 1;
   background-color: #000;
   opacity: 0;
+}
+
+.buttondown {
+  top: 50%;
 }
 
 .bg-full-screen.show {
