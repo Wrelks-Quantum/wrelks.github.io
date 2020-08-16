@@ -53,7 +53,7 @@ UNDER CONSTRUCTION 3/13/19
 
 <br>
 <div id="container">
-  <a class="button button--primary button--pill" href=""><i class="fas fa-backward"></i> BACK</a>
+  <a class="button button--primary button--pill" href="https://wrelks.com/devtests/f594ec05d4fdb15d6e2effe683b4de384828bc97/mobile-study-section"><i class="fas fa-backward"></i> BACK To Home</a>
   <a class="button button--primary button--pill sitck-to-right" href="https://wrelks.com/devtests/f594ec05d4fdb15d6e2effe683b4de384828bc97/2-basic-mobile#questioncard">NEXT <i class="fas fa-forward"></i></a>
 </div>
 
