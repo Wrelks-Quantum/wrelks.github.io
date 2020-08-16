@@ -356,7 +356,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "$$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$$",
+      "frontCopy": " This is some sample text talking about this very long equation here $$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$$",
       "backMedia": {
         "mimeType": null,
         "src": null
@@ -374,7 +374,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "backCopy": "Supine position with head resting on pillow"
+      "backCopy": "$$\\sum_{P_{n-1},\\ldots,P_0 \\in \\{1,X,Y,Z\\}} C_{P_{n-1}\\ldots,P_0}~~P_{n-1} \\otimes P_{n-2}\\otimes\\ldots\\otimes P_0$$"
     },
     {
       "position": 1,
