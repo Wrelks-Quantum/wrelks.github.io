@@ -107,6 +107,21 @@ MathJax.Hub.Config({
     overflow-wrap: break-word;
 }
 
+@media screen and (max-width : 320px)
+{
+.p-3
+  {
+    font-size: 0.78rem;
+  }
+}
+@media screen and (max-width : 1204px)
+{
+  .p-3
+    {
+      font-size: 1.2rem;
+    }
+}
+
 .front h5,
 .back p {
   display: table-cell;
