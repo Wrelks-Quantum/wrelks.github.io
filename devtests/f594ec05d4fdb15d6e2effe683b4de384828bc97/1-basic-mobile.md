@@ -39,12 +39,11 @@ UNDER CONSTRUCTION 3/13/19
   <!-------- FLASH CARD 1 -------->
   <div class="col-sm">
       <div class="flashcard">
-        <div class="box">
-        <div class="p-3 front border rescale" style="display:inline-block">
-          <h5>$\displaystyle\sum_{n \ = \ 0}^{\infty} \ \frac{(-1)^n \gamma^{2n} B^{2n}}{(2n)!} \ + \ i \displaystyle\sum_{n \ = \ 0}^{\infty} \frac{(-1)^n \gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$</h5></div>
+        <div class="p-3 front border">
+          <h5 style="font-size: 0.90rem; overflow-x: scroll;">$\displaystyle\sum_{n \ = \ 0}^{\infty} \ \frac{(-1)^n \gamma^{2n} B^{2n}}{(2n)!} \ + \ i \displaystyle\sum_{n \ = \ 0}^{\infty} \frac{(-1)^n \gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$</h5>
         </div><!-- end front -->
-        <div class="p-3 back border rescale">
-          <p>$\sum_{P_{n-1},\ldots,P_0 \in \{1,X,Y,Z\}} C_{P_{n-1}\ldots,P_0}~~P_{n-1} \otimes P_{n-2}\otimes\ldots\otimes P_0$</p>
+        <div class="p-3 back border">
+          <p style="font-size: 0.90rem; overflow-x: scroll;">$\sum_{P_{n-1},\ldots,P_0 \in \{1,X,Y,Z\}} C_{P_{n-1}\ldots,P_0}~~P_{n-1} \otimes P_{n-2}\otimes\ldots\otimes P_0$</p>
         </div><!-- end back -->
       </div><!-- end flashcard -->
     </div><!-- end col -->
@@ -109,33 +108,7 @@ $('.back', '.flashcard').on('click', function() {
   animation-duration: 0.5s;
 }
 
-.box {
-  margin: 1em auto 0 auto;
-  border: 2px solid black;
-  padding: 0 20px;
-  width: 20em;
-}
-
 </style>
-
-<script type="text/javascript">
-  window.MathJax = {
-    AuthorInit: function () {
-      MathJax.Hub.Register.StartupHook("Begin",function () {
-        MathJax.Hub.Queue(function () {
-          var math = document.getElementById("rescale");
-          var w = math.offsetWidth, W = math.parentNode.offsetWidth-40;
-          if (w > W) {
-            math.style.fontSize = (95*W/w)+"%";
-            MathJax.Hub.getAllJax(math)[0].Rerender();
-          }
-        });
-      });
-    },
-    jax: ["input/TeX","output/HTML-CSS","output/NativeMML"],
-    extensions: ["tex2jax.js"],
-  };
-</script>
 
 <!-- https://codepen.io/dylangggg/pen/YmGMew -->
 <!-- https://codepen.io/matie/pen/bvRqLE -->
