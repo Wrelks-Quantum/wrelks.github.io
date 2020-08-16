@@ -8,6 +8,25 @@ mathjax: true
 ---
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
+<script type="text/javascript">
+  window.MathJax = {
+    AuthorInit: function() {
+      MathJax.Hub.Register.StartupHook("Begin", function() {
+        MathJax.Hub.Queue(function() {
+          var math = document.getElementById("rescale");
+          var w = math.offsetWidth,
+            W = math.parentNode.offsetWidth - 40;
+          if (w > W) {
+            math.style.fontSize = (95 * W / w) + "%";
+            MathJax.Hub.getAllJax(math)[0].Rerender();
+          }
+        });
+      });
+    },
+    jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+  };
+</script>
+
 <body>
   <div>
     <div class="bg-full-screen">
@@ -320,23 +339,6 @@ font-size: 0.2em;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js"></script> 
 
 <script>
-
-  window.MathJax = {
-    AuthorInit: function () {
-      MathJax.Hub.Register.StartupHook("Begin",function () {
-        MathJax.Hub.Queue(function () {
-          var math = document.getElementById("rescale");
-          var w = math.offsetWidth, W = math.parentNode.offsetWidth-40;
-          if (w > W) {
-            math.style.fontSize = (95*W/w)+"%";
-            MathJax.Hub.getAllJax(math)[0].Rerender();
-          }
-        });
-      });
-    },
-    jax: ["input/TeX","output/HTML-CSS","output/NativeMML"],
-  };
-
  const deck = {
   "cards": [
     {
