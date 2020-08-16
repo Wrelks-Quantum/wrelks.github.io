@@ -45,7 +45,6 @@ mathjax: true
       </div>
       <div class="grid-container justify-center flash-card-nav">
         <div class="spacer"></div>
-        <br>
         <div class="flash-card-nav">
           <button class="btn-circle" id="previousCard" onclick="previousCard();">&lt;</button>
           <span class="ml-1 mr-1">Card
