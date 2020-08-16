@@ -26,7 +26,7 @@ UNDER CONSTRUCTION 3/13/19
 <div class="container">
   <div class="row">
     <div class="col">
-      <h2 id="questioncard">Click on the card to reveal the answer</h4>
+      <h2 id="questioncard">Click on the card to reveal the answer</h2>
     </div><!-- end col -->
   </div><!-- end row -->
 </div><!-- end container -->
