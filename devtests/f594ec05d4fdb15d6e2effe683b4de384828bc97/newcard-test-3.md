@@ -213,8 +213,8 @@ font-size: 0.2em;
 }
 
 .figure-centered {
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
 }
 
 .img-fullscreen {
@@ -252,19 +252,19 @@ font-size: 0.2em;
   display: none;
 }
 
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .grid-container.media-and-text {
     grid-template-columns: 60% auto;
     grid-column-gap: 1.5rem;
   }
 
-@media screen and (min-width: 201px){
+@media screen and (min-width: 801px){
     .flash-card-view {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 201px){
+@media screen and (min-width: 801px){
   .text-center {
   font-size:1.2rem;
   }
