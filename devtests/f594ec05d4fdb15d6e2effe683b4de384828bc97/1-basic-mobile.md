@@ -56,7 +56,7 @@ UNDER CONSTRUCTION 3/13/19
 
 <br>
 <br>
-<a class="button button--primary button--pill margin-right" href=""><i class="fas fa-forward"></i> NEXT</a>
+<a class="button button--primary button--pill sitck-to-right" href=""><i class="fas fa-forward"></i> NEXT</a>
 
 <a class="button button--primary button--pill" href=""><i class="fas fa-backward"></i> BACK</a>
 
@@ -89,6 +89,10 @@ $('.back', '.flashcard').on('click', function() {
   padding: 10px;
   box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.15), -8px -8px 12px 0 rgba(255, 255, 255, 0.5);
   border-radius: 10px;
+}
+
+.stick-to-right {
+  float: right;
 }
 
 .front h5,
