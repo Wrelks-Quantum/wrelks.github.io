@@ -252,6 +252,7 @@ font-size: 0.2em;
   display: none;
 }
 
+/*
 @media screen and (min-width: 801px) {
   .grid-container.media-and-text {
     grid-template-columns: 60% auto;
@@ -268,7 +269,7 @@ font-size: 0.2em;
   .text-center {
   font-size:1.2rem;
   }
-}
+} */
 
   
   .grid-container.flash-card-nav {
