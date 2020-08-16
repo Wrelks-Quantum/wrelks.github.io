@@ -109,14 +109,14 @@ MathJax.Hub.Config({
 
 @media screen and (max-width : 320px)
 {
-h5
-  {
-    font-size: 0.78rem;
-  }
+  .p-3
+    {
+      font-size: 0.78rem;
+    }
 }
 @media screen and (max-width : 1204px)
 {
-  .back
+  .p-3
     {
       font-size: 1.2rem;
     }
