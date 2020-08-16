@@ -22,17 +22,15 @@ UNDER CONSTRUCTION 3/13/19
 </head>
 
 <br>
-<br>
 
 <div class="container">
   <div class="row">
     <div class="col">
-      <h4>Click on the card to reveal the answer</h4>
+      <h2 id="questioncard">Click on the card to reveal the answer</h2>
     </div><!-- end col -->
   </div><!-- end row -->
 </div><!-- end container -->
 
-<br>
 <br>
 
 <div class="container">
@@ -53,9 +51,11 @@ UNDER CONSTRUCTION 3/13/19
   </div><!-- end row -->
 </div><!-- end container -->
 
-
 <br>
-<br>
+<div id="container">
+  <a class="button button--primary button--pill" href="https://wrelks.com/devtests/f594ec05d4fdb15d6e2effe683b4de384828bc97/1-basic-mobile#questioncard"><i class="fas fa-backward"></i> BACK</a>
+  <a class="button button--primary button--pill sitck-to-right" href="https://wrelks.com/devtests/f594ec05d4fdb15d6e2effe683b4de384828bc97/3-basic-mobile#questioncard">NEXT <i class="fas fa-forward"></i></a>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -81,11 +81,19 @@ $('.back', '.flashcard').on('click', function() {
 .back {
   width: 100%;
   /*min-height: 150px; */
-  height: 200px;
+  height: 300px;
   display: table;
   padding: 10px;
   box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.15), -8px -8px 12px 0 rgba(255, 255, 255, 0.5);
   border-radius: 10px;
+}
+
+.stick-to-right {
+  float: right;
+}
+
+#container{
+    text-align: center;
 }
 
 .front h5,
