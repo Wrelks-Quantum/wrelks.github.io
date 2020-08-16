@@ -74,6 +74,14 @@ $('.back', '.flashcard').on('click', function() {
   $(this).siblings('.front').show();
 });
 
+MathJax.Hub.Config({
+  CommonHTML: {
+    linebreaks: {
+      automatic: true
+    }
+  }
+});
+
 </script>
 
 <style>
@@ -88,9 +96,9 @@ $('.back', '.flashcard').on('click', function() {
   border-radius: 10px;
 }
 
-.stick-to-right {
+/*.stick-to-right {
   float: right;
-}
+}*/
 
 #container{
     text-align: center;
