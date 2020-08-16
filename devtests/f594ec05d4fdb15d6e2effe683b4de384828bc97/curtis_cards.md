@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Curtis Cards
-key: fffy384fad
+key: fffy384fad123ds
 comment: false
 author: Perry
 mathjax: true
@@ -10,9 +10,11 @@ mathjax: true
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 
  <link href="http://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet" type="text/css">
- <script src="path/to/modernizr-2.5.3.min.js"></script>
+ <script src="js/vendor/modernizr-2.5.3.min.js"></script>
 
 <script src="js/flash_cards.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js ">
 
  <ul id="deck">
     <li class="card">
