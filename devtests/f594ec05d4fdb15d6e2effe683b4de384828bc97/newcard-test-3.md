@@ -88,7 +88,7 @@ mathjax: true
 }
 
 .buttondown {
-  top: 50%;
+  bottom: 70%;
 }
 
 .bg-full-screen.show {
