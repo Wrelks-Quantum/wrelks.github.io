@@ -39,8 +39,9 @@ UNDER CONSTRUCTION 3/13/19
   <!-------- FLASH CARD 1 -------->
   <div class="col-sm">
       <div class="flashcard">
+        <div class="box">
         <div class="p-3 front border rescale" style="display:inline-block">
-          <h5>$\displaystyle\sum_{n \ = \ 0}^{\infty} \ \frac{(-1)^n \gamma^{2n} B^{2n}}{(2n)!} \ + \ i \displaystyle\sum_{n \ = \ 0}^{\infty} \frac{(-1)^n \gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$</h5>
+          <h5>$\displaystyle\sum_{n \ = \ 0}^{\infty} \ \frac{(-1)^n \gamma^{2n} B^{2n}}{(2n)!} \ + \ i \displaystyle\sum_{n \ = \ 0}^{\infty} \frac{(-1)^n \gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$</h5></div>
         </div><!-- end front -->
         <div class="p-3 back border rescale">
           <p>$\sum_{P_{n-1},\ldots,P_0 \in \{1,X,Y,Z\}} C_{P_{n-1}\ldots,P_0}~~P_{n-1} \otimes P_{n-2}\otimes\ldots\otimes P_0$</p>
@@ -106,6 +107,13 @@ $('.back', '.flashcard').on('click', function() {
 
 .fast {
   animation-duration: 0.5s;
+}
+
+.box {
+  margin: 1em auto 0 auto;
+  border: 2px solid black;
+  padding: 0 20px;
+  width: 20em;
 }
 
 </style>
