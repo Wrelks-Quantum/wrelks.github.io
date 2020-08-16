@@ -581,6 +581,7 @@ function setBackMedia(media) {
 }
 
 function showCardBacksFirst() {
+  MathJax.Hub.Typeset()
   return document.getElementById('cardBacksFirst').checked;
 }
 
@@ -598,6 +599,7 @@ function handleTouchStart(e) {
 }
 
 function handleTouchMove(e) {
+  MathJax.Hub.Typeset()
   if (initialX === null) return;
   
   let currentX = e.changedTouches[0].clientX;
@@ -610,6 +612,7 @@ function handleTouchMove(e) {
 }
 
 function handleTouchEnd(e) {
+  MathJax.Hub.Typeset()
   if (initialX === null) return;
 
   let currentX = e.changedTouches[0].clientX;
@@ -644,6 +647,7 @@ function handleTouchEnd(e) {
 }
 
 function handleClick(e) {
+  MathJax.Hub.Typeset()
   if (e.target.tagName.toLowerCase() === 'img') {
     toggleFullscreen(e, e.target);
   } else {
