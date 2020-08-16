@@ -9,7 +9,7 @@ mathjax: true
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
 <body>
-  <div><center>
+  <div>
     <div class="bg-full-screen">
       <figure class="figure-centered">
         <img id="fullScreenImg" class="img-fullscreen" src="" />
@@ -24,7 +24,7 @@ mathjax: true
               <div class="grid-item">
                 <h2 id="frontCopy" class="text-center"></h2>
               </div>
-            </div><center>
+            </div>
           </div>
           <!-- End Flash Card Front -->
 
@@ -102,7 +102,6 @@ backface-visibility: hidden;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 50%;
   /*margin: 1em auto 0 auto;*/
   /*padding: 0 20px;*/
   -webkit-backface-visibility: hidden;
