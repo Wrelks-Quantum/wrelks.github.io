@@ -213,8 +213,8 @@ font-size: 0.2em;
 }
 
 .figure-centered {
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
 }
 
 .img-fullscreen {
