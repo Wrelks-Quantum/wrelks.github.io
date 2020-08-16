@@ -8,25 +8,6 @@ mathjax: true
 ---
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
-<script type="text/javascript">
-  window.MathJax = {
-    AuthorInit: function() {
-      MathJax.Hub.Register.StartupHook("Begin", function() {
-        MathJax.Hub.Queue(function() {
-          var math = document.getElementById("rescale");
-          var w = math.offsetWidth,
-            W = math.parentNode.offsetWidth - 40;
-          if (w > W) {
-            math.style.fontSize = (95 * W / w) + "%";
-            MathJax.Hub.getAllJax(math)[0].Rerender();
-          }
-        });
-      });
-    },
-    jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
-  };
-</script>
-
 <body>
   <div>
     <div class="bg-full-screen">
@@ -41,11 +22,7 @@ mathjax: true
           <div class="flash-card-front">
             <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
-                <div id="rescale" style="display:inline-block">
-                <div class="box">
-                <p id="frontCopy" class="text-center"></p>
-                </div>
-                </div>
+                <h2 id="frontCopy" class="text-center"></h2>
               </div>
             </div>
           </div>
@@ -196,13 +173,6 @@ font-size: 0.2em;
   transform: rotateX(180deg);
 }
 
-.box {
-  margin: 1em auto 0 auto;
-  border: 2px solid black;
-  padding: 0 20px;
-  width: 20em;
-}
-
 .flash-card-view.slide-left {
   transform: translateX(-110%);
   transition: all .25s ease;
@@ -348,6 +318,23 @@ font-size: 0.2em;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js"></script> 
 
 <script>
+
+  window.MathJax = {
+    AuthorInit: function () {
+      MathJax.Hub.Register.StartupHook("Begin",function () {
+        MathJax.Hub.Queue(function () {
+          var math = document.getElementById("rescale");
+          var w = math.offsetWidth, W = math.parentNode.offsetWidth-40;
+          if (w > W) {
+            math.style.fontSize = (95*W/w)+"%";
+            MathJax.Hub.getAllJax(math)[0].Rerender();
+          }
+        });
+      });
+    },
+    jax: ["input/TeX","output/HTML-CSS","output/NativeMML"],
+  };
+
  const deck = {
   "cards": [
     {
