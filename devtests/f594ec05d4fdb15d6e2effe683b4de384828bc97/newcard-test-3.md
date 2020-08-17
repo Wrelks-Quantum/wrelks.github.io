@@ -21,8 +21,8 @@ mathjax: true
           <!-- Flash Card Front -->
           <div class="flash-card-front">
             <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
-              <div class="grid-item">
-                <p id="frontCopy" class="text-center" style=""></p>
+              <div class="grid-item"><div class="textfit1">
+                <p id="frontCopy" class="text-center" style=""></p></div>
               </div>
             </div>
           </div>
@@ -35,8 +35,8 @@ mathjax: true
                 <video id="backVideo" class="img-responsive hide" src="" controls></video>
                 <img id="backImage" class="img-responsive hide" src="" />
               </div>
-              <div class="grid-item">
-                <p id="backCopy" class="text-center" style="font-size:1.2rem;"></p>
+              <div class="grid-item"><div class="textfit1">
+                <p id="backCopy" class="text-center" style=""></p></div>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ mathjax: true
     {
       width: 100%
     }
-  frontCopy {
+  .textfit1 {
       font-size: 0.45rem;
   }
 }
@@ -106,7 +106,7 @@ mathjax: true
     {
       width: 70%
     }
-  frontCopy {
+  .textfit1 {
       font-size: 4.3rem;
   }
 }
