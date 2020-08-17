@@ -107,7 +107,7 @@ mathjax: true
       width: 70%
     }
   .textfit1 {
-      font-size: 4.3rem;
+      font-size: 1.3rem;
   }
 }
 
