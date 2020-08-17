@@ -144,7 +144,7 @@ font-size: 0.2em;
 .flash-card-view {
   position: relative;
   height: 60%; /* how thicc it is */
-  width: 70%; /* Changes size but not pos */ /* how long it is*/ /*70% on everything, 100% on phones%*/
+  /*width: 70%; */ /* Changes size but not pos */ /* how long it is*/ /*70% on everything, 100% on phones%*/
   margin: 0 auto;
   perspective: 1000px;
   transform: translateX(0);
