@@ -47,7 +47,7 @@ mathjax: true
         <div class="spacer"></div>
         <div class="flash-card-nav">
           <button class="btn-circle" id="previousCard" onclick="previousCard();">&lt;</button>
-          <span class="ml-1 mr-1">Question
+          <span class="ml-1 mr-1">Card
             <span id="currentPosition"></span>
             of
             <span id="cardCount"></span>
