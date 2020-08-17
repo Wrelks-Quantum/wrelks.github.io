@@ -9,6 +9,11 @@ mathjax: true
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
 <body>
+<br>
+<br>
+<br>
+<br>
+<br>
   <div>
     <div class="bg-full-screen">
       <figure class="figure-centered">
