@@ -107,7 +107,7 @@ mathjax: true
       width: 70%
     }
   frontCopy {
-      font-size: 1.3rem;
+      font-size: 4.3rem;
   }
 }
 
