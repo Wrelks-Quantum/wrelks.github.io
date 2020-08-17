@@ -76,9 +76,9 @@ show_edit_on_github: false
 		</span>
 		<h3>Weekly Quote</h3>
 		<p><blockquote>
-      “Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.”<blockquote>
-        <blockquote><blockquote><blockquote>Richard P. Feynman</blockquote></blockquote></blockquote>
-      </p>
+      Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.
+      <cite>Richard P. Feynman</cite>
+    </blockquote></p>
 	</div>
 <!-- item // -->
 	</div>
@@ -135,6 +135,164 @@ show_edit_on_github: false
   <style src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css"></style>
     <style src="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"></style>
 <style>
+
+/* Pure CSS quotations */
+/*  */
+
+blockquote {
+  position: relative;
+  font-family: inherit;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1em;
+  padding-top: 1em;
+  padding-left: 1em;
+  line-height: 2;
+}
+
+blockquote::before {
+  position: absolute;
+  content: "‘";
+  color: #418ad1;
+  font-size: 15em;
+  opacity: 0.2;
+  top: -0.5em;
+  left: -0.05em;
+  right: unset;
+}
+
+blockquote::after {
+  position: absolute;
+  content: "‘";
+  color: #418ad1;
+  font-size: 15em;
+  opacity: 0.5;
+  top: -0.5em;
+  left: -0.25em;
+  right: unset;
+}
+
+blockquote[role="review"]::before {
+  position: absolute;
+  content: "’";
+  color: #418ad1;
+  font-size: 15em;
+  opacity: 0.2;
+  top: -0.5em;
+  left: unset;
+  right: 0.25em;
+}
+
+blockquote[role="review"]::after {
+  position: absolute;
+  content: "’";
+  color: #418ad1;
+  font-size: 15em;
+  opacity: 0.5;
+  top: -0.5em;
+  left: unset;
+  right: 0.05em;
+}
+
+blockquote cite {
+  display: block;
+  color: #418ad1;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+blockquote cite::before {
+  content: "— ";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  color: #418ad1;
+}
+
+blockquote q {
+  quotes: "" "" "" "";
+  display: block;
+  color: #373a63;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+blockquote q::before {
+  content: no-open-quote;
+}
+
+blockquote q::after {
+  content: no-close-quote;
+}
+
+blockquote i {
+  display: block;
+  color: #418ad1;
+}
+
+/* Defaults [DEMO PURPOSES ONLY] */
+
+:root {
+  box-sizing: border-box; /* Set proper box sizing */
+  /* Set default variable font with Sans-Serif fallback */
+  font-family: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Set box sizing inheritance */
+}
+
+html {
+  box-sizing: inherit; /* Set box sizing inheritance */
+  width: 100vw; /* Set full viewport width */
+  height: 100vh; /* Set full viewport height */
+}
+
+body {
+  box-sizing: inherit; /* Set box sizing inheritance */
+  font-family: inherit; /* Set font inheritance */
+  font-size: 16px; /* Set base font size */
+  background-color: #f5f8f9; /* Darken default white */
+  color: #373a3b; /* Lighten default black */
+  width: 50%; /* Set base width */
+  height: 50%; /* Set base height */
+  margin: 0 auto; /* Set margins */
+  padding: 0; /* Remove padding */
+}
+
+a {
+  color: currentColor; /* Remove default blue color */
+  text-decoration: none; /* Remove default underline */
+}
+
+*::selection {
+  color: white;
+  background-color: lightGrey;
+  text-shadow: 0.08em 0.08em 0 darkGrey;
+}
+
+article:last-of-type {
+  padding: 1em;
+  text-align: center;
+  color: white;
+  border-radius: 5em;
+  background-image: linear-gradient(135deg, #418ad1 0%, #9b76bd 100%);
+}
+
+div {
+  margin: 5% auto;
+  text-align: center;
+}
+
+
+
 /* ----------- item-featured-round ------------ */
 .item-featured-round {
   position: relative;
