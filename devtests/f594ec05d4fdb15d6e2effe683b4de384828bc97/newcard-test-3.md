@@ -2,7 +2,7 @@
 layout: article
 title: Experimental Card Test 3
 key: fffy384fad
-comment: false
+comment: true
 author: Perry
 mathjax: true
 ---
