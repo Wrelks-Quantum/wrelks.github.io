@@ -17,8 +17,8 @@ As you may know, Wrelks.com is an ever evolving site that has new content and up
 - Must **at least** have some background in either Qiskit, Q#, or Silq programming.
 - Having a **decent** understanding of linear algebra.
 - Completed **at least one** formal quantum computing course.
-- Knowledge in creating and developing a Jekyll site. <red><i>Not Required*</i></red>
-- Background in either HTML, CSS, JavaScript, or jQuery. <red><i>*Not Required*</i></red>
+- Knowledge in creating and developing a Jekyll site. <red><i>Not Required</i></red>
+- Background in either HTML, CSS, JavaScript, or jQuery. <red><i>Not Required</i></red>
 - **Must** have access to discord.
 
 <style>
