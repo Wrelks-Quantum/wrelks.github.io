@@ -65,6 +65,17 @@ mathjax: true
 
 <style>
 
+@media screen and (max-width : 500px)
+{
+  .flash-card-view
+    {
+      width: 100%
+    }
+  frontCopy {
+      font-size: 0.75rem;
+  }
+}
+
 /*body {
   height: auto;
   max-width: auto;
