@@ -22,7 +22,7 @@ mathjax: true
           <div class="flash-card-front">
             <div class="grid-container full-height justify-center align-center text-only"> <!-- 'Text-only' will center text :)-->
               <div class="grid-item">
-                <p id="frontCopy" class="text-center" style=""></p>
+                <p id="frontCopy" class="text-center"></p>
               </div>
             </div>
           </div>
@@ -84,9 +84,9 @@ mathjax: true
   opacity: 0;
 }
 
-fontCopy {
+/*fontCopy {
   font-size: 1.3rem;
-}
+}*/
 
 
 @media screen and (max-width : 500px)
@@ -96,7 +96,7 @@ fontCopy {
       width: 100%
     }
   frontCopy {
-      font-size: 0.55rem;
+      font-size: 0.45rem;
   }
 }
 
