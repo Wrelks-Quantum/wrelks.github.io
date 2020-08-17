@@ -23,6 +23,11 @@ As you may know, Wrelks.com is an ever evolving site that has new content and up
 - **Must** be able to put in a couple hours each week.
 - A little knowledge in speaking English, you **do not** need to be fluent.
 
+## Want to apply?
+
+Check out the application <a href="https://discord.gg/VpQ586u">discord</a> if you are ready to apply.
+Good luck!
+
 <style>
 green {
     color: #52c41a;
