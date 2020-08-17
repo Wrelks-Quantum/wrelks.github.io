@@ -9,11 +9,7 @@ mathjax: true
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
+
   <div>
     <div class="bg-full-screen">
       <figure class="figure-centered">
@@ -130,7 +126,7 @@ backface-visibility: hidden;
 
 .flash-card-container {
   position: absolute;
-  top: 16rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
+  top: 25rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
   left: 0;
   right: 0;
   bottom: 0;
