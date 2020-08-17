@@ -129,7 +129,7 @@ backface-visibility: hidden;
   top: 20rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 2rem;
   /*margin: 1em auto 0 auto;*/
   /*padding: 0 20px;*/
   -webkit-backface-visibility: hidden;
