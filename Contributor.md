@@ -20,6 +20,8 @@ As you may know, Wrelks.com is an ever evolving site that has new content and up
 - Knowledge in creating and developing a Jekyll site. <red><i>Not Required</i></red>
 - Background in either HTML, CSS, JavaScript, or jQuery. <red><i>Not Required</i></red>
 - **Must** have access to discord.
+- **Must** be able to put in a couple hours each week.
+- A little knowledge in speaking English, you **do not** need to be fluent.
 
 <style>
 green {
