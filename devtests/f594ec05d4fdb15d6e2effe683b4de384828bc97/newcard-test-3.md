@@ -72,7 +72,7 @@ mathjax: true
       width: 100%
     }
   frontCopy {
-      font-size: 0.75rem;
+      font-size: 0.55rem;
   }
 }
 
