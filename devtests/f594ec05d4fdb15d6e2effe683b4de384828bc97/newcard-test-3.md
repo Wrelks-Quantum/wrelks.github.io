@@ -3,7 +3,7 @@ layout: article
 title: Experimental Card Test 3
 key: fffy384fad12
 comment: false
-author: Perry
+#author: Perry
 mathjax: true
 ---
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
@@ -51,7 +51,7 @@ mathjax: true
           <button class="btn-circle" id="previousCard" onclick="previousCard();">&lt;</button>
           <span class="ml-1 mr-1">
             <span id="currentPosition"></span>
-            of
+            /
             <span id="cardCount"></span>
           </span>
           <button class="btn-circle" id="nextCard" onclick="nextCard();">&gt;</button>
