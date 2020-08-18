@@ -332,6 +332,10 @@ font-size: 0.2em;
   border: 1px solid red;
 }
 
+.article__content { /*fixed copped off n on bottom of sigma notation for apple ipad*/
+    line-height: 1.5;
+}
+
 .debug-green {
   border: 1px solid green;
 }
