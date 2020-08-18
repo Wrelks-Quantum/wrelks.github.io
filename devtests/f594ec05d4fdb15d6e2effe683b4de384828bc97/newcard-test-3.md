@@ -463,12 +463,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you represent $|1\rangle$ as a vector?",
+      "frontCopy": "How would you find the probability of getting a $|1\rangle$ or $|0\\rangle$ using this equation? $\\alpha\\,\\left|0\\right\\rangle+\\beta\\,\\left|1\\right\\rangle$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
+      "backCopy": "By taking the absolute square of both $\\alpha$ and $\\beta$, like so, $|\\alpha|^2$ & $|\\beta|^2$ The resulting value is the probability of their corresponding ket."
     },
     {
       "position": 1,
@@ -476,12 +476,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write $$\\sigma_x$$ as a matrix?",
+      "frontCopy": "What does $\\psi$ represent?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$$"
+      "backCopy": "$\\psi$ represents some vector space"
     },
     {
       "position": 1,
@@ -489,12 +489,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write $$\\sigma_x$$ as a matrix?",
+      "frontCopy": "How do you create the following state? $\\tfrac{1}{\\sqrt{2}}(|0\\rangle + |1\\rangle)$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$$"
+      "backCopy": "By applying a Hadamard gate to $|0\\rangle$"
     },
     {
       "position": 1,
@@ -502,12 +502,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write $$\\sigma_x$$ as a matrix?",
+      "frontCopy": "What affect will this matrix have on a single qubit? $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1\\end{bmatrix}$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$$"
+      "backCopy": "Nothing! This is a identity matrix, and when this matrix is multiplied to a vector the product is the same as the initial vector."
     },
     {
       "position": 1,
@@ -515,12 +515,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write $$\\sigma_x$$ as a matrix?",
+      "frontCopy": "What's another way to write a one qubit system based on the following? $\\left|\\psi\\right\\rangle=\\begin{bmatrix} a_0 \\\\ a_1 \\end{bmatrix}$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$$"
+      "backCopy": "$\\left|\\psi\\right\\rangle=a_0\\,\\left|0\\right\\rangle+a_1\\,\\left|1\\right\\rangle$"
     },
   ]
 };
