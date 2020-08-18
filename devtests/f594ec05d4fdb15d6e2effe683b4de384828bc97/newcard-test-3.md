@@ -172,6 +172,11 @@ font-size: 0.2em;
   outline: 0;
 }
 
+.article__content {
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
 .flash-card {
   height: 100%;
   background-color: #fff;
