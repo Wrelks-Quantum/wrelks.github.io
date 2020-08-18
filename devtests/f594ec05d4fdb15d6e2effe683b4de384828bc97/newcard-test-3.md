@@ -167,7 +167,7 @@ font-size: 0.2em;
 
 .flash-card-nav {
   grid-template-rows: auto auto;
-  grid-row-gap: 4em;
+  grid-row-gap: 6em;
 }
 
 .btn-circle {
