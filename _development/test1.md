@@ -1,18 +1,12 @@
 ---
 layout: article
-title: Update 7/12/2020
+title: Release 7/12/2020
 cover: /images/patch.png
 key: page-single
 
 ---
 
-A post with a single column.
+**Changes**
 
-<!--more-->
+- Wrelks.com comes out of Alpha stage! Ready for public viewing 
 
-**front matter:**
-
-    ---
-    layout: article
-    title: Page - Single
-    ---
