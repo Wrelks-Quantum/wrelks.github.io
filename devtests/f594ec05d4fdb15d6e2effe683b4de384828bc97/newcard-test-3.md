@@ -416,7 +416,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$$"
+      "backCopy": "$\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$"
     },
     {
       "position": 2,
@@ -424,12 +424,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you represent $$|1\\rangle$$ as a vector?",
+      "frontCopy": "How do you represent $|1\\rangle$ as a vector?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$$"
+      "backCopy": "$\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$"
     },
     {
       "position": 1,
@@ -437,12 +437,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write $$\\sigma_x$$ as a matrix?",
+      "frontCopy": "How do you write $\\sigma_x$ as a matrix?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$$"
+      "backCopy": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
     },
     {
       "position": 1,
@@ -450,12 +450,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What is the resulting vector after applying $$\\sigma_x$$ to $$|1\\rangle$$",
+      "frontCopy": "What is the resulting vector after applying $\\sigma_x$ to $|1\\rangle$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix} \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix} \\ =  \\ \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$$"
+      "backCopy": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix} \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix} \\ =  \\ \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$"
     },
     {
       "position": 1,
@@ -468,7 +468,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$$"
+      "backCopy": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
     },
     {
       "position": 1,
