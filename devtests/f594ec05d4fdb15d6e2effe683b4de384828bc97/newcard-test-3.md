@@ -63,11 +63,6 @@ mathjax: true
     </div>
   </div>
 </body>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <style>
 
@@ -168,6 +163,7 @@ font-size: 0.2em;
 .flash-card-nav {
   grid-template-rows: auto auto;
   grid-row-gap: 9em;
+  padding 2rem;
 }
 
 .btn-circle {
