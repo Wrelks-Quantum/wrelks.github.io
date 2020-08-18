@@ -16,7 +16,6 @@ mathjax: true
         <img id="fullScreenImg" class="img-fullscreen" src="" />
       </figure>
     </div>
-    <div class="spacer">
     <div class="flash-card-container">
       <div class="flash-card-view" id="cardViewer">
         <div class="flash-card">
@@ -28,7 +27,6 @@ mathjax: true
               </div>
             </div>
           </div>
-        </div>
           <!-- End Flash Card Front -->
 
   <!-- Flash Card Back -->
