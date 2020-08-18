@@ -8,5 +8,6 @@ key: page-single
 
 **Changes**
 
-- Wrelks.com comes out of Alpha stage! Ready for public viewing 
+- Wrelks.com comes out of Alpha stage! 
+- Ready for public viewing.
 
