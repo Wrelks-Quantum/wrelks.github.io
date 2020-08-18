@@ -476,12 +476,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "If you multiply the matricies from the NOT gate & the Hadamard gate what will be your resulting matrix?",
+      "frontCopy": "If you multiply the matricies from the CNOT gate & the Hadamard gate what will be your resulting matrix?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$CNOT \\otimes H = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\\\ 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\end{bmatrix}$ $$CNOT \\otimes H = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 & 0 & 1 & 1 \\\\ 0 & 0 & 1 & -1 \\\\ 1 & 1 & 0 & 0 \\\\ 1 & -1 & 0 & 0 \\\\ \\end{bmatrix}$$"
+      "backCopy": "\\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix} \\otimes \\tfrac{1}{\\sqrt{2}}\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\\\ 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\end{bmatrix}$ $$\\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix} \\otimes \\tfrac{1}{\\sqrt{2}}\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 & 0 & 1 & 1 \\\\ 0 & 0 & 1 & -1 \\\\ 1 & 1 & 0 & 0 \\\\ 1 & -1 & 0 & 0 \\\\ \\end{bmatrix}$$"
     },
     {
       "position": 1,
