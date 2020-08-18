@@ -411,12 +411,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you represent $|0\\rangle$ as a vector?",
+      "frontCopy": "How do you write $\\sigma_y$ as a matrix?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$"
+      "backCopy": "$\\begin{pmatrix} 0 & -i \\\\ i & 0 \\end{pmatrix}$"
     },
     {
       "position": 2,
@@ -424,12 +424,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you represent $|1\\rangle$ as a vector?",
+      "frontCopy": "What kind of operation does $U \\ = \\ e^{i\\gamma H}$ refer to?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$"
+      "backCopy": "A unitary operation"
     },
     {
       "position": 1,
@@ -437,12 +437,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write $\\sigma_x$ as a matrix?",
+      "frontCopy": "What is the result from taking the conjugate transpose of $U$?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
+      "backCopy": "$\\Big( e^{i\\gamma H} \\Big)^{\\dagger} \\ = \\ e^{-i \\gamma H^{\\dagger}}$"
     },
     {
       "position": 1,
