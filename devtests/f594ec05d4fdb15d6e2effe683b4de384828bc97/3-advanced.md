@@ -424,7 +424,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Is it true that any matrix can be expressed in terms of tensor products with pauli matricies? If so how do you denote it with sigma notation?",
+      "frontCopy": "Is it true that any matrix can be expressed in terms of tensor products with pauli matricies?<p> If so how do you denote it with sigma notation?",
       "backMedia": {
         "mimeType": null,
         "src": null
@@ -450,7 +450,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Unitary matrices preserve the inner product no matter how you transform a vector under a sequence of unitary matrices. How can you demonstrate this proof with linear algebra",
+      "frontCopy": "Unitary matrices preserve the inner product no matter how you transform a vector under a sequence of unitary matrices.<p> How can you demonstrate this proof with linear algebra",
       "backMedia": {
         "mimeType": null,
         "src": null
