@@ -6,6 +6,7 @@ cover: /images/boost.png
 aside:
   toc: true
 author: Perry
+comment: true
 ---
 <center><h4>This Section is still in progress!</h4></center>
 
