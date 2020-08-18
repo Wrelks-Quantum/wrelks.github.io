@@ -411,12 +411,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you represent $|0\\rangle$ as a vector?",
+      "frontCopy": "Knowing that matricies can be written purley with outer products, what is another way to write the following? $M= \\begin{pmatrix} m_{0,0}&m_{0,1} \\\\\\\\ m_{1,0}&m_{1,1} \\end{pmatrix}$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$"
+      "backCopy": "$m_{0,0} |0\\rangle\\langle0|+ m_{0,1} |0\\rangle\\langle1|+ m_{1,0} |1\\rangle\\langle0|+ m_{1,1} |1\\rangle\\langle1|$"
     },
     {
       "position": 2,
@@ -424,12 +424,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you represent $|1\\rangle$ as a vector?",
+      "frontCopy": "Is it true that any matrix can be expressed in terms of tensor products with pauli matricies? If so how do you denote it with sigma notation?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$"
+      "backCopy": "$\\sum_{P_{n-1},\\ldots,P_0 \\in \\{1,X,Y,Z\\}} C_{P_{n-1}\\ldots,P_0}~~P_{n-1} \\otimes P_{n-2}\\otimes\\ldots\\otimes P_0$"
     },
     {
       "position": 1,
@@ -437,12 +437,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write $\\sigma_x$ as a matrix?",
+      "frontCopy": "How do we denote with sigma notation applying $N$ amount of hadamard gates to a quantum register $|00\\dots 0\\rangle$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
+      "backCopy": "$|00\\dots 0\\rangle \\xrightarrow{H^{\\otimes n}} \\frac{1}{\\sqrt{2^n}} \\sum_{x\\in \\{0,1\\}^n} |x\\rangle$"
     },
     {
       "position": 1,
@@ -450,12 +450,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What is the resulting vector after applying $\\sigma_x$ to $|1\\rangle$",
+      "frontCopy": "Unitary matrices preserve the inner product no matter how you transform a vector under a sequence of unitary matrices. How can you demonstrate this proof with linear algebra",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix} \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix} \\ =  \\ \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$"
+      "backCopy": "$\\langle \\psi | \\psi \\rangle \\ = \\ 1 \\ \\Rightarrow \\ |\\psi\\rangle \\ \\rightarrow \\ U |\\psi\\rangle \\ = \\ |\\psi'\\rangle \\ \\Rightarrow \\ \\langle \\psi' | \\psi' \\rangle \\ = \\ (U |\\psi\\rangle)^{\\dagger} U|\\psi\\rangle \\ = \\ \\langle \\psi | U^{\\dagger} U |\\psi\\rangle \\ = \\ \\langle \\psi | \\psi \\rangle \\ = \\ 1$"
     },
     {
       "position": 1,
@@ -463,12 +463,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How would you find the probability of getting a $|1\\rangle$ or $|0\\rangle$ using this equation? $\\alpha\\,\\left|0\\right\\rangle+\\beta\\,\\left|1\\right\\rangle$",
+      "frontCopy": "How do you write a formula which expresses a function such that a controlled unitary operator $C - U$ applies some unitary operator $U$ on a given target register only if it's corresponding control bit is $|1\\rangle$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "By taking the absolute square of both $\\alpha$ and $\\beta$, like so, $|\\alpha|^2$ & $|\\beta|^2$ The resulting value is the probability of their corresponding ket."
+      "backCopy": "$U^{2^{j}}|\\psi \\rangle =U^{2^{j}-1}U|\\psi \\rangle =U^{2^{j}-1}e^{2\\pi i\\theta }|\\psi \\rangle =\\cdots =e^{2\\pi i2^{j}\\theta }|\\psi \\rangle$"
     },
     {
       "position": 1,
@@ -476,12 +476,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What does $\\psi$ represent?",
+      "frontCopy": "What will the following Maclaurin series equation look like if you split it into two different sigma notation equations. One part being real and the other being imaginary. $e^{i \\gamma B} \\ = \\ \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(i \\gamma B)^n}{n!}$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\psi$ represents some vector space"
+      "backCopy": "$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$"
     },
     {
       "position": 1,
