@@ -411,12 +411,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "This is some sample text talking about this very long equation here $$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$$",
+      "frontCopy": "How do you represent $$|0\\rangle$$ as a vector?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "The bilaterally symmetric sympathetic chain ganglia, also called the paravertebral ganglia, <p> are located just ventral and lateral to the spinal cord. The chain extends from the upper neck down to the coccyx, forming the unpaired coccygeal ganglion"
+      "backCopy": "$$\\begin{pmatrix} 1 \\ 0 \\end{pmatrix}$$"
     },
     {
       "position": 2,
@@ -424,12 +424,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "$$10101203$$",
+      "frontCopy": "How do you represent $$|1\\rangle$$ as a vector?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\sum_{P_{n-1},\\ldots,P_0 \\in \\{1,X,Y,Z\\}} C_{P_{n-1}\\ldots,P_0}~~P_{n-1} \\otimes P_{n-2}\\otimes\\ldots\\otimes P_0$$"
+      "backCopy": "$$\\begin{pmatrix} 0 \\ 1 \\end{pmatrix}$$"
     },
     {
       "position": 1,
