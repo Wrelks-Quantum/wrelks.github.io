@@ -13,4 +13,4 @@ author: Perry
 
 <!--more-->
 
-> ##### I am looking for a contributer that will be able to create well made and detailed tutorials for complex subjects in quantum computing such as this one. If you would like to apply to become a contributer, you can apply here : * insert link later *
+> ##### I am looking for a contributor that will be able to create well made and detailed tutorials for complex subjects in quantum computing such as this and bring it down to a more understandable level for beginners. If you are up to the task and would like to apply to become a contributor, you can get started by checking out the [contributor page](https://wrelks.com/Contributor) 
