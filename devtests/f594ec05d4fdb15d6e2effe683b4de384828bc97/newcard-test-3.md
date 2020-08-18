@@ -224,7 +224,7 @@ font-size: 0.2em;
 .grid-container {
   overflow-y: auto;
   display: grid;
-  padding: 0 .5rem;
+  padding: .5rem;
 }
 
 .grid-container.text-only {
