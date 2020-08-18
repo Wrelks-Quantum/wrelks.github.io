@@ -483,45 +483,6 @@ font-size: 0.2em;
       },
       "backCopy": "$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$"
     },
-    {
-      "position": 1,
-      "frontMedia": {
-        "mimeType": null,
-        "src": null
-      },
-      "frontCopy": "How do you create the following state? $\\tfrac{1}{\\sqrt{2}}(|0\\rangle + |1\\rangle)$",
-      "backMedia": {
-        "mimeType": null,
-        "src": null
-      },
-      "backCopy": "By applying a Hadamard gate to $|0\\rangle$"
-    },
-    {
-      "position": 1,
-      "frontMedia": {
-        "mimeType": null,
-        "src": null
-      },
-      "frontCopy": "What affect will this matrix have on a single qubit? $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1\\end{bmatrix}$",
-      "backMedia": {
-        "mimeType": null,
-        "src": null
-      },
-      "backCopy": "Nothing! This is a identity matrix, and when this matrix is multiplied to a vector the product is the same as the initial vector."
-    },
-    {
-      "position": 1,
-      "frontMedia": {
-        "mimeType": null,
-        "src": null
-      },
-      "frontCopy": "What's another way to write a one qubit system based on the following? $\\left|\\psi\\right\\rangle=\\begin{bmatrix} a_0 \\\\ a_1 \\end{bmatrix}$",
-      "backMedia": {
-        "mimeType": null,
-        "src": null
-      },
-      "backCopy": "$\\left|\\psi\\right\\rangle=a_0\\,\\left|0\\right\\rangle+a_1\\,\\left|1\\right\\rangle$"
-    },
   ]
 };
 
