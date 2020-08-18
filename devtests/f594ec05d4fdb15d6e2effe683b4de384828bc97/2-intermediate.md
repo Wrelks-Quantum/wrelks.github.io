@@ -489,12 +489,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you create the following state? $\\tfrac{1}{\\sqrt{2}}(|0\\rangle + |1\\rangle)$",
+      "frontCopy": "What is one other way to write $U U^\\dagger$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "By applying a Hadamard gate to $|0\\rangle$"
+      "backCopy": "$U^\\dagger U$"
     },
     {
       "position": 1,
@@ -502,12 +502,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What affect will this matrix have on a single qubit? $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1\\end{bmatrix}$",
+      "frontCopy": "How would you expand the following equation? $\\displaystyle\\sum_{i} \\ f_i |v_i\\rangle$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "Nothing! This is a identity matrix, and when this matrix is multiplied to a vector the product is the same as the initial vector."
+      "backCopy": "$|v\\rangle \\ = \\ f_1 |v_1\\rangle \\ + \\ f_2 |v_2\\rangle \\ + \\ ... \\ + \\ f_n |v_n\\rangle$"
     },
     {
       "position": 1,
@@ -515,12 +515,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What's another way to write a one qubit system based on the following? $\\left|\\psi\\right\\rangle=\\begin{bmatrix} a_0 \\\\ a_1 \\end{bmatrix}$",
+      "frontCopy": "What does the following mean? $H^{\\otimes n}$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\left|\\psi\\right\\rangle=a_0\\,\\left|0\\right\\rangle+a_1\\,\\left|1\\right\\rangle$"
+      "backCopy": "This represents applying a Hadamard gate on some $N$ amount of qubits."
     },
   ]
 };
