@@ -39,7 +39,7 @@ author: Perry
 
 ## Getting started 
 
-First make sure that you are inside of your anaconda enviroment
+First make sure that you are inside of your anaconda environment
 
     conda acitvate 'name'
 

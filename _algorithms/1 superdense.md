@@ -3,7 +3,7 @@ layout: article
 title: Superdense Coding
 cover: /images/dense.png
 key: aslkjdfgw9487o3289t6ry4gf
-comment: false
+comment: true
 aside:
   toc: true
 author: Perry

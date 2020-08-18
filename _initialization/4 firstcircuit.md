@@ -78,7 +78,7 @@ This creates a circuit of 2 qubits in size
 
 afterwards gates can then be added to the circuit
 
-Lets say I want to add an X gate to qubit 0 and a hadamard gate to qubit 1, I would enter the following 
+Lets say I want to add an X gate to qubit 0 and a Hadamard gate to qubit 1, I would enter the following 
 
     qc.x(0)
     qc.h(1)
@@ -96,12 +96,12 @@ from here we can now tell qiskit to execute the circuit on a local simulator
     print('Simulator: ')
     counts = result.get_counts(qc) 
 
-> The 'shots=1024' variable tells qiskit how many times to run the circuit. In the example above, the circuit will run 1024 diffrent times
-> The reason we have quantum computers run a circuit many diffrent times is because in real quantum computers noise occures. Noise can interfere with the results so to find the the desirable output we run it many times and pick the most concurrent output as the official result.
+> The 'shots=1024' variable tells qiskit how many times to run the circuit. In the example above, the circuit will run 1024 different times
+> The reason we have quantum computers run a circuit many different times is because in real quantum computers noise occurs. Noise can interfere with the results so to find the the desirable output we run it many times and pick the most concurrent output as the official result.
 
 >> The simulator does **NOT** simulate noise by default.
 
-Qiskit gives us many diffrent ways to print out the answers, for this circuit we will print it out as a bar chart 
+Qiskit gives us many different ways to print out the answers, for this circuit we will print it out as a bar chart 
 
     plot_histogram(counts)
 
@@ -177,7 +177,7 @@ The output:
 
 ### IBMQ API Token
 
-The first step to getting your circuits to run on a real quantum computer is to create an account at the IBM Quantum Experince [here.](https://quantum-computing.ibm.com/)
+The first step to getting your circuits to run on a real quantum computer is to create an account at the IBM Quantum Experience [here.](https://quantum-computing.ibm.com/)
 
 Once you are all signed up ready to go head up to your profile icon and copy the API token 
 
@@ -206,7 +206,7 @@ The first thing that needs to be done is loading in your API token, and your pro
     IBMQ.enable_account("IBMQ_API_TOKEN")
     my_provider = IBMQ.get_provider()
 
->> #### NOTE: Once you run the program once with the IBMQ.enable_account("#########"), delete that line! The program will automatically remember your account credentials. Run this line each time you start up your enviroment!
+>> #### NOTE: Once you run the program once with the IBMQ.enable_account("#########"), delete that line! The program will automatically remember your account credentials. Run this line each time you start up your environment!
 
 <!--   save_account(IBMQ_API_TOKEN)
 
@@ -222,9 +222,9 @@ Afterwards you can then configure the quantum computer you want to use. Because 
     least_busy_device = least_busy(my_provider.backends(simulator=False))
     print("Least Busy:", least_busy_device)
 
-> 'simulator=False' of course means that the code will look for a backend that is not a local simulator. In short it will look for **ANY** avaliable quantum computer.
+> 'simulator=False' of course means that the code will look for a backend that is not a local simulator. In short it will look for **ANY** available quantum computer.
 
-Now we can intialize the job to run on the new quantum backend
+Now we can initialize the job to run on the new quantum backend
 
     backend = least_busy_device
     job = execute(qc, backend, shots=1024)
@@ -233,7 +233,7 @@ Now we can intialize the job to run on the new quantum backend
     counts = result.get_counts(qc)
     plot_histogram(counts)
 
-Now the entirity of the code looks like this 
+Now the entirety of the code looks like this 
 
     from qiskit import QuantumCircuit, execute, Aer, IBMQ
     from qiskit.providers.ibmq import least_busy
@@ -274,7 +274,7 @@ Your result should look a little like this if you ran the example as written
 
 You may've notice that 00 and 10 came out as a result to our circuit, but how can this be? Our provided circuit should make it impossible for those results?
 
-The answer is **noise**, real quantum computers aren't perfect yet and so they experince noise which cause faulty answers. This is why how I was explaining earlier why we run a circuit thousands of diffrent times to find the correct answers. I can look at this chart and see that 01 and 11 are the correct outputs because they were the highest probable outputs. 
+The answer is **noise**, real quantum computers aren't perfect yet and so they experience noise which cause faulty answers. This is why how I was explaining earlier why we run a circuit thousands of different times to find the correct answers. I can look at this chart and see that 01 and 11 are the correct outputs because they were the highest probable outputs. 
 
 
 <!-- backend = least_busy_device
