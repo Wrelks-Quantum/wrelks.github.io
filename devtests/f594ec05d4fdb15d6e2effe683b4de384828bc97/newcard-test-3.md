@@ -222,9 +222,9 @@ font-size: 0.2em;
 }
 
 .grid-container {
-  overflow-y: auto;
+  overflow-y: hidden;
   display: grid;
-  padding: 1 .5rem;
+  padding: 0 .5rem;
 }
 
 .grid-container.text-only {
