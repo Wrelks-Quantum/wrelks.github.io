@@ -450,7 +450,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Whats the resulting vector after applying $$\\sigma_x$$ to $$|1\\rangle$$",
+      "frontCopy": "What is the resulting vector after applying $$\\sigma_x$$ to $$|1\\rangle$$",
       "backMedia": {
         "mimeType": null,
         "src": null
@@ -463,7 +463,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write $$\\sigma_x$$ as a matrix?",
+      "frontCopy": "How do you represent $|1\rangle$ as a vector?",
       "backMedia": {
         "mimeType": null,
         "src": null
@@ -524,6 +524,12 @@ font-size: 0.2em;
     },
   ]
 };
+
+MathJax.Hub.Config({
+  tex2jax: {
+         inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+  }
+});
 
 window.onload = function() {
  /* hideNavButtonsForMobileOperatingSystems();*/
