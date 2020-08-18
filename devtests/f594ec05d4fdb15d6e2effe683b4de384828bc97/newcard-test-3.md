@@ -222,7 +222,7 @@ font-size: 0.2em;
 }
 
 .grid-container {
-  overflow-y: hidden;
+  overflow-y: auto;
   display: grid;
   padding: 0 .5rem;
 }
@@ -301,7 +301,7 @@ font-size: 0.2em;
 
   
   .grid-container.flash-card-nav {
-    grid-template-columns: 25% auto 25%;
+    grid-template-columns: 25% 2p25%;
   }
   
   .spacer {
