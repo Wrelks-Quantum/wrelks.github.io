@@ -163,7 +163,6 @@ font-size: 0.2em;
 .flash-card-nav {
   grid-template-rows: auto auto;
   grid-row-gap: 9em;
-  padding-top: 2rem;
 }
 
 .btn-circle {
@@ -225,7 +224,7 @@ font-size: 0.2em;
 .grid-container {
   overflow-y: auto;
   display: grid;
-  padding: 0 .5rem;
+  padding: 1 .5rem;
 }
 
 .grid-container.text-only {
