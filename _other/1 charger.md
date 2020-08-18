@@ -1,6 +1,6 @@
 ---
 layout: article 
-title: Fast LiPo Charger
+title: Fast LiPo Charger | Battery Pack Pt. 1
 cover: /images/charger.png
 key: t487fy112312
 aside:
@@ -10,8 +10,8 @@ comment: true
 #tags: [jekyll, tags, user-experience]
 ---
 
-## About
+## Background
 
-If you are not already familiar, my second favorite activity along side quantum computing is embedded systems/circuit design. It's something I've always been very passionate about. I felt as if Wrelks would be a fun place to not only serve as an archive for quantum computing resources and tutorials but also be a place to host some of my personal side projects. Anyways, hope you enjoy, overtime I will add more and more of my personal projects here for you to browse :)
+One of my other large side projects was creating a battery pack using custom designed fast charging technology. Battery packs are fun things that can be built at home with relative ease and without burning a hole in your wallet. If you have knowledge you can easily design your own battery pack charging logic
 
 <!--more-->
