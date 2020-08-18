@@ -1,8 +1,8 @@
 ---
 layout: article
 title: Experimental Card Test 3
-key: fffy384fad
-comment: true
+key: fffy384fad12
+comment: false
 author: Perry
 mathjax: true
 ---
@@ -63,22 +63,7 @@ mathjax: true
     </div>
   </div>
 </body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <style>
 
 /*body {
