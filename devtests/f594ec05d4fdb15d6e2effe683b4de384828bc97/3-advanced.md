@@ -411,7 +411,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Knowing that matricies can be written purley with outer products, what is another way to write the following? $M= \\begin{pmatrix} m_{0,0}&m_{0,1} \\\\\\\\ m_{1,0}&m_{1,1} \\end{pmatrix}$",
+      "frontCopy": "Knowing that matricies can be written purley with outer products, what is another way to write the following? $$M= \\begin{pmatrix} m_{0,0}&m_{0,1} \\\\\\\\ m_{1,0}&m_{1,1} \\end{pmatrix}$$",
       "backMedia": {
         "mimeType": null,
         "src": null
