@@ -411,7 +411,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you represent $|0\rangle$ as a vector?",
+      "frontCopy": "How do you represent $|0\\rangle$ as a vector?",
       "backMedia": {
         "mimeType": null,
         "src": null
