@@ -94,7 +94,7 @@ mathjax: true
 }*/
 
 
-@media screen and (max-width : 500px)
+@media screen and (max-width : 500px) /*mobile phones */
 {
   .flash-card-view
     {
@@ -102,6 +102,9 @@ mathjax: true
     }
   .textfit1 {
       font-size: 0.745rem;
+  }
+  .flash-card-container {
+    top: 16rem;
   }
 }
 
@@ -113,6 +116,9 @@ mathjax: true
     }
   .textfit1 {
       font-size: 1.3rem;
+  }
+  .flash-card-container {
+    top: 20rem;
   }
 }
 
