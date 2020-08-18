@@ -44,6 +44,7 @@ mathjax: true
           <!-- End Flash Card Back -->
         </div>
       </div>
+      <div class="seperate">
       <div class="grid-container justify-center flash-card-nav">
         <div class="spacer"></div>
         <div class="flash-card-nav">
@@ -62,6 +63,7 @@ mathjax: true
       </div>
     </div>
   </div>
+</div>
   <br>
     <br>
       <br>
@@ -87,6 +89,10 @@ mathjax: true
   z-index: 1;
   background-color: #000;
   opacity: 0;
+}
+
+.seperate {
+  padding: 20px;
 }
 
 /*fontCopy {
