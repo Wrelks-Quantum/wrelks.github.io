@@ -450,12 +450,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What is the resulting vector after applying $\\sigma_x$ to $|1\\rangle$",
+      "frontCopy": "How would you write $|{+++}\\rangle$ as a vector?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix} \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix} \\ =  \\ \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$"
+      "backCopy": "$\\frac{1}{\\sqrt{8}}\\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\\\end{bmatrix}$"
     },
     {
       "position": 1,
