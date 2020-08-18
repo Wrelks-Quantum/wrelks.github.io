@@ -6,6 +6,7 @@ key: t487fy12
 aside:
   toc: true
 author: Perry
+comment: true
 #tags: [jekyll, tags, user-experience]
 ---
 <!--https://hitcounter.pythonanywhere.com/--> 

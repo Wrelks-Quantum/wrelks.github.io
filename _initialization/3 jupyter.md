@@ -6,6 +6,7 @@ cover: /images/jupyter.png
 aside:
   toc: true
 author: Perry
+comment: true
 ---
 
 >> #### Installing Jupyter Notebook on Windows & Linux
