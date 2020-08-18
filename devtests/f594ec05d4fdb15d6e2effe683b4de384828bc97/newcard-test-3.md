@@ -525,11 +525,7 @@ font-size: 0.2em;
   ]
 };
 
-MathJax.Hub.Config({
-  tex2jax: {
-         inlineMath: [ ['$','$'], ['\\(','\\)'] ]
-  }
-});
+MathJax.Hub.Config({tex2jax: { displayMath: [ ['$$','$$'], ['\\(','\\)'] ] } });
 
 window.onload = function() {
  /* hideNavButtonsForMobileOperatingSystems();*/
