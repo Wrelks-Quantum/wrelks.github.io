@@ -463,12 +463,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How would you find the probability of getting a $|1\\rangle$ or $|0\\rangle$ using this equation? $\\alpha\\,\\left|0\\right\\rangle+\\beta\\,\\left|1\\right\\rangle$",
+      "frontCopy": "How would you write $\\text{CNOT}|0{+}\\rangle$ in ket notation?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "By taking the absolute square of both $\\alpha$ and $\\beta$, like so, $|\\alpha|^2$ & $|\\beta|^2$ The resulting value is the probability of their corresponding ket."
+      "backCopy": "$\\tfrac{1}{\\sqrt{2}}(|00\\rangle + |11\\rangle)$"
     },
     {
       "position": 1,
@@ -476,12 +476,15 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What does $\\psi$ represent?",
+      "frontCopy": "If you multiply the matricies from the NOT gate & the Hadamard gate what will be your resulting matrix?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\psi$ represents some vector space"
+      "backCopy": "$\\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix} \\otimes \\tfrac{1}{\\sqrt{2}}\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} = \\frac{1}{\sqrt{2}} \\begin{bmatrix} 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 1 \\times \begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\\\ 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\and{bmatrix} = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 & 0 & 1 & 1 \\\\
+                0 & 0 & 1 & -1 \\\\
+                1 & 1 & 0 & 0 \\\\
+                1 & -1 & 0 & 0 \\\\ \\end{bmatrix}$"
     },
     {
       "position": 1,
