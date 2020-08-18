@@ -45,7 +45,7 @@ The idea of the quantum teleportation is being able to *teleport* a qubit from o
 
 ## How it works
 
-As with the previous algorithm, this one also requires three diffrent users. One user, the third party, prepares a set of two entangled qubits with a bell state. The two other users will of course be the sender and the receiver. The third party shares the two entangled qubits with the sender and the receiver.
+As with the previous algorithm, this one also requires three different users. One user, the third party, prepares a set of two entangled qubits with a bell state. The two other users will of course be the sender and the receiver. The third party shares the two entangled qubits with the sender and the receiver.
 
 The bell state as shown before is prepared like this 
 
@@ -87,7 +87,7 @@ The receiver will use the following gates if certain values are met, those value
   </div>
 </div>
 
->> <strong>congratualtions the algorithm has been completed!</strong>
+>> <strong>Congratulations the algorithm is completed!</strong>
 
 From here we measure the outputs then send add an X followed by a Z gate at the end of the whole circuit to represent the receiver
 

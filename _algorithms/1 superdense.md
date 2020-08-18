@@ -58,9 +58,9 @@ A two qubit bell circuit in a perfect noiseless quantum computer will have an eq
 
 ### How it works
 
-In the superdense coding algorithm we have three diffrent users.
+In the superdense coding algorithm we have three different users.
 
-* The first user shares the two outputs of a two qubit bell state with the reciever and the sender.
+* The first user shares the two outputs of a two qubit bell state with the receiver and the sender.
 
 * The second user who is the sender, encodes the qubits 
 
@@ -76,7 +76,7 @@ The final design looks a little like this
 
 >> Credit: Wikipedia.org
 
-A good thing to try and think about is how a bell state truly works. Think about it, the control bit is entagled with the not gate. So when we set the control bit into a super position it also changes the target bit to a superposition as well, because they are entagled. 
+A good thing to try and think about is how a bell state truly works. Think about it, the control bit is entangled with the not gate. So when we set the control bit into a super position it also changes the target bit to a superposition as well, because they are entangled. 
 
 We can denote the bell state mathematically like so,
 
@@ -90,7 +90,7 @@ We can denote the bell state mathematically like so,
 
 ### The Encoder 
 
-The encoders job is simple, take the first qubit from the bell state and apply a single gate operation to it. In the two qubit example of this algorithm there are four diffrent ways for the encoder to encode their qubit. Either with a Identity gate (does no change), X-gate, Z-gate, or a combination of the Z and X-gate. Each of these four diffrent combinations represents an intended message. 
+The encoders job is simple, take the first qubit from the bell state and apply a single gate operation to it. In the two qubit example of this algorithm there are four different ways for the encoder to encode their qubit. Either with a Identity gate (does no change), X-gate, Z-gate, or a combination of the Z and X-gate. Each of these four diffrent combinations represents an intended message. 
 
 <div class="card">
   <div class="card__image">
@@ -106,7 +106,7 @@ So if I the sender wanted to pass on the message of 10 to my receiver, I would a
 
 ### The Receiver 
 
-The receivers job is bit easier. All they have to do is take the untouched second qubit from the initiall bell state and the new encoded qubit from the sender and pass it through a 'reverse' bell circuit. 
+The receivers job is bit easier. All they have to do is take the untouched second qubit from the initial bell state and the new encoded qubit from the sender and pass it through a 'reverse' bell circuit. 
 
 <div class="card">
   <div class="card__image">
