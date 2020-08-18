@@ -126,7 +126,7 @@ backface-visibility: hidden;
 
 .flash-card-container {
   position: absolute;
-  top: 20rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
+  top: 16rem; /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
   left: 0;
   right: 0;
   bottom: 2rem;
@@ -172,8 +172,8 @@ font-size: 0.2em;
   outline: 0;
 }
 
-.article__content {
-    line-height: 1.5;
+.article__content { /*fixed copped off n on bottom of sigma notation for apple ipad*/
+    line-height: 1.8;
     word-wrap: break-word;
 }
 
