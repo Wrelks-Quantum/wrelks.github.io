@@ -9,5 +9,5 @@ comment: false
 **Changes**
 
 - Wrelks.com comes out of Alpha stage! 
-- Ready for public viewing.
+- The site is ready for public viewing.
 
