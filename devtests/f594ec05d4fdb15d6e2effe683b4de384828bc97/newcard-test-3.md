@@ -257,7 +257,7 @@ font-size: 0.2em;
 }
 
 .full-height {
-  height: 100%;
+  height: 90%;
 }
 
 .justify-center {
