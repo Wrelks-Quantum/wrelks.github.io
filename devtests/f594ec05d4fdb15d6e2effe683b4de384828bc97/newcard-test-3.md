@@ -416,7 +416,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$$\\begin{pmatrix} 1 \ 0 \\end{pmatrix}$$"
+      "backCopy": "$$\\begin{pmatrix} 1 \\ 0 \\end{pmatrix}$$"
     },
     {
       "position": 2,
