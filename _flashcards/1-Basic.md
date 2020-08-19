@@ -125,7 +125,7 @@ body
 {
   .flash-card-view
     {
-      width: 70%
+      width: 70%;
     }
   .textfit1 {
       font-size: 1.3rem;
