@@ -55,7 +55,7 @@ Now that everything has arrived it was time to put it all to test. For the test 
 
 >In the middle is the battery output terminal, here is where the stepped down 4.2 volts result will come from.
 
->On the right side you'll find the 'status' terminal. The IC that I choose has two different signifier flags built into it. One being <b>chrg</b> which when <i>LOW</i> means that the battery is currently charging. The other status flag is the <b>stby</b>, this flag when <i>LOW</i> means that the battery is completely charged.
+>On the right side you'll find the 'status' terminal. The IC that I choose has two different signifier flags built into it. One being **chrg** which when *LOW* means that the battery is currently charging. The other status flag is the **stby**, this flag when *LOW* means that the battery is completely charged.
 
 
 <!--more-->
