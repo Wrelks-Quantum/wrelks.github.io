@@ -32,7 +32,7 @@ layout: article
 
 ---
 
-[Back](https://wrelks.com){:.button.button--primary.button--rounded}
+<!--[Back](https://wrelks.com){:.button.button--primary.button--rounded} may come in handy later-->
 
 <style>
 green {
