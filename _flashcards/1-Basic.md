@@ -95,8 +95,8 @@ mathjax: true
 }
 
 .seperate {
-  padding: 200px;
-  height: 21px;
+  /*padding: 200px;
+  height: 21px;*/
 }
 
 /*fontCopy {
@@ -110,6 +110,7 @@ body
   .flash-card-view
     {
       width: 100%
+      top: -200px;
     }
   .textfit1 {
       font-size: 0.745rem;
@@ -117,6 +118,7 @@ body
   .flash-card-container {
     top: 16rem;
   }
+
 }
 
 @media screen and (min-width : 501px)
@@ -130,6 +132,10 @@ body
   }
   .flash-card-container {
     top: 20rem;
+  }
+  .seperate {
+  padding: 200px;
+  height: 21px;
   }
 }
 
