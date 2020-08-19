@@ -42,7 +42,7 @@ The main goal when looking for a manufacturer is to find one that's cheap, fast,
 
 ### Part 3 | Testing
 
-Now that everything has arrived it was time to put it all to test. For the test I will be inputting a 5V 3Amp input and expecting a 4.2v ~3Amp output. Before I get into this test I believe a little tour on the surface of the board is in order for some context.
+Now that everything has arrived it was time to put it all to test. For the test I will be inputting a 5V 2Amp input and expecting a 4.2v ~2Amp output. Before I get into this test I believe a little tour on the surface of the board is in order for some context.
 
 <div class="card">
   <div class="card__image">
