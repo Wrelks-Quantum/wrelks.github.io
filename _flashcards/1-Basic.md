@@ -95,7 +95,7 @@ mathjax: true
 }
 
 .seperate {
-  padding: 20px;
+  padding: 200px;
 }
 
 /*fontCopy {
@@ -154,7 +154,7 @@ backface-visibility: hidden;
   /*padding: 0 20px;*/
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  height: 550px;
+  height: 300px;
 }
 
 /* make mathjax fit container */
