@@ -69,10 +69,9 @@ mathjax: true
     <br>
       <br>
         <br>
+</body>
 
 [Back](https://wrelks.com){:.button.button--primary.button--rounded}
-
-</body>
 
 <style>
 
