@@ -38,7 +38,16 @@ One of the most difficult parts of designing circuitry is picking out the ICs (I
 
 ### Step 2 | Picking a Manufacturer
 
-The main goal when looking for a manufacturer is to find one that's cheap, fast, and is good for the quantity of product you are wanting. What I mean by the last statement is that there are some manufacturers that are better for low quantity shipments and others for high quantity. I personally was looking into ordering 10 boards so I went with a pretty well known PCB manufacturer good for low quantity orders, [JLPCB](https://jlcpcb.com/). In about 5 days my boards were here! The other big aspect I look out for when looking into PCB manufacturers is seeing whether they support automatic placing of the ICs themselves or if it's exclusively PCB manufacturing. Many manufacturers print the actual board but without the chips soldered on. Thankfully [JLPCB](https://jlcpcb.com/) supports pre-soldered ICs for just a little bit more money. 
+The main goal when looking for a manufacturer is to find one that's cheap, fast, and is good for the quantity of product you are wanting. What I mean by the last statement is that there are some manufacturers that are better for low quantity shipments and others for high quantity. I personally was looking into ordering 10 boards so I went with a pretty well known PCB manufacturer known for low quantity orders, [JLPCB](https://jlcpcb.com/). In about 5 days my boards were here! The other big aspect I look out for when looking into PCB manufacturers is seeing whether they support automatic placing of the ICs themselves or if it's exclusively PCB stencil manufacturing. Many manufacturers print the actual board stencil but without the chips soldered on. Thankfully [JLPCB](https://jlcpcb.com/) supports pre-soldered ICs for a little extra cost. 
 
+### Part 3 | Testing
+
+Now that everything has arrived it was time to put it all to test. For the test I will be inputting a 5V 3Amp input and expecting a 4.2v ~3Amp output. Before I get into this test I believe a little tour on the surface of the board is in order for some context.
+
+<div class="card">
+  <div class="card__image">
+    <img class="image" src="/images/charger_diagram.jpg"/>
+  </div>
+</div>
 
 <!--more-->
