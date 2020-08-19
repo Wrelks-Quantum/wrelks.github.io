@@ -9,7 +9,7 @@ mathjax: true
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
 <body>
-<div class="seperate">
+
   <div>
     <div class="bg-full-screen">
       <figure class="figure-centered">
