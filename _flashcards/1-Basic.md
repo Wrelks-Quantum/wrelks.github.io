@@ -251,6 +251,7 @@ font-size: 0.2em;
   overflow-y: auto;
   display: grid;
   padding: 0 .5rem;
+  height: 70px;
 }
 
 .grid-container.text-only {
@@ -328,6 +329,7 @@ font-size: 0.2em;
   
   .grid-container.flash-card-nav {
     grid-template-columns: 25% auto 25%;
+    height: 30px;
   }
   
   .spacer {
