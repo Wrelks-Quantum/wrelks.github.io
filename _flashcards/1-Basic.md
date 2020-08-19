@@ -71,29 +71,6 @@ mathjax: true
         <br>
 </body>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-
-
-
 [Back](https://wrelks.com){:.button.button--primary.button--rounded}
 
 <style>
@@ -125,6 +102,7 @@ mathjax: true
   font-size: 1.3rem;
 }*/
 
+body
 
 @media screen and (max-width : 500px) /*mobile phones */
 {
@@ -176,6 +154,7 @@ backface-visibility: hidden;
   /*padding: 0 20px;*/
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  height: 550px;
 }
 
 /* make mathjax fit container */
