@@ -18,6 +18,8 @@ One of my larger side projects has been creating a battery pack using custom des
 
 For those maybe a little confused on the term 'fast charging', it pretty much means charging that utilizes a much higher wattage then normal USB charging solutions. For example a battery pack that can charge a phone at 15 watts would be considered fast charging capable battery pack. Whereas the normal charging rate is usually around 5 watts.
 
+<br>
+
 ## What the Board Does
 
 To be clear this board is **NOT** the entire battery pack logic. It's actually a separate print of the logic which takes in a high amperage 5V USB input and lowers it down to 4.2V at around the same amperage of the initial input.
