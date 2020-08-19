@@ -19,7 +19,9 @@ layout: article
         - **Quantum Games** - Fun games that can be made with Qiskit
     - Featured Content 
         - List of content that is updated on a regular basis
-    
+
+<br>
+
 - Navigation Bar 
     - **Wrelks** - Take you to the Home Page
     - **Resources** - List of high quality hand picked resources all related to Quantum Computing 
