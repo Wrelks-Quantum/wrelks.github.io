@@ -153,7 +153,6 @@ backface-visibility: hidden;
 
 .flash-card-container {
   position: absolute;
-  /*top: 16rem;*/ /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
   left: 0;
   right: 0;
   bottom: 0; /* 0 fixes cut off problems on ipad - laptops? */
