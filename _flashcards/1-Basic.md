@@ -109,7 +109,7 @@ body
 {
   .flash-card-view
     {
-      width: 100%
+      width: 100%;
       top: -200px;
     }
   .textfit1 {
