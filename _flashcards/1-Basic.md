@@ -116,7 +116,7 @@ body
       font-size: 0.745rem;
   }
   .flash-card-container {
-    top: 16rem;
+    top: 11rem;
   }
 
 }
