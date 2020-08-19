@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Experimental Card Test 3
+title: Linear Algebra | Part 3
 key: fffy384fa123dsad12
 comment: false
 #author: Perry
