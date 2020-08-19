@@ -50,16 +50,12 @@ Now that everything has arrived it was time to put it all to test. For the test 
   </div>
 </div>
 
-<ul>
-On the left side you'll find the USB input, and their corresponding polarization can be found by the plus and minus above the copper hole.
-</ul>
 
-<ul>
-In the middle is the battery output terminal, here is where the stepped down 4.2 volts result will come from
-</ul>
+>On the left side you'll find the USB input, and their corresponding polarization can be found by the plus and minus above the copper hole.
 
-<ul>
-On the right side you'll find the 'status' terminal. The IC that I choose has two different signifier flags built into it. One being <b>chrg</b> which when <i>LOW</i> means that the battery is currently charging. The other status flag is the <b>stby</b>, this flag when <i>LOW</i> means that the battery is completely charged.
-</ul>
+>In the middle is the battery output terminal, here is where the stepped down 4.2 volts result will come from.
+
+>On the right side you'll find the 'status' terminal. The IC that I choose has two different signifier flags built into it. One being <b>chrg</b> which when <i>LOW</i> means that the battery is currently charging. The other status flag is the <b>stby</b>, this flag when <i>LOW</i> means that the battery is completely charged.
+
 
 <!--more-->
