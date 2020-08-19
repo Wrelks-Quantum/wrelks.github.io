@@ -96,6 +96,7 @@ mathjax: true
 
 .seperate {
   padding: 200px;
+  height: 21px;
 }
 
 /*fontCopy {
