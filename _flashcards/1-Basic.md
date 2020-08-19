@@ -9,7 +9,7 @@ mathjax: true
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
 <body>
-
+<div class="seperate">
   <div>
     <div class="bg-full-screen">
       <figure class="figure-centered">
@@ -44,7 +44,7 @@ mathjax: true
           <!-- End Flash Card Back -->
         </div>
       </div>
-      <div class="seperate">
+      <!--<div class="seperate">-->
       <div class="grid-container justify-center flash-card-nav">
         <div class="spacer"></div>
         <div class="flash-card-nav">
