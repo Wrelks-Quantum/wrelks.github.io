@@ -28,7 +28,6 @@ mathjax: true
               </div>
             </div>
           </div>
-        </div>
           <!-- End Flash Card Front -->
 
   <!-- Flash Card Back -->
@@ -65,6 +64,7 @@ mathjax: true
       </div>
     </div>
   </div>
+</div>
 </div>
 <!--</div>--> 
   <br>
