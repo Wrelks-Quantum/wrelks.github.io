@@ -2,6 +2,7 @@
 layout: article
 title: Wrelks Contributor 
 show_edit_on_github: false
+comment: false
 ---
 
 
