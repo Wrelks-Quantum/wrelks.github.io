@@ -70,7 +70,7 @@ mathjax: true
       <br>
         <br>
 
-[Back](https://wrelks.com){:.button.button--primary.button--rounded} may come in handy later
+[Back](https://wrelks.com){:.button.button--primary.button--rounded}
 
 </body>
 
