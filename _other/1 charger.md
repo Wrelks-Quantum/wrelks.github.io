@@ -7,7 +7,6 @@ aside:
   toc: true
 author: Perry
 comment: true
-text_skin: dark
 #tags: [jekyll, tags, user-experience]
 ---
 
