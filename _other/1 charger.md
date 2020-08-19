@@ -59,3 +59,15 @@ Now that everything has arrived it was time to put it all to test. For the test 
 
 
 <!--more-->
+
+<style>
+green {
+    color: #52c41a;
+}
+orange {
+    color: #fa8c16;
+}
+red {
+    color: #f5222d;
+}
+</style>
