@@ -2,7 +2,7 @@
 layout: article 
 title: How to install Qiskit
 cover: /images/qiskit.png
-key: t487fy12
+key: t487fy12123g
 aside:
   toc: true
 author: Perry

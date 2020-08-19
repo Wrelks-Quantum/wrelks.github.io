@@ -10,6 +10,12 @@ comment: true
 #tags: [jekyll, tags, user-experience]
 ---
 
+>> #### Creating a circuit that can convert raw USB power into a more suitable voltage level that a LiPo battery can utilize to charge.
+
+<br>
+
+<!--more-->
+
 ## Background
 
 One of my larger side projects has been creating a battery pack using custom designed fast charging technology, and utilizing kinetic energy. Battery packs are fun things that can be built at home with relative ease and without burning a hole in your wallet. If you have decent circuit/PCB design and manufacturing knowledge you can easily design your own battery pack at home. 
