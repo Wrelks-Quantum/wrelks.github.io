@@ -16,7 +16,6 @@ mathjax: true
         <img id="fullScreenImg" class="img-fullscreen" src="" />
       </figure>
     </div>
-    <div class="topper">
     <div class="flash-card-container">
       <div class="flash-card-view" id="cardViewer">
         <div class="flash-card">
@@ -64,7 +63,6 @@ mathjax: true
       </div>
     </div>
   </div>
-</div>
 </div>
 <!--</div>--> 
   <br>
@@ -121,7 +119,7 @@ body
     top: 11rem;
   }
 
-  .topper {
+    .topper {
     top: 11rem;
   }
 
