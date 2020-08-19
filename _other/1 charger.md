@@ -24,7 +24,7 @@ To be clear this board is **NOT** the entire battery pack logic. It's actually a
 
 ### Why 4.2 Volts?
 
-The battery pack that I have been designing utilizes a 3.7V LiPo battery for it's storage. LiPo batteries are the same batteries that you'll find in **many** of modern day handheld electronics, laptops, phones, tablets, and any other device amongst this category. But wait, 4.2V? Isn't the battery rated at 3.7V? Well the 3.7V simply stands for the voltage output that the LiPo battery is capable of. The battery pack it's self can be charged with a voltage range of 3.7V - 4.2V.
+The battery pack that I have been designing utilizes a 3.7V LiPo battery for it's storage. LiPo batteries are the same batteries that you'll find in **many** of modern day handheld electronics, laptops, phones, tablets, and any other device amongst this category. But wait, 4.2V? Isn't the battery rated at 3.7V? Well the 3.7V simply stands for the voltage output that the LiPo battery is capable of. The battery it's self can be charged with a voltage range of 3.7V - 4.2V.
 
 
 
