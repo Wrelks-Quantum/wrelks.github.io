@@ -10,9 +10,9 @@ layout: article
 
 - Home Page
     - General
-        - How to navigate Wrelks <red><i>You Are Here!</i></red>
-        - Changelog - See updates and changes to the site
-        - Become a Contributor - Learn what it takes to become a contributor and where to apply
+        - **How to navigate Wrelks** <red><i>You Are Here!</i></red>
+        - **Changelog** - See updates and changes to the site
+        - **Become a Contributor** - Learn what it takes to become a contributor and where to apply
 
 ---
 
