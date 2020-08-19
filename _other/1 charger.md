@@ -58,6 +58,7 @@ Now that everything has arrived it was time to put it all to test. For the test 
 
 >On the right side you'll find the 'status' terminal. The IC that I chose has two different signifier flags built into it. One being **chrg** which when *LOW* means that the battery is currently charging. The other status flag is the **stby**, this flag when *LOW* means that the battery is completely charged.
 
+So after some thorough testing, it appears that the circuit **Works!**. It was successfully able to charge up a 3.7V 5,000mah LiPo battery! I hope this little write up was either useful / fun to read and I hope to release more of these in the coming future! See you then.
 
 <!--more-->
 
