@@ -72,7 +72,6 @@ description: A basic set linear algebra flashcards. This flashcard deck is conti
         <br>
 </body>
 
-{% seo %}
 
 <center>
 <a class="button button--primary button--pill" href="https://wrelks.com/study.html">Back to Decks</a>
