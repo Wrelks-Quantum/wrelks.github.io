@@ -97,13 +97,15 @@ mathjax: true
 }
 
 .seperate {
-  padding: 20px;
+  /*padding: 200px;
+  height: 21px;*/
 }
 
 /*fontCopy {
   font-size: 1.3rem;
 }*/
 
+body
 
 @media screen and (max-width : 500px) /*mobile phones */
 {
@@ -129,6 +131,13 @@ mathjax: true
     }
   .textfit1 {
       font-size: 1.3rem;
+  }
+  .flash-card-container {
+    top: -2rem;
+  }
+  .seperate {
+  padding: 200px;
+  height: 21px;
   }
 }
 
@@ -250,6 +259,7 @@ font-size: 0.2em;
   overflow-y: auto;
   display: grid;
   padding: 0 .5rem;
+  height: 70px;
 }
 
 .grid-container.text-only {
@@ -327,6 +337,7 @@ font-size: 0.2em;
   
   .grid-container.flash-card-nav {
     grid-template-columns: 25% auto 25%;
+    height: 30px;
   }
   
   .spacer {
