@@ -19,3 +19,5 @@ image: https://wrelks.com/images/bwlogo.png
 [Back](https://wrelks.com){:.button.button--primary.button--rounded}
 
 </div>
+
+{% seo %}
