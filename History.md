@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 
+title: QC History in a 🥜
 show_edit_on_github: false
 ---
 
