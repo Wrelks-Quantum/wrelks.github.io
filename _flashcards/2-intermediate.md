@@ -111,8 +111,7 @@ body
 {
   .flash-card-view
     {
-      width: 95%;
-      height: 300px;
+      width: 100%;
       top: -200px;
     }
   .textfit1 {
@@ -143,6 +142,7 @@ body
   height: 21px;
   }
 }
+
 
 .bg-full-screen.show {
   opacity: 1;
@@ -176,7 +176,7 @@ font-size: 0.2em;
 
 .flash-card-view {
   position: relative;
-  /*height: 40%;*/ /* how thicc it is */
+  height: 40%; /* how thicc it is */
   /*width: 70%; */ /* Changes size but not pos */ /* how long it is*/ /*70% on everything, 100% on phones%*/
   margin: 0 auto;
   perspective: 1000px;
