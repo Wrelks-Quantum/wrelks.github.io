@@ -8,6 +8,7 @@ articles:
     cover_size: sm
 show_edit_on_github: false
 comment: false
+description: Learn about how to program quantum games in qiskit. Many more games for other quantum programming languages are coming soon!
 ---
 
 <div class="article__content" markdown="1">
