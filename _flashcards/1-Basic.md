@@ -481,7 +481,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How would you find the probability of getting a $|1\\rangle$ or $|0\\rangle$ using this equation? $\\alpha\\,\\left|0\\right\\rangle+\\beta\\,\\left|1\\right\\rangle$",
+      "frontCopy": "How would you find the probability of getting a $|1\\rangle$ or $|0\\rangle$ <p>using this equation? $\\alpha\\,\\left|0\\right\\rangle+\\beta\\,\\left|1\\right\\rangle$",
       "backMedia": {
         "mimeType": null,
         "src": null
