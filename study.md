@@ -7,6 +7,7 @@ articles:
 show_edit_on_github: false
 comment: false
 description: Use beautiful interactive flashcards to learn quantum computing, qiskit, python and linear algebra. These cards are updated on a frequent basis | quantum flashcards | python flashcards | qiskit flashcards |
+tagline: Use beautiful interactive flashcards to learn quantum computing
 ---
 
 {% seo %}
