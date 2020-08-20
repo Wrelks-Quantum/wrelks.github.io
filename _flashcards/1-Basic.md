@@ -162,7 +162,7 @@ backface-visibility: hidden;
   /*padding: 0 20px;*/
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  height: 300px;
+  height: 600px;
 }
 
 /* make mathjax fit container */
