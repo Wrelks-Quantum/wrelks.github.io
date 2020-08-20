@@ -71,7 +71,9 @@ mathjax: true
         <br>
 </body>
 
-[Back](https://wrelks.com){:.button.button--primary.button--rounded}
+<center>
+<a class="button button--primary button--pill" href="https://wrelks.com/study.html">Back to Decks</a>
+</center>
 
 <style>
 
