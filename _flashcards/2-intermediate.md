@@ -118,8 +118,9 @@ body
       font-size: 0.745rem;
   }
   .flash-card-container {
-    top: 15rem;
-    height: 600px;
+    /*top: 15rem;*/
+    height: 400px;
+    width: 400px;
   }
 
 }
@@ -135,11 +136,13 @@ body
   }
   .flash-card-container {
     top: -9rem;
-    height: 300px;
+    height: 850px;
+    width: 800px;
   }
   .seperate {
-  padding: 200px;
-  height: 21px;
+  /*padding: 200px;*/
+  padding-bottom: 15rem;
+  padding-top: 16rem;
   }
 }
 
@@ -164,7 +167,7 @@ backface-visibility: hidden;
   /*padding: 0 20px;*/
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  height: 450px;
+  /*height: 450px;*/
 }
 
 /* make mathjax fit container */
