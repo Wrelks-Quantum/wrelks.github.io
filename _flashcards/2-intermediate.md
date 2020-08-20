@@ -119,6 +119,7 @@ body
   }
   .flash-card-container {
     top: 15rem;
+    height: 600px;
   }
 
 }
@@ -133,7 +134,8 @@ body
       font-size: 1.3rem;
   }
   .flash-card-container {
-    top: -2rem;
+    top: -9rem;
+    height: 300px;
   }
   .seperate {
   padding: 200px;
