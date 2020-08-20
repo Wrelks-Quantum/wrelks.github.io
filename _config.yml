@@ -273,3 +273,4 @@ plugins:
   - jemoji
   - 'jekyll-babel'
   - 'execjs'
+  - jekyll-seo-tag

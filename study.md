@@ -8,6 +8,8 @@ show_edit_on_github: false
 comment: false
 ---
 
+{% seo %}
+
 <div class="article__content" markdown="1">
 
 <a itemprop="headline" class="item__header" href="https://wrelks.com/flashcards/page-build/repo/1-Basic.html">Linear Algebra | Part 1</a><br>
