@@ -6,6 +6,7 @@ articles:
   type: grid
   size: sm
 comment: false
+description: See all the changes and updates that have happened to wrelks.com
 ---
 
 ---
