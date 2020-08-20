@@ -495,7 +495,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$C \\otimes H = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\\\ 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\end{bmatrix}$ $$\\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\\\ 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\end{bmatrix} = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 & 0 & 1 & 1 \\\\ 0 & 0 & 1 & -1 \\\\ 1 & 1 & 0 & 0 \\\\ 1 & -1 & 0 & 0 \\\\ \\end{bmatrix}$$"
+      "backCopy": "$CNOT \\otimes H = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\\\ 1 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} & 0 \\times \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\end{bmatrix}$ $$CNOT \\otimes H = \\frac{1}{\\sqrt{2}} \\begin{bmatrix} 0 & 0 & 1 & 1 \\\\ 0 & 0 & 1 & -1 \\\\ 1 & 1 & 0 & 0 \\\\ 1 & -1 & 0 & 0 \\\\ \\end{bmatrix}$$"
     },
     {
       "position": 1,
