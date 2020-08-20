@@ -132,7 +132,6 @@ body
   .textfit1 {
       font-size: 1.3rem;
   }
-}
   .flash-card-container {
     top: -2rem;
   }
