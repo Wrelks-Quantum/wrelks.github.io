@@ -7,6 +7,7 @@ aside:
   toc: true
 author: Perry
 comment: true
+description: How to install qiskit on windows and linux
 #tags: [jekyll, tags, user-experience]
 ---
 <!--https://hitcounter.pythonanywhere.com/--> 

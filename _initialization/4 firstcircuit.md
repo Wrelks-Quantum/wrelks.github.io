@@ -7,6 +7,7 @@ aside:
   toc: true
 author: Perry
 comment: true
+description: How to write your first qiskit circuit using jupyter notebook
 ---
 
 >> #### Learn how to create your first qiskit circuit!

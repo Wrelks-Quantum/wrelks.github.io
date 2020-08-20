@@ -7,6 +7,7 @@ aside:
   toc: true
 author: Perry
 comment: true
+description: Learn how to install and configure jupyter notebook
 ---
 
 >> #### Installing Jupyter Notebook on Windows & Linux
