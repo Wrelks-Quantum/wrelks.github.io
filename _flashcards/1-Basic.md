@@ -116,11 +116,7 @@ body
       font-size: 0.745rem;
   }
   .flash-card-container {
-    top: 11rem;
-  }
-
-    .topper {
-    top: 11rem;
+    top: 7rem;
   }
 
 }
@@ -135,7 +131,7 @@ body
       font-size: 1.3rem;
   }
   .flash-card-container {
-    top: 20rem;
+    top: -2rem;
   }
   .seperate {
   padding: 200px;
@@ -156,7 +152,7 @@ backface-visibility: hidden;
 */
 
 .flash-card-container {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   bottom: 0; /* 0 fixes cut off problems on ipad - laptops? */
