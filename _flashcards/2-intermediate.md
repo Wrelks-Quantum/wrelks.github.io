@@ -455,7 +455,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What is the result from taking the conjugate transpose of $U$?",
+      "frontCopy": "What is the result from taking the<p> conjugate transpose of $U$?",
       "backMedia": {
         "mimeType": null,
         "src": null
