@@ -71,6 +71,10 @@ mathjax: true
         <br>
 </body>
 
+<center>
+<a class="button button--primary button--pill" href="https://wrelks.com/study.html">Back to Decks</a>
+</center>
+
 <style>
 
 /*body {
@@ -105,27 +109,26 @@ mathjax: true
 {
   .flash-card-view
     {
-      width: 100%
+      width: 100%;
+      top: -200px;
     }
   .textfit1 {
       font-size: 0.745rem;
   }
   .flash-card-container {
-    top: 16rem;
+    top: 15rem;
   }
+
 }
 
 @media screen and (min-width : 501px)
 {
   .flash-card-view
     {
-      width: 70%
+      width: 70%;
     }
   .textfit1 {
       font-size: 1.3rem;
-  }
-  .flash-card-container {
-    top: 20rem;
   }
 }
 
@@ -142,8 +145,7 @@ backface-visibility: hidden;
 */
 
 .flash-card-container {
-  position: absolute;
-  /*top: 16rem;*/ /* org - 2 | Test with this one CHANGES HOW HIGH IT IS*/
+  position: relative;
   left: 0;
   right: 0;
   bottom: 0; /* 0 fixes cut off problems on ipad - laptops? */
@@ -151,6 +153,7 @@ backface-visibility: hidden;
   /*padding: 0 20px;*/
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  height: 300px;
 }
 
 /* make mathjax fit container */

@@ -105,8 +105,6 @@ mathjax: true
   font-size: 1.3rem;
 }*/
 
-body
-
 @media screen and (max-width : 500px) /*mobile phones */
 {
   .flash-card-view
@@ -132,6 +130,8 @@ body
   .textfit1 {
       font-size: 1.3rem;
   }
+}
+
   .flash-card-container {
     top: -2rem;
   }
