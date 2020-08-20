@@ -176,8 +176,9 @@ font-size: 0.2em;
 
 .flash-card-view {
   position: relative;
-  height: 40%; /* how thicc it is */
-  /*width: 70%; */ /* Changes size but not pos */ /* how long it is*/ /*70% on everything, 100% on phones%*/
+  height: 80%; /* how thicc it is */
+  width: 120%; /* Changes size but not pos */ /* how long it is*/ /*70% on everything, 100% on phones%*/
+  right: 35px;
   margin: 0 auto;
   perspective: 1000px;
   transform: translateX(0);
@@ -379,7 +380,6 @@ font-size: 0.2em;
 }
 
 </style>
-
 <!-- MathJax auto fit container code
 <script type="text/javascript">
   window.MathJax = {
