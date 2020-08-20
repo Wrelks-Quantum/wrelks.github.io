@@ -16,7 +16,7 @@ mathjax: true
         <img id="fullScreenImg" class="img-fullscreen" src="" />
       </figure>
     </div>
-    <div class="flash-card-container flash-card-fix">
+    <div class="flash-card-container">
       <div class="flash-card-view" id="cardViewer">
         <div class="flash-card">
           <!-- Flash Card Front -->
@@ -111,17 +111,16 @@ body
 {
   .flash-card-view
     {
-      width: 100%;
+      width: 95%;
+      height: 300px;
       top: -200px;
     }
   .textfit1 {
       font-size: 0.745rem;
   }
-  .flash-card-fix
   .flash-card-container {
-    /*top: 15rem;*/
-    height: 400px;
-    width: 400px;
+    top: 15rem;
+    height: 600px;
   }
 
 }
@@ -135,16 +134,13 @@ body
   .textfit1 {
       font-size: 1.3rem;
   }
-  .flash-card-fix
   .flash-card-container {
     top: -9rem;
-    height: 850px;
-    width: 800px;
+    height: 300px;
   }
   .seperate {
-  /*padding: 200px;*/
-  padding-bottom: 15rem;
-  padding-top: 16rem;
+  padding: 200px;
+  height: 21px;
   }
 }
 
@@ -169,6 +165,7 @@ backface-visibility: hidden;
   /*padding: 0 20px;*/
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  height: 450px;
 }
 
 /* make mathjax fit container */
@@ -179,7 +176,7 @@ font-size: 0.2em;
 
 .flash-card-view {
   position: relative;
-  height: 40%; /* how thicc it is */
+  /*height: 40%;*/ /* how thicc it is */
   /*width: 70%; */ /* Changes size but not pos */ /* how long it is*/ /*70% on everything, 100% on phones%*/
   margin: 0 auto;
   perspective: 1000px;
