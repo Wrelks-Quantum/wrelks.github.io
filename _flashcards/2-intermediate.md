@@ -16,7 +16,7 @@ mathjax: true
         <img id="fullScreenImg" class="img-fullscreen" src="" />
       </figure>
     </div>
-    <div class="flash-card-container">
+    <div class="flash-card-container flash-card-fix">
       <div class="flash-card-view" id="cardViewer">
         <div class="flash-card">
           <!-- Flash Card Front -->
@@ -117,6 +117,7 @@ body
   .textfit1 {
       font-size: 0.745rem;
   }
+  .flash-card-fix
   .flash-card-container {
     /*top: 15rem;*/
     height: 400px;
@@ -134,6 +135,7 @@ body
   .textfit1 {
       font-size: 1.3rem;
   }
+  .flash-card-fix
   .flash-card-container {
     top: -9rem;
     height: 850px;
