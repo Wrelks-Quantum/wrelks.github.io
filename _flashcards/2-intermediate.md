@@ -75,6 +75,12 @@ mathjax: true
 <a class="button button--primary button--pill" href="https://wrelks.com/study.html">Back to Decks</a>
 </center>
 
+</body>
+
+<center>
+<a class="button button--primary button--pill" href="https://wrelks.com/study.html">Back to Decks</a>
+</center>
+
 <style>
 
 /*body {
