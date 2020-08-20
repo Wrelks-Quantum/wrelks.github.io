@@ -17,7 +17,7 @@ comment: false
 ---
 
 <center>
-<p class="info">Flash Cards will work best on Tablet, Laptop, and Desktops computers! They will still function on Mobile Phones just be aware some questions might have cut off text. | We are working on improving stability on mobile phones :)</p>
+<p class="info">Flash Cards will work best on Tablet, Laptop, and Desktops computers! They will still function on Mobile Phones just be aware some questions might have cut off text. We are working on improving stability on mobile phones :)</p>
 </center>
 
 <br>
