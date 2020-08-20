@@ -520,12 +520,12 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What affect will this matrix have on a single qubit? $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1\\end{bmatrix}$",
+      "frontCopy": "What affect will this matrix have on a single qubit? $$\\begin{bmatrix} 1 & 0 \\\\ 0 & 1\\end{bmatrix}$$",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "Nothing! This is a identity matrix, and when this matrix is multiplied to a vector the product is the same as the initial vector."
+      "backCopy": "Nothing! This is a identity matrix, <p>and when this matrix is multiplied to a vector<p> the product is the same as the initial vector."
     },
     {
       "position": 1,
