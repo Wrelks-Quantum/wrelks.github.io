@@ -520,7 +520,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How would you expand the following equation? $\\displaystyle\\sum_{i} \\ f_i |v_i\\rangle$",
+      "frontCopy": "How would you expand the following equation? $$\\displaystyle\\sum_{i} \\ f_i |v_i\\rangle$$",
       "backMedia": {
         "mimeType": null,
         "src": null
