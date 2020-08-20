@@ -44,7 +44,7 @@ mathjax: true
           <!-- End Flash Card Back -->
         </div>
       </div>
-      <div class="seperate">
+      <!--<div class="seperate">-->
       <div class="grid-container justify-center flash-card-nav">
         <div class="spacer"></div>
         <div class="flash-card-nav">
@@ -64,7 +64,7 @@ mathjax: true
     </div>
   </div>
 </div>
-</div> 
+<!--</div>--> 
   <br>
     <br>
       <br>
