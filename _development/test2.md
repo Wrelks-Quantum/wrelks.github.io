@@ -1,0 +1,15 @@
+---
+layout: article
+title: Release 8/21/2020
+cover: /images/patch.png
+key: page-single
+comment: false
+---
+   
+---
+   
+**Changes**
+
+- Fixed discord invites in resources
+- Added more Quantum Cryptography related material to resources
+
