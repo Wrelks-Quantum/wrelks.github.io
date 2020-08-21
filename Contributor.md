@@ -3,6 +3,7 @@ layout: article
 title: Wrelks Contributor 
 show_edit_on_github: false
 comment: false
+description: Learn what it takes to become part of the Wrelks' team
 ---
 
 

@@ -26,6 +26,7 @@ titles:
 key: page-about
 comment: false
 show_edit_on_github: false
+description: Learn about wrelks.com, the people behind it, and what to expect in the future for your favorite quantum computing site. 
 ---
 
 <!--
