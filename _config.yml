@@ -22,7 +22,7 @@ url     :  https://www.wrelks.com
 baseurl : # does not include hostname
 title   : Wrelks
 description: > # this means to ignore newlines until "Language & timezone"
-  A Free Quantum Archive & Directory for beginners
+  The last quantum computing resources page you'll ever need. Wrelks.com features a wide selection of hand picked podcasts, videos, articles, discord servers, books, playlists, online classes, universities, and many more. Wrelks makes sure to include a large selection of qiskit tutorials, jupyter notebook tutorials, and many other quantum computing programming languages. Enjoy the content!
 
 ## => Language and Timezone
 ##############################
