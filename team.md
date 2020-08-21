@@ -14,8 +14,8 @@ description: Meet the team that makes Wrelks.com possible
     <div class="card__header">
       <h4>Aditya Giridharan</h4>
     </div>
-    <p><ul>Site Development</ul>
-    <ul>Quantum Tutorials</ul></p>
+    <p><ul><li>Site Development</li></ul>
+    <ul><li>Quantum Tutorials</li></ul></p>
   </div>
 </div>
 <br>
