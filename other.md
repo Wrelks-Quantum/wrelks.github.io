@@ -8,7 +8,7 @@ articles:
     cover_size: sm
 show_edit_on_github: false
 comment: false
-
+description: Take a look at some other fun projects those at Wrelks.com are up to
 ---
 <div class="article__content" markdown="1">
 
