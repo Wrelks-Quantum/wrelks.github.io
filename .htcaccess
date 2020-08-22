@@ -2,8 +2,8 @@
 # ------------------------------------------------------------------------------
 <IfModule mod_expires.c>
 ExpiresActive On
-ExpiresByType images/video.png "access 1 week"
-ExpiresByType /assets/css/main.css  "access 1 year"
+ExpiresByType /images/video.png "access 1 week"
+ExpiresByType /assets/css/main.css "access 1 year"
 ExpiresDefault "access 1 month"
 </IfModule>
 # End caching block
