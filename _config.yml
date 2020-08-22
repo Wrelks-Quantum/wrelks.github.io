@@ -231,6 +231,8 @@ collections:
     output: true
   flashcards:
     output: true
+  htcaccess:
+    output: true
 
   
   #includes: 
