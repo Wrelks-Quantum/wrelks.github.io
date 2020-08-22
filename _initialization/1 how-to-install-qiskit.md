@@ -1,7 +1,7 @@
 ---
 layout: article 
 title: How to install Qiskit
-cover: /images/qiskit.png
+cover: /images/qiskit-documentation.png
 key: t487fy12123g
 aside:
   toc: true
@@ -81,7 +81,7 @@ The first step is to install the latest python 3.x version of anaconda [here.](h
 Once you've installed anaconda you need to locate your windows search bar and type "anaconda prompt"
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/anaconda.png"/>
+    <img class="image" src="/images/anaconda-windows-activate.png"/>
   </div>
 </div>
 Linux users can simply enter conda commands straight into the terminal
@@ -123,7 +123,7 @@ if the console returns to a new line afterwards, it means that qiskit was instal
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/qiskittest.png"/>
+    <img class="image" src="/images/anaconda-install-qiskit.png"/>
   </div>
 </div>
 
@@ -167,7 +167,7 @@ if it returns a blank output then you have successfully installed the qiskit tex
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/qiskittest2.png"/>
+    <img class="image" src="/images/install-qiskit-on-windows.png"/>
   </div>
 </div>
 

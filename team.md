@@ -22,7 +22,7 @@ description: Meet the team that makes Wrelks.com possible
 <br>
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/perry.jpg"/>
+    <img class="image" src="/images/perry-newlin.jpg"/>
   </div>
   <div class="card__content">
     <div class="card__header">

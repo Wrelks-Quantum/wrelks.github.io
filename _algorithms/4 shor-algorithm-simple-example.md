@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Shor's Algorithm
-cover: /images/shor.png
+cover: /images/peter-shor-quantum.png
 key: a2dsvgabaawe3233473gfmr
 comment: false
 aside:

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Quantum Teleportation
-cover: /images/teleport.png
+cover: /images/quantum-teleportation-protocol.png
 key: asojufduhtaw783i6e
 comment: true
 aside:
@@ -51,7 +51,7 @@ The bell state as shown before is prepared like this
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/bell.png"/>
+    <img class="image" src="/images/bell-state-quantum-qiskit.png"/>
   </div>
 </div>
 
@@ -63,7 +63,7 @@ Next our sender prepares a bell measurement, however the target bit of this bell
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/step2.png"/>
+    <img class="image" src="/images/quantum-teleportation-algorithm.png"/>
   </div>
 </div>
 
@@ -73,7 +73,7 @@ Now we preform a measurement on q0 and q1 and send the results to the classical 
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/step3.png"/>
+    <img class="image" src="/images/quantum-teleportation-article.png"/>
   </div>
 </div>
 
@@ -83,7 +83,7 @@ The receiver will use the following gates if certain values are met, those value
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/chart1.png"/>
+    <img class="image" src="/images/quantum-teleportation-experiment.png"/>
   </div>
 </div>
 
@@ -95,7 +95,7 @@ The final result of the circuit should look a little like this,
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/telefinal.png"/>
+    <img class="image" src="/images/quantum-teleportation-and-entanglement.png"/>
   </div>
 </div>
 

@@ -1,7 +1,7 @@
 ---
 layout: article
-title: Writing your first qiskit program! 
-cover: /images/circuit.png
+title: How to write your first qiskit program! 
+cover: /images/quantum-circuit qiskit.png
 key: d9q8wtggadsia
 aside:
   toc: true
@@ -47,14 +47,14 @@ From there create a new python3 notebook file inside of the new folder.
 #### Step 1
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/menu.png"/>
+    <img class="image" src="/images/jupyter-notebook-examples.png"/>
   </div>
 </div>
 
 #### Step 2
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/menu2.png"/>
+    <img class="image" src="/images/jupyter-notebook-examples2.png"/>
   </div>
 </div>
 
@@ -138,7 +138,7 @@ If you did everything right the following output should look a little like this 
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/chart.png"/>
+    <img class="image" src="/images/qiskit-measurement.png"/>
   </div>
 </div>
 
@@ -156,7 +156,7 @@ The output:
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/circuit2.png"/>
+    <img class="image" src="/images/qiskit-circuit-draw.png"/>
   </div>
 </div>
 
@@ -170,7 +170,7 @@ The output:
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/circuit3.png"/>
+    <img class="image" src="/images/qiskit-circuit-draw2.png"/>
   </div>
 </div>
 <br>
@@ -187,7 +187,7 @@ Once you are all signed up ready to go head up to your profile icon and copy the
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/ibmq.png"/>
+    <img class="image" src="/images/the-ibm-quantum-experience.png"/>
   </div>
 </div>
 
@@ -195,7 +195,7 @@ Once you are all signed up ready to go head up to your profile icon and copy the
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/ibmq2.png"/>
+    <img class="image" src="/images/ibm-quantum-account.png"/>
   </div>
 </div>
 
@@ -266,7 +266,7 @@ Your result should look a little like this if you ran the example as written
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/noise.png"/>
+    <img class="image" src="/images/quantum-noise-circuits.png"/>
   </div>
 </div>
 

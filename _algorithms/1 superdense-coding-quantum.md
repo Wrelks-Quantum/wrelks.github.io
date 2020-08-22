@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Superdense Coding
-cover: /images/dense.png
+cover: /images/superdense-coding-circuit.png
 key: aslkjdfgw9487o3289t6ry4gf
 comment: true
 aside:
@@ -70,7 +70,7 @@ The final design looks a little like this
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/superdense.png"/>
+    <img class="image" src="/images/superdense-coding-circuit-1.png"/>
   </div>
 </div>
 
@@ -82,7 +82,7 @@ We can denote the bell state mathematically like so,
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/bell2.png"/>
+    <img class="image" src="/images/quantum-bell-state.png"/>
   </div>
 </div>
 
@@ -94,7 +94,7 @@ The encoders job is simple, take the first qubit from the bell state and apply a
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/dense_table.png"/>
+    <img class="image" src="/images/superdense-coding-protocol.png"/>
   </div>
 </div>
 
@@ -110,7 +110,7 @@ The receivers job is bit easier. All they have to do is take the untouched secon
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/reversebell.png"/>
+    <img class="image" src="/images/superdense-coding-qiskit.png"/>
   </div>
 </div>
 
@@ -160,6 +160,6 @@ If you did everything correctly your output should look like the following,
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/denseoutput.png"/>
+    <img class="image" src="/images/superdense-coding-experiment.png"/>
   </div>
 </div>

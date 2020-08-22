@@ -2,12 +2,12 @@
 layout: article
 title: How to install Jupter Notebook
 key: ad8273tgdy8usad
-cover: /images/jupyter.png
+cover: /images/jupyter-notebook-anaconda.png
 aside:
   toc: true
 author: Perry
 comment: true
-description: Learn how to install and configure jupyter notebook
+description: Learn how to install and configure jupyter notebook via anaconda / linux command line.
 ---
 
 >> #### Installing Jupyter Notebook on Windows & Linux
@@ -83,7 +83,7 @@ If you weren't automatically directed, go to your browser can enter in the follo
 
 If this still didn't work double check the output in the terminal to see if any url was provided 
 
-<img class="image image--xl" src="/images/notebookout.png"/>
+<img class="image image--xl" src="/images/jupyter-notebook-tutorial.png"/>
 
 <br>
 

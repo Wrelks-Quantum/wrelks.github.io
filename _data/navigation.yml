@@ -49,7 +49,7 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /study.html
+    url: /quantum-computing-an-applied-approach.html
 
 
   - titles:

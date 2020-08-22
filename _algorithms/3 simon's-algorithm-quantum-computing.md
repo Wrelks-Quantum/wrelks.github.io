@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Simon's Algorithm
-cover: /images/simons.png
+cover: /images/simon's-algorithm-qiskit.png
 key: svga3473gfmr
 comment: false
 aside:
