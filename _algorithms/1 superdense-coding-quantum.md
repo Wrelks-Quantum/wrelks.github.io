@@ -48,7 +48,7 @@ Superdense coding takes advantage of something called a 'bell circuit'
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/bell.png"/>
+    <img class="image" src="/images/bell-state-quantum-qiskit.png"/>
   </div>
 </div>
 
