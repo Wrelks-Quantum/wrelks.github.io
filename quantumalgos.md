@@ -8,7 +8,7 @@ articles:
     cover_size: sm
 show_edit_on_github: false
 comment: false
-description: Quantum Algorithms condensed down into a way that beginners can understand. We make sure to keep the experience simple and straight to the point while combining interactive elements to inspire new learners. Please sit back and enjoy the content :)
+description: Quantum computing algorithms condensed down into a way that beginners can understand. We make sure to keep the experience simple and straight to the point while combining interactive elements to inspire new learners. Please sit back and enjoy the content. Quantum computing and ai 
 image: https://wrelks.com/images/bwlogo.png
 ---
 

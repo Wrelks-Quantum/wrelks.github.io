@@ -7,7 +7,7 @@ aside:
   toc: true
 author: Perry
 comment: true
-description: How to install qiskit on windows and linux
+description: How to install qiskit on windows and linux | quantum computing an applied approach 
 #tags: [jekyll, tags, user-experience]
 ---
 <!--https://hitcounter.pythonanywhere.com/--> 
