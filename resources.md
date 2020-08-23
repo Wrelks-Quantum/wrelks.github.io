@@ -6,7 +6,7 @@ aside:
 comment: false
 mathjax: true
 mathjax_autoNumber: true
-description: Quantum computing applications. A list of resources for learning quantum computing and qiskit from podcasts, discord servers, books, universities, online classes, youtube videos, youtube playlists, articles, published research papers, other quantum computing/qiskit websites, twitter communities, slack communities, subreddits, and a complete archive of the qiskit summer school discord server
+description: Quantum computing applications. A list of resources for learning quantum computing and qiskit from quantum podcasts, quanutm discord servers, quantum computing books, universities with quantum computing, quantum computing online classes, quantum computing youtube videos, quantum computing youtube playlists, quantum computing articles, published quantum research papers, other quantum computing/qiskit websites, quantum twitter communities, slack communities, subreddits, and a complete archive of the qiskit summer school discord server.
 ---
 
 <!-- markdown cheatsheet for jekyll https://devhints.io/jekyll-->
@@ -271,7 +271,7 @@ description: Quantum computing applications. A list of resources for learning qu
   </li><ul>
     <h5>- Another playlist consisted of official qiskit made content. The playlist contains more lecture/podcast style content, as each video breaks the one hour mark on average. And at the time of writing it has 9 videos. ~9 Hours of Qiskit content!</h5></ul>  
     
-    <li>
+  <li>
       <a href="https://www.youtube.com/watch?v=78tSf2R1huk&list=PLm3J0oaFux3YL5qLskC6xQ24JpMwOAeJz">Quantum Computation and information at CMU : Ryan O'Donnell</a>
       </li><ul>
         <h5>- This playlist contains all of the quantum computing lectures made by Ryan O'Donnell. At the time of writing, the playlist is over 28 videos in size and many of the videos reach over the one hour mark. If you are looking for a deep dive into quantum computing from the basics to the advanced stuff, I would recommend this playlist.</h5></ul>  
@@ -376,7 +376,7 @@ description: Quantum computing applications. A list of resources for learning qu
   </li><ul>
     <h5>- A quantum computing course targeted towards high school students. It's completely free, plus many say its a great place to start learning quantum computing.</h5></ul>  
 
-    <ul>
+  <ul>
       <h2 id="College & Universities">College & Universities</h2> 
     </ul>
     <!-- https://www.reddit.com/r/QuantumComputing/comments/gdk2x9/which_universities_lead_in_quantum_computing/fpixgcr/ -->
@@ -598,13 +598,13 @@ held incredibly useful information. So I took it upon my self to archive and dow
   <a href="/qssdiscord/">#quantum-crypto</a>
   </li>
 
-    <li>
+  <li>
       <a href="/qssdiscord/">#quantum-machine-learning-enthusiast</a>
       </li>
 
-      <li>
-        <a href="/qssdiscord/">#quantum-algorithm-vqe</a>
-        </li>
+  <li>
+    <a href="/qssdiscord/">#quantum-algorithm-vqe</a>
+    </li>
 
 <li>
 <a href="/qssdiscord/">#quantum-chemists</a>
@@ -666,96 +666,96 @@ held incredibly useful information. So I took it upon my self to archive and dow
   <a href="/qssdiscord/">#undergrads-unite</a>
   </li>
       
-    <li>
+  <li>
     <a href="/qssdiscord/">#quantumapalooza-faithful</a>
     </li>
     
-    <li>
+  <li>
     <a href="/qssdiscord/">#qturkish</a>
     </li>
     
-    <li>
+  <li>
     <a href="/qssdiscord/">#quantum-عربي</a>
     </li>
     
-    <li>
-      <a href="/qssdiscord/">#squids</a>
+  <li>
+     <a href="/qssdiscord/">#squids</a>
       </li>
     
-        <li>
-          <a href="/qssdiscord/">#studygroupforfinalproject</a>
-          </li>
+  <li>
+    <a href="/qssdiscord/">#studygroupforfinalproject</a>
+      </li>
     
-          <li>
-            <a href="/qssdiscord/">#gravitational-waves-and-qc</a>
-            </li>
+  <li>
+   <a href="/qssdiscord/">#gravitational-waves-and-qc</a>
+    </li>
     
-    <li>
+  <li>
     <a href="/qssdiscord/">#hook-em-qubits</a>
     </li>
     
-    <li>
+  <li>
       <a href="/qssdiscord/">#north-america-qiskitters</a>
       </li>
     
-    <li>
+  <li>
     <a href="/qssdiscord/">#quantum-spaghetti</a>
     </li>
     
-    <li>
+  <li>
     <a href="/qssdiscord/">#quantum-tequila</a>
     </li>
     
 
 
-    <li>
+  <li>
     <a href="/qssdiscord/">#grad-student-study-group</a>
     </li>
     
-    <li>
+  <li>
     <a href="/qssdiscord/">#gdnfbf</a>
     </li>
     
-    <li>
+  <li>
       <a href="/qssdiscord/">#european-laboratory-group</a>
         </li>
       
-      <li>
+  <li>
       <a href="/qssdiscord/">#deutschland-qiskit</a>
       </li>
 
-      <li>
+  <li>
       <a href="/qssdiscord/">#bangladeshi-qiskitters</a>
       </li>
       
-      <li>
+  <li>
       <a href="/qssdiscord/">#aussie_qiskitters</a>
       </li>
       
-      <li>
+  <li>
       <a href="/qssdiscord/">#afriquantum</a>
       </li>
 
-      <li>
+  <li>
       <a href="/qssdiscord/">#math_aspect_quantum_computing</a>
       </li>
 
-      <li>
+  <li>
       <a href="/qssdiscord/">#quantum_crypto</a>
       </li>
 
-      <li>
+  <li>
       <a href="/qssdiscord/">#quantum-study-group</a>
       </li>
 
-      <li>
+  <li>
       <a href="/qssdiscord/">#weekend-crew</a>
       </li>
 
 <!-- Create glowing private text elements here -->
 
-      <style> 
 
+<style> 
 .glow {
  /* margin-top: 70px; */
   /*text-align: center;*/
@@ -786,7 +786,7 @@ held incredibly useful information. So I took it upon my self to archive and dow
     text-shadow: 0 0 2px #02557D, 0 0 5px #02557D, 0 0 10px #02557D, 0 0 20px #02557D, 0 0 35px #02557D, 0 0 40px #02557D;
   }
 }
-        </style>
+</style>
 
 <!-- uncompiled codepen for glow
 
