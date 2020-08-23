@@ -76,7 +76,7 @@ sharing: true
 
 
 <center>
-<a class="button button--primary button--pill" href="https://wrelks.com/study.html">Back to Decks</a>
+<a class="button button--primary button--pill" href="/quantum-computing-flashcards">Back to Decks</a>
 </center>
 
 <style>
