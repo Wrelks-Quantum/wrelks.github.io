@@ -272,29 +272,29 @@ description: Quantum computing applications. A list of resources for learning qu
     <h5>- Another playlist consisted of official qiskit made content. The playlist contains more lecture/podcast style content, as each video breaks the one hour mark on average. And at the time of writing it has 9 videos. ~9 Hours of Qiskit content!</h5></ul>  
     
   <li>
-      <a href="https://www.youtube.com/watch?v=78tSf2R1huk&list=PLm3J0oaFux3YL5qLskC6xQ24JpMwOAeJz">Quantum Computation and information at CMU : Ryan O'Donnell</a>
-      </li><ul>
-        <h5>- This playlist contains all of the quantum computing lectures made by Ryan O'Donnell. At the time of writing, the playlist is over 28 videos in size and many of the videos reach over the one hour mark. If you are looking for a deep dive into quantum computing from the basics to the advanced stuff, I would recommend this playlist.</h5></ul>  
-      <li>
-      <a href="https://www.youtube.com/watch?v=Vykpk7UsvdI&list=PLay4zC7VCXV4gWb0ucSUQiGcRJFYMzROT&index=1">Quantum Computing Tutorial : Travis Gritter</a>
-      </li><ul>
+  <a href="https://www.youtube.com/watch?v=78tSf2R1huk&list=PLm3J0oaFux3YL5qLskC6xQ24JpMwOAeJz">Quantum Computation and information at CMU : Ryan O'Donnell</a>
+  </li><ul>
+   <h5>- This playlist contains all of the quantum computing lectures made by Ryan O'Donnell. At the time of writing, the playlist is over 28 videos in size and many of the videos reach over the one hour mark. If you are looking for a deep dive into quantum computing from the basics to the advanced stuff, I would recommend this playlist.</h5></ul>  
+    <li>
+    <a href="https://www.youtube.com/watch?v=Vykpk7UsvdI&list=PLay4zC7VCXV4gWb0ucSUQiGcRJFYMzROT&index=1">Quantum Computing Tutorial : Travis Gritter</a>
+  </li><ul>
         <h5>- A 7 video playlist containing tutorial videos made by Travis Gritter. It's a more beginner oriented type of content, so if you are new to quantum computing I would highly implore you to check this one out!</h5></ul>  
-      <li>
-      <a href="https://www.youtube.com/watch?v=rT40sxiqHJQ&list=PLMnoxczUtKqWpKZTwpRBHrif_y-xENTfx">Intro to Quantum Computing : Michael Loceff</a>
-      </li><ul>
-        <h5>- An extremely good playlist for those who are beginners as the playlist starts off with videos focused around the linear algebra behind quantum computing and going over basic concepts such as hilbert spaces, and then later going into more advanced topics like quantum algorithms.</h5></ul>  
-      <li>
-      <a href="https://www.youtube.com/watch?v=jANZxzetPaQ&list=PLUl4u3cNGP60cspQn3N9dYRPiyVWDd80G">MIT 8.04 Quantum Physics I, Spring 2016 : MIT OpenCourseWare</a>
-      </li><ul>
-        <h5>- This isn't directly a quantum computing focused playlist but the videos here are focused towards quantum physics. Watching through this playlist will create an extremely solid foundation of knowledge for yourself on topics in quantum physics that are often brought up in quantum computing. The playlist is an official MIT recorded course and the quality is amazing! Definitely a must watch!</h5></ul>  
-      <li>
-      <a href="https://www.youtube.com/watch?v=aPCZcv-5qfA&list=PLQVvvaa0QuDc79w6NcGB0pnoJBgaKdfrW">Quantum Computer Programming w/ Qiskit : sentdex</a>
-      </li><ul>
-        <h5>- Sentdex, a very popular DIY computer programming channel created a 3 video series on how to get started programming qiskit. Each video is around 45 minutes in length are each very well made, I would reccomend this playlist to anyone getting started with qiskit.</h5></ul>  
-      <li>
-      <a href="https://www.youtube.com/watch?v=Omv-bPvQ3E8&list=PLOFEBzvs-VvrRlVz7wqaqmaMZj_ZK2Afe&index=2&t=0s">NPTEL Quantum Computing : Indian Institute of Technology Kanpur</a>
-      </li><ul>
-        <h5>- A playlist containing over 45 videos each going over the 25 Minute mark. The playlist starts from the basics and gradually goes into more complex ideas & concepts. Each tutorial is very well made and has a plentiful amount of visuals for the viewer to assist in grabbing the concepts more easily. A definite must watch for experienced quantum computing enthusiasts and beginners.</h5></ul>  
+   <li>
+  <a href="https://www.youtube.com/watch?v=rT40sxiqHJQ&list=PLMnoxczUtKqWpKZTwpRBHrif_y-xENTfx">Intro to Quantum Computing : Michael Loceff</a>
+  </li><ul>
+  <h5>- An extremely good playlist for those who are beginners as the playlist starts off with videos focused around the linear algebra behind quantum computing and going over basic concepts such as hilbert spaces, and then later going into more advanced topics like quantum algorithms.</h5></ul>  
+  <li>
+   <a href="https://www.youtube.com/watch?v=jANZxzetPaQ&list=PLUl4u3cNGP60cspQn3N9dYRPiyVWDd80G">MIT 8.04 Quantum Physics I, Spring 2016 : MIT OpenCourseWare</a>
+     </li><ul>
+    <h5>- This isn't directly a quantum computing focused playlist but the videos here are focused towards quantum physics. Watching through this playlist will create an extremely solid foundation of knowledge for yourself on topics in quantum physics that are often brought up in quantum computing. The playlist is an official MIT recorded course and the quality is amazing! Definitely a must watch!</h5></ul>  
+    <li>
+    <a href="https://www.youtube.com/watch?v=aPCZcv-5qfA&list=PLQVvvaa0QuDc79w6NcGB0pnoJBgaKdfrW">Quantum Computer Programming w/ Qiskit : sentdex</a>
+     </li><ul>
+   <h5>- Sentdex, a very popular DIY computer programming channel created a 3 video series on how to get started programming qiskit. Each video is around 45 minutes in length are each very well made, I would reccomend this playlist to anyone getting started with qiskit.</h5></ul>  
+  <li>
+  <a href="https://www.youtube.com/watch?v=Omv-bPvQ3E8&list=PLOFEBzvs-VvrRlVz7wqaqmaMZj_ZK2Afe&index=2&t=0s">NPTEL Quantum Computing : Indian Institute of Technology Kanpur</a>
+ </li><ul>
+  <h5>- A playlist containing over 45 videos each going over the 25 Minute mark. The playlist starts from the basics and gradually goes into more complex ideas & concepts. Each tutorial is very well made and has a plentiful amount of visuals for the viewer to assist in grabbing the concepts more easily. A definite must watch for experienced quantum computing enthusiasts and beginners.</h5></ul>  
       
 
 
