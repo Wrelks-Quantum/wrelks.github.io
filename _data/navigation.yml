@@ -23,7 +23,7 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: //quantum-computing-resources-2020
+    url: /quantum-computing-resources-2020
 
 
   - titles:
