@@ -8,6 +8,7 @@ aside:
 author: Perry
 comment: true
 description: How to install qiskit on windows and linux | quantum computing an applied approach 
+sharing: true
 #tags: [qiskit]
 ---
 <!--https://hitcounter.pythonanywhere.com/--> 
