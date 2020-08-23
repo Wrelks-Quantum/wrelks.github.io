@@ -45,8 +45,6 @@ description: Quantum computing applications. A list of resources for learning qu
 
 <hr>
 
-</hr>
-
 <!--
 <details>
   <summary>Click to expand!</summary>
