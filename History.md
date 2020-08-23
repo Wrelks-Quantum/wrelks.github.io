@@ -3,6 +3,8 @@ layout: article
 title: Quantum History in a 🥜
 show_edit_on_github: false
 description: Learn about the history behind quantum computing with a beautiful intuitive timeline. The timeline has been condensed, and only highlights the most significant events that have occurred since the 1900s. Quantum History | Quantum | History |
+permalink: /quantum-computing-history
+sharing: true
 ---
 
 <style>

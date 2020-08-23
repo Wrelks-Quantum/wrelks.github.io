@@ -7,6 +7,8 @@ articles:
 show_edit_on_github: false
 comment: false
 description: Quantum Computing Flashcards. Good for learning how to solve linear algebra equations. And Qiskit composer, or Qiskit circuit related questions.
+permalink: /quantum-computing-flashcards
+sharing: true
 ---
 
 {% seo %}
