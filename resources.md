@@ -207,7 +207,7 @@ description: Quantum computing applications. A list of resources for learning qu
 <li>
   <a href="https://fedtechmagazine.com/article/2020/03/what-difference-between-quantum-cryptography-and-post-quantum-cryptography-perfcon">What Is the Difference Between Quantum Cryptography and Post-Quantum Cryptography? : Derek Rice</a>
 </li>
-<code class="success highlighter-rouge">Easy</code> <code class="success highlighter-rouge">Short Read</code
+<code class="success highlighter-rouge">Easy</code> <code class="success highlighter-rouge">Short Read</code>
 
 
 
