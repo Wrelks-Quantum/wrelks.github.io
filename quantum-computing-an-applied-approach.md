@@ -11,8 +11,6 @@ permalink: /quantum-computing-flashcards
 sharing: true
 ---
 
-{% seo %}
-
 <div class="article__content" markdown="1">
 
 <a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-easy">Linear Algebra | Part 1</a><br>
