@@ -9,6 +9,7 @@ author: Perry
 comment: true
 description: How to write your first qiskit circuit using jupyter notebook. Quantum computing a gentle introduction 
 permalink: /creating-a-circuit-in-qiskit-windows-linux
+sharing: true
 ---
 
 >> #### Learn how to create your first qiskit circuit!
