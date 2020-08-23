@@ -75,7 +75,7 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /History.html
+    url: /quantum-computing-history
 
   - titles:
       # @start locale config

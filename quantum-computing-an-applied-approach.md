@@ -15,9 +15,9 @@ sharing: true
 
 <div class="article__content" markdown="1">
 
-<a itemprop="headline" class="item__header" href="https://wrelks.com/flashcards/page-build/repo/quantum-computing an-applied-approach.html">Linear Algebra | Part 1</a><br>
-<a itemprop="headline" class="item__header" href="https://wrelks.com/flashcards/page-build/repo/quantum-computing-explained.html">Linear Algebra | Part 2</a><br>
-<a itemprop="headline" class="item__header" href="https://wrelks.com/flashcards/page-build/repo/quantum-computing-a-gentle-introduction.html">Linear Algebra | Part 3</a><br>
+<a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-easy">Linear Algebra | Part 1</a><br>
+<a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-medium">Linear Algebra | Part 2</a><br>
+<a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-hard">Linear Algebra | Part 3</a><br>
 
 ---
 
