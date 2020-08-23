@@ -9,6 +9,7 @@ author: Perry
 comment: true
 description: Learn how to install and configure jupyter notebook via anaconda / linux command line.
 sharing: true
+permalink: /using-jupyter-notebook-with-qiskit
 ---
 
 >> #### Installing Jupyter Notebook on Windows & Linux
