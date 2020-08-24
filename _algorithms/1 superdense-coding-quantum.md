@@ -48,7 +48,7 @@ Superdense coding takes advantage of something called a 'bell circuit'
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/bell-state-quantum-qiskit.png"/>
+    <img class="image" src="/images/bell-state-quantum-qiskit.png" alt="Bell state qiskit circuit"/>
   </div>
 </div>
 
@@ -70,7 +70,7 @@ The final design looks a little like this
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/superdense-coding-circuit-1.png"/>
+    <img class="image" src="/images/superdense-coding-circuit-1.png" alt="Superdense coding circuit"/>
   </div>
 </div>
 
@@ -82,7 +82,7 @@ We can denote the bell state mathematically like so,
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/quantum-bell-state.png"/>
+    <img class="image" src="/images/quantum-bell-state.png" alt="Quantum Bell State"/>
   </div>
 </div>
 
@@ -94,7 +94,7 @@ The encoders job is simple, take the first qubit from the bell state and apply a
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/superdense-coding-protocol.png"/>
+    <img class="image" src="/images/superdense-coding-protocol.png" alt="Superdense coding protocol qiskit"/>
   </div>
 </div>
 
@@ -110,7 +110,7 @@ The receivers job is bit easier. All they have to do is take the untouched secon
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/superdense-coding-qiskit.png"/>
+    <img class="image" src="/images/superdense-coding-qiskit.png" alt="Superdense coding protocol explained"/>
   </div>
 </div>
 
@@ -160,6 +160,6 @@ If you did everything correctly your output should look like the following,
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/superdense-coding-experiment.png"/>
+    <img class="image" src="/images/superdense-coding-experiment.png" alt="Qiskit Circuit Output"/>
   </div>
 </div>
