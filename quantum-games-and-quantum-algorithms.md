@@ -9,7 +9,7 @@ articles:
 show_edit_on_github: false
 comment: false
 description: Learn about how to program quantum games in qiskit. Many more games for other quantum programming languages are coming soon!
-permalink: /quantum-computing-games-qiskit-q#
+permalink: /quantum-computing-qiskit-games
 sharing: true
 ---
 
