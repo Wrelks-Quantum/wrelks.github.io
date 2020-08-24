@@ -85,7 +85,7 @@ If you weren't automatically directed, go to your browser can enter in the follo
 
 If this still didn't work double check the output in the terminal to see if any url was provided 
 
-<img class="image image--xl" src="/images/jupyter-notebook-tutorial.png"/>
+<img class="image image--xl" src="/images/jupyter-notebook-tutorial.png" alt="Jupyter notebook windows setup"/>
 
 <br>
 

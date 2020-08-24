@@ -49,14 +49,14 @@ From there create a new python3 notebook file inside of the new folder.
 #### Step 1
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/jupyter-notebook-examples.png"/>
+    <img class="image" src="/images/jupyter-notebook-examples.png" alt="Qiskit Jupyter Tutorial"/>
   </div>
 </div>
 
 #### Step 2
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/jupyter-notebook-examples2.png"/>
+    <img class="image" src="/images/jupyter-notebook-examples2.png" alt="Jupyter Notebook Qiskit Tutorial"/>
   </div>
 </div>
 
@@ -140,7 +140,7 @@ If you did everything right the following output should look a little like this 
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/qiskit-measurement.png"/>
+    <img class="image" src="/images/qiskit-measurement.png" alt="Qiskit IBM tutorial"/>
   </div>
 </div>
 
@@ -158,7 +158,7 @@ The output:
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/qiskit-circuit-draw.png"/>
+    <img class="image" src="/images/qiskit-circuit-draw.png" alt="How to use qiskit on windows tutorial"/>
   </div>
 </div>
 
@@ -172,7 +172,7 @@ The output:
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/qiskit-circuit-draw2.png"/>
+    <img class="image" src="/images/qiskit-circuit-draw2.png" alt="How To Print Qiskit Circuit"/>
   </div>
 </div>
 <br>
@@ -189,7 +189,7 @@ Once you are all signed up ready to go head up to your profile icon and copy the
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/the-ibm-quantum-experience.png"/>
+    <img class="image" src="/images/the-ibm-quantum-experience.png" alt="IBM Quantum Experince Tutorial"/>
   </div>
 </div>
 
@@ -197,7 +197,7 @@ Once you are all signed up ready to go head up to your profile icon and copy the
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/ibm-quantum-account.png"/>
+    <img class="image" src="/images/ibm-quantum-account.png" alt="IBMQ Load Account"/>
   </div>
 </div>
 
@@ -268,7 +268,7 @@ Your result should look a little like this if you ran the example as written
 
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/quantum-noise-circuits.png"/>
+    <img class="image" src="/images/quantum-noise-circuits.png" alt="ibmq get provider"/>
   </div>
 </div>
 
