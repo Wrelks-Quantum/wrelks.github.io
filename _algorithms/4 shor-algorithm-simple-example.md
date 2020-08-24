@@ -7,6 +7,8 @@ comment: false
 aside:
   toc: true
 author: Perry
+permalink: /shors-algorithm-qiskit
+sharing: true 
 ---
 
 <br>

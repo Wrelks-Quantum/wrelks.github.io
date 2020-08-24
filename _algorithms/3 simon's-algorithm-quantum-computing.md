@@ -7,6 +7,8 @@ comment: false
 aside:
   toc: true
 author: Perry
+permalink: /simons-algorithm-qiskit
+sharing: true 
 ---
 
 <br>

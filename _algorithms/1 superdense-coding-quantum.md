@@ -7,6 +7,8 @@ comment: true
 aside:
   toc: true
 author: Perry
+permalink: /superdense-coding-qiskit
+sharing: true
 ---
 
 >> #### Learn how to replicate the Superdense Coding Algorithm in qiskit

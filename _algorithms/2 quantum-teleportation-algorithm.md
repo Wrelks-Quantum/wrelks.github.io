@@ -8,6 +8,8 @@ aside:
   toc: true
 author: Perry
 mathjax: true
+permalink: /quantum-teleportation-qiskit
+sharing: true 
 ---
 
 >> #### Learn how to replicate the Quantum Teleportation Algorithm in qiskit
