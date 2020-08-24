@@ -5,6 +5,7 @@ comment: false
 show_edit_on_github: false
 layout: article
 description: Wrelks.com site structure / explanation 
+permalink: /how-to-navigate-wrelks
 ---
 
 ### Welcome to Wrelks.com, happy to see you here!

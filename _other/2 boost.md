@@ -7,6 +7,7 @@ aside:
   toc: true
 author: Perry
 comment: true
+permalink: /boost-converter-battery-pack-pt-2
 ---
 <center><h4>This Section is still in progress!</h4></center>
 
