@@ -9,7 +9,7 @@ description: Meet the team that makes Wrelks.com possible
 <center>
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/giri.jpg"/>
+    <img class="image" src="/images/giri.jpg" alt="Aditya Giridharan"/>
   </div>
   <div class="card__content">
     <div class="card__header">
@@ -22,7 +22,7 @@ description: Meet the team that makes Wrelks.com possible
 <br>
 <div class="card">
   <div class="card__image">
-    <img class="image" src="/images/perry-newlin.jpg"/>
+    <img class="image" src="/images/perry-newlin.jpg" alt="Perry Newlin"/>
   </div>
   <div class="card__content">
     <div class="card__header">
