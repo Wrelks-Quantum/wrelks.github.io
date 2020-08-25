@@ -13,7 +13,7 @@ image: https://wrelks.com/images/bwlogo.png
 permalink: /quantum-computing-algorithms-implementation
 sharing: true
 twitter:
-  username: wrelks
+  username: Wrelks
   card: summary
 image: /images/logo.png
 ---
