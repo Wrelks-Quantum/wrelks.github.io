@@ -12,6 +12,10 @@ description: How to implement quantum algorithms in qiskit. Learn quantum comput
 image: https://wrelks.com/images/bwlogo.png
 permalink: /quantum-computing-algorithms-implementation
 sharing: true
+twitter:
+  username: wrelks
+  card: summary
+image: /images/logo.png
 ---
 
 <div class="article__content" markdown="1">
