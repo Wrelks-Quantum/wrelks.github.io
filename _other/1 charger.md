@@ -10,6 +10,7 @@ comment: true
 #tags: [jekyll, tags, user-experience]
 permalink: /Fast-Charge-LiPo-battery-pack-pt-1
 image: /images/logo.png
+description: LiPo fast charger. How to create your own custom PCBs and how a fast charging circuit is made.
 ---
 
 >> #### Creating a circuit that can convert raw USB power into a more suitable voltage level that a LiPo battery can utilize to charge.
