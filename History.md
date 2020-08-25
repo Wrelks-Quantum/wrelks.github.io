@@ -709,6 +709,62 @@ a:hover {
                         <p>Around this year D-Wave Systems will make the claim to have created a working 128 qubit quantum computer. This has become a major controversy in the community, as D-Wave has never proved this claim before. The only piece of evidence we have of this quantum computer is D-Waves word. To this day many of D-Waves claims remain controversial.</p>
                     </div>
                 </li>
+                                                 <li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>2009</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Photons</h3>
+                        <p>First ever times we are able to have a 'quantum' control over over photons</p>
+                          <h3 class="timeline-title">Qubit Lifespan</h3>
+                        <p>During this period a major breakthrough would be made which allowed for researchers to extend the time of a qubit to decay by 1000 times. This meant qubits could be used for a much longer duration of time before they decayed beyond the point of usability. This was first reported by Nicole Casal Moore.</p>
+                          <h3 class="timeline-title">Electronic Quantum Processor?</h3>
+                        <p>The first ever electric based quantum processor, one that doesn't utilize atom spins or photons but rather superconducting technology. We still use this same technology today, aka the superconducting qubit!</p>
+                          <h3 class="timeline-title">Individual Read and Writing</h3>
+                        <p>NIST gains the ability to read and write a single qubit without disturbing other qubits.</p>
+                        <h3 class="timeline-title">Shor's Algorithm Demo</h3>
+                        <p>Researchers at the University of Bristol run Shor's algorithm on a silicon photonic chip for the first time.</p>
+                          <h3 class="timeline-title">Programmable Quantum Computer</h3>
+                        <p>For a while a quantum computer couldn't be programmed after it was built. Until 2009 that is! In early 2009, the National Institute of Standards and Technology in Boulder, Colorado, constructed a quantum computer with a size of 2 qubits that could be programmed before and after an experiment was run.</p>
+                    </div>
+                </li>
+                <!--                                 <li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>2008</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">New Quantum Dot Technology </h3>
+                        <p>A group of researchers, Ensslin, along with fellows at the Solid State Physics Laboratory create a new quantum dot device that utilized Graphene as it's main material.</p>
+                          <h3 class="timeline-title">Quantum Bit Stored!</h3>
+                        <p>In a major breakthrough, a group of scientists at the University of Heidelberg (Germany) store a quantum bit for the first time.</p>
+                          <h3 class="timeline-title">First Qutrit</h3>
+                        <p>Qutrits are discovered; a qutrit is a superposition of three mutually orthogonal quantum states. So instead of a having a qubit which can be in a superposition of either 0 or 1, qutrits can be in a superposition of 0, 1, and some other third energy state.</p>
+                          <h3 class="timeline-title">Atomic Storage</h3>
+                        <p>A Qubit for the first time has been stored in an atomic nucleus for over 1 second.</p>
+                        <h3 class="timeline-title">First Major Controversies</h3>
+                        <p>Around this year D-Wave Systems will make the claim to have created a working 128 qubit quantum computer. This has become a major controversy in the community, as D-Wave has never proved this claim before. The only piece of evidence we have of this quantum computer is D-Waves word. To this day many of D-Waves claims remain controversial.</p>
+                    </div>
+                </li>
+                                                 <li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>2008</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">New Quantum Dot Technology </h3>
+                        <p>A group of researchers, Ensslin, along with fellows at the Solid State Physics Laboratory create a new quantum dot device that utilized Graphene as it's main material.</p>
+                          <h3 class="timeline-title">Quantum Bit Stored!</h3>
+                        <p>In a major breakthrough, a group of scientists at the University of Heidelberg (Germany) store a quantum bit for the first time.</p>
+                          <h3 class="timeline-title">First Qutrit</h3>
+                        <p>Qutrits are discovered; a qutrit is a superposition of three mutually orthogonal quantum states. So instead of a having a qubit which can be in a superposition of either 0 or 1, qutrits can be in a superposition of 0, 1, and some other third energy state.</p>
+                          <h3 class="timeline-title">Atomic Storage</h3>
+                        <p>A Qubit for the first time has been stored in an atomic nucleus for over 1 second.</p>
+                        <h3 class="timeline-title">First Major Controversies</h3>
+                        <p>Around this year D-Wave Systems will make the claim to have created a working 128 qubit quantum computer. This has become a major controversy in the community, as D-Wave has never proved this claim before. The only piece of evidence we have of this quantum computer is D-Waves word. To this day many of D-Waves claims remain controversial.</p>
+                    </div>
+                </li>-->
             </ul>
         </div>
     </div>
