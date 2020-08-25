@@ -14,7 +14,7 @@
 
 {%- include head/favicon.html -%}
 
-<link href="{{ "/assets/css/main.css" | prepend: site.baseurl }}?{{ site.time | date:'%s' }}" rel="stylesheet">
+<link  rel="stylesheet" href="assets/css/main.css?v={{ "now" | date: "%Y-%m-%d-%H-%M" }}">
 <!--{%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
 <link rel="stylesheet" href="{{ __return }}">-->
 
