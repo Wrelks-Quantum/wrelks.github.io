@@ -185,7 +185,7 @@ permalink   : date
 exclude:
   - CHANGELOG.md
   - HOW_TO_RELEASE.md
-#  - .jekyll-cache
+  - .jekyll-cache
 #  - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -239,8 +239,8 @@ collections:
   #  output: true
   #data:
   #  output: true
-  sass:
-    output: true
+  #sass:
+  #  output: true
   #assets:
   #  output: true
 
