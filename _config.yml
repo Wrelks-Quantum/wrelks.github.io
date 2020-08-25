@@ -239,8 +239,8 @@ collections:
   #  output: true
   #data:
   #  output: true
-  #sass:
-  #  output: true
+  sass:
+    output: true
   #assets:
   #  output: true
 
