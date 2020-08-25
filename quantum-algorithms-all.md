@@ -8,7 +8,7 @@ articles:
     cover_size: sm
 show_edit_on_github: false
 comment: false
-description: Quantum computing algorithms condensed down into a way that beginners can understand. We make sure to keep the experience simple and straight to the point while combining interactive elements to inspire new learners. Please sit back and enjoy the content. Quantum computing and ai 
+description: How to implement quantum algorithms in qiskit. Learn quantum computing algorithm applications and how to use them with IBM Quantum Computers. Qiskit IBM.
 image: https://wrelks.com/images/bwlogo.png
 permalink: /quantum-computing-algorithms-implementation
 sharing: true
