@@ -8,6 +8,7 @@ sharing: true
 twitter:
   username: wrelks
   card: summary
+image: /images/logo.png
 logo: /images/logo.png
 ---
 
