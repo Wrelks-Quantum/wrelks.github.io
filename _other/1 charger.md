@@ -9,6 +9,7 @@ author: Perry
 comment: true
 #tags: [jekyll, tags, user-experience]
 permalink: /Fast-Charge-LiPo-battery-pack-pt-1
+image: /images/logo.png
 ---
 
 >> #### Creating a circuit that can convert raw USB power into a more suitable voltage level that a LiPo battery can utilize to charge.
