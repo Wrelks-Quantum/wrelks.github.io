@@ -14,8 +14,9 @@
 
 {%- include head/favicon.html -%}
 
-{%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
-<link rel="stylesheet" href="{{ __return }}">
+<link href="{{ "/assets/css/main.css" | prepend: site.baseurl }}?{{ site.time | date: '%s%N' }}" rel="stylesheet">
+<!--{%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
+<link rel="stylesheet" href="{{ __return }}">-->
 
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
