@@ -19,14 +19,14 @@
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     :  https://wrelks.com
-baseurl : # does not include hostname
+baseurl : / # does not include hostname
 title   : Wrelks
 description: > # this means to ignore newlines until "Language & timezone"
   The best place to learn quantum computing, Qiskit, Q#, and Silq. Wrelks' also features a large selection of daily updated and hand-picked quantum resources.
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
+lang: en # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
@@ -34,8 +34,8 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ##############################
 author:
   type      : organization # "person" (default), "organization"
-  name      : Wrelks
-  url       : 
+  name      : Perry
+  url       : https://wrelks.com
   avatar    : /images/logo.png # path or url of avatar image (square)
   bio       : >
     Hope to create a website to help noobies in quantum computing by adding interactive examples and making sure to keep the website new and fresh with daily updates to the site.
