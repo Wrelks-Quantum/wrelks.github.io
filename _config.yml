@@ -35,7 +35,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : person # "person" (default), "organization"
   name      : Perry
-  url       :
+  url       : https://wrelks.com
   avatar    : https://wrelks.com/images/logo.png # path or url of avatar image (square)
   bio       : Hope to create a website to help noobies in quantum computing by adding interactive examples and making sure to keep the website new and fresh with daily updates to the site.
   email     : 
