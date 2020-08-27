@@ -25,8 +25,7 @@ sharing: true
 
 <br>
 
->> The study page is here to provide you with a plentiful set of flash cards for you to study quantum computing from. Ranging from linear algebra to quantum algorithms. These flash cards are actively updated, but if you have any suggestions for sample questions, contact me at <perry@wrelks.com>. 
-If you would like to regularly contribute to the flash cards please check out the [contributor page](https://wrelks.com/contributor)
+>> The study page is here to provide you with a plentiful set of flash cards for you to study quantum computing from. Ranging from linear algebra to quantum algorithms. These flash cards are actively updated, but if you have any suggestions for sample questions, contact me on my [twitter](https://twitter.com/Wrelks).
 
 <blockquote><h6><a href="https://wrelks.com/devtests/">Development Tests <i>(Private)</i></a></h6></blockquote>
 
