@@ -34,23 +34,23 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ##############################
 author:
   type      : organization # "person" (default), "organization"
-  name      : Perry
-  url       : https://wrelks.com
+  name      : Wrelks
+  url       : 
   avatar    : /images/logo.png # path or url of avatar image (square)
   bio       : >
     Hope to create a website to help noobies in quantum computing by adding interactive examples and making sure to keep the website new and fresh with daily updates to the site.
   email     : 
-  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
+  facebook  : 
   twitter   : wrelks
-  weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
-  googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
-  telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
-  medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
-  zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
-  douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
-  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
+  weibo     : 
+  googleplus: 
+  telegram  : 
+  medium    : 
+  zhihu     : 
+  douban    : 
+  linkedin  : 
   github    : wrelks
-  npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+  npm       : 
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
