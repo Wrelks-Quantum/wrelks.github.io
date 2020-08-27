@@ -36,7 +36,7 @@ author:
   type      : organization # "person" (default), "organization"
   name      : Perry
   url       : https://wrelks.com
-  avatar    : https://wrelks.com/images/logo.png # path or url of avatar image (square)
+  avatar    : /images/logo.png # path or url of avatar image (square)
   bio       : >
     Hope to create a website to help noobies in quantum computing by adding interactive examples and making sure to keep the website new and fresh with daily updates to the site.
   email     : 
