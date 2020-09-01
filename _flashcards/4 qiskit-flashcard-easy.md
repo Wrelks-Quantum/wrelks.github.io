@@ -383,6 +383,11 @@ font-size: 0.2em;
   border: 1px solid blue;
 }
 
+code {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
 </style>
 <!-- MathJax auto fit container code
 <script type="text/javascript">
