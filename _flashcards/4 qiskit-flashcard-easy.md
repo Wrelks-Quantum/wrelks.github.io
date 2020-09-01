@@ -437,7 +437,7 @@ font-size: 0.2em;
         "mimeType": null,
         "src": null
       },
-      "backCopy": "<code>qc = QuantumCircuit(3)</code>"
+      "backCopy": "<code style=""font-size: 22px"">qc = QuantumCircuit(3)</code>"
     },
     {
       "position": 2,
