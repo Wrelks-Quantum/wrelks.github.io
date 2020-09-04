@@ -494,7 +494,7 @@ code {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "<code>qc.draw(output=mpl)</code>"
+      "backCopy": "<code>qc.draw(output=""mpl"")</code>"
     },
     {
       "position": 1,
@@ -502,7 +502,8 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What does the following code do? <code>for i in range(2): <p>qc.measure(i, i)</code>": {
+      "frontCopy": "What does the following code do? <code>for i in range(2): <p>qc.measure(i, i)</code>",
+      "backMedia": {
         "mimeType": null,
         "src": null
       },
