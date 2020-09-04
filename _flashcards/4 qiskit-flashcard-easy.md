@@ -450,12 +450,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Is it true that any matrix can be expressed in terms of tensor products with pauli matricies?<p> If so how do you denote it with sigma notation?",
+      "frontCopy": "How do you tell Qiskit to put a Hadamard gate on qubit one?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\sum_{P_{n-1},\\ldots,P_0 \\in \\{1,X,Y,Z\\}} C_{P_{n-1}\\ldots,P_0}~~P_{n-1} \\otimes P_{n-2}\\otimes\\ldots\\otimes P_0$"
+      "backCopy": "<code>qc.h(0)</code>"
     },
     {
       "position": 1,
@@ -463,12 +463,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do we denote with sigma notation applying $N$ amount of hadamard gates to a quantum register $|00\\dots 0\\rangle$",
+      "frontCopy": "How do you tell Qiskit to put a NOT gate on qubit three",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$|00\\dots 0\\rangle \\xrightarrow{H^{\\otimes n}} \\frac{1}{\\sqrt{2^n}} \\sum_{x\\in \\{0,1\\}^n} |x\\rangle$"
+      "backCopy": "<code>qc.x(2)</code>"
     },
     {
       "position": 1,
@@ -476,12 +476,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Unitary matrices preserve the inner product no matter how you transform a vector under a sequence of unitary matrices.<p> How can you demonstrate this proof with linear algebra",
+      "frontCopy": "How do you print the Quantum Circuit in Ascii?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\langle \\psi | \\psi \\rangle \\ = \\ 1 \\ \\Rightarrow \\ |\\psi\\rangle \\ \\rightarrow \\ U |\\psi\\rangle \\ = \\ |\\psi'\\rangle \\ \\Rightarrow \\ \\langle \\psi' | \\psi' \\rangle \\ = \\ (U |\\psi\\rangle)^{\\dagger} U|\\psi\\rangle \\ = \\ \\langle \\psi | U^{\\dagger} U |\\psi\\rangle \\ = \\ \\langle \\psi | \\psi \\rangle \\ = \\ 1$"
+      "backCopy": "<code>print(qc)</code>"
     },
     {
       "position": 1,
@@ -489,12 +489,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write a formula which expresses a function such that a controlled unitary operator $C - U$ applies some unitary operator $U$ on a given target register only if it's corresponding control bit is $|1\\rangle$",
+      "frontCopy": "How would you print the Quantum Circuit in MPL format?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$U^{2^{j}}|\\psi \\rangle =U^{2^{j}-1}U|\\psi \\rangle =U^{2^{j}-1}e^{2\\pi i\\theta }|\\psi \\rangle =\\cdots =e^{2\\pi i2^{j}\\theta }|\\psi \\rangle$"
+      "backCopy": "<code>qc.draw(output=""mpl"")</code>"
     },
     {
       "position": 1,
@@ -502,8 +502,7 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What will the following Maclaurin series equation look like if you split it into two different sigma notation equations. One part being real and the other being imaginary. $e^{i \\gamma B} \\ = \\ \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(i \\gamma B)^n}{n!}$",
-      "backMedia": {
+      "frontCopy": "What does the following code do? <code>for i in range(2): <p>qc.measure(i, i)</code>": {
         "mimeType": null,
         "src": null
       },
