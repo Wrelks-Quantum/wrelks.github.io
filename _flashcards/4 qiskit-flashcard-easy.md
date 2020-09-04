@@ -494,7 +494,7 @@ code {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "<code>qc.draw(output=""mpl"")</code>"
+      "backCopy": "<code>qc.draw(output=mpl)</code>"
     },
     {
       "position": 1,
