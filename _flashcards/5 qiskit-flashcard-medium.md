@@ -385,7 +385,7 @@ font-size: 0.2em;
 
 code {
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.0;
 }
 
 </style>
