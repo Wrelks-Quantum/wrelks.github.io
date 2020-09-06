@@ -507,7 +507,8 @@ code {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "<p><code>from qiskit import *</code></p>"
+      "backCopy": 
+      "<p><code>from qiskit import *</code></p>"
       "<p><code>qc = QuantumCircuit(2)</code></p>"
       "<p><code>for i in range(2):</code></p>"
       "<p><code>qc.h(i)</code></p>"
