@@ -428,7 +428,7 @@ code {
     },
     jax: ["input/TeX","output/HTML-CSS","output/NativeMML"],
   };
-
+                                                     
  const deck = {
   "cards": [
     {
@@ -437,12 +437,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Knowing that matricies can be written purley with outer products, what is another way to write the following? $$M= \\begin{pmatrix} m_{0,0}&m_{0,1} \\\\\\\\ m_{1,0}&m_{1,1} \\end{pmatrix}$$",
+      "frontCopy": "Given the following circuit, <p><code> = 2 #number of qubits</code></p> <p><code>qc = QuantumCircuit(n, n)</code></p> How would you measure the circuit by utilizing a <code>for</code> function?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$m_{0,0} |0\\rangle\\langle0|+ m_{0,1} |0\\rangle\\langle1|+ m_{1,0} |1\\rangle\\langle0|+ m_{1,1} |1\\rangle\\langle1|$"
+      "backCopy": "<p><code>for i in range(n):</code></p> <p><code>qc.measure(i, i)</code></p>"
     },
     {
       "position": 2,

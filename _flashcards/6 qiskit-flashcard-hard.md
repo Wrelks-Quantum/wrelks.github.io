@@ -10,10 +10,6 @@ permalink: /qiskit-flashcards-hard
 sharing: true
 ---
 
-<script>document.getElementsByTagName("BODY")[0].style.display = "none";</script>
-
-<center><h2>Under Construction, come back later :)</h2><center>
-
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
 
 <body>
