@@ -384,7 +384,7 @@ font-size: 0.2em;
 }
 
 code {
-    font-size: 1rem;
+    font-size: 0.7rem;
     line-height: 1.0;
 }
 
