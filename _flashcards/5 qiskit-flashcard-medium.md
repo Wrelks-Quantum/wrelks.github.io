@@ -463,12 +463,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do we denote with sigma notation applying $N$ amount of hadamard gates to a quantum register $|00\\dots 0\\rangle$",
+      "frontCopy": "Given the following controlled not gate <code>qc.cx(0,1)</code> which qubit is the control bit on? And which qubit is the target bit?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$|00\\dots 0\\rangle \\xrightarrow{H^{\\otimes n}} \\frac{1}{\\sqrt{2^n}} \\sum_{x\\in \\{0,1\\}^n} |x\\rangle$"
+      "backCopy": "The target bit is on Qubit Two and the control bit is on the first Qubit."
     },
     {
       "position": 1,
