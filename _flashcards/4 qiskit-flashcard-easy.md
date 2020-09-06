@@ -502,12 +502,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What will the following Maclaurin series equation look like if you split it into two different sigma notation equations. One part being real and the other being imaginary. $e^{i \\gamma B} \\ = \\ \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(i \\gamma B)^n}{n!}$",
+      "frontCopy": "It is possible to create a qiskit circuit of differentiating size quantum and classical registers. How would you create a circuit with a 2 Qubit size quantum register but a one Bit size classical Register?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$"
+      "backCopy": "<code>from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit <p> q = QuantumRegister(2) <p> c = ClassicalRegister(1)</code>"
     },
   ]
 };
