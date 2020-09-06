@@ -437,7 +437,7 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Given the following circuit, <p><code> = 2 #number of qubits</code></p> <p><code>qc = QuantumCircuit(n, n)</code></p> How would you measure the circuit by utilizing a <code>for</code> function?",
+      "frontCopy": "Given the following circuit, <p><code>n = 2</code></p> <p><code>qc = QuantumCircuit(n, n)</code></p> How would you measure the circuit by utilizing a <code>for</code> function?",
       "backMedia": {
         "mimeType": null,
         "src": null
