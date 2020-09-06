@@ -489,12 +489,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write a formula which expresses a function such that a controlled unitary operator $C - U$ applies some unitary operator $U$ on a given target register only if it's corresponding control bit is $|1\\rangle$",
+      "frontCopy": "How do you create a controlled controlled not gate in Qiskit where Qubit one and two are the controlls and the third bit is the target bit?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$U^{2^{j}}|\\psi \\rangle =U^{2^{j}-1}U|\\psi \\rangle =U^{2^{j}-1}e^{2\\pi i\\theta }|\\psi \\rangle =\\cdots =e^{2\\pi i2^{j}\\theta }|\\psi \\rangle$"
+      "backCopy": "<code>qc.ccx(0,1,2)</code>"
     },
     {
       "position": 1,
