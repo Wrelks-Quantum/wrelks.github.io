@@ -476,12 +476,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Unitary matrices preserve the inner product no matter how you transform a vector under a sequence of unitary matrices.<p> How can you demonstrate this proof with linear algebra",
+      "frontCopy": "What affect does a barrier have in a Qiskit circuit? And how do you add one to your circuit?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\langle \\psi | \\psi \\rangle \\ = \\ 1 \\ \\Rightarrow \\ |\\psi\\rangle \\ \\rightarrow \\ U |\\psi\\rangle \\ = \\ |\\psi'\\rangle \\ \\Rightarrow \\ \\langle \\psi' | \\psi' \\rangle \\ = \\ (U |\\psi\\rangle)^{\\dagger} U|\\psi\\rangle \\ = \\ \\langle \\psi | U^{\\dagger} U |\\psi\\rangle \\ = \\ \\langle \\psi | \\psi \\rangle \\ = \\ 1$"
+      "backCopy": "Nothing! Barriers in a Qiskit circuit have no affect on the Qubits in the circuit. To add a barrier, enter the following <p><code>"
     },
     {
       "position": 1,
