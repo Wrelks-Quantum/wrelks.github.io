@@ -450,12 +450,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Is it true that any matrix can be expressed in terms of tensor products with pauli matricies?<p> If so how do you denote it with sigma notation?",
+      "frontCopy": "Given a 3 qubit circuit, how can we use a <code>For</code> function to place a Hadamard gate on all 3 qubits?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\sum_{P_{n-1},\\ldots,P_0 \\in \\{1,X,Y,Z\\}} C_{P_{n-1}\\ldots,P_0}~~P_{n-1} \\otimes P_{n-2}\\otimes\\ldots\\otimes P_0$"
+      "backCopy": "<p><code>for i in range(3):</code></p> <p><code>qc.h(i)</code></p>"
     },
     {
       "position": 1,
