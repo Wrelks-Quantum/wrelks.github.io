@@ -502,12 +502,20 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What will the following Maclaurin series equation look like if you split it into two different sigma notation equations. One part being real and the other being imaginary. $e^{i \\gamma B} \\ = \\ \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(i \\gamma B)^n}{n!}$",
+      "frontCopy": "How do you output a State Vector of a Qiskit Circuit?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$"
+      "backCopy": "<p><code>from qiskit import *</code></p>"
+      "<p><code>qc = QuantumCircuit(2)</code></p>"
+      "<p><code>for i in range(2):</code></p>"
+      "<p><code>qc.h(i)</code></p>"
+      "<p><code>backend = Aer.get_backend('unitary_simulator')</code></p>"
+      "<p><code>initial_state = [1,0]"
+      "<p><code>result = execute(qc,backend).result()"
+      "<p><code>out_state = result.get_unitary()</code></p>"
+      "<p><code>print(out_state)</code></p>"
     },
   ]
 };
