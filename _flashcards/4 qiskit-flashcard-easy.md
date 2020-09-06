@@ -507,7 +507,7 @@ code {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "<code>from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit<code> <p><code>q = QuantumRegister(2) </code></p> <p><code> c = ClassicalRegister(1)</code></p>"
+      "backCopy": "<code>from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit</code> <p><code>q = QuantumRegister(2) </code></p> <p><code> c = ClassicalRegister(1)</code></p>"
     },
   ]
 };
