@@ -1,12 +1,12 @@
 ---
 layout: article
-title: Linear Algebra | Part 3
-key: fffy384fa123dsad12
+title: Qiskit | Part 2
+key: fffy384fa1sadvas23dsad12
 comment: false
 #author: Perry
 mathjax: true
 description: A basic set linear algebra flashcards. This flashcard deck is continually getting updates. There is no other experience like this. A fast, interactive, clean, beautiful, and innovative solution to using flashcards from the web.
-permalink: /
+permalink: /qiskit-flashcards-medium
 sharing: true
 ---
 <!--https://codepen.io/jrjones34/pen/NEemmW-->
