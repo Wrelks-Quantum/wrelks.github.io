@@ -442,7 +442,7 @@ code {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "<code>for i in range(n): <p> qc.measure(i, i)</code>
+      "backCopy": "<p><code>for i in range(n):</code></p> <p><code>qc.measure(i, i)</code></p>"
     },
     {
       "position": 2,
