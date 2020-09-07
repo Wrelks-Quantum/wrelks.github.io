@@ -508,7 +508,7 @@ code {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "<code>array_to_latex(unitary, pretext="\\text{Circuit = } ")</code>"
+      "backCopy": "<code>array_to_latex(unitary, pretext=""\\text{Circuit = } "")</code>"
     },
   ]
 };
