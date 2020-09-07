@@ -502,13 +502,13 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you output a State Vector of a Qiskit Circuit?",
+      "frontCopy": "How do you create a bell state in Qiskit?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
       "backCopy": 
-          "<p><code>from qiskit import *</code></p> <p><code>qc = QuantumCircuit(2)</code></p> <p><code>for i in range(2):</code></p> <p><code>qc.h(i)</code></p> <p><code>backend = Aer.get_backend('unitary_simulator')</code></p> <p><code>initial_state = [1,0] <p><code>result = execute(qc,backend).result() <p><code>out_state = result.get_unitary()</code></p> <p><code>print(out_state)</code></p>"
+          "<p><code>qc.h(0)</code></p> <p><code>qc.cx(0,1)</code></p>""
     },
   ]
 };
