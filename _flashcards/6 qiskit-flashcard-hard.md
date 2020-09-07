@@ -458,7 +458,7 @@ code {
       },
       "backCopy": "<code>statevector_backend = Aer.get_backend('statevector_simulator')</code>"
 "<code>final_state = execute(qc,statevector_backend).result().get_statevector()</code>"
-"<code>array_to_latex(final_state, pretext="\\text{Statevector} = ", precision=1)</code>"
+"<code>array_to_latex(final_state, pretext=""\\text{Statevector} = "", precision=1)</code>"
 "<code>plot_bloch_multivector(final_state)</code>"
     },
     {
