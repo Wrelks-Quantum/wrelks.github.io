@@ -508,7 +508,7 @@ code {
         "src": null
       },
       "backCopy": 
-          "<p><code>qc.h(0)</code></p> <p><code>qc.cx(0,1)</code></p>""
+          "<p><code>qc.h(0)</code></p> <p><code>qc.cx(0,1)</code></p>"
     },
   ]
 };
