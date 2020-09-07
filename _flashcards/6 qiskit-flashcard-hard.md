@@ -456,10 +456,7 @@ code {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "<p><code>statevector_backend = Aer.get_backend('statevector_simulator')</code></p>"
-"<p><code>final_state = execute(qc,statevector_backend).result().get_statevector()</code></p>"
-"<p><code>array_to_latex(final_state, pretext=""\\text{Statevector} = "", precision=1)</code></p>"
-"<p><code>plot_bloch_multivector(final_state)</code>"
+      "backCopy": "<p><code>statevector_backend = Aer.get_backend('statevector_simulator')</code></p> <p><code>final_state = execute(qc,statevector_backend).result().get_statevector()</code></p> <p><code>array_to_latex(final_state, pretext=""\\text{Statevector} = "", precision=1)</code></p> <p><code>plot_bloch_multivector(final_state)</code>"
     },
     {
       "position": 1,
@@ -493,12 +490,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do you write a formula which expresses a function such that a controlled unitary operator $C - U$ applies some unitary operator $U$ on a given target register only if it's corresponding control bit is $|1\\rangle$",
+      "frontCopy": "How would you simulate the unitary of a qiskit circuit?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$U^{2^{j}}|\\psi \\rangle =U^{2^{j}-1}U|\\psi \\rangle =U^{2^{j}-1}e^{2\\pi i\\theta }|\\psi \\rangle =\\cdots =e^{2\\pi i2^{j}\\theta }|\\psi \\rangle$"
+      "backCopy": "<p><code>backend = Aer.get_backend('unitary_simulator')</code></p><p><code>unitary = execute(qc,backend).result().get_unitary()</p></code>"
     },
     {
       "position": 1,
@@ -506,12 +503,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "What will the following Maclaurin series equation look like if you split it into two different sigma notation equations. One part being real and the other being imaginary. $e^{i \\gamma B} \\ = \\ \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(i \\gamma B)^n}{n!}$",
+      "frontCopy": "After finding the unitary of a qiskit circuit how can you print it out as latex?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\ \\frac{(-1)^n \\gamma^{2n} B^{2n}}{(2n)!} \\ + \\ i \\displaystyle\\sum_{n \\ = \\ 0}^{\\infty} \\frac{(-1)^n \\gamma^{2n + 1} B^{2n + 1}}{(2n + 1)!}$"
+      "backCopy": "<code>array_to_latex(unitary, pretext="\\text{Circuit = } ")</code>"
     },
   ]
 };
