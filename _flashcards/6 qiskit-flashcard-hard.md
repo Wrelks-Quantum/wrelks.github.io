@@ -456,10 +456,10 @@ code {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "<code>statevector_backend = Aer.get_backend('statevector_simulator')</code>"
-"<code>final_state = execute(qc,statevector_backend).result().get_statevector()</code>"
-"<code>array_to_latex(final_state, pretext=""\\text{Statevector} = "", precision=1)</code>"
-"<code>plot_bloch_multivector(final_state)</code>"
+      "backCopy": "<p><code>statevector_backend = Aer.get_backend('statevector_simulator')</code></p>"
+"<p><code>final_state = execute(qc,statevector_backend).result().get_statevector()</code></p>"
+"<p><code>array_to_latex(final_state, pretext=""\\text{Statevector} = "", precision=1)</code></p>"
+"<p><code>plot_bloch_multivector(final_state)</code>"
     },
     {
       "position": 1,
@@ -467,12 +467,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "How do we denote with sigma notation applying $N$ amount of hadamard gates to a quantum register $|00\\dots 0\\rangle$",
+      "frontCopy": "How do you tell qiskit to run your circuit on a qasm simulator?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$|00\\dots 0\\rangle \\xrightarrow{H^{\\otimes n}} \\frac{1}{\\sqrt{2^n}} \\sum_{x\\in \\{0,1\\}^n} |x\\rangle$"
+      "backCopy": "<code>backend = BasicAer.get_backend('qasm_simulator')</code>"
     },
     {
       "position": 1,
@@ -480,12 +480,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Unitary matrices preserve the inner product no matter how you transform a vector under a sequence of unitary matrices.<p> How can you demonstrate this proof with linear algebra",
+      "frontCopy": "How do you tell Qiskit to not only run the circuit on a qasm simulator, but to also represent the outcome as a bar graph?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\langle \\psi | \\psi \\rangle \\ = \\ 1 \\ \\Rightarrow \\ |\\psi\\rangle \\ \\rightarrow \\ U |\\psi\\rangle \\ = \\ |\\psi'\\rangle \\ \\Rightarrow \\ \\langle \\psi' | \\psi' \\rangle \\ = \\ (U |\\psi\\rangle)^{\\dagger} U|\\psi\\rangle \\ = \\ \\langle \\psi | U^{\\dagger} U |\\psi\\rangle \\ = \\ \\langle \\psi | \\psi \\rangle \\ = \\ 1$"
+      "backCopy": "<p><code>backend = BasicAer.get_backend('qasm_simulator')</code></p> <p><code>backend = BasicAer.get_backend('qasm_simulator')</code></p> <code><p>plot_histogram(counts)</code></p>"
     },
     {
       "position": 1,
