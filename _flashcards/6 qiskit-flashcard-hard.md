@@ -451,12 +451,15 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Is it true that any matrix can be expressed in terms of tensor products with pauli matricies?<p> If so how do you denote it with sigma notation?",
+      "frontCopy": "How do you print a bloch vector of the circuit outcome? FYI, you need to import this lib <code>from qiskit.visualization import plot_bloch_multivector</code>",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$\\sum_{P_{n-1},\\ldots,P_0 \\in \\{1,X,Y,Z\\}} C_{P_{n-1}\\ldots,P_0}~~P_{n-1} \\otimes P_{n-2}\\otimes\\ldots\\otimes P_0$"
+      "backCopy": "<code>statevector_backend = Aer.get_backend('statevector_simulator')</code>"
+"<code>final_state = execute(qc,statevector_backend).result().get_statevector()</code>"
+"<code>array_to_latex(final_state, pretext="\\text{Statevector} = ", precision=1)</code>"
+"<code>plot_bloch_multivector(final_state)</code>"
     },
     {
       "position": 1,

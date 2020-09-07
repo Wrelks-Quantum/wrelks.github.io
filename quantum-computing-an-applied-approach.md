@@ -16,7 +16,9 @@ sharing: true
 <a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-easy">Linear Algebra | Part 1</a><br>
 <a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-medium">Linear Algebra | Part 2</a><br>
 <a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-hard">Linear Algebra | Part 3</a><br>
-<a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-hard">Qiskit | Part 1</a><br>
+<a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-easy">Qiskit | Part 1</a><br>
+<a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-medium">Qiskit | Part 2</a><br>
+<a itemprop="headline" class="item__header" href="https://wrelks.com/quantum-computing-flashcards-hard">Qiskit | Part 3</a><br>
 
 ---
 
