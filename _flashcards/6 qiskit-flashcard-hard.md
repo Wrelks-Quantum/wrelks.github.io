@@ -438,12 +438,12 @@ code {
         "mimeType": null,
         "src": null
       },
-      "frontCopy": "Knowing that matricies can be written purley with outer products, what is another way to write the following? $$M= \\begin{pmatrix} m_{0,0}&m_{0,1} \\\\\\\\ m_{1,0}&m_{1,1} \\end{pmatrix}$$",
+      "frontCopy": "How do you create a U1 gate with a phase of $$pi/4$$ that connects to both qubit 0 and 1?",
       "backMedia": {
         "mimeType": null,
         "src": null
       },
-      "backCopy": "$m_{0,0} |0\\rangle\\langle0|+ m_{0,1} |0\\rangle\\langle1|+ m_{1,0} |1\\rangle\\langle0|+ m_{1,1} |1\\rangle\\langle1|$"
+      "backCopy": "<code>qc.cu1(pi/4, 0, 1)</code>"
     },
     {
       "position": 2,
