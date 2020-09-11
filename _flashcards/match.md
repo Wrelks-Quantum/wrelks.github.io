@@ -86,12 +86,12 @@ html,
     flex-direction: column;
 }
 
-h1 {
+/*h1 {
   margin-top: 20px;
     font-family: 'Pacifico', cursive;
     font-weight: 400;
   color:  #ff6600;
-}
+}*/
 
 
 /*
