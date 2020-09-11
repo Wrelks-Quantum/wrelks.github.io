@@ -279,9 +279,10 @@ html,
 		font-size: 3em;
     text-align: center;
 	}*/
-  .header{
-    width: 1700px;
-  }
+
+ body{
+   width: 1700px;
+ }
 
 	.deck {
 		width: 300px;
