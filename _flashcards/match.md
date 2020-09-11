@@ -32,7 +32,7 @@ sharing: true
       </div>
     </section>
 
-    <ul class="deck"></ul>
+  <ul class="deck"></ul>
 
 <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
