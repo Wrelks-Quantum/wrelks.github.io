@@ -10,6 +10,7 @@ permalink: /match
 sharing: true
 ---
 
+<!-- org code https://codepen.io/sshastri/pen/mjJjWz -->
 
 <body>
   <div class="container">
@@ -256,7 +257,6 @@ html,
 		padding: 20px;
 		margin: 0 0 2em;
 	}
-
 	.deck .card {
 		height: 65px;
 		width: 65px;
