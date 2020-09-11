@@ -78,7 +78,7 @@ html,
 
 
 .container {
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -103,8 +103,8 @@ html,
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 0 0 3em;
