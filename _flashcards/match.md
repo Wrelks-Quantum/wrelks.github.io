@@ -310,10 +310,10 @@ html,
 	.container {
 		font-size: 0.8em;
 	}
-	header {
+/*	header {
 		font-size: 2.8em;
     text-align: center;
-	}
+	}*/
 
 	.deck {
 		width: 260px;
