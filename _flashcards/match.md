@@ -278,10 +278,10 @@ html,
 	.container {
 		font-size: 1em;
 	}
-	header {
+/*	header {
 		font-size: 3em;
     text-align: center;
-	}
+	}*/
 
 	.deck {
 		width: 300px;
