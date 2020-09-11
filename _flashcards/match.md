@@ -14,9 +14,8 @@ sharing: true
 <body>
   <div class="container">
 
-  <header>
-      <h1>Easy</h1>
-    </header>
+  <h1>Easy</h1>
+
 
   <section class="score-panel">
       <ul class="stars">
