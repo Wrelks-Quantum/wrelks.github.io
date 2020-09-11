@@ -103,7 +103,7 @@ html,
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -279,10 +279,6 @@ html,
 		font-size: 3em;
     text-align: center;
 	}*/
-
- body{
-   width: 1700px;
- }
 
 	.deck {
 		width: 300px;
