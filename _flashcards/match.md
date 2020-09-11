@@ -1,11 +1,11 @@
 ---
 layout: article
-title: Qiskit | Part 3
+title: Quantum Matching
 key: fffy384fa123124eddsad12
 comment: false
 #author: Perry
 mathjax: true
-description: A basic set linear algebra flashcards. This flashcard deck is continually getting updates. There is no other experience like this. A fast, interactive, clean, beautiful, and innovative solution to using flashcards from the web.
+description: Matching game for quantum computing, qiskit, silq, and Q#
 permalink: /match
 sharing: true
 ---
@@ -15,7 +15,7 @@ sharing: true
   <div class="container">
 
   <header>
-      <h1>Memory Game</h1>
+      <h1>Easy</h1>
     </header>
 
   <section class="score-panel">
