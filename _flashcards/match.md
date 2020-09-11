@@ -14,7 +14,7 @@ sharing: true
 
   <div class="container">
 
-  <h1>Easy</h1>
+  <h1>     Easy</h1>
 
 
   <section class="score-panel">
