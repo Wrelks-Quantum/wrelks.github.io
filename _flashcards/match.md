@@ -104,7 +104,7 @@ html,
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
     /*display: flex;*/
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: space-between;
     align-items: center;
     margin: 0 0 3em;
