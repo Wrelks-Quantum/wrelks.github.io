@@ -99,7 +99,7 @@ html,
 .deck {
     width: 660px;
     min-height: 680px;
-    background: #ff4d4d;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -113,7 +113,7 @@ html,
 .deck .card {
     height: 125px;
     width: 125px;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: #999999;
     font-size: 0;
     color: #111111;
     border-radius: 8px;
