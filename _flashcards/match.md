@@ -6,7 +6,7 @@ comment: false
 #author: Perry
 mathjax: true
 description: A basic set linear algebra flashcards. This flashcard deck is continually getting updates. There is no other experience like this. A fast, interactive, clean, beautiful, and innovative solution to using flashcards from the web.
-permalink: /qiskit-flashcards-hard
+permalink: /match
 sharing: true
 ---
 
