@@ -108,7 +108,7 @@ html,
     justify-content: space-between;
     align-items: center;
     margin: 0 0 3em;
-}
+} /*good css gradient gen*/
 
 .deck .card {
     height: 125px;
