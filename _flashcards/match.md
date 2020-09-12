@@ -99,7 +99,7 @@ html,
 .deck {
     width: 660px;
     min-height: 680px;
-    background: linear-gradient(45deg, #e03b2c 0%,#f2f2f2 73%);
+    background: #000000; /*linear-gradient(45deg, #e03b2c 0%,#f2f2f2 73%);*/
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -135,12 +135,12 @@ html,
 }
 
 .deck .card.notMatch {
-    background: #99ff66;
+    background: #FFFFFF;
 }
 
 .deck .card.match {
     cursor: default;
-    background: #99ff66; /*success color!*/
+    background: #FFFFFF; /*success color!*/
     font-size: 33px;
 }
 
