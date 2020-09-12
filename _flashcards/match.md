@@ -140,7 +140,7 @@ html,
 
 .deck .card.match {
     cursor: default;
-    background: #72E57E; /*success color!*/
+    background: #50A05F; /*success color!*/
     font-size: 33px;
 }
 
