@@ -135,7 +135,7 @@ html,
 }
 
 .deck .card.notMatch {
-    background: #FFFFFF;
+    background: #ee4c0b;
 }
 
 .deck .card.match {
