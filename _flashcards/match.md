@@ -99,7 +99,7 @@ html,
 .deck {
     width: 660px;
     min-height: 680px;
-    background: #000000; /*linear-gradient(45deg, #e03b2c 0%,#f2f2f2 73%);*/
+    background: linear-gradient(45deg, #e03b2c 0%,#000000 74%); 
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
