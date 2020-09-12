@@ -126,7 +126,7 @@ html,
 
 .deck .card.open {
     transform: rotateY(0);
-    background: #F9A602;
+    background: #FFFFFF; /*selected card color - no match or fail*/
     cursor: default;
 }
 
