@@ -20,6 +20,9 @@ sharing: true
 <a itemprop="headline" class="item__header" href="https://wrelks.com/qiskit-flashcards-medium">Qiskit | Part 2</a><br>
 <a itemprop="headline" class="item__header" href="https://wrelks.com/qiskit-flashcards-hard">Qiskit | Part 3</a><br>
 
+<a itemprop="headline" class="item__header" href="https://wrelks.com/match"><i>BETA | </i>Quantum Matching Game</a><br>
+
+
 ---
 
 <center>
