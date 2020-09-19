@@ -10,6 +10,8 @@ permalink: /match
 sharing: true
 ---
 
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/5aba875a12/UntitledProject/style.css">
+
 <!-- org code https://codepen.io/sshastri/pen/mjJjWz -->
 
   <div class="container">
@@ -349,7 +351,8 @@ let cards = [
   "fa fa-diamond",
   "fa fa-bomb",
   "fa fa-bolt",
-  "fa fa-cube"
+  "fa fa-cube",
+  "icon-px-Qiskit-Logosvg"
 ];
 
 cards = cards.concat(cards);
