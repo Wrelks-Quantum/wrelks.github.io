@@ -5,7 +5,7 @@ key: fffy384fa123124eddsad12
 comment: false
 #author: Perry
 mathjax: true
-description: Matching game for quantum computing, qiskit, silq, and Q#
+description: Matching game for quantum computing
 permalink: /match
 sharing: true
 ---
