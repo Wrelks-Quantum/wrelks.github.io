@@ -344,12 +344,12 @@ html,
 
 // Create a list that holds all of your cards
 let cards = [
-  "fa fa-paper-plane-o",
-  "fa fa-anchor",
-  "fa fa-leaf",
-  "fa fa-bicycle",
-  "fa fa-diamond",
-  "fa fa-bomb",
+  "icon-px-Qcircuit_CYsvg",
+  "icon-px-CNOT_gatesvg",
+  "icon-quantum-logic-gate-pgf-ti-i-k-i-z-quantum-mechanics-controlled-not-gate-quantum-circuit-png-favpng-1",
+  "icon-px-Toffoli_gatesvg",
+  "icon-Qcircuit_Z",
+  "icon-px-Greek_uc_psisvg",
   "icon-px-Hadamard_gatesvg",
   "icon-px-Qiskit-Logosvg"
 ];
