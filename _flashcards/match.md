@@ -350,7 +350,7 @@ let cards = [
   "fa fa-bicycle",
   "fa fa-diamond",
   "fa fa-bomb",
-  "fa fa-bolt",
+  "icon-px-Hadamard_gatesvg",
   "icon-px-Qiskit-Logosvg"
 ];
 
