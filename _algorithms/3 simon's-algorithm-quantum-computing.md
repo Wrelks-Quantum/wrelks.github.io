@@ -16,6 +16,8 @@ permalink: /what-is-simons-algorithm-quantum-computing
 
 ## Background
 
+>> written by : Aditya
+
 In the year 1994, Daniel Simon formulated a computational problem, called Simon's Problem, that could be solved exponentially faster by a quantum algorithm running on a quantum computer than by any deterministic or probabilistic classical algorithm running on a classical computer. Despite it being a problem with little to no practical value, it is well known as the first quantum algorithm to demonstrate this exponential speedup over its classical counterparts and is said to have been the "inspiration" for the much more famous Shor's Algorithm.
 
 ## Problem
