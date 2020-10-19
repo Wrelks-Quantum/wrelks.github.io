@@ -7,6 +7,7 @@ comment: false
 aside:
   toc: true
 author: Aditya
+permalink: /what-is-simons-algorithm-quantum-computing
 ---
 
 <br>
