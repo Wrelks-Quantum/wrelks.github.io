@@ -12,11 +12,15 @@ sharing: true
 
 <link rel="stylesheet" href="https://i.icomoon.io/public/temp/e8542e56cb/UntitledProject/style.css">
 
-
-<!-- Link external directories with SVG files-->
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="/demo-files/demo.css">
     <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+
+<!-- Link external directories with SVG files-->
 
 <!-- org code https://codepen.io/sshastri/pen/mjJjWz -->
 
