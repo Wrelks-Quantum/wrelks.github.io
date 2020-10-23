@@ -10,7 +10,14 @@ permalink: /match
 sharing: true
 ---
 
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/00fb96f19e/UntitledProject/style.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/icomoon-emojis/demo-files/demo.css">
+    <link rel="stylesheet" href="/icomoon-emojis/style.css">
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/00fb96f19e/UntitledProject/style.css"></head>
+
+
 
 <!-- org code https://codepen.io/sshastri/pen/mjJjWz -->
 
