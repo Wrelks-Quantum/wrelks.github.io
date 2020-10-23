@@ -1,0 +1,44 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-px-Qcircuit_CYsvg {
+  width: 1.2392578125em;
+}
+
+.icon-Qcircuit_Z {
+  width: 2.705078125em;
+}
+
+.icon-px-Toffoli_gatesvg {
+  width: 1.162109375em;
+}
+
+.icon-quantum-logic-gate-pgf-ti-i-k-i-z-quantum-mechanics-controlled-not-gate-quantum-circuit-png-favpng-1 {
+  width: 1.501953125em;
+}
+
+.icon-blochspphere {
+  width: 1.126953125em;
+}
+
+.icon-px-CNOT_gatesvg {
+  width: 1.6533203125em;
+}
+
+.icon-px-Hadamard_gatesvg {
+  width: 2.3671875em;
+}
