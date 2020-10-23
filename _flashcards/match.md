@@ -15,7 +15,7 @@ sharing: true
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://wrelks.com/icomoon-emojis/demo-files/demo.css">
     <link rel="stylesheet" href="https://wrelks.com/icomoon-emojis/style.css">
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/00fb96f19e/UntitledProject/style.css"></head>
+    <!--<link rel="stylesheet" href="https://i.icomoon.io/public/temp/00fb96f19e/UntitledProject/style.css">--></head>
 
 
 
