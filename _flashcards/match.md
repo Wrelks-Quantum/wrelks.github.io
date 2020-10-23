@@ -10,7 +10,7 @@ permalink: /match
 sharing: true
 ---
 
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/e8542e56cb/UntitledProject/style.css">
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/00fb96f19e/UntitledProject/style.css">
 
 <!-- org code https://codepen.io/sshastri/pen/mjJjWz -->
 
