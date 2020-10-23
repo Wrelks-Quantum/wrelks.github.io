@@ -12,16 +12,6 @@ sharing: true
 
 <link rel="stylesheet" href="https://i.icomoon.io/public/temp/e8542e56cb/UntitledProject/style.css">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="/demo-files/demo.css">
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-
-
-<!-- Link external directories with SVG files-->
-
 <!-- org code https://codepen.io/sshastri/pen/mjJjWz -->
 
   <div class="container">
@@ -353,17 +343,15 @@ html,
 <script>
 
 // Create a list that holds all of your cards
-// First goal is to get external z gate SVG working
 let cards = [
-  "<svg class='icon icon-Qcircuit_Z'><use xlink:href='symbol-defs.svg#icon-Qcircuit_Z'></use></svg><span class='name'> icon-Qcircuit_Z</span>"
-  /*"icon-px-Qcircuit_CYsvg",
+  "icon-px-Qcircuit_CYsvg",
   "icon-px-CNOT_gatesvg",
   "icon-quantum-logic-gate-pgf-ti-i-k-i-z-quantum-mechanics-controlled-not-gate-quantum-circuit-png-favpng-1",
   "icon-px-Toffoli_gatesvg",
   "icon-Qcircuit_Z",
   "icon-px-Greek_uc_psisvg",
   "icon-px-Hadamard_gatesvg",
-  "icon-px-Qiskit-Logosvg"*/
+  "icon-px-Qiskit-Logosvg"
 ];
 
 cards = cards.concat(cards);
@@ -416,8 +404,7 @@ function createCards() {
   shuffledCards.forEach(function(item) {
     
     /*Here we are creating li element and appending it to the ul and assiging the card name as a class name to the icon tag*/
-    //$("ul.deck").append(`<li class='card'><i class="${item}"></i></li>`);
-     $("ul.deck").append(`${item}`);
+    $("ul.deck").append(`<li class='card'><i class="${item}"></i></li>`);
   });
 }
 
