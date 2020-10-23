@@ -25,7 +25,7 @@ sharing: true
 
   <h1>Easy</h1>
 
-  <span class="icon-px-Qcircuit_CYsvg"></span>
+  <!--<span class="icon-px-Qcircuit_CYsvg"></span>-->
 
 
   <section class="score-panel">
@@ -413,7 +413,8 @@ function createCards() {
   shuffledCards.forEach(function(item) {
     
     /*Here we are creating li element and appending it to the ul and assiging the card name as a class name to the icon tag*/
-    $("ul.deck").append(`<li class='card'><i class="${item}"></i></li>`);
+    /*<span class="icon-px-Qcircuit_CYsvg"></span>*/
+    $("ul.deck").append(`<li class='card'><span class="${item}"></span></li>`);
   });
 }
 
