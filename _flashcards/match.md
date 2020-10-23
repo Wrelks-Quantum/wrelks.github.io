@@ -14,7 +14,7 @@ sharing: true
 
 
 <!-- Link external directories with SVG files-->
- <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
    <link rel="stylesheet" href="/demo-files/demo.css">
     <link rel="stylesheet" href="/styles/style.css">
 
