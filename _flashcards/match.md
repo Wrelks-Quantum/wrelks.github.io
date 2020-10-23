@@ -25,6 +25,8 @@ sharing: true
 
   <h1>Easy</h1>
 
+  <span class="icon-px-Qcircuit_CYsvg"></span>
+
 
   <section class="score-panel">
       <ul class="stars">
