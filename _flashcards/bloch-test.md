@@ -20,45 +20,26 @@ sharing: true
     </head>
 
 
+  <style>
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+    </style>
+
+
+
   <canvas id="renderCanvas"></canvas>
   <script src="js/main.js"></script>
-
-
-
-
-
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-d
-
-
 
   <b>f</b>
