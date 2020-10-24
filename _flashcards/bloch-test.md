@@ -31,8 +31,8 @@ sharing: true
         }
         
         #renderCanvas {
-            width: 100%;
-            height: 150%;
+            width: 150%;
+            height: 100%;
             touch-action: none;
         }
     </style>
