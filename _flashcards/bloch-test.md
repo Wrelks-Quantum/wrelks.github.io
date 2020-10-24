@@ -31,7 +31,7 @@ sharing: true
         }
         
         #renderCanvas {
-            width: 150%;
+            width: 105%;
             height: 100%;
             touch-action: none;
         }
