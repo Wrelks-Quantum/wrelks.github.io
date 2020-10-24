@@ -1,0 +1,23 @@
+---
+layout: article
+title: Qiskit | Part 3
+key: fffy384fa123124eddsad12
+comment: false
+#author: Perry
+mathjax: true
+description: A basic set linear algebra flashcards. This flashcard deck is continually getting updates. There is no other experience like this. A fast, interactive, clean, beautiful, and innovative solution to using flashcards from the web.
+permalink: /blochtesting
+sharing: true
+---
+
+  <script src="js/thirdparty/babylon.js"></script>
+    <script src="js/thirdparty/babylon.gui.min.js"></script>
+    <script src="js/thirdparty/math.min.js"></script>
+    <script src="js/blochsphere.js"></script>
+    <script src="js/quantumphasedisk.js"></script>
+    <script src="js/gate.js"></script>
+    <script src="js/scene.js"></script>
+
+
+  <canvas id="renderCanvas"></canvas>
+  <script src="js/main.js"></script>
