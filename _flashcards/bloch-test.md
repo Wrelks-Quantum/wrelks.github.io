@@ -9,14 +9,15 @@ description: A basic set linear algebra flashcards. This flashcard deck is conti
 permalink: /blochtesting
 sharing: true
 ---
-
-  <script src="js/thirdparty/babylon.js"></script>
-    <script src="js/thirdparty/babylon.gui.min.js"></script>
-    <script src="js/thirdparty/math.min.js"></script>
-    <script src="js/blochsphere.js"></script>
-    <script src="js/quantumphasedisk.js"></script>
-    <script src="js/gate.js"></script>
-    <script src="js/scene.js"></script>
+<head>
+  <script src="https://wrelks.com/js/thirdparty/babylon.js"></script>
+    <script src="https://wrelks.com/js/thirdparty/babylon.gui.min.js"></script>
+    <script src="https://wrelks.com/js/thirdparty/math.min.js"></script>
+    <script src="https://wrelks.com/js/blochsphere.js"></script>
+    <script src="https://wrelks.com/js/quantumphasedisk.js"></script>
+    <script src="https://wrelks.com/js/gate.js"></script>
+    <script src="https://wrelks.com/js/scene.js"></script>
+    </head>
 
 
   <canvas id="renderCanvas"></canvas>
