@@ -125,8 +125,8 @@ function createScene(engine, canvas, config) {
 
     var addRadio = function(text, selected, parent, observable) {
         var button = new BABYLON.GUI.RadioButton();
-        button.width = "30px";
-        button.height = "30px";
+        button.width = "25px"; //button sizes
+        button.height = "25px";
         button.color = "#777";
         button.background = "white";     
         button.onIsCheckedChangedObservable.add((state)=>{
