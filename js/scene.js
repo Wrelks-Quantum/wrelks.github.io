@@ -61,7 +61,7 @@ function createScene(engine, canvas, config) {
     const outcomeProbabilityHeadingTextBlock = new BABYLON.GUI.TextBlock();
     outcomeProbabilityHeadingTextBlock.text = "Prob of |0⟩";
     outcomeProbabilityHeadingTextBlock.color = "black";
-    outcomeProbabilityHeadingTextBlock.fontSize = config.fontSize;
+    outcomeProbabilityHeadingTextBlock.fontSize = "15px"; // org : config.fontSize
     outcomeProbabilityHeadingTextBlock.height = adaptRatioStr(30);
     outcomeProbabilityPanel.addControl(outcomeProbabilityHeadingTextBlock);
 
