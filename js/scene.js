@@ -61,14 +61,14 @@ function createScene(engine, canvas, config) {
     const outcomeProbabilityHeadingTextBlock = new BABYLON.GUI.TextBlock();
     outcomeProbabilityHeadingTextBlock.text = "Prob of |0⟩";
     outcomeProbabilityHeadingTextBlock.color = "black";
-    outcomeProbabilityHeadingTextBlock.fontSize = "35px"; // org : config.fontSize
+    outcomeProbabilityHeadingTextBlock.fontSize = "25px"; // org : config.fontSize
     outcomeProbabilityHeadingTextBlock.height = adaptRatioStr(30);
     outcomeProbabilityPanel.addControl(outcomeProbabilityHeadingTextBlock);
 
     const outcomeProbabilityTextBlock1 = new BABYLON.GUI.TextBlock();
     outcomeProbabilityTextBlock1.text = "1";
     outcomeProbabilityTextBlock1.color = "black";
-    outcomeProbabilityTextBlock1.fontSize = "35px";
+    outcomeProbabilityTextBlock1.fontSize = "25px";
     outcomeProbabilityTextBlock1.height = adaptRatioStr(30);
     outcomeProbabilityPanel.addControl(outcomeProbabilityTextBlock1);
 
@@ -87,7 +87,7 @@ function createScene(engine, canvas, config) {
     const outcomeProbabilityTextBlock0 = new BABYLON.GUI.TextBlock();
     outcomeProbabilityTextBlock0.text = "0";
     outcomeProbabilityTextBlock0.color = "black";
-    outcomeProbabilityTextBlock0.fontSize = "35px";
+    outcomeProbabilityTextBlock0.fontSize = "25px";
     outcomeProbabilityTextBlock0.height = adaptRatioStr(30);
     outcomeProbabilityPanel.addControl(outcomeProbabilityTextBlock0);
 
