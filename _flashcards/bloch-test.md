@@ -38,6 +38,14 @@ sharing: true
     </style>
 
 
+  <script>
+  probAmplitudeTextBlock0.fontSize = "5px";
+  probAmplitudeTextBlock1.fontSize = "5px";
+  probabilityTextBlock0.fontSize = "5px";
+  probabilityTextBlock1.fontSize = "5px";
+  azimuthRadiansTextBlock.fontSize = "5px" * 0.7;
+  </script>
+
 
   <canvas id="renderCanvas"></canvas>
   <script src="js/main.js"></script>

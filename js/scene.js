@@ -556,6 +556,7 @@ function azimuthRadiansToPiRadians(radians) {
 }
 
 function updateQuantumStateDisplay(config) {
+
     blochSphere.resetGlobalPhase();
     probAmplitudeTextBlock0.dispose();
 
