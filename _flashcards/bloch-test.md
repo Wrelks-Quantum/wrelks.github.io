@@ -34,6 +34,7 @@ sharing: true
             width: 105%; /*Org 100% on both */
             height: 100%;
             touch-action: none;
+            font-size: 5px;
         }
     </style>
 
