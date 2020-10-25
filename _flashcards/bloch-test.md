@@ -38,7 +38,7 @@ sharing: true
     </style>
 
 
-  <script>
+  <script src="https://wrelks.com/js/scene.js">
   probAmplitudeTextBlock0.fontSize = "5px";
   probAmplitudeTextBlock1.fontSize = "5px";
   probabilityTextBlock0.fontSize = "5px";
