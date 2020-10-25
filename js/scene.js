@@ -61,7 +61,7 @@ function createScene(engine, canvas, config) {
     const outcomeProbabilityHeadingTextBlock = new BABYLON.GUI.TextBlock();
     outcomeProbabilityHeadingTextBlock.text = "Prob of |0⟩";
     outcomeProbabilityHeadingTextBlock.color = "black";
-    outcomeProbabilityHeadingTextBlock.fontSize = "25px"; // org : config.fontSize
+    outcomeProbabilityHeadingTextBlock.fontSize = "25px"; // org : "25px"
     outcomeProbabilityHeadingTextBlock.height = adaptRatioStr(30);
     outcomeProbabilityPanel.addControl(outcomeProbabilityHeadingTextBlock);
 
@@ -285,7 +285,7 @@ function createScene(engine, canvas, config) {
     var qubitStateDiracTextBlock = new BABYLON.GUI.TextBlock();
     qubitStateDiracTextBlock.text = "Dirac notation will go here";
     qubitStateDiracTextBlock.color = "black";
-    qubitStateDiracTextBlock.fontSize = config.fontSize;
+    qubitStateDiracTextBlock.fontSize = "25px";
     /////// END Top panel
 
 
@@ -300,12 +300,12 @@ function createScene(engine, canvas, config) {
     var basisLabel0 = new BABYLON.GUI.TextBlock();
     basisLabel0.text = "|0⟩";
     basisLabel0.color = "black";
-    basisLabel0.fontSize = config.fontSize;
+    basisLabel0.fontSize = "25px";
 
     var basisLabel1 = new BABYLON.GUI.TextBlock();
     basisLabel1.text = "|1⟩";
     basisLabel1.color = "black";
-    basisLabel1.fontSize = config.fontSize;
+    basisLabel1.fontSize = "25px";
 
 
     //// Dirac notation grid
@@ -569,29 +569,29 @@ function updateQuantumStateDisplay(config) {
     // (imaginary0 < 0 ? " - " : " + ") +
     // Math.abs(imaginary0).toFixed(2) + "i";
     probAmplitudeTextBlock0.color = "black";
-    probAmplitudeTextBlock0.fontSize = config.fontSize;
+    probAmplitudeTextBlock0.fontSize = "25px";
 
     probAmplitudeTextBlock1.dispose();
     probAmplitudeTextBlock1.text = blochSphere.getProbAmplitude1().re.toFixed(2) +
         (imaginary1 < 0 ? " - " : " + ") +
         Math.abs(imaginary1).toFixed(2) + "i";
     probAmplitudeTextBlock1.color = "black";
-    probAmplitudeTextBlock1.fontSize = config.fontSize;
+    probAmplitudeTextBlock1.fontSize = "25px";
 
     probabilityTextBlock0.dispose();
     probabilityTextBlock0.text = blochSphere.getProbability0().toFixed(2);
     probabilityTextBlock0.color = "black";
-    probabilityTextBlock0.fontSize = config.fontSize;
+    probabilityTextBlock0.fontSize = "25px";
 
     probabilityTextBlock1.dispose();
     probabilityTextBlock1.text = blochSphere.getProbability1().toFixed(2);
     probabilityTextBlock1.color = "black";
-    probabilityTextBlock1.fontSize = config.fontSize;
+    probabilityTextBlock1.fontSize = "25px";
 
     azimuthRadiansTextBlock.dispose();
     azimuthRadiansTextBlock.text = azimuthRadiansToPiRadians(blochSphere.getAzimuthRadians());
     azimuthRadiansTextBlock.color = "black";
-    azimuthRadiansTextBlock.fontSize = config.fontSize * 0.7;
+    azimuthRadiansTextBlock.fontSize = "25px" * 0.7;
     azimuthRadiansTextBlock.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
 
     quantumStateGrid.addControl(probAmplitudeTextBlock0, 0, 0);
