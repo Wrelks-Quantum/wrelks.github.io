@@ -31,7 +31,7 @@ sharing: true
         }
         
         #renderCanvas {
-            width: 105%;
+            width: 105%; /*Org 100% on both */
             height: 105%;
             touch-action: none;
         }
