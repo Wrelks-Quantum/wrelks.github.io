@@ -32,7 +32,7 @@ sharing: true
         
         #renderCanvas {
             width: 105%;
-            height: 100%;
+            height: 105%;
             touch-action: none;
         }
     </style>
