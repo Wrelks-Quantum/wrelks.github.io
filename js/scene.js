@@ -111,7 +111,7 @@ function createScene(engine, canvas, config) {
     advancedTexture.addControl(rightPanel);
 
     // TODO: Move these into styles
-    var buttonSize = adaptRatioStr(35); //org 65
+    var buttonSize = adaptRatioStr(45); //org 65
     var paddingTop = adaptRatioStr(5); //org 5
 
     function CreateImageButton(img, buttonSize, paddingTop, observable ){
