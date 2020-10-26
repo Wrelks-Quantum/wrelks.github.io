@@ -34,19 +34,8 @@ sharing: true
             width: 105%; /*Org 100% on both */
             height: 100%;
             touch-action: none;
-            font-size: 5px;
         }
     </style>
-
-
-  <script src="https://wrelks.com/js/scene.js">
-  probAmplitudeTextBlock0.fontSize = "5px";
-  probAmplitudeTextBlock1.fontSize = "5px";
-  probabilityTextBlock0.fontSize = "5px";
-  probabilityTextBlock1.fontSize = "5px";
-  azimuthRadiansTextBlock.fontSize = "5px" * 0.7;
-  </script>
-
 
   <canvas id="renderCanvas"></canvas>
   <script src="js/main.js"></script>
