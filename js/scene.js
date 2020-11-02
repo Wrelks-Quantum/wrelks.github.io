@@ -570,7 +570,7 @@ function updateQuantumStateDisplay(config) {
     // (imaginary0 < 0 ? " - " : " + ") +
     // Math.abs(imaginary0).toFixed(2) + "i";
     probAmplitudeTextBlock0.color = "black";
-    //probAmplitudeTextBlock0.fontSize = "25px"; //org off
+    probAmplitudeTextBlock0.fontSize = "15px"; //org off
 
     probAmplitudeTextBlock1.dispose();
     probAmplitudeTextBlock1.text = blochSphere.getProbAmplitude1().re.toFixed(2) +
