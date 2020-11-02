@@ -267,19 +267,19 @@ function createScene(engine, canvas, config) {
     qubitStateDiracImagePanel.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
     qubitStateDiracImagePanel.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
     qubitStateDiracImagePanel.height = adaptRatioStr(346); //org 546
-    qubitStateDiracImagePanel.paddingTop = adaptRatioStr(10); //org 10
+    qubitStateDiracImagePanel.paddingTop = adaptRatioStr(5); //org 10
     advancedTexture.addControl(qubitStateDiracImagePanel);
 
     var qubitStateDiracImage = new BABYLON.GUI.Image("but", "images/qubit-state-dirac.png");
     qubitStateDiracImage.width = adaptRatioStr(346); //change the size of the image, org 546
-    qubitStateDiracImage.height = adaptRatioStr(48); //change the size of the image, org 48
+    qubitStateDiracImage.height = adaptRatioStr(24); //change the size of the image, org 48
     qubitStateDiracImagePanel.addControl(qubitStateDiracImage);
 
     var qubitStateDiracTextPanel = new BABYLON.GUI.StackPanel();
     qubitStateDiracTextPanel.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
     qubitStateDiracTextPanel.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
     qubitStateDiracTextPanel.height = adaptRatioStr(346); //org 546
-    qubitStateDiracTextPanel.paddingTop = adaptRatioStr(10); //org 10
+    qubitStateDiracTextPanel.paddingTop = adaptRatioStr(5); //org 10
     advancedTexture.addControl(qubitStateDiracTextPanel);
 
     var qubitStateDiracTextBlock = new BABYLON.GUI.TextBlock();
