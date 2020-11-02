@@ -87,7 +87,7 @@ function createScene(engine, canvas, config) {
     const outcomeProbabilityTextBlock0 = new BABYLON.GUI.TextBlock();
     outcomeProbabilityTextBlock0.text = "0"; //the zero on the bottom of the grey bar on the left
     outcomeProbabilityTextBlock0.color = "black";
-    outcomeProbabilityTextBlock0.fontSize = "15px";
+    outcomeProbabilityTextBlock0.fontSize = "25px";
     outcomeProbabilityTextBlock0.height = adaptRatioStr(30);
     outcomeProbabilityPanel.addControl(outcomeProbabilityTextBlock0);
 
@@ -266,13 +266,13 @@ function createScene(engine, canvas, config) {
     var qubitStateDiracImagePanel = new BABYLON.GUI.StackPanel();
     qubitStateDiracImagePanel.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
     qubitStateDiracImagePanel.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
-    qubitStateDiracImagePanel.height = adaptRatioStr(546);
-    qubitStateDiracImagePanel.paddingTop = adaptRatioStr(10);
+    qubitStateDiracImagePanel.height = adaptRatioStr(346); //org 546
+    qubitStateDiracImagePanel.paddingTop = adaptRatioStr(10); //org 10
     advancedTexture.addControl(qubitStateDiracImagePanel);
 
     var qubitStateDiracImage = new BABYLON.GUI.Image("but", "images/qubit-state-dirac.png");
-    qubitStateDiracImage.width = adaptRatioStr(546);
-    qubitStateDiracImage.height = adaptRatioStr(48);
+    qubitStateDiracImage.width = adaptRatioStr(546); //change the size of the image
+    qubitStateDiracImage.height = adaptRatioStr(48); //change the size of the image
     qubitStateDiracImagePanel.addControl(qubitStateDiracImage);
 
     var qubitStateDiracTextPanel = new BABYLON.GUI.StackPanel();
