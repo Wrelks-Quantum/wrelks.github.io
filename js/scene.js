@@ -309,8 +309,8 @@ function createScene(engine, canvas, config) {
 
 
     //// Dirac notation grid
-    quantumStateDiracGrid.width = adaptRatioStr(546);
-    quantumStateDiracGrid.height = adaptRatioStr(40);
+    quantumStateDiracGrid.width = adaptRatioStr(346); //org 546
+    quantumStateDiracGrid.height = adaptRatioStr(40); //org 40
 
     quantumStateDiracGrid.addRowDefinition(adaptRatio(0.4));
     quantumStateDiracGrid.addRowDefinition(adaptRatio(0.6));
