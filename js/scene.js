@@ -285,7 +285,7 @@ function createScene(engine, canvas, config) {
     var qubitStateDiracTextBlock = new BABYLON.GUI.TextBlock();
     qubitStateDiracTextBlock.text = "Dirac notation will go here";
     qubitStateDiracTextBlock.color = "black";
-    qubitStateDiracTextBlock.fontSize = "15px";
+    qubitStateDiracTextBlock.fontSize = "25px"; //not sure
     /////// END Top panel
 
 
@@ -300,12 +300,12 @@ function createScene(engine, canvas, config) {
     var basisLabel0 = new BABYLON.GUI.TextBlock();
     basisLabel0.text = "|0⟩";
     basisLabel0.color = "black";
-    basisLabel0.fontSize = "25px";
+    basisLabel0.fontSize = "15px";
 
     var basisLabel1 = new BABYLON.GUI.TextBlock();
     basisLabel1.text = "|1⟩";
     basisLabel1.color = "black";
-    basisLabel1.fontSize = "25px";
+    basisLabel1.fontSize = "15px";
 
 
     //// Dirac notation grid
