@@ -3,7 +3,7 @@ var canvas = document.getElementById('renderCanvas');
 
 var config = {
     devicePixelRatio: window.devicePixelRatio || 1.0,
-    fontSize: 23 * devicePixelRatio //org 28
+    fontSize: 13 * devicePixelRatio //org 28
 };
 
 // load the 3D engine
