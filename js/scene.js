@@ -87,7 +87,7 @@ function createScene(engine, canvas, config) {
     const outcomeProbabilityTextBlock0 = new BABYLON.GUI.TextBlock();
     outcomeProbabilityTextBlock0.text = "0"; //the zero on the bottom of the grey bar on the left
     outcomeProbabilityTextBlock0.color = "black";
-    outcomeProbabilityTextBlock0.fontSize = "25px";
+    outcomeProbabilityTextBlock0.fontSize = "15px";
     outcomeProbabilityTextBlock0.height = adaptRatioStr(30);
     outcomeProbabilityPanel.addControl(outcomeProbabilityTextBlock0);
 
