@@ -59,16 +59,16 @@ function createScene(engine, canvas, config) {
     outcomeProbabilityPanel.height = adaptRatioStr(410); // org 410
 
     const outcomeProbabilityHeadingTextBlock = new BABYLON.GUI.TextBlock();
-    outcomeProbabilityHeadingTextBlock.text = "Prob of |0⟩";
+    outcomeProbabilityHeadingTextBlock.text = "Prob of |0⟩"; //the prob of 0 text ontop of the bar
     outcomeProbabilityHeadingTextBlock.color = "black";
-    outcomeProbabilityHeadingTextBlock.fontSize = "15px"; // org : "25px"
+    outcomeProbabilityHeadingTextBlock.fontSize = "25px"; // org : "25px"
     outcomeProbabilityHeadingTextBlock.height = adaptRatioStr(30);
     outcomeProbabilityPanel.addControl(outcomeProbabilityHeadingTextBlock);
 
     const outcomeProbabilityTextBlock1 = new BABYLON.GUI.TextBlock();
-    outcomeProbabilityTextBlock1.text = "1";
+    outcomeProbabilityTextBlock1.text = "1"; // the one ontop of the grey bar on the left
     outcomeProbabilityTextBlock1.color = "black";
-    outcomeProbabilityTextBlock1.fontSize = "15px"; //org : "25px"
+    outcomeProbabilityTextBlock1.fontSize = "25px"; //org : "25px"
     outcomeProbabilityTextBlock1.height = adaptRatioStr(30);
     outcomeProbabilityPanel.addControl(outcomeProbabilityTextBlock1);
 
@@ -85,7 +85,7 @@ function createScene(engine, canvas, config) {
     outcomeProbabilityPanel.addControl(outcomeProbabilityBar);
 
     const outcomeProbabilityTextBlock0 = new BABYLON.GUI.TextBlock();
-    outcomeProbabilityTextBlock0.text = "0";
+    outcomeProbabilityTextBlock0.text = "0"; //the zero on the bottom of the grey bar on the left
     outcomeProbabilityTextBlock0.color = "black";
     outcomeProbabilityTextBlock0.fontSize = "25px";
     outcomeProbabilityTextBlock0.height = adaptRatioStr(30);
@@ -285,7 +285,7 @@ function createScene(engine, canvas, config) {
     var qubitStateDiracTextBlock = new BABYLON.GUI.TextBlock();
     qubitStateDiracTextBlock.text = "Dirac notation will go here";
     qubitStateDiracTextBlock.color = "black";
-    qubitStateDiracTextBlock.fontSize = "25px";
+    qubitStateDiracTextBlock.fontSize = "15px";
     /////// END Top panel
 
 
