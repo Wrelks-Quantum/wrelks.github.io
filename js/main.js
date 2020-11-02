@@ -2,8 +2,8 @@
 var canvas = document.getElementById('renderCanvas');
 
 var config = {
-    devicePixelRatio: window.devicePixelRatio || 1.0,
-    fontSize: 13 * devicePixelRatio //org 28
+    devicePixelRatio: window.devicePixelRatio || .8, //org 1.0
+    fontSize: 28 * devicePixelRatio //org 28
 };
 
 // load the 3D engine
