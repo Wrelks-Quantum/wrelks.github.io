@@ -300,7 +300,7 @@ function createScene(engine, canvas, config) {
     var basisLabel0 = new BABYLON.GUI.TextBlock();
     basisLabel0.text = "|0⟩";
     basisLabel0.color = "black";
-    basisLabel0.fontSize = "15px";
+    basisLabel0.fontSize = "25px";
 
     var basisLabel1 = new BABYLON.GUI.TextBlock();
     basisLabel1.text = "|1⟩";
