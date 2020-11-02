@@ -603,6 +603,7 @@ function updateQuantumStateDisplay(config) {
         azimuthRadiansTextBlock.fontSize = "5px" * 0.7;
         console.log(check)
         console.log("probabilityTextBlock1.fontSize: "+ probabilityTextBlock1.fontSize)
+        console.log("I AM WORKINGGGGG")
         }else{
             probAmplitudeTextBlock0.fontSize = "25px";
             probAmplitudeTextBlock1.fontSize = "25px";
