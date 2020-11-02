@@ -17,6 +17,7 @@ sharing: true
     <script src="https://wrelks.com/js/quantumphasedisk.js"></script>
     <script src="https://wrelks.com/js/gate.js"></script>
     <script src="https://wrelks.com/js/scene.js"></script> <!-- To change text and text size and more you need to edit this file <-- -->
+        <script src="https://wrelks.com/js/main.js"></script>
     </head>
 
 
