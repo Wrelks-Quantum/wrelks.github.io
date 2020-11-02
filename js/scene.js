@@ -570,24 +570,24 @@ function updateQuantumStateDisplay(config) {
     // (imaginary0 < 0 ? " - " : " + ") +
     // Math.abs(imaginary0).toFixed(2) + "i";
     probAmplitudeTextBlock0.color = "black";
-    probAmplitudeTextBlock0.fontSize = "15px"; //org off
+    //probAmplitudeTextBlock0.fontSize = "25px"; //org off
 
     probAmplitudeTextBlock1.dispose();
     probAmplitudeTextBlock1.text = blochSphere.getProbAmplitude1().re.toFixed(2) +
         (imaginary1 < 0 ? " - " : " + ") +
         Math.abs(imaginary1).toFixed(2) + "i";
     probAmplitudeTextBlock1.color = "black";
-    probAmplitudeTextBlock1.fontSize = "15px"; //org off
+    //probAmplitudeTextBlock1.fontSize = "25px"; //org off
 
     probabilityTextBlock0.dispose();
     probabilityTextBlock0.text = blochSphere.getProbability0().toFixed(2);
     probabilityTextBlock0.color = "black";
-    probabilityTextBlock0.fontSize = "15px"; //org off
+    //probabilityTextBlock0.fontSize = "25px"; //org off
 
     probabilityTextBlock1.dispose();
     probabilityTextBlock1.text = blochSphere.getProbability1().toFixed(2);
     probabilityTextBlock1.color = "black";
-    probabilityTextBlock1.fontSize = "15px"; //org off
+    //probabilityTextBlock1.fontSize = "25px"; //org off
 
     azimuthRadiansTextBlock.dispose();
     azimuthRadiansTextBlock.text = azimuthRadiansToPiRadians(blochSphere.getAzimuthRadians());
