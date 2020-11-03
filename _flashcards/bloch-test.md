@@ -24,9 +24,9 @@ sharing: true
   <style>
         html,
         body {
-            overflow: show; /* org hidden */
+            overflow: hidden; /* org hidden */
             width: 100%;
-            height: 100%;
+            height: 200%;
             margin: 0;
             padding: 0;
         }
