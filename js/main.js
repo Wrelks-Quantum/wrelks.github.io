@@ -2,7 +2,7 @@
 var canvas = document.getElementById('renderCanvas');
 
 var config = {
-    devicePixelRatio: window.devicePixelRatio || 1.0, //org 1.0
+    devicePixelRatio: window.devicePixelRatio || 1.3, //org 1.0
     fontSize: 50 * devicePixelRatio //org 28
 };
 
