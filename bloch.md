@@ -9,12 +9,12 @@ description: A basic set linear algebra flashcards. This flashcard deck is conti
 permalink: /blochtesting2
 sharing: true
 ---
-
-    <!-- three.jsを読み込む -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.js"></script>
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
-    <script src="http://jsrun.it/assets/s/l/o/p/slopo"></script>
+<head>
+<!-- three.jsを読み込む -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.js"></script>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
+<script src="http://jsrun.it/assets/s/l/o/p/slopo"></script>
     <!-- <script src="js/EffectComposer.js"></script> -->
     <!-- <script src="js/RenderPass.js"></script> -->
     <!-- <script src="js/CopyShader.js"></script> -->
@@ -22,11 +22,11 @@ sharing: true
     <!-- <script src="js/OutlinePass.js"></script> -->
     <!-- <script src="js/OrbitControls.js"></script> -->
 
-    <script src="js/bloch.js"></script>
-    <script src="js/bloch-gui.js"></script>
+<script src="js/bloch.js"></script>
+<script src="js/bloch-gui.js"></script>
 
 
-    <link rel="stylesheet" href="css/bloch.css">    
+<link rel="stylesheet" href="css/bloch.css">    
 </head>
 <body>
     <div class="plotArea">
