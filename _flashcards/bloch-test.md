@@ -33,7 +33,7 @@ sharing: true
         
         #renderCanvas {
             width: 100%; /*Org 100% on both */
-            height: 100%;
+            height: 200%;
             touch-action: none;
         }
     </style>
