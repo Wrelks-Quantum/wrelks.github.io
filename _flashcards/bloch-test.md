@@ -26,14 +26,14 @@ sharing: true
         body {
             overflow: hidden; /* org hidden */
             width: 100%;
-            height: 110%;
+            height: 105%;
             margin: 0;
             padding: 0;
         }
         
         #renderCanvas {
             width: 100%; /*Org 100% on both */
-            height: 110%;
+            height: 105%;
             touch-action: none;
         }
     </style>
