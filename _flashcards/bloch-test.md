@@ -39,7 +39,7 @@ sharing: true
     </style>
 
   <canvas id="renderCanvas"></canvas>
-  <script src="js/main.js"></script>
+  <script src="https://wrelks.com/js/main.js"></script>
 
 
 
