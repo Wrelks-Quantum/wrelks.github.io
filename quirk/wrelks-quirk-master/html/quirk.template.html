@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="quantum,circuit,simulator,quirk">
+        <meta name="description" content="Wrelks is an open-source drag-and-drop quantum circuit simulator based on Quirk for exploring and understanding the mathematical operations of gates on Quantum States.">
+        <title>Quirk: Quantum Circuit Simulator</title>
+        <link rel="shortcut icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD//gAfQ29tcHJlc3NlZCBieSBqcGVnLXJlY29tcHJlc3P/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAALCAAgACABAREA/8QAGQABAAIDAAAAAAAAAAAAAAAACggLAwcJ/8QAJhAAAAcBAAEEAwEBAQAAAAAAAQIDBAUGBwgJChESFAATFRchIv/aAAgBAQAAPwBqHcHTdc4z5E6I6itKiIRuK5Va7o1bLmACythZxyjepQJAEQ+S1gtLmHhUCB7mMq/IAAI/8/K9fwRecvysap3BRcN0zoZHV+dpD/Rdb3hxs8AztLnM8Zz6tz2g6JYKxdEVIu1QZY6PYfzYBrJzUrAMnb2NZhEmQ/WkCOPHd6rHjjufdqbzNYMc2TF9d068mpGXmTZtdJpFvdvHrlOEUdTNfSYT9XWeMESPpAJarGhoYv2DO5/6rc7r8R/lO84jusfJSuLa7m2rx8LJPoaZdZ5da9b04eWjXazB/GSwQUg9PGv2jxus2XaPSoLpqpmKJPwgnrQezBzjlHCuK63K/osPRV6W0i/NG6pirBmGTqIGiWbspDAP1Z/QJOLdoAcPgsenOiB8vgcAJZyUoHH/AIh+3+t3A/zdP7atUJ49MCcmD9UglnTdJjp/VNnilA9lgYuoBrTc+XeIiBSOpdy0E4GOYo5/DgkjzbnPevlBmkk263IvPshlnPzt0QvwddX9TJP8vzxxGHMAiq/pFRcXW4OSo+6rRFBq7H4gBTBu70seA6R0D5cMtsEFZ7nA0zD4Wy7nrb+vT0zEJT8fBpli6zWbIvHPG39WPst7n4MJCLkRcNpOOayqbhFZMFSjOT1oGJ7RE9641vkzCTjzDLlz3WKBSrUm2dOK3E3Ko2m6SNqqbl4UhmkdNOEZ+MnkGqx0lpJk7Os2KsDF1+gtWq9SaxseGc48+2MINjlPKkLe4nOYetw6sWVWR1K4urncLVb3H2nKc1bZt+LONGWOm09oWEi2CTcPrLKrSo2Lq7K2njD5U4cxR3LrT7nXtT6h6+k3cQ6h2slq71Qc6x2nx7lYfjYYil5dGrSxnyQmZFl7YqmkAO2roE3Vejd4qHGeGtK68s8R9W4dY3w0dU3TlsZN2nkGTryEFFqIHOAGBrPXh3cHhvh7Jum0ZErh8ilTMK19Hy/NtiqUnQdaoFM02jzRATlqhfqzDW2tSJS+/wAPuQs8zfR65kxETJKHbiokb/2mYpgAfzmF1P4R/H/0Vx/q3INPwfMeb67pLuKszO5YhnVRqVjrWg1ldV3VbeIxsey/vBFrLumbqHk3ItH0LJSkYmoyF4DlEjOdeiR30NkYtdX7IyP/AAJnMIrSU1Q6rcD6rOwCTgDKsGNbnWaNXrsu9agKIv17RYGcaqp+8jOVKmCClgNhWKZ1zhjeZYLkcEnWc0yOlwFCpUImcVjMoGusEWDP7LgwAd2/cgkZ3IvlQ/c+fruXa3uqscfz/9k=">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
+        <!-- Whatever is between these start/end analytic tags is stripped by the 'downloading offline copy' code. -->
+        <!-- Start Analytics -->
+        <!-- End Analytics -->
+    </head>
+    <body style="margin: 0">
+        <!-- Primary content -->
+        <div id="inspectorDiv" style="display: none">
+            <!-- Buttons -->
+            <div style="margin: 5px;">
+                <button id="menu-button" style="min-width: 50px; min-height: 30px;">Menu</button>
+                &nbsp;
+                &nbsp;
+                <button id="export-button" style="min-width: 50px; min-height: 30px;">Export</button>
+                &nbsp;
+                &nbsp;
+                <button id="clear-circuit-button" style="min-width: 50px; min-height: 30px;">Clear Circuit</button>
+                <button id="clear-all-button" style="min-width: 50px; min-height: 30px;">Clear ALL</button>
+                &nbsp;
+                &nbsp;
+                <button id="undo-button" style="min-width: 50px; min-height: 30px;">Undo</button>
+                <button id="redo-button" style="min-width: 50px; min-height: 30px;">Redo</button>
+                &nbsp;
+                &nbsp;
+                <button id="gate-forge-button" style="min-width: 50px; min-height: 30px;">Make Gate</button>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <span style="color:#BBB">Version 2.3</span>
+            </div>
+
+            <!-- Circuit drawing area -->
+            <div id="canvasDiv" style="width: 100%; touch-action: manipulation; tab-index: 0; position: relative;">
+                <canvas id="drawCanvas"></canvas>
+            </div>
+
+            <!-- INCLUDE EXPORT PART -->
+
+            <!-- INCLUDE FORGE PART -->
+        </div>
+
+        <!-- INCLUDE MENU PART -->
+
+        <!-- INCLUDE ERROR PART -->
+
+        <!-- Javascript detection -->
+        <div id="noscript-div" class="noscript-warning" style="
+                        animation-duration: 3.0s;
+                   -moz-animation-duration: 3.0s;
+                -webkit-animation-duration: 3.0s;
+                     -o-animation-duration: 3.0s;
+                        animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
+                   -moz-animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
+                -webkit-animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
+                     -o-animation-name: delay-showing-before-hide-script-can-run-but-then-jump-in;
+                      background-color: white;
+                                border: 1px solid red;
+                               padding: 10px;">
+            <style scoped>
+                @keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
+                    from { opacity: 0; }
+                    95% { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @-webkit-keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
+                    from { opacity: 0; }
+                    95% { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @-moz-keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
+                    from { opacity: 0; }
+                    95% { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @-o-keyframes delay-showing-before-hide-script-can-run-but-then-jump-in {
+                    from { opacity: 0; }
+                    95% { opacity: 0; }
+                    to { opacity: 1; }
+                }
+
+                .noscript-warning {
+                    color: red;
+                    font-size: 24px;
+                    position: absolute;
+                    top: 25%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            </style>
+            You appear to have JavaScript blocked. And Quirk is made out of JavaScript... :(
+        </div>
+        <script>
+          document.getElementById('noscript-div').style.display = 'none';
+        </script>
+
+        <script>
+          document.getElementById('noscript-div').style.display = 'block';
+          //noinspection InnerHTMLJS
+          document.QUIRK_QUINE_ALL_HTML_ORIGINAL = '<!'+'DOCTYPE html>\n<'+'html>\n    ' +
+                  document.documentElement.innerHTML + '\n<' + '/html>';
+          document.getElementById('noscript-div').style.display = 'none';
+//DEFAULT_CIRCUIT_START
+document.DEFAULT_CIRCUIT = undefined;
+//DEFAULT_CIRCUIT_END
+
+// UN-MINIFIED SOURCE IS AVAILABLE FROM github.com/Strilanc/Quirk
+
+<!-- INCLUDE SOURCE PART -->
+
+        </script>
+        <button type="button" onclick="MathJax.typeset()">Render Me!</button>
+        <p id = "label"></p>
+        <p id = "matrix"></p>
+        <div>
+      </div>
+    </body>
+</html>
