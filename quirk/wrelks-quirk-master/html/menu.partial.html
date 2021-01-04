@@ -1,0 +1,68 @@
+<div id="menu-div" style="display:block;">
+    <div id="menu-overlay" style="position:fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: rgba(0, 0, 0, 0.8);">
+    </div>
+    <div style="position:absolute; top:20px; left:50px; margin:0;">
+        <div style="display:inline-block; padding:20px; background-color:white; border:1px solid black; text-align:center;">
+            <div style="font-size: 32px;">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD//gAfQ29tcHJlc3NlZCBieSBqcGVnLXJlY29tcHJlc3P/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAALCAAgACABAREA/8QAGQABAAIDAAAAAAAAAAAAAAAACggLAwcJ/8QAJhAAAAcBAAEEAwEBAQAAAAAAAQIDBAUGBwgJChESFAATFRchIv/aAAgBAQAAPwBqHcHTdc4z5E6I6itKiIRuK5Va7o1bLmACythZxyjepQJAEQ+S1gtLmHhUCB7mMq/IAAI/8/K9fwRecvysap3BRcN0zoZHV+dpD/Rdb3hxs8AztLnM8Zz6tz2g6JYKxdEVIu1QZY6PYfzYBrJzUrAMnb2NZhEmQ/WkCOPHd6rHjjufdqbzNYMc2TF9d068mpGXmTZtdJpFvdvHrlOEUdTNfSYT9XWeMESPpAJarGhoYv2DO5/6rc7r8R/lO84jusfJSuLa7m2rx8LJPoaZdZ5da9b04eWjXazB/GSwQUg9PGv2jxus2XaPSoLpqpmKJPwgnrQezBzjlHCuK63K/osPRV6W0i/NG6pirBmGTqIGiWbspDAP1Z/QJOLdoAcPgsenOiB8vgcAJZyUoHH/AIh+3+t3A/zdP7atUJ49MCcmD9UglnTdJjp/VNnilA9lgYuoBrTc+XeIiBSOpdy0E4GOYo5/DgkjzbnPevlBmkk263IvPshlnPzt0QvwddX9TJP8vzxxGHMAiq/pFRcXW4OSo+6rRFBq7H4gBTBu70seA6R0D5cMtsEFZ7nA0zD4Wy7nrb+vT0zEJT8fBpli6zWbIvHPG39WPst7n4MJCLkRcNpOOayqbhFZMFSjOT1oGJ7RE9641vkzCTjzDLlz3WKBSrUm2dOK3E3Ko2m6SNqqbl4UhmkdNOEZ+MnkGqx0lpJk7Os2KsDF1+gtWq9SaxseGc48+2MINjlPKkLe4nOYetw6sWVWR1K4urncLVb3H2nKc1bZt+LONGWOm09oWEi2CTcPrLKrSo2Lq7K2njD5U4cxR3LrT7nXtT6h6+k3cQ6h2slq71Qc6x2nx7lYfjYYil5dGrSxnyQmZFl7YqmkAO2roE3Vejd4qHGeGtK68s8R9W4dY3w0dU3TlsZN2nkGTryEFFqIHOAGBrPXh3cHhvh7Jum0ZErh8ilTMK19Hy/NtiqUnQdaoFM02jzRATlqhfqzDW2tSJS+/wAPuQs8zfR65kxETJKHbiokb/2mYpgAfzmF1P4R/H/0Vx/q3INPwfMeb67pLuKszO5YhnVRqVjrWg1ldV3VbeIxsey/vBFrLumbqHk3ItH0LJSkYmoyF4DlEjOdeiR30NkYtdX7IyP/AAJnMIrSU1Q6rcD6rOwCTgDKsGNbnWaNXrsu9agKIv17RYGcaqp+8jOVKmCClgNhWKZ1zhjeZYLkcEnWc0yOlwFCpUImcVjMoGusEWDP7LgwAd2/cgkZ3IvlQ/c+fruXa3uqscfz/9k=">
+                Welcome to Wrelks
+            </div>
+
+            A drag-and-drop quantum circuit simulator.
+
+            <div style="margin:20px;">
+                <div id="loading-div" style="color:#D90; font-size:40px; display:block; height:120px; width:410px;">
+                    Loading...
+                </div>
+                <button tabindex="50" id="close-menu-button" style="width:410px; height:120px; font-size:20px; display:none;">Edit Circuit</button>
+            </div>
+
+            <div style="display:inline-block; text-align:center; border:1px solid black; padding:2px;">
+                <a tabindex="51" href="https://github.com/Strilanc/Quirk/wiki/How-to-use-Quirk">
+                    <div style="width:128px;">
+                        <svg version="1.1" viewBox="0 0 20 25" width="48" height="48">
+                          <text x="5" y="9" style="font-size: 8px;">???</text>
+                          <path d="M0 0 h20 v25 h-20 v-25 M3 13 h14 M3 17 h14 M3 21 h14" stroke="black" fill="transparent"></path>
+                        </svg>
+                        <div>How to Use</div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="display:inline-block; text-align:center; border:1px solid black; padding:2px;">
+                <a tabindex="52" href="https://www.youtube.com/watch?v=aloFwlBUwsQ">
+                    <div style="width:128px;">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACt0lEQVQoz+3SP09TYRQG8IOL4RsgSNvbv4C4uMAkLgbippEw6CKwqIuGwW/gZEI6kIiDo0MnEk1MmEBLRQFbCnJLa6WlFK6K2kKrBarH55p7TUWa1vgm8pqe5Jc0vbfneZ+8JWYmmUl9+FqBWoFagf+hwP5Jn/TUQw/cgmG4Dz54DH4IQQwSkIaMgf+Q+bu0sStm7PYbWT4je9g4i36meio3a+2eOrgBGeBDKmOcse63Aql29yiwJO79cvjVE+4+YMn0/SyQbHNPA0tm+sfhV9rcdmBJOehNq2sQWFKDFG91eYEl5aXXLS4fsKR8FPM4A8BCtLq3hO2qToCiHqcKLMJOKrW3NnTzZbTFlRO1swKVlt1ODViEr9ks65NPpQor/VeCyx5XQdTuMjSKuBw5YBHMAvoU9/Z4MxzejvdeDOJZUVTGPjlS8UGUYkkBc/JbW7weCGRi53rm8c43kXk6euV0sCgHFTBv46OmcXp8/F3kTNeCyExadDhYlHIFSm/jbTLJqbGx9aWOjoiITFpw2FmUSgXM2/iwscFaIsHRgf7I32ZS2G5nUaopoM+237+61Nm5JCKT5hU7i1LxLxQKaerprrDITAopCotSrsAXVX0f6e4OiswyUdCmsCj7C+wkk9no+QtzeFYUmVOK5qxKDlgEs8CupuWjly7P4LtdUbvLyNGsVdGARSisJArxq9dmZ232gqidFWg0Y7GpwEJYlbywXdVR6UWzbQpYUlP0vNnmA5aUj6aPW73AkvLSsybrALCkBijQZFWAJaWQPlONlgCwZAJkztNGSy+wZHqpdJ4cs4wAS2KEDprJBssgJIEPqU24DnVUbiYamo/AKeiH23AXHsAjmISQIQ4J0CBjyAJX4bPx/idjh27R2DsBD43MUbgDQ3AWjv52YGaWWq1ArUCtQK3Av/UdR/1BF+14cggAAAAASUVORK5CYII=">
+                        <div>Tutorial Video</div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="display:inline-block; text-align:center; border:1px solid black; padding:2px;">
+                <a tabindex="53" href="https://github.com/abhobe/wrelks-quirk">
+                    <div style="width:128px;">
+                        <svg version="1.1" viewBox="0 0 16 16" width="48" height="48">
+                            <path fill-rule="evenodd"
+                                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                            </path>
+                        </svg>
+                        <div>Source Code</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div style="display:inline-block; vertical-align:top; line-height:1.8; padding:13px 15px 13px 5px; background-color:#DDD; border:1px solid gray; margin:0 0 0 -5px;">
+            Example Circuits<br>
+            <a id="example-anchor-grover"></a><br>
+            <a id="example-anchor-shor"></a><br>
+            <a id="example-chsh-test"></a><br>
+            <a id="example-anchor-teleport"></a><br>
+            <a id="example-superdense-coding"></a><br>
+            <a id="example-anchor-delayed-eraser"></a><br>
+            <a id="example-symmetry-break"></a><br>
+            <a id="example-qft"></a><br>
+            <a id="example-addition"></a><br>
+            <a id="example-anchor-distill"></a><br>
+        </div>
+    </div>
+</div>
