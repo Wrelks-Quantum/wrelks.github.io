@@ -1,7 +1,6 @@
-source "https://rubygems.org"
-# gem "github-pages", group: :jekyll_plugins
-#gemspec
-
-gem 'jekyll-babel'
-gem 'execjs'
-gem 'jekyll-seo-tag'
+source 'https://rubygems.org'
+gem "bundler"
+gem "jekyll"
+gem "jekyll-paginate"
+gem 'jekyll-tagging'
+gem "jekyll-sitemap"

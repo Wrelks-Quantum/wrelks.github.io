@@ -1,305 +1,48 @@
 ---
-layout: article
-comment: false
-show_edit_on_github: false
-# articles:
-#   excerpt_type: html
-cover: /images/wrelks-quantum-logo.png
-title: The best place to learn Quantum Computing
-twitter:
-  username: Wrelks
-  card: summary
-image: /images/logo.png
-key: dan1238dhdd
-type: webpage
-cover: /images/loog.png
+layout: default
 ---
 
-<meta property="og:type" content="website">
-
-  <style src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css"></style>
-<style>
-
-blockquote {
-	position: relative;
-	padding-left: 30px;
-	font-weight: 900;
-	color: #00000;
-	padding: 1em;
-	margin: 1em;
-	max-width: 33em;
-	font-size: 24px;
-	&:before {
-		content: "“";
-		font-family: serif;
-		position: absolute;
-		right: 100%;
-		font-size: 120px;
-		line-height: 0px;
-		top: 50px;
-		color: #00000;
-	}
-	&:after {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 100%;
-		width: 80px;
-		height: 5px;
-		background: #e56d39;
-		left: 1em;
-	}
-}
-
-/* ----------- item-featured-round ------------ */
-.item-featured-round {
-  position: relative;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-right: 5%;
-  margin-left: 5%;
-}
-
-.cardpad {
-  padding: 16px;
-  text-align: center;
-}
-
-.tab1cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.item-featured-round .iconwrap {
-  width: 68px;
-  height: 68px;
-  background: #f1c40f none repeat scroll 0% 0%;
-  line-height: 68px;
-  animation-delay: 0.5s;
-  visibility: visible;
-  display: block;
-  position: relative;
-  text-align: center;
-  margin: auto auto 15px;
-  color: #fff;
-  border-radius: 50%;
-  transition: all 0.2s linear 0s;
-}
-.item-featured-round i {
-  font-size: 40px;
-  font-weight: normal;
-  line-height: inherit;
-  vertical-align: inherit;
-}
-.item-featured-round h3 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #40454d;
-  margin-bottom: 5px;
-  text-align: center;
-  font-family: "Open sans", "Arial";
-}
-.item-featured-round p {
-  color: #8e8e8e;
-  text-align: center;
-}
-.item-featured-round .iconhover {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  border: 2px solid red;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  opacity: 0;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-.item-featured-round:hover .iconhover {
-  opacity: 1;
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}
-</style>
-
-<blockquote><blockquote><h5>
-The number one place to find information, how to guides, and resources on quantum computation. We feature a large amount of Qiskit, Q#, and Silq tutorials. 
-We strive to be the best and to keep our website as user friendly and up to date as possible to make learning quantum computing and programming quantum computers, an easy and intuitive experience.
-</h5></blockquote></blockquote>
-
-  <h2>General</h2>
-  <ul>
-      <h3><li><a href="/how-to-navigate-wrelks">How to navigate Wrelks</a></li></h3>
-  </ul>
-  <!--<ul>
-    <h3><li><a href="/general/welcome.html">Discussion</a></li></h3>
-</ul>-->
-<ul>
-  <h3><li><a href="/wrelks-changelog">Changelog</a></li></h3>
-</ul>
-
-<ul>
-  <h3><li><a href="/Contributor">Become a Contributor</a></li></h3>
-</ul>
-
-<ul>
-  <h3><li><a href="https://wrelks.com/quirk.html">Wrelks Quirk</a></li></h3>
-</ul>
-
-<h2>Qiskit Tutorials</h2>
-  <ul>
-      <h3><li><a href="/install-qiskit">Getting Started</a></li></h3>
-  </ul>
-  <ul>
-    <h3><li><a href="/quantum-computing-algorithms-implementation">Quantum Algorithms</a></li></h3>
-</ul>
-<ul>
-  <h3><li><a href="/quantum-computing-qiskit-games">Quantum Games</a></li></h3>
-</ul>
-<br>
-<h2>Featured Content</h2>
-
-<br>
-
-<!--
-<div class="tab1cards">
-
-<div class="cardpad">
-<div class="card">
-  <div class="card__content">
-    <div class="card__header">
-      <h4>I am currently in need for some Contributors for Wrelks, someone that can assist in creating tutorials, web development, and backend services. If you think that you might be interested in becoming a contributor please fill out the following application here at our <a href="https://discord.gg/VpQ586u">discord</a></h4>
+<!-- begin hero -->
+{% if site.hero.image %}
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__image">
+      <img class="lazy" data-src="{{site.baseurl}}{{site.hero.image}}" alt="{{site.hero.title}}">
     </div>
-    <p>...</p>
+    <div class="hero__content">
+      <h1 class="hero__title">{{site.hero.title}}</h1>
+      <p class="hero__desc">{{site.hero.description}}</p>
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="hero-without-image">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1 class="hero__title">{{site.hero.title}}</h1>
+      <p class="hero__desc">{{site.hero.description}}</p>
+    </div>
+  </div>
+</section>
+{% endif %}
+<!-- begin hero -->
+
+{% include featured-posts.html %}
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <div class="container__inner">
+        <div class="row grid">
+          {% if site.posts.size > 0 %}
+            {% for post in paginator.posts %}
+              {% include article-content.html %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-<div class="cardpad">
-<div class="card">
-  <div class="card__content">
-    <div class="card__header">
-      <h4>I am currently in need for some Contributors for Wrelks, someone that can assist in creating tutorials, web development, and backend services. If you think that you might be interested in becoming a contributor please fill out the following application here at our <a href="https://discord.gg/VpQ586u">discord</a></h4>
-    </div>
-    <p>...</p>
-  </div>
-</div>
-</div>
 
-</div> -->
-
-<!--<h2>Development</h2>
-  <ul>
-    <h3><li><a href="/WrelksChangelog.html">Changelog</a></li></h3>
-</ul>-->
-
-	<div class="col-sm-3">	
-<!-- item -->
-	<div class="item-featured-round">
-		<span class="iconwrap" style="background-color:#E67E22">
-			<i class="far fa-comment-alt"></i>
-			<span class="iconhover" style="border-color:#E67E22"></span>
-		</span>
-    <h3>Weekly Quote</h3>
-    <center>
-		<p>
-        <blockquote><blockquote><blockquote><h3>"I will always choose a lazy person to do a difficult job because a lazy person will find an easy way to do it.”</h3></blockquote>- Bill Henry Gates</blockquote></blockquote>
-      </p></center>
-	</div>
-<!-- item // -->
-<br>
-	</div>
-	<div class="col-sm-3">
-<!-- item -->
-	<div class="item-featured-round">
-		<span class="iconwrap" style="background-color:#f5222d">
-			<i class="fab fa-youtube"></i>
-			<span class="iconhover" style="border-color:#f5222d"></span>
-		</span>
-		<h3>Weekly Video</h3>
-		<p><center>
-      <div class="card">
-        <div class="card__image">
-          <img class="image" src="/images/weeklyvideo.jpg" alt="Quantum Pong — Programming on Quantum Computers Season 1 Ep 1"/>
-        </div>
-        <div class="card__content">
-          <div class="card__header">
-            <h4><a href="https://www.youtube.com/watch?v=a1NZC5rqQD8&list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY">Quantum Pong — Programming on Quantum Computers Season 1 Ep 1</a></h4>
-          </div>
-        </div>
-      </div></center>
-      <!--<div>{%- include extensions/youtube.html id='lvTqbM5Dq4Q' -%}</div>--></p>
-	</div>
-<!-- item// -->
-<br>
-	</div>
-    <div class="col-sm-3">
-<!-- item -->
-		<div class="item-featured-round">
-			<span class="iconwrap" style="background-color:#1890ff">
-				<i class="far fa-hand-pointer"></i>
-				<span class="iconhover" style="border-color:#1890ff"></span>
-			</span>
-			<h3>Weekly Resource</h3>
-			<p><h4>Shor's Algorithm</h4><p>
-        <ul>
-          An amazing 26 page summary on Shor's algorithm, written by Elisa B ̈aumer, Jan-Grimo Sobez, and Stefan Tessarini. Mostly covers the mathematical aspects of the algorithm.
-          </ul>
-         <a href="https://qudev.phys.ethz.ch/static/content/QSIT15/Shors%20Algorithm.pdf">Check it out!</a>
-      </p></p>
-    </div>
-<!-- item// -->
-<br>
-</div>
-<div class="col-sm-3">	
-  <!-- item -->
-<div class="item-featured-round">
-  <span class="iconwrap" style="background-color:#52c41a">
-    <i class="fab fa-safari"></i>
-    <span class="iconhover" style="border-color:#52c41a"></span>
-  </span>
-  <h3>Massive list of quantum computing resources</h3>
-  <p>Qosf.org has a massive list of quantum computing resources for beginners and experts alike. All for completely free.
-    <p><a href="https://qosf.org/learn_quantum/">Learning Resources on Quantum Computing - qosf</a></p></p>
-</div>
-<!-- item// -->
-<br>
-</div>
-<div class="col-sm-3">	
-<!-- item -->
-<div class="item-featured-round">
-  <span class="iconwrap" style="background-color:#f0e68c">
-    <i class="fab fa-discord"></i>
-    <span class="iconhover" style="border-color:#f0e68c"></span>
-  </span>
-  <h3>Indi Quantum Community Discord</h3>
-  <p>
-    <center>
-      <div class="card">
-        <div class="card__image">
-          <img class="image" src="/images/India-quantum-community-discord.png" alt="Quantum Computing India"/>
-        </div>
-        <div class="card__content">
-          <div class="card__header">
-            <h4><a href="https://discord.gg/GH6BbqE">Join Now</a></h4>
-          </div>
-        </div>
-      </div></center>
-  </p>
-</div>
-<!-- item// -->
-  </div>
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+{% include pagination.html %}

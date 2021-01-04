@@ -1,44 +1,63 @@
-{%- if include.theme == 'dark' -%}
-  <header class="header header--dark" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
-{%- elsif include.theme == 'light' -%}
-  <header class="header header--light" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
-{%- else -%}
-  <header class="header" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
-{%- endif -%}
-    <div class="main">
-      <div class="header__title">
-        <div class="header__brand">
-          {%- include svg/logo.svg -%}
-          {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
-          {%- include snippets/get-nav-url.html path=_paths_root -%}
-          {%- if site.title -%}
-            <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
-          {%- endif -%}
-        </div>
-        {%- if site.search.provider -%}
-          <button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
-        {%- endif -%}
+{% if page.id %}
+  {% assign class = '' %}
+  {% elsif page.url contains 'tag' %}
+  {% assign class = '' %}
+  {% else %}
+  {% assign class = 'header--top' %}
+{% endif %}
+
+<!-- begin header -->
+<header class="header {{ class }}">
+  <div class="container">
+    <div class="row">
+      <div class="header__inner col col-12">
+
+      <div class="logo">
+        <a class="logo__link" href="{{ site.baseurl }}/">
+        {%if site.logo %}
+          <img class="logo__image" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}">
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+        </a>
       </div>
-      {%- if site.data.navigation.header -%}
-      <nav class="navigation">
-        <ul>
-          {%- for _item in site.data.navigation.header -%}
-            {%- include snippets/get-nav-url.html path=_item.url -%}
-            {%- assign _nav_url = __return -%}
-            {%- include snippets/get-nav-url.html path=page.url -%}
-            {%- assign _page_url = __return -%}
-            {%- include snippets/get-string-from-locale-config.html locale=_item.titles -%}
-            {%- if _nav_url == _page_url or page.nav_key and _item.key and page.nav_key == _item.key -%}
-              <li class="navigation__item navigation__item--active"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
-            {%- else -%}
-              <li class="navigation__item"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
-            {%- endif -%}
-          {%- endfor -%}
-          {%- if site.search.provider -%}
-            <li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li>
-          {%- endif -%}
-        </ul>
-      </nav>
-      {%- endif -%}
+        
+      <div class="menu-overlay">
+        <nav class="main-nav">
+          <div class="main-nav__box">
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+            <div class="nav-grid">
+              <div class="nav-grid__item">
+                <h2 class="nav-grid__title">Menu</h2>
+                <div class="mobile-nav">
+                  {% include navigation.html %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="navigation">
+        <div class="top-nav">
+          {% include navigation.html %}
+        </div>
+      </div>
+
+      <div class="nav-buttons">
+        <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        <div class="search-button">
+          <i class="nav__icon nav__icon-search ion ion-md-search"></i>
+          <span>Search</span>
+        </div>
+      </div>
+
+      </div>
     </div>
-  </header>
+  </div>
+</header>
+<!-- end header -->
+
+{% include search.html %}

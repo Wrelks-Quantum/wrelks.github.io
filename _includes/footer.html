@@ -1,35 +1,26 @@
-
-<footer class="footer py-4 js-page-footer">
-  <div class="main">
-
-    {%- assign _site_author = site.author -%}
-    {%- if _site_author.type == 'organization' -%}
-      {%- assign _site_author_itemtype = 'http://schema.org/Organization' -%}
-    {%- else -%}
-      {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
-    {%- endif -%}
-
-    <div itemscope itemtype="{{ _site_author_itemtype }}">
-      <meta itemprop="name" content="{{ _site_author.name }}">
-      {%- assign _site_author_url = _site_author.url | default: '/'-%}
-      {%- include snippets/get-nav-url.html path=_site_author_url -%}
-      {%- assign _site_author_url = __return -%}
-      <meta itemprop="url" content="{{ _site_author_url }}">
-      {%- if _site_author.bio -%}
-        <meta itemprop="description" content="{{ _site_author.bio }}">
-      {%- endif -%}
-      <div class="footer__author-links">
-        {%- include author-links.html author=_site_author -%}
-      </div>
+<!-- begin footer-widgets -->
+<section class="footer-widgets">
+  <div class="container">
+    <div class="row">
+      {% include footer-widgets/widget-recent-posts.html %}
+      {% include footer-widgets/widget-tag-cloud.html %}
+      {% include footer-widgets/widget-subscribe.html %}
     </div>
-    {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
-    {%- assign _locale_copyright_dates = __return -%}
-    <div class="site-info mt-2">
-      <div>
-        {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
-        {%- assign _locale_copyright_dates = __return -%}
-        © {{ site.title }} {{ _locale_copyright_dates }}
+  </div>
+</section>
+<!-- end footer-widgets -->
+
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+      <div class="footer__inner">
+        <div class="copyright">{{site.time | date: '%Y'}} &copy; <a href="/">{{site.title}}</a>. <!--Crafted & Designed by <a href="https://jekyllthemes.io/developers/artem-sheludko">Artem Sheludko</a>.--></div>
+        {% include social-links.html %}
+        </div>
       </div>
     </div>
   </div>
 </footer>
+<!-- end footer -->
