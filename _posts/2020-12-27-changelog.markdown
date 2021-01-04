@@ -31,7 +31,6 @@ featured: true
 * Team page removed 
 * Contributor page restyled
 * 404 page restyled
-* Old website has been moved to [legacy.wrelks.com](https://legacy.wrelks.com)
 
 <hr>
 
