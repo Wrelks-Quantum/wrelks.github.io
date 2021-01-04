@@ -8,7 +8,7 @@ tags:   [Development, Extra, Active]
 featured: true
 ---
 
-# Release 12/27/2020 
+# Release 1/4/2021
 ### MAJOR OVERHALL
 * Homepage goes through major restyling
 * Post tagging system added 
