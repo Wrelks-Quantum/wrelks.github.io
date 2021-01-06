@@ -6,7 +6,7 @@ image: '/images/50.jpg'
 ---
 
 <center>
-<a class="button button--outline-error button--rounded my-2" href="https://shop.wrelks.com/contact/"><i class="fas fa-paper-plane"></i> Submit A new resource</a></center>
+<a class="button button--outline-error button--rounded my-2" href="https://www.wrelks.com/contact/"><i class="fas fa-paper-plane"></i> Submit A new resource</a></center>
 
 <hr>
 
