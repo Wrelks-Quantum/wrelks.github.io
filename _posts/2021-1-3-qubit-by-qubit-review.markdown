@@ -4,7 +4,6 @@ title:  Qubit by Qubit, 1st Semester Review
 description: My personal review on the first semester in Qubit by Qubit's quantum computing course. My thoughts, complaints, and personal recommendations.
 date:   2021-1-3 18:00:55 +0300
 image:  '/images/IMG_20201227_181007__01.jpg'
-image: /images/IMG_20201227_181007__01.jpg
 tags:   [Review, Quantum Computing, Course]
 featured: true
 ---
