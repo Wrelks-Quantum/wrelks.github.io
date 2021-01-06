@@ -54,7 +54,7 @@ disqus-identifier: Wrelks # Add your shortname for Disqus Comment. For example a
 
 #-------------------------------
 # Google Analytics
-google-analytics: # Add your identifier. For example UA-99631805-1.
+google-analytics: UA-174532619-1 # Add your identifier. For example UA-99631805-1.
 
 
 #-------------------------------
