@@ -35,4 +35,22 @@ featured: true
 
 Something that has always fascinated me about Albert Einstein is his dislike towards education. Really makes you think huh?
 
+<hr>
+
+> You miss 100% of the shots you don't take.
+>
+> <cite>Wayne Gretzky</cite>
+
+> Those who dare to fail miserably can achieve greatly.
+>
+> <cite>John F. Kennedy</cite>
+
+> Don’t count the days, make the days count.
+>
+> <cite>Muhammad Ali</cite>
+
+<hr>
+
+
+
 
