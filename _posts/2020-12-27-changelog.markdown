@@ -8,6 +8,9 @@ tags:   [Development, Extra, Active]
 featured: true
 ---
 
+# Release 1/16/2021
+* Added new quotes / photos to quotes page
+
 # Release 1/4/2021
 ### MAJOR OVERHALL
 * Homepage goes through major restyling
