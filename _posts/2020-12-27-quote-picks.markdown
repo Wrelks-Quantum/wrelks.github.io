@@ -51,6 +51,19 @@ Something that has always fascinated me about Albert Einstein is his dislike tow
 
 <hr>
 
+![]({{site.baseurl}}/images/benjamin_franklin.jpg)
+*Benjamin Franklin*
 
+> Love your Enemies, for they tell you your Faults.
+>
+> <cite>Benjamin Franklin</cite>
+
+> Either write something worth reading or do something worth writing.
+>
+> <cite>Benjamin Franklin</cite>
+
+> Tell me and I forget, teach me and I may remember, involve me and I learn.
+>
+> <cite>Benjamin Franklin</cite>
 
 
