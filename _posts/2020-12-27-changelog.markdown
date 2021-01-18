@@ -8,6 +8,9 @@ tags:   [Development, Extra, Active]
 featured: true
 ---
 
+# Release 1/18/2021
+* Added Jupyter Notebook installation tutorial [here](https://www.wrelks.com/2021/01/17/jupyter-notebook-install/)
+
 # Release 1/16/2021
 * Added new quotes / photos to quotes page
 
