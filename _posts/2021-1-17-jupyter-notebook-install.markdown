@@ -12,17 +12,26 @@ featured: true
 
 First make sure that you are inside of your anaconda environment
 
-    conda acitvate 'name'
+{% highlight python %}
+conda acitvate 'name'
+{% endhighlight %}
+
 
 Afterwards you can install jupyter notebook with either conda or pip
 
 # Anaconda install
 
-    conda install -c conda-forge notebook
+{% highlight python %}
+conda install -c conda-forge notebook
+{% endhighlight %}
+
 
 # Pip install 
 
-    pip install notebook 
+{% highlight python %}
+pip install notebook
+{% endhighlight %}
+
 
 **Congratulations** jupyter notebook is now installed 🎉
 
@@ -33,7 +42,10 @@ Afterwards you can install jupyter notebook with either conda or pip
 Now you can set your notebook password with the following command
 
 * Make a easy to remember password
-    * <code>jupyter notebook password</code>
+
+{% highlight python %}
+jupyter notebook password
+{% endhighlight %}
 
 <br>
 
@@ -41,13 +53,17 @@ Now you can set your notebook password with the following command
 
 To start up a notebook session enter in the following command into your terminal 
 
-    jupyter notebook
+{% highlight python %}
+jupyter notebook
+{% endhighlight %}
 
 A new browser window should've been opened automatically pointing to the notebook Interface
 
 If you weren't automatically directed, go to your browser can enter in the following url
 
-    localhost:8888/
+{% highlight python %}
+localhost:8888/
+{% endhighlight %}
 
 If this still didn't work double check the output in the terminal to see if any url was provided 
 
