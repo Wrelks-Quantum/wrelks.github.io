@@ -21,7 +21,7 @@ featured: true
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
         </script>
 
-        <style>
+<style>
             .homeBTN {
         box-shadow:inset 0px 39px 0px -24px #e67a73;
         background-color:#e4685d;
@@ -46,10 +46,10 @@ featured: true
 
         </style>
 
-        <!-- Whatever is between these start/end analytic tags is stripped by the 'downloading offline copy' code. -->
-        <!-- Start Analytics -->
-        <!-- End Analytics -->
-    </head>
+<!-- Whatever is between these start/end analytic tags is stripped by the 'downloading offline copy' code. -->
+<!-- Start Analytics -->
+<!-- End Analytics -->
+ </head>
     <body style="margin: 0">
         <!-- Primary content -->
         <div id="inspectorDiv" style="display: none">
@@ -82,12 +82,12 @@ featured: true
                 <span style="color:#BBB">Created By: Arjun Bhobe | Version 2.4</span>
             </div>
 
-            <!-- Circuit drawing area -->
-            <div id="canvasDiv" style="width: 100%; touch-action: manipulation; tab-index: 0; position: relative;">
+<!-- Circuit drawing area -->
+<div id="canvasDiv" style="width: 100%; touch-action: manipulation; tab-index: 0; position: relative;">
                 <canvas id="drawCanvas"></canvas>
             </div>
 
-            <div id="export-div" style="display:none;">
+<div id="export-div" style="display:none;">
     <div id="export-overlay" style="position:fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: rgba(0, 0, 0, 0.7);">
     </div>
     <div style="position: absolute; top: 20px; left: 50px; padding: 20px; background-color: white; border: 1px solid black;">
@@ -97,19 +97,19 @@ featured: true
             <div style="overflow:auto; word-wrap:break-word; max-height:60px; max-width:600px; border: 1px solid black; padding: 10px; margin: 2px;"><a tabindex="101" id="export-escaped-anchor"></a></div>
         </div>
 
-        <strong>Offline Copy</strong> - Html file containing Quirk and the current circuit.
+<strong>Offline Copy</strong> - Html file containing Quirk and the current circuit.
         <div style="margin: 10px 0 30px 20px;">
             <button tabindex="102" id="download-offline-copy-button" style="width:600px; height:60px;">Download ...</button>
         </div>
 
-        <strong>Circuit JSON</strong> - Parsable representation of current circuit.
+<strong>Circuit JSON</strong> - Parsable representation of current circuit.
         <div style="margin: 10px 0 0 20px;">
             <button tabindex="103" id="export-json-copy-button">Copy to Clipboard</button>&nbsp;&nbsp;<span id="export-json-copy-result"></span>
             <br>
             <pre tabindex="104" id="export-circuit-json-pre" style="overflow:auto; max-width:600px; max-height:60px; border: 1px solid black; padding:5px; margin:2px;"></pre>
         </div>
 
-        <br>
+<br>
         <strong>Simulation Data JSON</strong> - Output amplitudes, detector results, display data, etc.
         <div style="margin: 10px 0 0 20px;">
             <button tabindex="105" id="export-amplitudes-button">Generate and Copy to Clipboard</button>&nbsp;<span id="export-amplitudes-result"></span>
@@ -122,7 +122,7 @@ featured: true
 </div>
 
 
-            <div id="gate-forge-div" style="display:none">
+ <div id="gate-forge-div" style="display:none">
     <div id="gate-forge-overlay" style="position:fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: rgba(0, 0, 0, 0.7);">
     </div>
     <div style="position: absolute; top: 20px; left: 50px; padding: 20px; background-color: white; border: 1px solid black;">
@@ -161,9 +161,9 @@ featured: true
                         }
                     </style>
 
-                    <textarea tabindex="200" id="gate-forge-matrix" cols="25" rows="5" placeholder="1, i,  i, 1"></textarea><br/>
+ <textarea tabindex="200" id="gate-forge-matrix" cols="25" rows="5" placeholder="1, i,  i, 1"></textarea><br/>
 
-                    <input tabindex="201" id="gate-forge-matrix-fix" type="checkbox" checked>
+<input tabindex="201" id="gate-forge-matrix-fix" type="checkbox" checked>
                     <label for="gate-forge-matrix-fix">ensure unitary (by SVD)</label>
                 </td>
                 <td></td>
@@ -217,9 +217,9 @@ featured: true
     </div>
 </div>
 
-        </div>
+ </div>
 
-        <div id="menu-div" style="display:block;">
+ <div id="menu-div" style="display:block;">
     <div id="menu-overlay" style="position:fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: rgba(0, 0, 0, 0.8);">
     </div>
     <div style="position:absolute; top:20px; left:50px; margin:0;">
@@ -229,16 +229,16 @@ featured: true
                 Welcome to Wrelks
             </div>
 
-            A drag-and-drop quantum circuit simulator.
+    A drag-and-drop quantum circuit simulator.
 
-            <div style="margin:20px;">
+<div style="margin:20px;">
                 <div id="loading-div" style="color:#D90; font-size:40px; display:block; height:120px; width:410px;">
                     Loading...
                 </div>
                 <button tabindex="50" id="close-menu-button" style="width:410px; height:120px; font-size:20px; display:none;">Edit Circuit</button>
             </div>
 
-            <div style="display:inline-block; text-align:center; border:1px solid black; padding:2px;">
+<div style="display:inline-block; text-align:center; border:1px solid black; padding:2px;">
                 <a tabindex="51" href="https://github.com/Strilanc/Quirk/wiki/How-to-use-Quirk">
                     <div style="width:128px;">
                         <svg version="1.1" viewBox="0 0 20 25" width="48" height="48">
@@ -250,7 +250,7 @@ featured: true
                 </a>
             </div>
 
-            <div style="display:inline-block; text-align:center; border:1px solid black; padding:2px;">
+<div style="display:inline-block; text-align:center; border:1px solid black; padding:2px;">
                 <a tabindex="52" href="https://www.youtube.com/watch?v=aloFwlBUwsQ">
                     <div style="width:128px;">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACt0lEQVQoz+3SP09TYRQG8IOL4RsgSNvbv4C4uMAkLgbippEw6CKwqIuGwW/gZEI6kIiDo0MnEk1MmEBLRQFbCnJLa6WlFK6K2kKrBarH55p7TUWa1vgm8pqe5Jc0vbfneZ+8JWYmmUl9+FqBWoFagf+hwP5Jn/TUQw/cgmG4Dz54DH4IQQwSkIaMgf+Q+bu0sStm7PYbWT4je9g4i36meio3a+2eOrgBGeBDKmOcse63Aql29yiwJO79cvjVE+4+YMn0/SyQbHNPA0tm+sfhV9rcdmBJOehNq2sQWFKDFG91eYEl5aXXLS4fsKR8FPM4A8BCtLq3hO2qToCiHqcKLMJOKrW3NnTzZbTFlRO1swKVlt1ODViEr9ks65NPpQor/VeCyx5XQdTuMjSKuBw5YBHMAvoU9/Z4MxzejvdeDOJZUVTGPjlS8UGUYkkBc/JbW7weCGRi53rm8c43kXk6euV0sCgHFTBv46OmcXp8/F3kTNeCyExadDhYlHIFSm/jbTLJqbGx9aWOjoiITFpw2FmUSgXM2/iwscFaIsHRgf7I32ZS2G5nUaopoM+237+61Nm5JCKT5hU7i1LxLxQKaerprrDITAopCotSrsAXVX0f6e4OiswyUdCmsCj7C+wkk9no+QtzeFYUmVOK5qxKDlgEs8CupuWjly7P4LtdUbvLyNGsVdGARSisJArxq9dmZ232gqidFWg0Y7GpwEJYlbywXdVR6UWzbQpYUlP0vNnmA5aUj6aPW73AkvLSsybrALCkBijQZFWAJaWQPlONlgCwZAJkztNGSy+wZHqpdJ4cs4wAS2KEDprJBssgJIEPqU24DnVUbiYamo/AKeiH23AXHsAjmISQIQ4J0CBjyAJX4bPx/idjh27R2DsBD43MUbgDQ3AWjv52YGaWWq1ArUCtQK3Av/UdR/1BF+14cggAAAAASUVORK5CYII=">
@@ -259,7 +259,7 @@ featured: true
                 </a>
             </div>
 
-            <div style="display:inline-block; text-align:center; border:1px solid black; padding:2px;">
+<div style="display:inline-block; text-align:center; border:1px solid black; padding:2px;">
                 <a tabindex="53" href="https://github.com/abhobe/wrelks-quirk">
                     <div style="width:128px;">
                         <svg version="1.1" viewBox="0 0 16 16" width="48" height="48">
@@ -289,7 +289,7 @@ featured: true
 </div>
 
 
-        <div id="error-div" style="display:none; font-size:24px; font-family:monospace; color:red;">
+ <div id="error-div" style="display:none; font-size:24px; font-family:monospace; color:red;">
     <div id="error-happened-div">An error happened. :(</div>
     <div id="error-message-div" style="font-size: 16px;"></div>
     <div id="error-known-div" style="font-size: 18px;">
@@ -329,9 +329,8 @@ featured: true
     </div>
 </div>
 
-
-        <!-- Javascript detection -->
-        <div id="noscript-div" class="noscript-warning" style="
+<!-- Javascript detection -->
+ <div id="noscript-div" class="noscript-warning" style="
                         animation-duration: 3.0s;
                    -moz-animation-duration: 3.0s;
                 -webkit-animation-duration: 3.0s;
@@ -364,8 +363,7 @@ featured: true
                     95% { opacity: 0; }
                     to { opacity: 1; }
                 }
-
-                .noscript-warning {
+.noscript-warning {
                     color: red;
                     font-size: 24px;
                     position: absolute;
@@ -373,14 +371,14 @@ featured: true
                     left: 50%;
                     transform: translate(-50%, -50%);
                 }
-            </style>
+</style>
             You appear to have JavaScript blocked. And Quirk is made out of JavaScript... :(
         </div>
         <script>
           document.getElementById('noscript-div').style.display = 'none';
         </script>
 
-        <script>
+ <script>
           document.getElementById('noscript-div').style.display = 'block';
           //noinspection InnerHTMLJS
           document.QUIRK_QUINE_ALL_HTML_ORIGINAL = '<!'+'DOCTYPE html>\n<'+'html>\n    ' +
