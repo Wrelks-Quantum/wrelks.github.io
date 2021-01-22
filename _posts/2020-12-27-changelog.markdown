@@ -8,6 +8,10 @@ tags:   [Development, Extra, Active]
 featured: true
 ---
 
+# Release 1/22/2021
+* Quirk matrix order fixed.
+    * Check out new build here -> 
+
 # Release 1/18/2021
 * Added Jupyter Notebook installation tutorial [here](https://www.wrelks.com/2021/01/17/jupyter-notebook-install/)
 
