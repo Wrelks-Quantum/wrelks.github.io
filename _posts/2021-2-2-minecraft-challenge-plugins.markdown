@@ -8,7 +8,7 @@ tags:   [Personal, Extra, Active, Minecraft]
 featured: false
 ---
 
-# No Sprint - Works on 1.16.X Servers
+# No Sprint
 
 Need to make Minecraft more challenging? Well No Sprint is for you. This plugin makes it so
 that whenever you begin sprinting you die immediately. Have Fun!
@@ -22,7 +22,7 @@ Download it [Here][1]
 
 <hr>
 
-# Fast Mobs - Works on 1.16.X Servers
+# Fast Mobs
 
 Another plugin to further stretch your skill. Fast Mobs adds a various number of new changes
 
