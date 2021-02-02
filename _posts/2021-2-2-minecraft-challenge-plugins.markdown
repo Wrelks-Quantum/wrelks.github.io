@@ -13,8 +13,9 @@ featured: false
 Need to make Minecraft more challenging? Well No Sprint is for you. This plugin makes it so
 that whenever you begin sprinting you die immediately. Have Fun!
 
-#### Insert YT vid demo later...
+![]({{site.baseurl}}/images/noSprint.gif)
+*No Sprint Demo*
 
 Download it [Here][1]
 
-[1]:{{ https://www.wrelks.com }}/downloads/test-download.jar
+[1]:{{ https://www.wrelks.com }}/downloads/noSprint.jar
