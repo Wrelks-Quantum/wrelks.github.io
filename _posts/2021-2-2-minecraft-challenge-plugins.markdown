@@ -22,7 +22,6 @@ Download it [Here][1]
 
 <hr>
 
-<!--
 # Fast Mobs
 
 Another plugin to further test your skill. Fast Mobs adds a various number of new changes, similarly to what you could expect in
@@ -31,5 +30,22 @@ that of a Dream/GeorgeNotFound/Sapnap challenge video.
 * All mobs are given speed multipliers, making every mob faster then the player
 * All mobs are given damage buffs
 * Zombies have a **100%** chance to spawn with an Iron Chestplate and Iron Sword
-    * Zombies have a **100%** chance to drop their Iron Chestplate
-* Creeper Explosions are slightly buffed-->
+* Zombies have a **100%** chance to drop their Iron Chestplate upon death
+* Creeper Explosions are slightly buffed
+* Creepers have a random chance to drop between 1 and 4 TNT.
+
+![]({{site.baseurl}}/images/fast_mobs_demo.gif)
+*Fast Running Mob*
+
+![]({{site.baseurl}}/images/creeper_explosion.gif)
+*Buffed Creeper Explosion*
+
+![]({{site.baseurl}}/images/creeper_dropping_tnt.gif)
+*Creeper TNT Drop*
+
+![]({{site.baseurl}}/images/iron_chestplate_drop.gif)
+*Zombie Iron Chestplate Drop*
+
+Download it [Here][2]
+
+[2]:{{ https://www.wrelks.com }}/downloads/fastMobs.jar
