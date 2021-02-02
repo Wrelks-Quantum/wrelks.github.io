@@ -25,10 +25,11 @@ Download it [Here][1]
 <!--
 # Fast Mobs
 
-Another plugin to further test your skill. Fast Mobs adds a various number of new changes
+Another plugin to further test your skill. Fast Mobs adds a various number of new changes, similarly to what you could expect in
+that of a Dream/GeorgeNotFound/Sapnap challenge video.
 
-* Every mob is given speed **five**, making every mob in the game faster than the player
-* Mobs are given damage buffs
+* All mobs are given speed multipliers, making every mob faster then the player
+* All mobs are given damage buffs
 * Zombies have a **100%** chance to spawn with an Iron Chestplate and Iron Sword
-    * Zombies have a **100%** chance to drop their Iron Chestplates
-* Creeper Explosions are buffed-->
+    * Zombies have a **100%** chance to drop their Iron Chestplate
+* Creeper Explosions are slightly buffed-->
