@@ -3,7 +3,7 @@ layout: post
 title:  Custom made 1.16.5 plugins
 description: Here you can find all of the plugins that I've created for Minecraft, all completely free.
 date:   2021-2-2 15:00:35 +0300
-image:  '/images/11.jpg'
+image:  '/images/minecraft_plugins.png'
 tags:   [Personal, Extra, Active, Minecraft]
 featured: false
 ---
