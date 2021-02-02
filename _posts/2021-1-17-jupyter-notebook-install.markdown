@@ -5,7 +5,7 @@ description: How to install Jupyter Notebook, the dos and don'ts!
 date:   2021-1-17 18:00:55 +0300
 image:  '/images/jupyter-notebook-anaconda.jpg'
 tags:   [Tutorial, Quantum Computing]
-featured: true
+featured: false
 ---
 
 # Getting started 
