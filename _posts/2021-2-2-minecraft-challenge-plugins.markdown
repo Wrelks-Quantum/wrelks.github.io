@@ -24,7 +24,7 @@ Download it [Here][1]
 
 # Fast Mobs
 
-Another plugin to further stretch your skill. Fast Mobs adds a various number of new changes
+Another plugin to further test your skill. Fast Mobs adds a various number of new changes
 
 * Every mob is given speed **five**, making every mob in the game faster than the player
     * Mobs are also given addition damage buffs
