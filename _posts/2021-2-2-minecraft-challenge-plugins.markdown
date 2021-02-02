@@ -22,6 +22,7 @@ Download it [Here][1]
 
 <hr>
 
+<!--
 # Fast Mobs
 
 Another plugin to further test your skill. Fast Mobs adds a various number of new changes
@@ -30,4 +31,4 @@ Another plugin to further test your skill. Fast Mobs adds a various number of ne
 * Mobs are given damage buffs
 * Zombies have a **100%** chance to spawn with an Iron Chestplate and Iron Sword
     * Zombies have a **100%** chance to drop their Iron Chestplates
-* Creeper Explosions are buffed
+* Creeper Explosions are buffed-->
