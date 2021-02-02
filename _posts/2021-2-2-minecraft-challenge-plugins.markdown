@@ -8,6 +8,13 @@ tags:   [Personal, Extra, Active, Minecraft]
 featured: false
 ---
 
-some text and [here is possible to download the file in PDF][1]
+# No Sprint - Works on 1.16.X Servers
+
+Need to make Minecraft more challenging? Well No Sprint is for you. This plugin makes it so
+that whenever you begin sprinting you die immediately. Have Fun!
+
+#### Insert YT vid demo later...
+
+Download it [Here][1]
 
 [1]:{{ https://www.wrelks.com }}/downloads/test-download.jar
