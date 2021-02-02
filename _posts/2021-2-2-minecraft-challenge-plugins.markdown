@@ -10,4 +10,4 @@ featured: false
 
 some text and [here is possible to download the file in PDF][1]
 
-[1]:{{ https://www.wrelks.com }}/downloads/test-download.jpg
+[1]:{{ https://www.wrelks.com }}/downloads/test-download.jar
