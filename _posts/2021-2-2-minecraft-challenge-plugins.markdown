@@ -32,7 +32,7 @@ that of a Dream/GeorgeNotFound/Sapnap challenge video.
 * Zombies have a **100%** chance to spawn with an Iron Chestplate and Iron Sword
 * Zombies have a **100%** chance to drop their Iron Chestplate upon death
 * Creeper Explosions are slightly buffed
-* Creepers have a random chance to drop between 1 and 4 TNT.
+* Creepers have a random chance to drop between 1 and 4 TNT upon death
 
 ![]({{site.baseurl}}/images/fast_mobs_demo.gif)
 *Fast Running Mob*
