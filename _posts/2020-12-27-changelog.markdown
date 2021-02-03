@@ -8,6 +8,11 @@ tags:   [Development, Extra, Active]
 featured: true
 ---
 
+# Release 2/2/2021
+* Added a file downloading system 
+* New post containing all my plugins that I've created for the game Minecraft
+    * You can check it out [here](https://www.wrelks.com/2021/02/02/minecraft-challenge-plugins/)
+
 # Release 1/22/2021
 * Quirk matrix order fixed
     * Check out new build [here](https://wrelks.com/quirk)
