@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Free Custom Minecraft Plugins
+title:  Minecraft 1.16.5 Plugins
 description: Here you can find all of the plugins that I've created for Minecraft, all completely free.
 date:   2021-2-2 15:00:35 +0300
 image:  '/images/minecraft_plugins.png'
