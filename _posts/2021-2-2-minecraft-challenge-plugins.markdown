@@ -8,7 +8,7 @@ tags:   [Personal, Extra, Active, Minecraft]
 twitter:
     card: summary
     creator: Wrelks
-    image: 'www.wrelks.com/images/minecraft_plugins.png'
+    image: 'https://www.wrelks.com/images/minecraft_plugins.png'
 featured: true
 ---
 
