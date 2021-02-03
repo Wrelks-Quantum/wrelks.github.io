@@ -80,3 +80,20 @@ that of a Dream/GeorgeNotFound/Sapnap challenge video.
 Download it [Here][2]
 
 [2]:{{ https://www.wrelks.com }}/downloads/fastMobs.jar
+
+<hr>
+
+# Auto Smelter
+
+This plugin makes it so that whenever you mine iron ore, gold ore, or nether gold ore, you will immediately receive the ingot rather then 
+just receiving the ore
+
+* XP drops of ores have been slightly increased 
+* Fire particles are added to complete the auto smelting vibe
+
+![]({{site.baseurl}}/images/minecraft_auto_smelter_plugin.gif)
+*Auto Smelting Example*
+
+Download it [Here][3]
+
+[3]:{{ https://www.wrelks.com }}/downloads/autoSmelter.jar
