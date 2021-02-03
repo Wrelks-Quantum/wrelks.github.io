@@ -26,6 +26,16 @@ twitter:
 <meta name="twitter:image" content="https://www.wrelks.com/images/minecraft_plugins.png">
 </head>
 
+# How to use these plugins
+
+First you need to create a 1.16+ server that can run plugins, I recommend setting up a paper server.
+And I would recommend using version 1.16.5 as this is the version all plugins have been tested in.
+
+If you are new to creating Minecraft servers, follow this tutorial:
+
+<iframe src="https://www.youtube.com/embed/skOd0iKwing" frameborder="0" allowfullscreen></iframe>
+
+Once your server is setup, download the plugin jar file, and drag it into the *plugins* folder!
 
 # No Sprint
 
