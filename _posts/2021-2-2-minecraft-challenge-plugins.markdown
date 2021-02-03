@@ -13,11 +13,11 @@ featured: true
 ---
 
 
-<head>
+<!--<head>
 <meta name="twitter:creator" content="@Wrelks">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.wrelks.com/images/minecraft_plugins.png">
-</head>
+</head>-->
 
 
 # No Sprint
