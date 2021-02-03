@@ -5,19 +5,26 @@ description: Here you can find all of the plugins that I've created for Minecraf
 date:   2021-2-2 15:00:35 +0300
 image:  '/images/minecraft_plugins.png'
 tags:   [Personal, Extra, Active, Minecraft]
+featured: true
+---
+
+<!-- failed twitter card attemps
 twitter:
     card: summary
     creator: Wrelks
     image: 'https://www.wrelks.com/images/minecraft_plugins.png'
-featured: true
----
+
+      <meta name="twitter:creator" content="@Wrelks">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="{{ page.image }}">
+-->
 
 
-<!--<head>
+<head>
 <meta name="twitter:creator" content="@Wrelks">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.wrelks.com/images/minecraft_plugins.png">
-</head>-->
+</head>
 
 
 # No Sprint
