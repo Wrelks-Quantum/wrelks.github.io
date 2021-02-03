@@ -28,8 +28,8 @@ twitter:
 
 # How to use these plugins
 
-First you need to create a 1.16+ server that can run plugins, I recommend setting up a paper server.
-And I would recommend using version 1.16.5 as this is the version all plugins have been tested in.
+First you need to create a 1.16+ server that can run plugins. I recommend setting up a paper server and 
+using version 1.16.5, as this is the version all my plugins have been tested in.
 
 If you are new to creating Minecraft servers, follow this tutorial:
 
