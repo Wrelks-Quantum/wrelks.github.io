@@ -37,6 +37,8 @@ If you are new to creating Minecraft servers, follow this tutorial:
 
 Once your server is setup, download the plugin jar file, and drag it into the *plugins* folder!
 
+<hr>
+
 # No Sprint
 
 Need to make Minecraft more challenging? Well No Sprint is for you. This plugin makes it so
