@@ -8,6 +8,10 @@ tags:   [Development, Extra, Active]
 featured: true
 ---
 
+# Release 3/28/2021
+* Update to quirk, check it out [here](https://wrelks.com/quirk)
+* **Content overhaul coming this summer**
+
 # Release 2/2/2021
 * Added a file downloading system 
 * New post containing all my plugins that I've created for the game Minecraft
