@@ -87,52 +87,56 @@ const mostRecentStats = new ObservableValue(CircuitStats.EMPTY);
 /** @type {!Revision} */
 let revision = Revision.startingAt(displayed.get().snapshot());
 
-var hmatrix = " \\frac{1}{\\sqrt{2}}\\begin{bmatrix} 1 & 1 \\\\ 1 & -1\\end{bmatrix}";
-var ymatrix = " \\begin{bmatrix} 0 & -i \\\\ i & 0\\end{bmatrix}";
-var xmatrix = " \\begin{bmatrix} 0 & 1 \\\\ 1 & 0\\end{bmatrix}";
-var zmatrix = " \\begin{bmatrix} 1 & 0 \\\\ 0 & -1\\end{bmatrix}";
-var wrelksparse = null;
-function convt(inp) {
-  let list = '$$\\begin{pmatrix} 1 \\\\ 0\\end{pmatrix}\\times'
-  let label = '$$|0\\rangle\\times '
-  let {cols} = JSON.parse(inp)
+var hmatrix = "\\frac{1}{\\sqrt{2}}\\begin{bmatrix} 1 & 1 \\\\ 1 & -1\\end{bmatrix}";
+var ymatrix = "\\begin{bmatrix} 0 & -i \\\\ i & 0\\end{bmatrix}";
+var xmatrix = "\\begin{bmatrix} 0 & 1 \\\\ 1 & 0\\end{bmatrix}";
+var zmatrix = "\\begin{bmatrix} 1 & 0 \\\\ 0 & -1\\end{bmatrix}";
 
-  if (document.readyState === 'complete'){
-    for (let i=0;i<Object.keys(cols).length;i++) {
-      if (String(cols[i]) === 'H'){
-        list = list + hmatrix
-        label=label+'H'
+function convt(inp) {
+  let matrix = '\\times\\begin{pmatrix} 1 \\\\ 0\\end{pmatrix}$$'
+  let label = '\\times|0\\rangle$$'
+  let {cols} = JSON.parse(inp)
+  let matrixHTML = document.getElementById("matrix");
+  let labelHTML = document.getElementById("label");
+
+  let gateDict = {
+    'H': hmatrix,
+    'X': xmatrix,
+    'Y': ymatrix,
+    'Z': zmatrix
+  };
+
+  for (let i = 0;i < Object.keys(cols).length; i++) {
+    let key = String(cols[i]);
+
+    if (gateDict.hasOwnProperty(key)) {
+
+      if (i != 0){
+        matrix = ' \\times ' + matrix
+        label =' \\times ' + label
       }
-      if (String(cols[i]) === 'X'){
-        list = list + xmatrix
-        label=label+'X'
-      }
-      if (String(cols[i]) === 'Z'){
-        list = list + zmatrix
-        label=label+'Z'
-      }
-      if (String(cols[i]) === 'Y'){
-        list = list + ymatrix
-        label=label+'Y'
-      }
-      if (i<(Object.keys(cols).length-1)){
-        list = list+'\\times '
-        label = label+'\\times '
-      }
+
+      matrix = gateDict[key] + matrix;
+      label = key + label;
     }
-    list=list+'$$'
-    label = label +'$$'
-    document.getElementById("matrix").innerHTML = list;
-    document.getElementById("label").innerHTML = label;
+    else {
+      console.warn(cols[i] + ' is not a gate.')
+    }
   }
-  wrelksparse = inp;
+  
+  matrix ='$$' + matrix;
+  label = '$$' + label;
+  matrixHTML.innerHTML = matrix;
+  labelHTML.innerHTML = label;
 }
 
 revision.latestActiveCommit().subscribe(jsonText => {
     let circuitDef = fromJsonText_CircuitDefinition(jsonText);
     let newInspector = displayed.get().withCircuitDefinition(circuitDef);
     let jsonInpText = JSON.stringify(Serializer.toJson(circuitDef));
-    convt(jsonInpText);
+    if (document.readyState === 'complete') {
+      convt(jsonInpText);
+    }
     displayed.set(newInspector);
 });
 

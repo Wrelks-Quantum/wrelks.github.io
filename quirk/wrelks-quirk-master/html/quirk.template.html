@@ -7,8 +7,31 @@
         <title>Quirk: Quantum Circuit Simulator</title>
         <link rel="shortcut icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAQABAAD//gAfQ29tcHJlc3NlZCBieSBqcGVnLXJlY29tcHJlc3P/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAALCAAgACABAREA/8QAGQABAAIDAAAAAAAAAAAAAAAACggLAwcJ/8QAJhAAAAcBAAEEAwEBAQAAAAAAAQIDBAUGBwgJChESFAATFRchIv/aAAgBAQAAPwBqHcHTdc4z5E6I6itKiIRuK5Va7o1bLmACythZxyjepQJAEQ+S1gtLmHhUCB7mMq/IAAI/8/K9fwRecvysap3BRcN0zoZHV+dpD/Rdb3hxs8AztLnM8Zz6tz2g6JYKxdEVIu1QZY6PYfzYBrJzUrAMnb2NZhEmQ/WkCOPHd6rHjjufdqbzNYMc2TF9d068mpGXmTZtdJpFvdvHrlOEUdTNfSYT9XWeMESPpAJarGhoYv2DO5/6rc7r8R/lO84jusfJSuLa7m2rx8LJPoaZdZ5da9b04eWjXazB/GSwQUg9PGv2jxus2XaPSoLpqpmKJPwgnrQezBzjlHCuK63K/osPRV6W0i/NG6pirBmGTqIGiWbspDAP1Z/QJOLdoAcPgsenOiB8vgcAJZyUoHH/AIh+3+t3A/zdP7atUJ49MCcmD9UglnTdJjp/VNnilA9lgYuoBrTc+XeIiBSOpdy0E4GOYo5/DgkjzbnPevlBmkk263IvPshlnPzt0QvwddX9TJP8vzxxGHMAiq/pFRcXW4OSo+6rRFBq7H4gBTBu70seA6R0D5cMtsEFZ7nA0zD4Wy7nrb+vT0zEJT8fBpli6zWbIvHPG39WPst7n4MJCLkRcNpOOayqbhFZMFSjOT1oGJ7RE9641vkzCTjzDLlz3WKBSrUm2dOK3E3Ko2m6SNqqbl4UhmkdNOEZ+MnkGqx0lpJk7Os2KsDF1+gtWq9SaxseGc48+2MINjlPKkLe4nOYetw6sWVWR1K4urncLVb3H2nKc1bZt+LONGWOm09oWEi2CTcPrLKrSo2Lq7K2njD5U4cxR3LrT7nXtT6h6+k3cQ6h2slq71Qc6x2nx7lYfjYYil5dGrSxnyQmZFl7YqmkAO2roE3Vejd4qHGeGtK68s8R9W4dY3w0dU3TlsZN2nkGTryEFFqIHOAGBrPXh3cHhvh7Jum0ZErh8ilTMK19Hy/NtiqUnQdaoFM02jzRATlqhfqzDW2tSJS+/wAPuQs8zfR65kxETJKHbiokb/2mYpgAfzmF1P4R/H/0Vx/q3INPwfMeb67pLuKszO5YhnVRqVjrWg1ldV3VbeIxsey/vBFrLumbqHk3ItH0LJSkYmoyF4DlEjOdeiR30NkYtdX7IyP/AAJnMIrSU1Q6rcD6rOwCTgDKsGNbnWaNXrsu9agKIv17RYGcaqp+8jOVKmCClgNhWKZ1zhjeZYLkcEnWc0yOlwFCpUImcVjMoGusEWDP7LgwAd2/cgkZ3IvlQ/c+fruXa3uqscfz/9k=">
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script type="text/javascript" id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+	<style>
+            .homeBTN {
+        box-shadow:inset 0px 39px 0px -24px #e67a73;
+        background-color:#e4685d;
+        border-radius:7px;
+        border:2px solid #ffffff;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        padding:6px 15px;
+        text-decoration:none;
+        text-shadow:0px 1px 1px #b23e35;
+        }
+        .homeBTN:hover {
+        background-color:#eb675e;
+        }
+        .homeBTN:active {
+        position:relative;
+        top:1px;
+        }
+
+        </style>
+        <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
         </script>
 
         <!-- Whatever is between these start/end analytic tags is stripped by the 'downloading offline copy' code. -->
@@ -39,6 +62,7 @@
                 &nbsp;
                 &nbsp;
                 &nbsp;
+		<a class="homeBTN" href="https://wrelks.com"><b>Go Back To Wrelks</b></a>
                 <span style="color:#BBB">Version 2.3</span>
             </div>
 
@@ -121,9 +145,11 @@ document.DEFAULT_CIRCUIT = undefined;
 <!-- INCLUDE SOURCE PART -->
 
         </script>
-        <button type="button" onclick="MathJax.typeset()">Render Me!</button>
         <p id = "label"></p>
         <p id = "matrix"></p>
+        <script>
+        setInterval(function(){MathJax.typeset()}, 100);
+        </script>
         <div>
       </div>
     </body>

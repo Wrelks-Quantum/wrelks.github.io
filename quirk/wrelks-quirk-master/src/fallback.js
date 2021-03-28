@@ -44,15 +44,15 @@ let showErrorDiv_forced = (callout, subject, body, isKnownIssueUrl) => {
     document.getElementById('error-happened-div').innerText = callout;
     document.getElementById('error-message-div').innerText = subject;
     document.getElementById('error-description-div').innerText = body;
-    document.getElementById('error-mailto-anchor').innerText = 'Email the issue to craig.gidney@gmail.com';
+    document.getElementById('error-mailto-anchor').innerText = 'Email the issue to abhobe@pm.me';
     document.getElementById('error-mailto-anchor').href = [
-        'mailto:craig.gidney@gmail.com?subject=',
+        'mailto:abhobe@pm.me?subject=',
         encodeURIComponent('Quirk had an error: ' + subject),
         '&body=',
         encodeURIComponent('\n\n\n' + body)
     ].join('');
     document.getElementById('error-github-anchor').href = [
-        'https://github.com/Strilanc/Quirk/issues/new?title=',
+        'https://github.com/abhobe/wrelks-quirk/issues/new?title=',
         encodeURIComponent('Encountered error: ' + subject),
         '&body=',
         encodeURIComponent('\n\n\n' + body)
