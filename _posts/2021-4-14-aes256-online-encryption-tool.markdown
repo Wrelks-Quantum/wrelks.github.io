@@ -23,10 +23,10 @@ featured: false
 </script>
 
 
-<html>
+
 
 <strong><label>Original String:</label></strong>
-<p id="demo0"></p>
+<span id="demo0"></span>
 
   <br>
   <br>
@@ -49,6 +49,3 @@ featured: false
 
   <br/>
   <br/>
-
-
-</html>
