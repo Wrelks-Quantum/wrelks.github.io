@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87dd9167-4142-4d80-8504-aaa7af30762d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2020-12-27-quote-picks.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-12-27-quote-picks.markdown" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2021-4-14-aes256-online-encryption-tool.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-4-14-aes256-online-encryption-tool.markdown" afterDir="false" />
     </list>
