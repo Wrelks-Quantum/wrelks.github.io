@@ -8,19 +8,10 @@ tags:   [Tutorial, Cryptography, coding]
 featured: false
 ---
 
-<script type="text/javascript" src="js/aes.js"></script>
+<script type="text/javascript" src="https://www.wrelks.com/js/cryptojs/aes.js"></script>
 <script type="text/javascript">
-
-require.config({
-    paths: {
-        'crypto-js': 'js/cryptojs'
-    }
-});
-
-require(["crypto-js"], function (CryptoJS) {
-    console.log(CryptoJS.HmacSHA1("Message", "Key"));
-});
-
+    var encrypted = CryptoJS.AES("dug", "asdfasfd344");
+    console.log(encrypted);
 </script>
 
 
