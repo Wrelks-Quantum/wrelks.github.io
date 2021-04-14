@@ -11,24 +11,18 @@ featured: false
 <strong><label>Your String:</label></strong>
 <input type="text" id="demo0">
 
-  <br>
-
 <strong><label>Your Password:</label></strong>
 <input type="text" id="demo">
 
-  <br>
-
 <button onclick="submitDetails()">Encrypt!</button>
+
+<hr>
 
 <strong><label>Encrypted:</label></strong>
 <span id="demo1"></span>
 
-  <br>
-
 <strong><label>Decrypted:</label></strong>
 <span id="demo2"></span>
-
-  <br>
 
 <strong><label>String after Decryption:</label></strong>
 <span id="demo3"></span>
