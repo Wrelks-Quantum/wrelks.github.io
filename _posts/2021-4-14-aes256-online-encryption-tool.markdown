@@ -8,7 +8,7 @@ tags:   [Tutorial, Cryptography, coding]
 featured: false
 ---
 
-<strong><label>Your String:</label></strong>
+<strong><label>Your Plaintext:</label></strong>
 <input type="text" id="demo0">
 
 <strong><label>Your Password:</label></strong>
