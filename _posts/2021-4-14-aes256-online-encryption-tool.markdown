@@ -9,16 +9,16 @@ featured: false
 ---
 
 <strong><label>Your String:</label></strong>
-<input type="text" id="demo0"></input>
+<input type="text" id="demo0">
 
   <br>
 
 <strong><label>Your Password:</label></strong>
-<input type="text" id="demo"></input>
+<input type="text" id="demo">
 
   <br>
 
-<input type="submit" onclick="submitDetails();"></input>
+<button onclick="submitDetails()">Click me</button>
 
 <strong><label>Encrypted:</label></strong>
 <span id="demo1"></span>
