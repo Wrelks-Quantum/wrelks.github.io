@@ -12,7 +12,7 @@ featured: false
 <textarea id="demo0" class="plaintextfield" cols="25" rows="5"></textarea>
 
 <strong><label>Your Password: </label></strong>
-<textarea class="plaintextfield" id="demo" cols="25" rows="5"></textarea>
+<input type="text" class="plaintextfield" id="demo">
 
 <button onclick="submitDetails()">Encrypt!</button>
 
@@ -22,7 +22,7 @@ featured: false
 <textarea class="plaintextfield" id="cipher" cols="25" rows="5"></textarea>
 
 <strong><label>Your Password: </label></strong>
-<textarea class="plaintextfield" id="pass" cols="25" rows="5"></textarea>
+<input type="text" class="plaintextfield" id="pass">
 
 <button onclick="submitDetails2()">Decrypt!</button>
 
