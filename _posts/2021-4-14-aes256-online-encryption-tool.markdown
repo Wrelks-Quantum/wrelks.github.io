@@ -8,26 +8,6 @@ tags:   [Tutorial, Cryptography, coding]
 featured: false
 ---
 
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js">
-
-    var myString   = "blablabla Card game bla";
-    var myPassword = "myPassword";
-
-    var encrypted = CryptoJS.AES.encrypt(myString, myPassword);
-    var decrypted = CryptoJS.AES.decrypt(encrypted, myPassword);
-    document.getElementById("demo0").innerHTML = myString;
-    document.getElementById("demo1").innerHTML = encrypted;
-    document.getElementById("demo2").innerHTML = decrypted;
-
-    console.log(encrypted);
-
-    document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
-</script>
-
-
-
-
 <strong><label>Original String:</label></strong>
 <span id="demo0"></span>
 
@@ -50,5 +30,24 @@ featured: false
 <span id="demo3"></span>
 
 
-  <br/>
-  <br/>
+  <br>
+  <br>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+<script>
+
+
+    var myString = "blablabla Card game bla";
+    var myPassword = "myPassword";
+
+    var encrypted = CryptoJS.AES.encrypt(myString, myPassword);
+    var decrypted = CryptoJS.AES.decrypt(encrypted, myPassword);
+    document.getElementById("demo0").innerHTML = myString;
+    document.getElementById("demo1").innerHTML = encrypted;
+    document.getElementById("demo2").innerHTML = decrypted;
+    console.log(encrypted);
+    document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+
+</script>
+
