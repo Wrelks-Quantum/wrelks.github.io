@@ -19,10 +19,10 @@ featured: false
 <br>
 
 <strong><label>Your Ciphertext:</label></strong>
-<input type="text" id="encrypted">
+<input type="text" id="cipher">
 
 <strong><label>Your Password:</label></strong>
-<input type="text" id="demo">
+<input type="text" id="pass">
 
 <button onclick="submitDetails2()">Decrypt!</button>
 
@@ -58,10 +58,13 @@ function submitDetails() {
 
 function submitDetails2() {
 
-    var decrypted = CryptoJS.AES.decrypt(encrypted, myPassword);
+    var cipherText = document.getElementById("cipher").value;
+    var pass = document.getElementById("pass").value;
+
+    var decrypted = CryptoJS.AES.decrypt(cipher, pass);
 
     document.getElementById("demo1").innerHTML = "---";
-    document.getElementById("demo2").innerHTML = "---";
+    document.getElementById("demo2").innerHTML = decrypted;
     document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
 
 }
