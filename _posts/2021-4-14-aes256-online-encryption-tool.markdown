@@ -8,8 +8,8 @@ tags:   [Tutorial, Cryptography, coding]
 featured: false
 ---
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js">
+
     // INIT
     var myString   = "blablabla Card game bla";
     var myPassword = "myPassword";
