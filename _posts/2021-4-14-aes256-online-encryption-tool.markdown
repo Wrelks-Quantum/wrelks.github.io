@@ -12,17 +12,17 @@ featured: false
 <textarea id="demo0" class="plaintextfield" cols="25" rows="5"></textarea>
 
 <strong><label>Your Password: </label></strong>
-<input type="text" id="demo">
+<textarea class="plaintextfield" id="demo" cols="25" rows="5"></textarea>
 
 <button onclick="submitDetails()">Encrypt!</button>
 
 <br>
 
 <strong><label>Your Ciphertext: </label></strong>
-<input type="text" id="cipher">
+<textarea class="plaintextfield" id="cipher" cols="25" rows="5"></textarea>
 
 <strong><label>Your Password: </label></strong>
-<input type="text" id="pass">
+<textarea class="plaintextfield" id="pass" cols="25" rows="5"></textarea>
 
 <button onclick="submitDetails2()">Decrypt!</button>
 
