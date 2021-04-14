@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="downloads">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/downloads/fastMobs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/downloads/test-download.jar!/" />
+      <root url="jar://$PROJECT_DIR$/downloads/noSprint.jar!/" />
+      <root url="jar://$PROJECT_DIR$/downloads/autoSmelter.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

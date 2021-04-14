@@ -7,7 +7,6 @@ image:  '/images/10.jpg'
 tags:   [Inspiring, Extra, Active]
 featured: true
 ---
-
 > Your time is limited, so don’t waste it living someone else’s life.
 >
 > <cite>Steven Paul Jobs</cite>
