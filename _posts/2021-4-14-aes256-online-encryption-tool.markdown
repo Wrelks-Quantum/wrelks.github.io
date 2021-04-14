@@ -8,7 +8,7 @@ tags:   [Tutorial, Cryptography, coding]
 featured: false
 ---
 
-<head>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js">
 
     var myString   = "blablabla Card game bla";
@@ -21,13 +21,12 @@ featured: false
     document.getElementById("demo2").innerHTML = decrypted;
     document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
 </script>
-</head>
 
 
 <html>
 
 <strong><label>Original String:</label></strong>
-<span id="demo0"></span>
+<p id="demo0"></p>
 
   <br>
   <br>
