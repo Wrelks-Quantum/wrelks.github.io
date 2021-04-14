@@ -19,6 +19,9 @@ featured: false
     document.getElementById("demo0").innerHTML = myString;
     document.getElementById("demo1").innerHTML = encrypted;
     document.getElementById("demo2").innerHTML = decrypted;
+
+    console.log(encrypted);
+
     document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
 </script>
 
