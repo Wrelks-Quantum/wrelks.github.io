@@ -16,6 +16,16 @@ featured: false
 
 <button onclick="submitDetails()">Encrypt!</button>
 
+<br>
+
+<strong><label>Your Ciphertext:</label></strong>
+<input type="text" id="encrypted">
+
+<strong><label>Your Password:</label></strong>
+<input type="text" id="demo">
+
+<button onclick="submitDetails2()">Decrypt!</button>
+
 <hr>
 
 <strong><label>Encrypted:</label></strong>
@@ -42,6 +52,16 @@ function submitDetails() {
 
     document.getElementById("demo1").innerHTML = encrypted;
     document.getElementById("demo2").innerHTML = decrypted;
+    document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+
+}
+
+function submitDetails2() {
+
+    var decrypted = CryptoJS.AES.decrypt(encrypted, myPassword);
+
+    document.getElementById("demo1").innerHTML = "---";
+    document.getElementById("demo2").innerHTML = "---";
     document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
 
 }
