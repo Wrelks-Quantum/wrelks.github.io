@@ -8,20 +8,20 @@ tags:   [Tutorial, Cryptography, coding]
 featured: false
 ---
 
-<strong><label>Your Plaintext:</label></strong>
+<strong><label>Your Plaintext: </label></strong>
 <input type="text" id="demo0">
 
-<strong><label>Your Password:</label></strong>
+<strong><label>Your Password: </label></strong>
 <input type="text" id="demo">
 
 <button onclick="submitDetails()">Encrypt!</button>
 
 <br>
 
-<strong><label>Your Ciphertext:</label></strong>
+<strong><label>Your Ciphertext: </label></strong>
 <input type="text" id="cipher">
 
-<strong><label>Your Password:</label></strong>
+<strong><label>Your Password: </label></strong>
 <input type="text" id="pass">
 
 <button onclick="submitDetails2()">Decrypt!</button>
