@@ -9,7 +9,7 @@ featured: false
 ---
 
 <strong><label>Your Plaintext: </label></strong>
-<input type="text" id="demo0">
+<input type="text" id="demo0" class="plaintextfield">
 
 <strong><label>Your Password: </label></strong>
 <input type="text" id="demo">
@@ -70,4 +70,21 @@ function submitDetails2() {
 }
 
 </script>
+
+<style>
+
+.plaintextfield {
+     padding: 4px;
+     font-size: 15px;
+     border-width: 2px;
+     border-color: #cccccc;
+     background-color: #233840;
+     color: #ffffff;
+     border-style: solid;
+     border-radius: 6px;
+     box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+</style>
 
