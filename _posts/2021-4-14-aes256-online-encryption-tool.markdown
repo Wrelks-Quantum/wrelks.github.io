@@ -9,7 +9,7 @@ featured: false
 ---
 
 <strong><label>Your Plaintext: </label></strong>
-<textarea id="demo0" class="plaintextfield" cols="40" rows="5"></textarea>
+<textarea id="demo0" class="plaintextfield" cols="25" rows="5"></textarea>
 
 <strong><label>Your Password: </label></strong>
 <input type="text" id="demo">
