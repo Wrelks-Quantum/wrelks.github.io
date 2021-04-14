@@ -8,13 +8,12 @@ tags:   [Tutorial, Cryptography, coding]
 featured: false
 ---
 
+<head>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js">
 
-    // INIT
     var myString   = "blablabla Card game bla";
     var myPassword = "myPassword";
-    
-    // PROCESS
+
     var encrypted = CryptoJS.AES.encrypt(myString, myPassword);
     var decrypted = CryptoJS.AES.decrypt(encrypted, myPassword);
     document.getElementById("demo0").innerHTML = myString;
@@ -22,6 +21,8 @@ featured: false
     document.getElementById("demo2").innerHTML = decrypted;
     document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
 </script>
+</head>
+
 
 <html>
 
