@@ -61,7 +61,7 @@ function submitDetails2() {
     var cipherText = document.getElementById("cipher").value;
     var pass = document.getElementById("pass").value;
 
-    var decrypted = CryptoJS.AES.decrypt(cipher, pass);
+    var decrypted = CryptoJS.AES.decrypt(cipherText, pass);
 
     document.getElementById("demo1").innerHTML = "---";
     document.getElementById("demo2").innerHTML = decrypted;
