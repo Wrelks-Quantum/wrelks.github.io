@@ -18,7 +18,7 @@ featured: false
 
   <br>
 
-<button onclick="submitDetails()">Click me</button>
+<button onclick="submitDetails()">Encrypt!</button>
 
 <strong><label>Encrypted:</label></strong>
 <span id="demo1"></span>
