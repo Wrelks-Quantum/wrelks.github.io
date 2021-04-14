@@ -8,46 +8,50 @@ tags:   [Tutorial, Cryptography, coding]
 featured: false
 ---
 
-<strong><label>Original String:</label></strong>
-<span id="demo0"></span>
+<strong><label>Your String:</label></strong>
+<input type="text" id="demo0"></input>
 
   <br>
+
+<strong><label>Your Password:</label></strong>
+<input type="text" id="demo"></input>
+
   <br>
+
+<input type="submit" onclick="submitDetails();"></input>
 
 <strong><label>Encrypted:</label></strong>
 <span id="demo1"></span>
 
   <br>
-  <br>
 
 <strong><label>Decrypted:</label></strong>
 <span id="demo2"></span>
 
-  <br> 
   <br>
 
 <strong><label>String after Decryption:</label></strong>
 <span id="demo3"></span>
 
-
   <br>
-  <br>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 <script>
 
+function submitDetails() {
 
-    var myString = "blablabla Card game bla";
-    var myPassword = "myPassword";
+    var myString = document.getElementById("demo0").value;
+    var myPassword = document.getElementById("demo").value;
 
     var encrypted = CryptoJS.AES.encrypt(myString, myPassword);
     var decrypted = CryptoJS.AES.decrypt(encrypted, myPassword);
-    document.getElementById("demo0").innerHTML = myString;
+    document.getElementById("demo").innerHTML = myPass;
+    document.getElementById("demo0").innerHTML = myString; 
     document.getElementById("demo1").innerHTML = encrypted;
     document.getElementById("demo2").innerHTML = decrypted;
-    console.log(encrypted);
     document.getElementById("demo3").innerHTML = decrypted.toString(CryptoJS.enc.Utf8);
+
+}
 
 </script>
 
