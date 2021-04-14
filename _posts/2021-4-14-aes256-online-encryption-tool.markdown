@@ -14,7 +14,7 @@ featured: false
 <strong><label>Your Password: </label></strong>
 <input type="text" class="plaintextfield" id="demo">
 
-<button onclick="submitDetails()">Encrypt!</button>
+<button class="encrypt" onclick="submitDetails()">Encrypt!</button>
 
 <br>
 
@@ -24,7 +24,7 @@ featured: false
 <strong><label>Your Password: </label></strong>
 <input type="text" class="plaintextfield" id="pass">
 
-<button onclick="submitDetails2()">Decrypt!</button>
+<button class="decrypt" onclick="submitDetails2()">Decrypt!</button>
 
 <hr>
 
@@ -84,6 +84,53 @@ function submitDetails2() {
      border-radius: 6px;
      box-shadow: 0px 0px 5px rgba(66,66,66,.75);
      text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+.encrypt {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.encrypt:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+.encrypt:active {
+	position:relative;
+	top:1px;
+}
+
+.decrypt {
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	background-color:#74ad5a;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+}
+.decrypt:hover {
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	background-color:#68a54b;
+}
+.decrypt:active {
+	position:relative;
+	top:1px;
 }
 
 </style>
