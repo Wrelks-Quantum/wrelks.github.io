@@ -8,6 +8,12 @@ tags:   [Tutorial, Cryptography, Coding]
 featured: false
 ---
 
+<head>
+<meta name="twitter:creator" content="@Wrelks">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.wrelks.com/images/aes256-online-encryption-tool.jpg">
+</head>
+
 <strong><label>Your Plaintext: </label></strong>
 <textarea id="demo0" class="plaintextfield" cols="25" rows="5"></textarea>
 
