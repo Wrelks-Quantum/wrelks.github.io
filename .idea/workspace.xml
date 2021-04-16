@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87dd9167-4142-4d80-8504-aaa7af30762d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_posts/2021-1-1-minecraft-fortnite-building-plugin.markdown" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-12-27-changelog.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-12-27-changelog.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2021-4-14-free-online-aes256-encryption-tool.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2021-4-14-free-online-aes256-encryption-tool.markdown" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +22,12 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wrelks\Documents\GitHub\wrelks.github.io\_posts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Wrelks\Documents\GitHub\wrelks.github.io\_posts" />
     </key>
