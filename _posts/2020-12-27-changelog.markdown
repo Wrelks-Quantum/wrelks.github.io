@@ -10,7 +10,7 @@ featured: true
 
 # Release 4/15/2021
 * Added AES256 encryption tool.
-* Check it out [here](https://wrelks.com/2021/4/14/free-online-aes256-encryption-tool)
+* Check it out [here](https://www.wrelks.com/2021/04/14/free-online-aes256-encryption-tool/)
 
 # Release 3/28/2021
 * Update to quirk, check it out [here](https://wrelks.com/quirk)
