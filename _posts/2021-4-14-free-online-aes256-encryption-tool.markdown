@@ -41,9 +41,9 @@ featured: false
 
 ## What is AES256 Encryption:
 
->>The current encryption standard for most government and private sector IT security purposes is called the Advanced Encryption System.  AES was chosen as the U.S. government security standard in 2001, and eventually also evolved into the encryption standard for most private sector enterprises.
->>AES uses a symmetric algorithm, which means the same key is applied for both encryption and decryption. The algorithm provides 128-bit block encryption and has been designed to supports key sizes of 128, 192 and 256 bits. AES 256-bit encryption is the strongest and most robust encryption standard that is commercially available today.
-> idera.com
+> The current encryption standard for most government and private sector IT security purposes is called the Advanced Encryption System.  AES was chosen as the U.S. government security standard in 2001, and eventually also evolved into the encryption standard for most private sector enterprises.
+> AES uses a symmetric algorithm, which means the same key is applied for both encryption and decryption. The algorithm provides 128-bit block encryption and has been designed to supports key sizes of 128, 192 and 256 bits. AES 256-bit encryption is the strongest and most robust encryption standard that is commercially available today.
+> <cite>idera.com</cite>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 <script>
