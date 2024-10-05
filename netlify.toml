@@ -1,0 +1,8 @@
+[build]
+  command = "bundle install"
+
+[build.environment]
+  RUBY_VERSION = "2.7.1"
+
+[build.lifecycle]
+  onPreBuild = "gem update --system"
