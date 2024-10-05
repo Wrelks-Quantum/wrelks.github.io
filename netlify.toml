@@ -3,6 +3,7 @@
 
 [build.environment]
   RUBY_VERSION = "2.7.1"
-
+  BUNDLER_VERSION = "2.2.33"
+  
 [build.lifecycle]
   onPreBuild = "gem update --system"
